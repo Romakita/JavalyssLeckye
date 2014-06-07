@@ -1,0 +1,308 @@
+.icon-crm{
+	background:url(crm-16.png) no-repeat left center;	
+}
+
+.icon-crm-48,
+.icon-crm-32{
+	background:url(crm-48.png) no-repeat left center;	
+}
+
+.panel.crm .icon-add-client{
+	background:url(add.png) no-repeat left center;	
+}
+
+.panel.crm .icon-add-call{
+	background:url(add-call.png) no-repeat left center;	
+}
+
+.panel.crm .icon-edit-client{
+	background:url(edit-client.png) no-repeat left center;	
+}
+
+.panel.crm .icon-edit-call{
+	background:url(edit-call.png) no-repeat left center;	
+}
+
+.panel.crm .icon-edit-statistics{
+	background:url(edit-statistics.png) no-repeat left center;	
+}
+
+.panel.crm .icon-edit-setting{
+	background:url(setting.png) no-repeat left center;	
+}
+
+.panel.crm .icon-edit-import{
+	background:url(import.png) no-repeat left center;	
+}
+.icon-crm-call-checked,
+.panel.crm .icon-call-checked{
+	background:url(call-checked.png) no-repeat center;	
+}
+
+.panel.crm .icon-open-customer{
+	background:url(open-customer.png) no-repeat center;	
+}
+
+.icon-crm-call{
+	background:url(crm-call.png) no-repeat;	
+}
+
+.icon-crm-call-48{
+	background:url(crm-call-48.png) no-repeat;	
+}
+
+.icon-crm-call-agenda{
+	background:url(crm-call-white.png) no-repeat;
+}
+.icon-crm-duplicate-call{
+	background:url(crm-duplicate-call.png) no-repeat left center;	
+}
+
+/* Fenetre */
+.window.crm{
+	border:1px solid #f2d700;	
+}
+
+.panel.jpanel.flat.crm > .wrap-header{
+	background: none repeat scroll 0 0 #f2d700;
+}
+
+.panel.jpanel.flat.crm > .wrap-header > h1 {
+	color:#242424;
+}
+
+.panel.jpanel.crm.flat > .wrap-header > .simple-button{
+	background: none repeat scroll 0 0 #c2a900;
+}
+
+.panel.jpanel.crm.flat > .wrap-header > .simple-button:hover{
+	background: none repeat scroll 0 0 #575757;		
+}
+
+.panel.jpanel.crm.flat > .wrap-header > .simple-button.selected{
+	background: none repeat scroll 0 0 #FFF;
+}
+
+.panel.jpanel.crm.flat > .wrap-header > .simple-button > .wrap-text{
+	color: 	white;
+	text-shadow:0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.panel.jpanel.crm.flat > .wrap-header > .simple-button.selected > .wrap-text{
+	color:	#242424;
+	text-shadow:none;
+}
+
+.panel.jpanel.crm > .drop-menu{
+	display:none;	
+}
+
+
+.jpanel .panel.pan-body .simpletable.crm-table{
+	border:1px solid #DFDFDF;
+}
+
+.jpanel .panel.pan-body .simpletable.crm-table, 
+.jpanel .panel.pan-body .simpletable.crm-table > .wrap-body {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.jpanel .simpletable.theme-default.crm-table .simple-table > tbody > tr.wrap-header .wrap-group-text{
+	font-size: 16px;
+	color: rgb(85, 85, 85);
+	height: 20px;
+	font-weight: normal;
+}
+
+
+.jpanel .panel.pan-body .simpletable.crm-table .simple-table{
+	border-collapse:separate;
+	border-spacing:0px;	
+}
+
+.jpanel .panel.pan-body .simpletable.theme-default.crm-table .simple-table > thead > tr > *,
+.jpanel .panel.pan-body .simpletable.theme-default.crm-table .simple-table > tbody > tr > *{
+	border-right:1px solid #CCCCCC !important;	
+}
+.jpanel .panel.pan-body .simpletable.theme-default.crm-table .simple-table > thead > tr > .col-complement,
+.jpanel .panel.pan-body .simpletable.theme-default.crm-table .simple-table > tbody > tr > .col-complement{
+	border-right:1px solid transparent !important;
+}
+.jpanel .panel.pan-body .simpletable.theme-default.crm-table .simple-table > thead > tr > .col-complement{
+	border-bottom: 1px solid #CCCCCC !important;
+}
+.jpanel .panel.pan-body .simpletable.crm-table.footer{
+	border:0px;
+	min-height:0px;
+}	
+.jpanel .panel.pan-body .simpletable.crm-table.footer > .wrap-header{
+	width:calc(100% - 17px);
+	display:none;	
+}
+.jpanel .panel.pan-body .simpletable.crm-table.footer > .wrap-body > .wrapper {
+    margin-right: 17px;
+}
+.jpanel .panel.pan-body .simpletable.theme-default.crm-table.footer .simple-table > thead > tr > .col-complement{
+	border-bottom: 0px solid #CCCCCC !important;
+}
+/* button */
+
+.panel.jpanel.crm .market-button{
+	background:white;
+	border-color:transparent;	
+}
+
+.panel.jpanel.crm.open .panel.pan-body {
+    opacity: 1;
+}
+
+.panel.jpanel.crm .market-button:hover{
+	border-color:#e7cd02;
+}
+
+.panel.jpanel.crm .market-button > .wrap-mask{
+	background:url(contact.png) center;
+}
+
+.crm-button .wrap-button{
+	position:absolute;
+	right:3px;
+	bottom:0px;
+	top:auto;
+}
+
+.crm-button .wrap-button .simple-button{
+	margin-bottom:4px;
+}
+.crm-button .wrap-button .simple-button:hover{
+	background-color:	#fbe2dc !important;
+	border-radius:		0px;
+}
+
+
+/* Media */
+
+.market-button.client-media{
+	width:96%;	
+	background:white;
+	border:2px solid #CCC;
+	
+	-moz-transition-delay:400ms;
+	-moz-transition-property:height;
+	-moz-transition-timing-function: ease-in-out;
+	
+	-webkit-transition-delay:400ms;
+	-webkit-transition-property:height;
+	-webkit-transition-timing-function: ease-in-out;
+	
+	-ms-transition-delay:400ms;
+	-ms-transition-property:height;
+	-ms-transition-timing-function: ease-in-out;
+	
+	transition-delay:400ms;
+	transition-property:height;
+	transition-timing-function: ease-in-out;
+}
+
+.market-button.client-media > .wrap-mask{
+	background:url(media.png) center;
+}
+.market-button.client-media.media-note > .wrap-mask{
+	display:none;	
+}
+.market-button.client-media.have-textarea.media-note .wrap-text .input,
+.market-button.client-media .wrap-text .input{
+	width:93%
+}
+
+.market-button.client-media.media-note > .wrap-text{
+	margin-left:5px;
+}
+
+.market-button.client-media > .simple-button.remove{
+	margin: 	0;
+	position: 	absolute;
+	right: 		5px;
+	top: 		5px;
+}
+
+.market-button.client-media .frameworker{
+	bottom: 	0;
+	left: 		90px;
+	position: 	absolute;
+	right: 		0;
+	width: 		auto !important;
+}
+.market-button.client-media .dropfile{
+	background: none repeat scroll 0 0 transparent;
+	border: 0 none;	
+}
+.market-button.client-media .dropfile > .wrap-title, .frameworker.click > .wrap-body > .wrap-label, 
+.market-button.client-media .frameworker.noclick > .wrap-body > .wrap-label{
+	display:none;
+}
+
+.market-button.client-media.have-textarea{
+	height:130px;
+}
+
+.market-button.client-media.have-textarea .wrap-text .input {
+	width:75%;
+}
+.market-button.client-media.have-textarea .frameworker {
+	left: 	auto;
+	top: 	0;
+	bottom:	auto;
+	width: 	70px;
+}
+
+
+.market-button.client-media.have-textarea .frameworker .dropfile > .wrap-body{
+	display:none;	
+}
+
+.market-button.client-media.have-textarea .editable-area {
+	background: none repeat scroll 0 0 transparent;
+	border: 	0 none;
+	bottom:		0;
+	top: 		48px;
+	position: 	absolute;
+	right: 		0;
+	left:		90px;
+	resize:		none;
+	overflow:	auto;
+}
+
+.market-button.client-media.have-textarea.media-note .editable-area{
+	width:		calc(100% - 10px);
+	padding:	5px;
+	left:		0px;
+}
+
+.market-button.have-textarea.client-media.focus{
+	height:300px;
+}
+
+/* Splashscreen */
+
+.panel.jpanel.crm .w-flex.fullscreen.splashscreen{
+	background:none repeat scroll 0 0 #e7cd02;
+}
+
+.panel.jpanel.crm .w-flex.fullscreen.theme-white.splashscreen > .wrap-bg{
+	background:transparent;
+	opacity:1 !important;
+}
+
+.panel.jpanel.crm .w-flex.fullscreen.infinite.theme-white.splashscreen > .wrap-mask{
+	background-image:	url(splashscreen.png);
+}
+
+.panel.jpanel.crm .w-flex.fullscreen.infinite.splashscreen > .wrap-text{
+	color:#242424;
+	top:320px;	
+}

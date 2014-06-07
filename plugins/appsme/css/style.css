@@ -1,0 +1,160 @@
+@charset "utf-8";
+/* CSS Document */
+
+.icon-appsme{
+	background:url(icons/16/appsme.png) no-repeat;
+}
+.icon-appsme-32{
+	background:url(icons/32/appsme.png) no-repeat;
+}
+.icon-appsme-64{
+	background:url(icons/64/appsme.png) no-repeat;
+}
+
+.icon-appsme-galery{
+	background:url(icons/16/edit-galery.png) no-repeat;
+}
+
+.icon-appsme-galery-48{
+	background:url(icons/48/edit-galery.png) no-repeat;
+}
+
+
+.icon-application{
+	background:url(icons/16/application.png) no-repeat;
+}
+
+.icon-application-48{
+	background:url(icons/48/application.png) no-repeat;
+}
+
+
+.appsme .icon-edit-apps{
+	background:url(edit-apps.png) no-repeat left center;	
+}
+
+.appsme .icon-edit-incident{
+	background:url(edit-incident.png) no-repeat left center;	
+}
+
+.appsme .icon-edit-message{
+	background:url(edit-message.png) no-repeat left center;	
+}
+
+.appsme .icon-edit-setting{
+	background:url(edit-setting.png) no-repeat left center;	
+}
+/* Fenetre */
+
+.window.appsme{
+	border:1px solid #a54173;	
+}
+
+.panel.jpanel.appsme.flat > .wrap-header{
+	background: none repeat scroll 0 0 #a54173;
+}
+
+.panel.jpanel.appsme.flat > .wrap-header{
+	background:url("splashscreen.png") no-repeat scroll -35px #a54173;
+}
+
+.panel.jpanel.appsme.flat > .wrap-header > h1{
+	margin-left:85px;
+	padding-right:35px;
+}
+
+
+.panel.jpanel.appsme.flat > .wrap-header > .simple-button{
+	background: none repeat scroll 0 0 #dd4993;
+}
+
+.panel.jpanel.appsme.flat > .wrap-header > .simple-button:hover{
+	background: none repeat scroll 0 0 #8f2c5e;		
+}
+
+.panel.jpanel.appsme.flat > .wrap-header > .simple-button.selected{
+	background: none repeat scroll 0 0 #FFF;
+}
+
+.panel.jpanel.appsme.flat > .wrap-header > .simple-button > .wrap-text{
+	color: white;
+}
+
+.panel.jpanel.appsme.flat > .wrap-header > .simple-button.selected > .wrap-text{
+	color:#a54173;
+}
+
+.panel.jpanel.appsme > .wrap-body > .panel.pan-body > .wrap-body h2.letter-group {
+  	color: #D24726;
+}
+
+.panel.jpanel.flat.appsme > .wrap-header > .simple-button{
+	width:84px;	
+}
+
+
+/* appsme */
+
+
+.panel.market.appsme > .wrap-body > .wrap-pan.wrap-app > .wrap-footer > .simple-button{
+	display:inline-block;
+}
+
+.panel.appsme.default .wrap-actions .tool-appsme{
+	display:inline-block;	
+}
+
+.market-button > .wrap-button{
+	position:absolute;
+	top:5px;
+	right:3px;
+}
+
+.panel.market.preferences > .wrap-body > .wrap-pan > .wrap-actions{
+	display:none;	
+}
+
+.panel.market.preferences > .wrap-body > .wrap-pan > .wrap-body{
+	top:0px;
+	
+}
+
+.window.setting .panel.market > .wrap-body > .wrap-pan > .wrap-body > .wrapper > .panel{
+	padding-top:20px;
+}
+
+.panel.jpanel.flat > .wrap-body > .panel.pan-swip .galery a{
+	display:inline-block;
+	height:80px;
+	width:120px;
+	overflow:hidden;
+	border:4px solid #CCC;
+	margin:5px;
+	background:white;
+}
+
+.panel.jpanel.flat > .wrap-body > .panel.pan-swip .galery a[rel] > img{
+	border-radius:0px;
+	border:0px;
+	width:100%;
+}
+
+/* Splashscreen */
+
+.panel.jpanel.appsme .w-flex.fullscreen.splashscreen{
+	background:none repeat scroll 0 0 #a54173;
+}
+
+.panel.jpanel.appsme .w-flex.fullscreen.theme-white.splashscreen > .wrap-bg{
+	background:transparent;
+	opacity:1 !important;
+}
+
+.panel.jpanel.appsme .w-flex.fullscreen.infinite.theme-white.splashscreen > .wrap-mask{
+	background-image:	url(splashscreen.png);
+}
+
+.panel.jpanel.appsme .w-flex.fullscreen.infinite.splashscreen > .wrap-text{
+	color:white;
+	top:320px;	
+}

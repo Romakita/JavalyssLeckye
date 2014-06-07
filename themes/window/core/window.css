@@ -1,0 +1,547 @@
+.splite-window{
+	position:	fixed; 
+	top:		0px; 
+	left:		0px; 
+	height:		100%; 
+	width:		100%;
+	overflow:	hidden;
+}
+/****************************************************************************************************/
+/*Window*********************************************************************************************/
+/****************************************************************************************************/
+<?php $window_height = CssNode::Value($Window->header->height); ?>
+
+.window{
+	position:		fixed;
+	top:			0;
+	left:			0;
+	padding:		0px;
+	margin:			0px;
+	max-width:		100%;
+	max-height:		100%;
+	text-align:		left;
+}
+
+.window > .wrap-header,
+.window > .wrap-header > .wrap-title{
+	height:			<?php echo $Window->header->height; ?>;
+	line-height:	<?php echo $Window->header->height; ?>;
+	height:			<?php echo $Window->header->height; ?>;
+}
+
+.window > .wrap-header{
+	line-height:	normal;
+	position: 		relative;
+}
+
+.window > .wrap-header > .wrap-title{
+	position:			absolute;
+	left:				0px;
+	padding-left:		3px;
+	top:				0px;
+	right:				3px;
+	background-repeat:	no-repeat;
+	background-position:7px center;
+	word-spacing:		normal;
+	white-space:		nowrap;
+	z-index:			1;
+	overflow:			hidden;
+}
+.window.tabcontrol > .wrap-header > .wrap-title{
+	z-index:			2;
+}
+
+.window.icon > .wrap-header > .wrap-title{
+	padding-left:30px;	
+}
+
+.window.closable > .wrap-header > .wrap-title,
+.window.resizable > .wrap-header > .wrap-title,
+.window.cacheable > .wrap-header > .wrap-title{
+	right:<?php echo $Window->header->height + 3; ?>px;	
+}
+
+.window.closable.resizable > .wrap-header > .wrap-title,
+.window.cacheable.resizable > .wrap-header > .wrap-title,
+.window.closable.cacheable > .wrap-header > .wrap-title{
+	right:<?php echo $Window->header->height * 2 + 3; ?>px;	
+}
+
+.window.closable.resizable.cacheable > .wrap-header > .wrap-title{
+	right:<?php echo $Window->header->height * 3 + 3; ?>px;	
+}
+
+.window > .wrap-header > .btn-actions{
+	display:none;
+}
+		
+.window.closable > .wrap-header > .wrap-close,
+body .clearlooks2 .mceFocus .mceClose{
+	display:		block;
+	float:			right;
+	cursor:			pointer;
+	top:			<?php echo ($window_height - 20)/2; ?>px;
+	margin-right:	3px;
+	background:		url(<?php echo $Window->header->button->background->image;?>) -<?php echo $window_height * 2; ?>px 0px no-repeat;
+	width:			<?php echo $Window->header->height; ?>;
+	height:			<?php echo $Window->header->height; ?>;
+	z-index:		1;
+	-moz-user-select:none;
+}
+body .clearlooks2 .mceFocus .mceClose{
+	top:0px !important;
+	right:0px !important;
+	background-image:		url(<?php echo $Window->header->button->background->image;?>) !important;	
+}
+
+
+
+.window.resizable > .wrap-header > .wrap-resize{
+	display:		block;
+	float:			right;
+	cursor:			pointer;
+	top:			<?php echo ($window_height - 20)/2; ?>px;
+	background:		url(<?php echo $Window->header->button->background->image; ?>) -<?php echo $window_height *1; ?>px 0px no-repeat;
+	width:			<?php echo $Window->header->height; ?>;
+	height:			<?php echo $Window->header->height; ?>;
+	z-index:		1;
+}
+		
+.window.cacheable > .wrap-header > .wrap-hide{
+	display:		block;
+	float:			right;
+	cursor:			pointer;
+	top:			<?php echo ($window_height - 20)/2; ?>px;
+	background:		url(<?php echo $Window->header->button->background->image; ?>) 0px 0px no-repeat;
+	width:			<?php echo $Window->header->height; ?>;
+	height:			<?php echo $Window->header->height; ?>;
+	z-index:		1;
+}
+		
+.window > .wrap-header > .wrap-close:hover,
+body .clearlooks2 .mceFocus .mceClose:hover{
+	background-position:-<?php echo $window_height * 2; ?>px -<?php echo $Window->header->height; ?>;
+	cursor:pointer;
+}
+		
+.window > .wrap-header > .wrap-resize:hover{
+	background-position:-<?php echo $window_height; ?>px -<?php echo $Window->header->height; ?>;
+	cursor:pointer;
+}
+		
+.window > .wrap-header > .wrap-hide:hover{
+	background-position:0px -<?php echo $Window->header->height; ?>;
+	cursor:pointer;
+}
+		
+.window > .wrap-super-body{
+	margin:				0px;
+	padding:			0px;
+	padding-left:		<?php echo $Window->padding; ?>;
+	padding-right:		<?php echo $Window->padding; ?>;
+	padding-bottom:		<?php echo $Window->padding; ?>;
+	line-height:		normal;
+	left:				0;
+	position:			relative;
+	top:				0;
+	z-index:			1;
+}
+
+.window > .wrap-super-body > .drop-menu.top{
+	border:				1px solid transparent;
+	border-bottom-width:0px;
+	background:			transparent;
+	padding:			0px;
+	margin:				0px !important;
+	height:				<?php echo $Window->menu->height; ?>;
+	z-index:			1;
+}
+
+.window > .wrap-super-body > .drop-menu.top > .simple-menu > .wrap-content > .wrap-body > .simple-button{
+	height:		<?php echo CssNode::Value($Window->menu->height) - 6; ?>px;
+	min-height:	10px;
+	margin:		2px;
+	margin-top:	<?php echo ceil((CssNode::Value($Window->menu->height) - (CssNode::Value($Window->menu->height) - 6))/2); ?>;
+	padding:	0px;
+	background:	none;
+	border:		1px solid transparent;
+}
+
+.window > .wrap-super-body > .drop-menu.top > .group-button{
+	margin:		2px;
+	margin-top:	<?php echo ceil((CssNode::Value($Window->menu->height) - (CssNode::Value($Window->menu->height) - 6))/2); ?>;
+}
+
+.window > .wrap-super-body > .drop-menu.top > .group-button > .simple-button{
+	padding:	0px;
+}
+
+.window > .wrap-super-body > .drop-menu.top > .simple-menu > .wrap-content > .wrap-body > .simple-button > .wrap-text,
+.window > .wrap-super-body > .drop-menu.top > .simple-menu > .wrap-content > .wrap-body > .simple-button > .wrap-text.notext{
+	display:inline;
+}
+
+.window > .wrap-super-body > .drop-menu.top > .simple-menu > .wrap-content > .wrap-body > .wrapper{
+	top:	<?php echo $Window->menu->height; ?>;
+	margin-top:-7px;
+	left:		0px;
+}
+
+/*body*/
+		
+.window > .wrap-super-body > .wrap-body{
+	position:				relative;	
+
+	overflow:				auto;
+	min-height: 			50px;
+	min-width:				200px;
+}
+
+.window.theme-default > .wrap-super-body > .wrap-body{
+	<?php if($Window->padding == 0): ?>
+		border-width:	1px 0px 0px;
+	<?php elseif($Window->footer->mode): ?>
+		border-width:   1px 1px 0;
+	<?php else: ?>
+		border-width: 	1px 1px 0;
+	<?php endif; ?>		
+}
+
+.window > .wrap-super-body > .wrap-footer{
+	display:		block;
+	padding:		0px;
+	margin:			0px;
+	text-align:		center;
+	z-index:		1;
+	position:		relative;
+	
+}
+
+.window.theme-default > .wrap-super-body > .wrap-footer{		
+	<?php echo $Window->footer->mode ? $Window->footer->background : $Window->background; ?>
+	border-top: 	<?php echo ($Window->footer->mode ? '0px' : $Window->footer->border->toBorder()); ?>;
+	border-left:	<?php echo $Window->footer->mode ? $Window->footer->border->toBorder() : '0'; ?>;
+	border-right:	<?php echo $Window->footer->mode ? $Window->footer->border->toBorder() : '0'; ?>;
+	border-bottom:	<?php echo $Window->footer->mode ? $Window->footer->border->toBorder() : '0'; ?>;	
+}
+
+.window > .wrap-super-body > .wrap-footer > .simple-button{
+	margin-left:	5px;
+	margin-right:	5px;
+	margin-bottom:	<?php echo $Window->footer->margin->bottom; ?>;
+	margin-top:		<?php echo $Window->footer->margin->top; ?>;
+}
+
+.window > .wrap-resize{
+	display:none;
+}
+.window.resizable > .wrap-resize{
+	display:block;
+}
+.window > .wrap-n, 
+.window > .wrap-s, 
+.window > .wrap-e, 
+.window > .wrap-w, 
+.window > .wrap-ne, 
+.window > .wrap-nw, 
+.window > .wrap-se, 
+.window > .wrap-sw{
+	-moz-user-select: 	none;
+	position:			absolute;
+	z-index:			100;
+}
+.window > .wrap-n{
+	cursor:		n-resize;
+	height:		6px;
+	left:		0;
+	top:		0;
+	width:		100%;	
+}
+.window > .wrap-s{
+	cursor:		s-resize;
+	height:		6px;
+	left:		0;
+	bottom:		0;
+	width:		100%;	
+}
+.window > .wrap-e{
+	cursor:		e-resize;
+	width:		6px;
+	right:		0;
+	top:		0;	
+	height:		100%;
+}
+.window > .wrap-w{
+	cursor:		w-resize;
+	width:		6px;
+	left:		0;
+	top:		0;
+	height:		100%;
+}
+.window > .wrap-nw{
+	cursor:		nw-resize;
+	height:		5px;
+	width:		5px;
+	left:		0;
+	top:		0;
+	z-index:	101;	
+}
+.window > .wrap-ne{
+	cursor:		ne-resize;
+	height:		5px;
+	width:		5px;
+	top:		0;
+	right:		0;
+	z-index:	101;	
+}
+.window > .wrap-sw{
+	cursor:		sw-resize;
+	height:		5px;
+	width:		5px;
+	left:		0;
+	bottom:		0;
+	z-index:	101;
+}
+
+.window > .wrap-se{
+	cursor:		se-resize;
+	height:		5px;
+	width:		5px;
+	right:		0;
+	bottom:		0;
+	z-index:	101;	
+}
+/****************************************************************************************************/
+/*NoChrome window************************************************************************************/
+/****************************************************************************************************/
+.window.no-chrome > .wrap-header{
+	position:				absolute;
+	top:					0px;
+	right:					0px;
+	height:					0px;
+	background:				none;
+	z-index:				5;
+}
+
+.window.no-chrome > .wrap-header > .wrap-title{
+	display:none;
+}
+
+.window.no-chrome > .wrap-super-body{
+	padding:0px;
+}
+
+.window.no-chrome > .wrap-super-body > .drop-menu.top{
+	border:				0px;
+	padding:			0px;
+	margin:				0px;
+	border-top-width:	0px;
+	border-left-width:	0px;
+	border-right-width:	0px;
+}
+.window.no-chrome > .wrap-super-body > .wrap-body{
+	border-width:0px;
+	background:none;
+}
+.window.no-chrome > .wrap-super-body > .wrap-footer{
+	border:0px;
+}
+.window.no-chrome > .wrap-super-body > .wrap-footer > .simple-button{
+	margin:5px;	
+}
+/*********************************************************************************
+ **Win-tabcontrol*****************************************************************
+ *********************************************************************************/
+.window.no-chrome.tabcontrol > .wrap-header{
+	height:			<?php echo $Window->header->height; ?>;
+	line-height:	normal;
+	position: 		relative;
+	border-radius:	0;
+	z-index:		2;
+	cursor:			default;	
+}
+
+.window.no-chrome.tabcontrol > .wrap-header > .wrap-title{
+	display:inline-block;
+}
+
+.window.tabcontrol .panel{
+	padding:		10px;
+	overflow:		auto;
+}
+
+.window.tabcontrol > .wrap-super-body > .wrap-body{
+	overflow:hidden;	
+}
+
+.window.no-chrome.tabcontrol > .wrap-super-body > .wrap-body{
+	border-top-width:1px;
+}
+
+.window.tabcontrol > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body{
+	border:			0px;
+	padding:		0px;
+	overflow:		auto;
+}
+
+.window.tabcontrol > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body > .panel.no-padding > .widget{
+	border:0px;	
+}
+.window.tabcontrol > .wrap-super-body > .wrap-body > .tab-control,
+.window.tabcontrol > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body,
+.window.tabcontrol > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body{
+	height:100%;	
+}
+
+.window.tabcontrol > .wrap-super-body > .wrap-body > .tab-control.top,
+.window.tabcontrol > .wrap-super-body > .wrap-body > .tab-control.left{
+	border-width:	0;
+	margin:			0px;
+	border-bottom:	0px;
+}
+
+.window.tabcontrol > .wrap-super-body > .wrap-body > .tab-control.top > .wrap-super-body.border{
+	border-width:	0px;
+}
+
+.window.tabcontrol > .wrap-header,
+.window.tabcontrol > .wrap-header > .wrap-title{
+	overflow:visible;	
+}
+.window.tabcontrol > .wrap-header > .wrap-title > .wrap-header{
+	left:		0px;
+	right:		0px;
+	bottom:		0px;
+	position:	absolute;
+	top:		0px;
+}
+
+.window.tabcontrol.icon > .wrap-header > .wrap-title > .wrap-header{
+	left:30px;
+}
+
+.window.tabcontrol > .wrap-header > .wrap-title > .wrap-header > .simple-button,
+.window.tabcontrol  > .wrap-header > .wrap-title > .wrap-header > .simple-menu{
+	float:left;
+	margin-right:-1px;	
+	margin-left:0px;
+}
+
+.window.tabcontrol > .wrap-header > .wrap-title > .wrap-header > .simple-button,
+.window.tabcontrol  > .wrap-header > .wrap-title > .wrap-header > .simple-menu > .wrap-content > .wrap-body > .simple-button{
+	border-radius:0px;
+	padding:0px;
+	padding-left:8px;
+	padding-right:8px;
+	border-bottom-width:0px;
+	border-top-width:0px;
+	height:<?php echo $Window->header->height; ?>;
+}
+
+.window.tabcontrol > .wrap-header > .wrap-title > .wrap-header > .simple-button.selected,
+.window.tabcontrol  > .wrap-header > .wrap-title > .wrap-header > .simple-menu > .wrap-content > .wrap-body > .simple-button.selected{
+	padding-bottom:	1px;
+	z-index:		2;
+	box-shadow:		none;
+	border-color:	<?php echo $Window->body->border->color; ?>;
+	background:		<?php echo $Window->body->background->color; ?>;
+}
+
+.window.tabcontrol > .wrap-header > .wrap-title > .wrap-header > .simple-button.selected .wrap-text,
+.window.tabcontrol  > .wrap-header > .wrap-title > .wrap-header > .simple-menu > .wrap-content > .wrap-body > .simple-button.selected .wrap-text{
+	color:#464646;
+	text-shadow:none;
+}
+
+.window.tabcontrol > .wrap-header > .wrap-title > .wrap-header > .simple-button > .wrap-text,
+.window.tabcontrol > .wrap-header > .wrap-title > .wrap-header > .simple-menu > .wrap-content > .wrap-body > .simple-button > .wrap-text{
+	height:<?php echo $Window->header->height; ?> ;
+	line-height:<?php echo $Window->header->height; ?>;
+}
+.window.tabcontrol > .wrap-header > .wrap-title > .wrap-header > .simple-button.icon > .wrap-icon,
+.window.tabcontrol > .wrap-header > .wrap-title > .wrap-header > .simple-menu > .wrap-content > .wrap-body > .simple-button.icon > .wrap-icon{
+	width:30px;	
+}
+/****************************************************************************************************/
+/*WindowList*****************************************************************************************/
+/****************************************************************************************************/
+.wtable .wrap-body > .simpletable.theme-default .simple-table,
+.wtable .wrap-body > .wrapper > .simpletable.theme-default .simple-table{
+	border:0px;	
+}
+.wtable > .wrap-super-body > .wrap-body > .simpletable.theme-default,
+.wtable > .wrap-super-body > .wrap-body > .simpletable.theme-default > .wrap-header,
+.wtable > .wrap-super-body > .wrap-body > .simpletable.theme-default > .wrap-body{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+}
+
+.wtable > .wrap-super-body > .wrap-body > .simpletable.theme-default,
+.wtable > .wrap-super-body > .wrap-body > .simpletable.theme-default > .wrap-body{
+	bottom:0px;	
+}
+
+/** Gestion des etats de la fenêtre **/
+*:-webkit-full-screen{
+	width:100%;	
+	height:100%;	
+}
+.window.fullscreen.html5{
+	border:0px;	
+}
+
+.window.fullscreen.html5:-webkit-full-screen{
+	top:0px !important;
+	left:0px !important;	
+}
+
+.window.fullscreen,
+.window.fullscreen > .wrap-header,
+.window.fullscreen > .wrap-super-body{
+	-moz-border-radius:0px !important;	
+	-webkit-border-radius:0px !important;	
+	border-radius:0px !important;
+}
+
+body .window.hidden{
+	display:none;	
+}
+
+body.no-taskbar .window.hidden{
+	display:block;	
+	width:200px;
+}
+
+body.no-taskbar .window.hidden.tabcontrol > .wrap-header{
+	<?php echo $Window->border->toRadius(); ?>
+}
+
+body.no-taskbar .window.hidden.tabcontrol > .wrap-header, body.no-taskbar .window.hidden.tabcontrol > .wrap-header > .wrap-title{
+	overflow:hidden;	
+}
+
+body.no-taskbar .window.hidden.tabcontrol > .wrap-header > .wrap-title > .wrap-header,
+body.no-taskbar .window.hidden > .wrap-super-body{
+	display:none;
+}
+
+body.no-taskbar .window.hidden > .wrap-n, 
+body.no-taskbar .window.hidden > .wrap-s, 
+body.no-taskbar .window.hidden > .wrap-e, 
+body.no-taskbar .window.hidden > .wrap-w, 
+body.no-taskbar .window.hidden > .wrap-ne, 
+body.no-taskbar .window.hidden > .wrap-nw, 
+body.no-taskbar .window.hidden > .wrap-se, 
+body.no-taskbar .window.hidden > .wrap-sw,
+.window.fullscreen.html5 > .wrap-n, 
+.window.fullscreen.html5 > .wrap-s, 
+.window.fullscreen.html5 > .wrap-e, 
+.window.fullscreen.html5 > .wrap-w, 
+.window.fullscreen.html5 > .wrap-ne, 
+.window.fullscreen.html5 > .wrap-nw, 
+.window.fullscreen.html5 > .wrap-se, 
+.window.fullscreen.html5 > .wrap-sw{
+	display:none;	
+}

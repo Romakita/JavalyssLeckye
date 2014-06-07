@@ -1,0 +1,267 @@
+/* CSS Document */
+.icon-autodbbackup{
+	background:url(autodbbackup-16.png) no-repeat left center;	
+}
+
+.icon-autodbbackup-32{
+	background:url(autodbbackup-32.png) no-repeat left center;	
+}
+
+.icon-autodbbackup-48{
+	background:url(autodbbackup-48.png) no-repeat left center;	
+}
+
+.icon-autodbbackup-save{
+	background:url(save.png) no-repeat left center;	
+}
+
+.icon-autodbbackup-restore{
+	background:url(restore.png) no-repeat left center;	
+}
+
+.icon-autodbbackup-save-48{
+	background:url(save-48.png) no-repeat left center;	
+}
+
+.icon-autodbbackup-restore-48{
+	background:url(restore-48.png) no-repeat left center;	
+}
+
+.icon-autodbbackup-download{
+	background:url(download.png) no-repeat left center;	
+}
+
+.icon-autodbbackup-db{
+	background:url(db.png) no-repeat center;	
+}
+
+.icon-autodbbackup-db-files{
+	background:url(db-files.png) no-repeat center;	
+}
+
+.icon-autodbbackup-files{
+	background:url(files.png) no-repeat center;	
+}
+
+.simple-button.selected .icon-autodbbackup-save,
+.simple-button:hover .icon-autodbbackup-save{
+	background:url(save-black.png) no-repeat center;	
+}
+.simple-button.selected .icon-autodbbackup-restore,
+.simple-button:hover .icon-autodbbackup-restore{
+	background:url(restore-black.png) no-repeat center;	
+}
+
+/* Fenetre */
+
+.window.autodbbackup{
+	border:#484848;	
+}
+
+.panel.jpanel.autodbbackup.flat > .wrap-header{
+	background: url("../icon.png") no-repeat scroll 7px -3px #484848;
+	background:transparent;
+	height:20px;
+	
+}
+
+.panel.jpanel.flat.autodbbackup > .wrap-header > h1 {
+	color:#0084a6;
+	display:none;
+	margin-left:47px;
+}
+
+.panel.jpanel.autodbbackup.flat > .wrap-body .panel.pan-body > .wrap-header {
+   	display:none;
+}
+.panel.jpanel.flat.autodbbackup > .wrap-body,
+.panel.jpanel.flat.autodbbackup > .drop-menu,
+.panel.jpanel.autodbbackup.flat > .wrap-body .panel.pan-body > .wrap-body {
+   	top:0px;
+}
+.panel.jpanel.flat.autodbbackup > .wrap-body{
+	top:20px;
+}
+
+.panel.jpanel.autodbbackup.flat > .drop-menu{
+	background:#484848;
+}
+.panel.jpanel.autodbbackup .panel.pan-body > .wrap-header .input-button{
+	float:right;
+	margin-right:60px;
+}
+
+.panel.jpanel.autodbbackup.open .panel.pan-body > .wrap-header .input-button{
+	float:right;
+	margin-right:10px;
+}
+
+.panel.jpanel.autodbbackup > .drop-menu.left > .simple-menu {
+	margin:4px 0px;	
+}
+.panel.jpanel.autodbbackup > .drop-menu.left > .simple-menu > .wrap-content > .wrap-body > .simple-button > .wrap-icon{
+	width:42px;	
+}
+.panel.jpanel.autodbbackup > .drop-menu.left > .simple-menu > .wrap-content > .wrap-body > .simple-button{
+	margin-bottom:10px;	
+}
+.panel.jpanel.autodbbackup > .drop-menu.left > .simple-menu:hover > .wrap-content > .wrap-body > .simple-button{
+	background:white;
+}
+
+.panel.jpanel.autodbbackup > .drop-menu.left > .simple-menu > .wrap-content > .wrap-body > .simple-button.selected {
+    border-left: 4px solid #43c6e6 !important;
+}
+
+.panel.jpanel.autodbbackup.flat > .drop-menu.left > .simple-menu > .wrap-content > .wrap-body > .simple-button > .wrap-text{
+	color:white;
+	font-size:20px;
+}
+
+.panel.jpanel.autodbbackup.flat > .drop-menu.left > .simple-menu > .wrap-content > .wrap-body > .simple-button.selected > .wrap-text,
+.panel.jpanel.autodbbackup > .drop-menu.left > .simple-menu:hover > .wrap-content > .wrap-body > .simple-button > .wrap-text{
+	color:#333;
+}
+
+
+
+/* Button */
+
+.market-button.autodb-button{
+    display: 		block;
+    position: 		relative;
+    width: 			auto;
+    height: 		58px;
+    opacity: 		1;
+}
+.market-button.autodb-button.selected{
+	border:1px solid #093 !important;
+	background:white;
+}
+.market-button.autodb-button > .wrap-mask{
+	width:			48px;
+	height:			48px;
+	left:			20px;
+}
+/*.market-button.autodb-button > .wrap-text,
+.market-button.autodb-button > .wrap-subtitle{
+	margin-left:	70px;
+}*/
+.market-button.autodb-button > .btn-remove{
+	position:absolute;
+	bottom:3px;
+	margin:0px;
+	right:3px;
+}
+.market-button.autodb-button > .btn-download{
+	position:absolute;
+	bottom:3px;
+	margin:0px;
+	right:38px;
+}
+.market-button.autodb-button > .btn-download:hover,
+.market-button.autodb-button > .btn-remove:hover{
+	background:	#FC9 !important;
+}
+
+.market-button.autodb-button > .checkbox{
+	position:absolute;
+	top:50%;
+	margin-top:-6px;
+	left:3px;	
+}
+
+.market-button.autodb-button > .btn-download.simple-menu > .wrap-content > .wrap-body > .w-popup{
+	left:auto;
+	right:0px;	
+}
+
+.listbox-revision{
+	border-width:	2px;
+	overflow:		hidden; 
+	height:			360px;
+	position:		relative;
+	margin-bottom:	15px;
+}
+.listbox-revision.dragover{
+	border-style:dashed;	
+}
+.listbox-revision > .navbar{
+	position:absolute;
+	top:	0px;
+	left:	0px;
+	right:	0px;
+	background:#F0F0F0;	
+}
+
+.listbox-revision > .navbar .group-button.hide{
+	display:none !important;	
+}
+.listbox-revision > .navbar > .group-button{
+	margin-left: 3px;
+	margin-top: 3px;
+}
+.listbox-revision > .navbar > .paging > div > span > input {
+	height: 20px !important;
+	margin-top: 1px;
+	font-size: 12px;
+}
+.listbox-revision > .wrap-body{
+	position:absolute;
+	top:	30px;
+	left:	0px;
+	bottom:	35px;
+	right:	0px;
+	overflow:auto;	
+}
+.listbox-revision.upload > .wrap-body{
+	opacity:0.6;	
+}
+.jpanel .panel .listbox-revision >.frameworker,
+.listbox-revision >.frameworker{
+	position: absolute;
+	width: auto;
+	left: -1px;
+	right: -1px;
+	bottom: -1px;
+}
+.listbox-revision >.frameworker .dropfile.upload > .wrap-body {
+	width: auto;
+	margin-right: 112px;
+	overflow:hidden;
+}
+/* Splashscreen */
+
+.panel.jpanel.autodbbackup .w-flex.fullscreen.splashscreen{
+	background:none repeat scroll 0 0 #484848;
+}
+
+.panel.jpanel.autodbbackup .w-flex.fullscreen.theme-white.splashscreen > .wrap-bg{
+	background:transparent;
+	opacity:1 !important;
+}
+
+.panel.jpanel.autodbbackup .w-flex.fullscreen.infinite.theme-white.splashscreen > .wrap-mask{
+	background-image:	url(splashscreen.png);
+}
+
+.panel.jpanel.autodbbackup .w-flex.fullscreen.infinite.splashscreen > .wrap-text{
+	color:#0084a6;
+	top:320px;	
+}
+/** Backup Table */
+
+.jpanel .listbox.backup-tables{
+	height:200px;
+	width:auto;
+	border-width:2px;
+	margin-bottom:5px;	
+}
+.listbox.backup-tables .w-line{
+	float:left;
+	width:50%;	
+}
+.listbox.backup-tables .w-line > .gradient.wrap-header > .wrap-title.font{
+	font-family: Segoe UI;
+	font-size:13px;	
+}

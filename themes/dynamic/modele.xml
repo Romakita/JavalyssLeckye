@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<global author="Lenzotti Romain" name="default" version="0.1">
+<!-- CDATA[[ 
+ 
+ Global Font
+ Style de la police par défaut de la bibliothèque Window
+ 
+]]-->
+	<font>
+		<family>Arial, Helvetica, sans-serif</family>
+		<size>12px</size>>
+	</font>
+	<color>#COLOR</color>
+<!-- CDATA[[ 
+ 
+ Global Border
+ Style des bordures de fenêtre à utiliser par défaut.
+ 
+]]-->
+	<border>
+		<width>1px</width>
+		<style>solid</style>
+		<color>#BORDER_COLOR</color>
+		<!--<radius>0px</radius>-->
+	</border>
+<!-- CDATA[[ 
+ 
+ Global Background
+ Couleur de fond des fenêtres.
+ 
+]]-->
+	<background>
+		<color>#FORE_COLOR</color>
+	</background>
+<!-- CDATA[[ 
+ 
+ Global Box Shadow
+ Style des ombres des éléments.
+ 
+]]-->
+	<boxShadow>0px 0px 8px #000</boxShadow>
+<!-- CDATA[[ 
+ 
+ Global Header
+ Style des entêtes de fenêtre de Window.
+ 
+]]-->
+	<header>
+		<color>#COLOR</color>
+		<!--<text>text-shadow:0 1px 0 rgba(#TEXT_SHADOW);</text>-->
+		<background>
+			<color>#FORE_COLOR</color>
+			<image>#GRADIENT_1</image>
+			<linearGradient>
+				background-image: -ms-linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+				background-image: -moz-linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+				background-image: -o-linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+				background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FORE_COLOR), color-stop(1, #FORE_COLOR_2));
+				background-image: -webkit-linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+				background-image: linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+			</linearGradient>
+			<position>top</position>
+			<repeat>repeat-x</repeat>
+		</background>
+		<border>
+			<color>#808080</color>
+		</border>
+		
+	</header>
+<!-- CDATA[[ 
+ 
+ Global Body
+ Couleur de fond des éléments de type Body. (Corps des Fenêtres Window)
+ 
+]]-->
+	<body>
+		<background>
+			<color>#f0f0f0</color>
+		</background>
+	</body>
+<!-- CDATA[[ 
+ 
+ Global Button
+ Style générale des éléments de type Bouton.
+ 
+]]-->
+	<button>
+<!-- CDATA[[ 
+ 
+ Button Padding
+ Définissez ici la marge interne à appliquer aux boutons.
+ 
+]]-->
+		<padding>
+			<!--<left>5px</left>
+			<top>2px</top>
+			<right>5px</right>
+			<bottom>2px</bottom>-->
+		</padding>
+<!-- CDATA[[ 
+ 
+ Button Normal
+ Définissez ici le style du bouton à l'état normal.
+ 
+]]-->
+		<normal>
+			<!-- Couleur du texte -->
+			<color>#COLOR</color>
+			<!--<text>text-shadow:0 1px 0 rgba(#TEXT_SHADOW);</text>-->
+			<background>
+				<color>#FORE_COLOR</color>
+				<image>#GRADIENT_1</image>
+				<linearGradient>				
+					background-image: -ms-linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+					background-image: -moz-linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+					background-image: -o-linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+					background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FORE_COLOR), color-stop(1, #FORE_COLOR_2));
+					background-image: -webkit-linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+					background-image: linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+				</linearGradient>
+				<repeat>repeat-x</repeat>
+				<position>top</position>
+			</background>
+			<!-- Bordure arrondie -->
+			<border>
+				<radius>2px</radius>
+			</border>
+		</normal>
+<!-- CDATA[[ 
+ 
+ Button Over
+ Définissez ici le style du bouton à l'état survolé.
+ 
+]]-->
+		<over>
+			<!-- Couleur du texte -->
+			<color>#COLOR</color>
+			<!--<text>text-shadow:0 -1px 0 rgba(#TEXT_SHADOW_OVER);</text>-->
+			<background>
+				<color>#FORE_COLOR_OVER</color>
+				<image>#GRADIENT_1</image>
+				<linearGradient>
+					background-image: -ms-linear-gradient(top, #FORE_COLOR_OVER 0%, #FORE_COLOR_OVER_2 100%);
+					background-image: -moz-linear-gradient(top, #FORE_COLOR_OVER 0%, #FORE_COLOR_OVER_2 100%);
+					background-image: -o-linear-gradient(top, #FORE_COLOR_OVER 0%, #FORE_COLOR_OVER_2 100%);
+					background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FORE_COLOR_OVER), color-stop(1, #FORE_COLOR_OVER_2));
+					background-image: -webkit-linear-gradient(top, #FORE_COLOR_OVER 0%, #FORE_COLOR_OVER_2 100%);
+					background-image: linear-gradient(top, #FORE_COLOR_OVER 0%, #FORE_COLOR_OVER_2 100%);
+				</linearGradient>
+				<repeat>repeat-x</repeat>
+				<position>top</position>
+			</background>
+			
+			<border>
+				<color>#BORDER_COLOR_OVER</color>
+			</border>
+		</over>
+<!-- CDATA[[ 
+ 
+ Button Selected
+ Définissez ici le style du bouton à l'état selectionné. Par défaut l'etat séléctionné reprend le style
+ de l'état survolé.
+ 
+]]-->
+		<selected>
+				
+		</selected>
+<!-- CDATA[[ 
+ 
+ Button Submit
+ Définissez ici le style du bouton de type submit. Par défaut l'etat séléctionné reprend le style
+ de l'état normal.
+ 
+]]-->		
+		<submit>
+			<!-- Couleur du texte -->
+			<color>#COLOR</color>
+			<!--<text>text-shadow:0 1px 0 rgba(#TEXT_SHADOW);</text>-->
+			<background>
+				<color>#FORE_COLOR</color>
+				<image>#GRADIENT_1</image>
+				<linearGradient>
+					background-image: -ms-linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+					background-image: -moz-linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+					background-image: -o-linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+					background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FORE_COLOR), color-stop(1, #FORE_COLOR_2));
+					background-image: -webkit-linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+					background-image: linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+				</linearGradient>
+				<repeat>repeat-x</repeat>
+				<position>top</position>
+			</background>
+			<!-- Bordure arrondie -->
+			<border>
+				<radius>2px</radius>
+			</border>
+		</submit>
+<!-- CDATA[[ 
+ 
+ Button Large
+ Définissez ici le style du bouton Large.
+ 
+]]-->
+		<large>
+			<width>80px</width>
+			<height>70px</height>
+			
+			<padding>
+				<bottom>5px</bottom>
+				<left>5px</left>
+				<right>5px</right>
+				<top>5px</top>
+			</padding>
+			
+			<normal>
+				<color>#333</color>
+				<border>
+					<color>#CCC</color>
+					<radius>5px</radius>
+				</border>
+				<background>white</background>
+			</normal>
+			
+			<over>
+				<color>#333</color>
+				<border>
+					<color>#09F</color>
+				</border>
+				<background>white</background>
+			</over>
+			
+			<selected>
+				
+			</selected>
+		</large>
+		
+	</button>
+	
+<!-- CDATA[[ 
+ 
+ Global Table
+ Définissez ici le style des éléments de type tableau.
+ 
+]]-->
+	<table>
+<!-- CDATA[[ 
+ 
+ Table Border
+ Définissez ici le style des bordures du tableau.
+ 
+]]-->	
+		<border>
+			<collapse>collapse</collapse>
+			<color>#808080</color>
+			<!--<width>1px</width>-->
+		</border>
+<!-- CDATA[[ 
+ 
+ Table Background
+ Définissez ici le style d'arrière plan du tableau.
+ 
+]]-->	
+		<background>
+			<color>#EBEAEF</color>
+		</background>
+<!-- CDATA[[ 
+ 
+ Table Header
+ Définissez ici le style CSS pour les balises thead tr td ou thead tr th
+ 
+]]-->		
+		<header>
+		
+			<normal>
+				<!--<text>text-shadow:0px 1px white</text>-->
+				<color>#222</color>
+				<background>
+					<color>#C3C3C3</color>
+					<image>window/images/table-header-font.png</image>
+					<!--<linearGradient>center top, #D7D7D7, #E4E4E4</linearGradient>-->
+					<repeat>repeat-x</repeat>
+					<position>left top</position>
+				</background>
+				<!--<border>
+					<width>0px</width>
+				</border>-->
+			</normal>
+			
+			<over>
+				<color>white</color>
+				<background>
+					<color>#999</color>
+				</background>
+			</over>
+		
+		</header>
+<!-- CDATA[[ 
+ 
+ Table Body
+ Définissez ici le style CSS pour les balises tbody tr td ou tbody tr th
+ 
+]]-->
+		<body>
+			
+			<header>
+				<color>white</color>
+				<background>
+					<color>#999</color>
+				</background>
+				<!--<border>
+					<width>0px</width>
+				</border>-->
+			</header>
+			
+			<row>
+				<border>
+					<width>1px</width>
+					<color>tranparent</color>
+				</border>
+			</row>
+		
+		</body>
+	</table>
+<!-- CDATA[[ 
+ 
+ Global Row
+ Définissez ici le style CSS pour les éléments de type ligne de tableau ou ligne de menu contextuel.
+ 
+]]-->
+	<row>
+		<margin>
+			<bottom>2px</bottom>
+			<top>2px</top>
+		</margin>
+<!-- CDATA[[ 
+ 
+ Row Even
+ Définissez ici le style CSS d'une ligne ayant la propriété pair.
+ 
+]]-->
+		<even>
+			<color>#111</color>
+			<background>
+				<color>#D4D4D4</color>
+			</background>
+		</even>
+<!-- CDATA[[ 
+ 
+ Row Odd
+ Définissez ici le style CSS d'une ligne ayant la propriété impair.
+ 
+]]-->
+		<odd>
+			<color>#111</color>
+			<background>
+				<color>#EBEAEF</color>
+			</background>
+		</odd>
+<!-- CDATA[[ 
+ 
+ Row Outline
+ Définissez ici le style CSS des bordures d'une ligne.
+ 
+]]-->
+		<outline>
+			<left>
+				<color>#fff</color>
+			</left>
+			<right>
+				<color>#e2e3e3</color>
+			</right>
+		</outline>
+<!-- CDATA[[ 
+ 
+ Row Normal
+ Définissez ici le style CSS d'une ligne à l'état normal.
+ 
+]]-->
+		<normal>
+			<color>#111</color>
+			
+			<border>
+				<color>transparent</color>
+			</border>
+			
+			<background>
+				<color>transparent</color>
+			</background>
+		</normal>
+<!-- CDATA[[ 
+ 
+ Row Over
+ Définissez ici le style CSS d'une ligne à l'état survolé.
+ 
+]]-->		
+		<over>
+				<!-- Couleur du texte -->
+			<color>#COLOR</color>
+			<!--<text>text-shadow:0 -1px 0 rgba(TEXT_SHADOW_OVER);</text>-->
+			<background>
+				<color>#FORE_COLOR_OVER</color>
+				<image>#GRADIENT_1</image>
+				<linearGradient>
+					background-image: -ms-linear-gradient(top, #FORE_COLOR_OVER 0%, #FORE_COLOR_OVER_2 100%);
+					background-image: -moz-linear-gradient(top, #FORE_COLOR_OVER 0%, #FORE_COLOR_OVER_2 100%);
+					background-image: -o-linear-gradient(top, #FORE_COLOR_OVER 0%, #FORE_COLOR_OVER_2 100%);
+					background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FORE_COLOR_OVER), color-stop(1, #FORE_COLOR_OVER_2));
+					background-image: -webkit-linear-gradient(top, #FORE_COLOR_OVER 0%, #FORE_COLOR_OVER_2 100%);
+					background-image: linear-gradient(top, #FORE_COLOR_OVER 0%, #FORE_COLOR_OVER_2 100%);
+				</linearGradient>
+				<repeat>repeat-x</repeat>
+				<position>top</position>
+			</background>
+			
+			<border>
+			</border>
+		</over>
+<!-- CDATA[[ 
+ 
+ Row Selected
+ Définissez ici le style CSS d'une ligne à l'état séléctionné.
+ 
+]]-->		
+		<selected>
+			<color>#111</color>
+			
+			<border>
+				<color>transparent</color>
+			</border>
+			
+			<background>
+				<color>#FORE_COLOR</color>
+				<image>none</image>
+			</background>
+		</selected>
+	</row>
+<!-- CDATA[[ 
+ 
+ Global Form
+ Définissez ici le style des éléments du formulaire.
+ 
+]]-->
+	<form>
+		<input>
+			<height>18px</height>
+			<normal>
+				<border>
+					<color>#999</color>
+				</border>
+			</normal>
+			<focus>
+				<border>
+					<color>#BORDER_COLOR_OVER</color>
+				</border>
+			</focus>
+		</input>
+		<field>
+			<color>#000</color>
+			<height>18px</height>
+			<background>
+				<color>#E1DFDF</color>
+			</background>
+			<padding>3px</padding>
+		</field>
+	</form>
+<!-- CDATA[[ 
+ 
+ Global Window
+ Définissez ici le style des fenêtres.
+ 
+]]-->
+	<window>
+	
+		<padding>5px</padding>
+		<background>
+			<color>#FORE_COLOR_2</color>
+		</background>
+		<header>
+			<height>24px</height>
+			<icon>
+				<background>
+					<image>window/images/view_choose.png</image>
+				</background>
+			</icon>
+			<button>
+				<background>
+					<image>window/images/win-btn-all.png</image>
+				</background>
+			</button>
+		</header>
+		
+		<menu>
+			<height>24px</height>
+			<color>#COLOR</color>
+			<background>
+				<color>#FORE_COLOR_2</color>
+			</background>
+			
+			<rubbon>
+				<height>70px</height>
+			</rubbon>
+		</menu>
+		
+		<body>
+			
+		</body>
+		
+		<footer>
+			<mode>true</mode>
+			<pointer>
+				<image>window/images/win-pointer.png</image>
+			</pointer>
+			<margin>
+				<bottom>3px</bottom>
+				<top>3px</top>
+			</margin>
+		</footer>
+	</window>
+<!-- CDATA[[ 
+ 
+ Global TaskBar
+ Définissez ici le style CSS de la barre des tâches.
+ 
+]]-->	
+	<taskbar>
+		<color>white</color>
+		<height>41px</height>
+		
+		<background>
+			<color>#FORE_COLOR</color>
+			<image>#GRADIENT_3</image>
+			<linearGradient>
+				background-image: -ms-linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+				background-image: -moz-linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+				background-image: -o-linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+				background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FORE_COLOR), color-stop(1, #FORE_COLOR_2));
+				background-image: -webkit-linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+				background-image: linear-gradient(top, #FORE_COLOR 0%, #FORE_COLOR_2 100%);
+			</linearGradient>		
+			<position>top</position>
+			<repeat>repeat-x</repeat>
+		</background>
+		
+		<!--<border>
+			<style>solid</style>
+			<width>1px</width>
+			<color>#C6C6C6</color>
+		</border>-->
+		
+		<menu>
+			<width>160px</width>
+			<background>
+				<image>window/images/win-task-menu-icon.png</image>
+				<position>left center</position>
+			</background>		
+		</menu>
+		
+		<clock>
+			<width>109px</width>
+			<color>white</color>
+			<background>
+				<image>window/images/win-task-calendar-font.png</image>
+				<position>left center</position>
+				<color>transparent</color>
+			</background>
+		</clock>
+	</taskbar>
+<!-- CDATA[[ 
+ 
+ Global MinWin
+ Définissez ici le style CSS des miniatures de fenêtre.
+ 
+]]-->	
+	<minwin>
+		<height>40px</height>
+		<!--<width>50px</width>-->
+		<color>white</color>
+		<margin>
+			<left>1px</left>
+			<right>1px</right>
+			<!--<top>5px</top>-->
+		</margin>
+		<normal>
+			<background>
+				<image>window/images/min-win-font.png</image>
+				<color>transparent</color>
+				<repeat>repeat-x</repeat>
+				<position>top</position>
+			</background>
+			<border>
+			<!--<color>#022750</color>
+				<style>solid</style>
+				<width>1px</width>-->
+				<radius>0px</radius>
+			</border>
+		</normal>
+		<over>
+			<background>
+				<image>window/images/min-win-font-hover.png</image>
+				<!--<color>#0AF</color>-->
+				<repeat>repeat-x</repeat>
+				<position>top</position>
+			</background>
+			<!--<border>
+				<color>#022750</color>
+				<style>solid</style>
+				<width>1px</width>
+			</border>-->
+		</over>	
+	</minwin>
+<!-- CDATA[[ 
+ 
+ Global Calendar
+ Définissez ici le style CSS du composant calendrier.
+ 
+]]-->	
+	<calendar>
+		
+		<body>
+			<background>
+				<color>#FFF</color>
+			</background>
+			<color>#222</color>
+		</body>
+		
+		<day>	
+			<off>
+				<color>#999</color>
+			</off>
+			<selected>
+				<background>
+					<color>#09F</color>
+				</background>
+				<color>#FFF</color>
+			</selected>
+			<over>
+				<background>
+					<color>#333</color>
+				</background>
+				<color>#FFF</color>
+			</over>
+		</day>
+		
+		<inter>
+			<background>
+				<color>#BBB</color>
+			</background>
+			<color>#222</color>
+		</inter>
+		
+		<today>
+			<background>
+				<color>#06F</color>
+			</background>
+			<color>#FFF</color>
+		</today>
+		
+		<week>
+			<background>
+				<color>#DDD</color>
+			</background>
+			<color>#222</color>
+		</week>
+		
+		<weekend>
+			<background>
+				<color>#CCC</color>
+			</background>
+			<color>#222</color>
+		</weekend>
+			
+	</calendar>
+<!-- CDATA[[ 
+ 
+ Global ProgressBar
+ Définissez ici le style CSS du composant bar de progression.
+ 
+]]-->
+	<progress>
+<!--		<padding>
+			<top>0px</top>
+			<bottom>0px</bottom>
+			<left>0px</left>
+			<right>0px</right>
+		</padding>-->
+		<flex>
+		<!--<background>
+				<color>#6c83a1</color>
+				<image>iphone/images/btn-gradient.png</image>
+				<linearGradient>
+					background-image: -ms-linear-gradient(top, #c7d9f2 0%, #81b1f5 50%, #2d6fc6 50%, #3193e9 100%);
+					background-image: -moz-linear-gradient(top, #c7d9f2 0%, #81b1f5 50%, #2d6fc6 50%, #3193e9 100%);
+					background-image: -o-linear-gradient(top, #c7d9f2 0%, #81b1f5 50%, #2d6fc6 50%, #3193e9 100%);
+					background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c7d9f2), color-stop(0.5, #81b1f5), color-stop(0.5, #2d6fc6), color-stop(1, #3193e9)); 
+					background-image: -webkit-linear-gradient(top, #81b1f5 0%, #5A78A3 50%, #2d6fc6 50%, #3193e9 100%);
+					background-image: linear-gradient(top, #c7d9f2 0%, #81b1f5 50%, #2d6fc6 50%, #3193e9 100%);
+				</linearGradient>
+				<repeat>repeat-x</repeat>
+				<position>top</position>
+			</background>-->
+			<border>
+				<radius>5px</radius>
+			</border>
+		</flex>
+	</progress>
+</global>

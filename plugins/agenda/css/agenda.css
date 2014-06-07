@@ -1,0 +1,233 @@
+.icon-next-element{
+	background:url(arrow-right.png) no-repeat center;	
+}
+
+.icon-previous-element{
+	background:url(arrow-left.png) no-repeat center;	
+}
+
+.icon-next-2-element{
+	background:url(arrow-right-2.png) no-repeat center;	
+}
+
+.icon-previous-2-element{
+	background:url(arrow-left-2.png) no-repeat center;	
+}
+
+.icon-agenda{
+	background:url(agenda-16.png) no-repeat center;	
+}
+
+.icon-agenda-32{
+	background:url(agenda-32.png) no-repeat center;	
+}
+
+
+.icon-agenda-48{
+	background:url(agenda-48.png) no-repeat center;	
+}
+
+.icon-agenda-setting{
+	background:url(agenda-setting.png) no-repeat center;	
+}
+
+.panel.jpanel.agenda,
+.panel.jpanel.agenda .font{
+	font-family:Segoe UI, HelveticaNeue, Helvetica, Arial;
+}
+
+/* Agenda intégré au bureau */
+
+body > .panel.jpanel.agenda > .wrap-header,
+.jpanel.agenda .panel.pan-body > .wrap-header,
+.jpanel.agenda > .wrap-body > .pan-body > .wrap-body {
+	display:none;	
+}
+
+body > .panel.jpanel.agenda > .wrap-body,
+body > .panel.jpanel.menu > .drop-menu{
+	top:0;
+	background:#FAFAFA;
+}
+.jpanel.agenda .panel.pan-body > .simpletable{
+	visibility:hidden;
+	z-index:0;
+	background:white;
+}
+
+.jpanel.agenda .panel.pan-body > .schedule{
+	border: 0px none;
+	position: absolute;
+	width: auto;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index:1;
+}
+
+.jpanel.agenda.mode-listing .panel.pan-body > .simpletable{
+	visibility: visible;
+	z-index:1;
+}
+.jpanel.agenda.mode-listing .panel.pan-body > .schedule{
+	visibility:hidden;
+	z-index:0;
+}
+
+/* Top Bar */
+
+.agenda-top-bar{
+	float:left;
+	padding:8px 5px;
+}
+
+.agenda-top-bar .simple-button:hover .icon-next-element{
+	background:url(arrow-right-over.png) no-repeat center;	
+}
+.agenda-top-bar .simple-button:hover .icon-previous-element{
+	background:url(arrow-left-over.png) no-repeat center;	
+}
+
+.panel.jpanel.agenda > .wrap-header > .topbar{
+	float:left;
+	margin:15px;	
+	padding:0px;
+}
+.panel.jpanel.agenda .schedule{
+	background:#FAFAFA;
+}
+.panel.jpanel.agenda .schedule > .wrap-header{
+	background:#FAFAFA;
+	height:40px;
+}
+
+.panel.jpanel.agenda .schedule > .wrap-body{
+	background:white;
+	top:40px;	
+	border-top:1px solid #CFCFCF;
+	border-left:1px solid #CFCFCF;
+	max-height: 1007px;
+	border-bottom: 1px solid #CFCFCF;
+}
+
+.panel.jpanel.agenda > .drop-menu{
+	width:250px;
+	padding-top:11px;	
+}
+.panel.jpanel.agenda > .wrap-body{
+	left:250px;	
+}
+
+.jpanel.agenda > .drop-menu.left > .simple-menu > .wrap-content > .wrap-body > .simple-button.agendas.selected{
+	border-left:4px solid #666 !important;
+}
+
+.jpanel.agenda > .drop-menu.left > .simple-menu {
+    width: 95%;
+    margin-left: 5%;
+}
+.pc .jpanel.agenda > .drop-menu.left > .simple-menu:hover > .wrap-content > .wrap-body > .simple-button{
+	background:	#666;
+}
+
+/* Splashscreen */
+
+.panel.jpanel.agenda .w-flex.fullscreen.splashscreen{
+	background:none repeat scroll 0 0 #9f04ca;
+}
+
+.panel.jpanel.agenda .w-flex.fullscreen.theme-white.splashscreen > .wrap-bg{
+	background:transparent;
+	opacity:1 !important;
+}
+
+.panel.jpanel.agenda .w-flex.fullscreen.infinite.theme-white.splashscreen > .wrap-mask{
+	background-image:	url(splashscreen.png);
+}
+
+.panel.jpanel.agenda .w-flex.fullscreen.infinite.splashscreen > .wrap-text{
+	color:white;
+	top:320px;	
+}
+
+/* Boutton de création d'événement */
+
+.button-create-event{
+	padding-left:10px;
+	padding-right:10px;
+	margin-right:20px;
+	background:#D14836;
+ 	border-color:#C6322A;
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top, #DD4B39 0%, #D14836 100%);
+	
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #DD4B39 0%, #D14836 100%);
+	
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #DD4B39 0%, #D14836 100%);
+	
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #DD4B39), color-stop(1, #D14836));
+	
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #DD4B39 0%, #D14836 100%);
+	
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom, #DD4B39 0%, #D14836 100%);
+}
+.button-create-event > .wrap-text{
+	color:white;
+	text-shadow:0 1px rgba(0, 0, 0, 0.1);
+}
+
+.input.input-magic.icon-edit-element.input-event{
+	width:95%;
+	border-bottom:1px solid #D24726 !important;
+}
+.input.input-magic.input-event:focus{
+	border:1px solid #D24726 !important;
+}
+
+/* Calendar */
+
+.panel.jpanel.agenda > .drop-menu > .calendar{
+	border:0px;
+	margin-left:12px;
+}
+.panel.jpanel.agenda .calendar > .wrap-header > .wrap-title{
+	color:#D24726;
+}
+.panel.jpanel.agenda > .drop-menu > .calendar .calendar-body{
+	background:white;
+}
+.panel.jpanel.agenda > .drop-menu > .calendar > .wrap-header{
+	background:transparent;	
+}
+
+.panel.jpanel.agenda > .drop-menu > .calendar > .wrap-header > .simple-button{
+	background:transparent;
+	border:1px solid transparent;
+}
+.panel.jpanel.agenda > .drop-menu > .calendar > .wrap-header > .simple-button:hover{
+	background:white;	
+}
+.panel.jpanel.agenda > .drop-menu > .calendar .node-day > .tag-button{
+	font-size:7px;
+	background:#D24726;
+	line-height:12px;
+	padding:0 3px;
+}
+.pc .panel.jpanel.agenda > .drop-menu .input-button .w-popup{
+	margin-top:-1px;	
+}
+.pc .panel.jpanel.agenda > .drop-menu .input-button .w-popup > .wrap-content > ul{
+	width:221px;	
+}
+
+.schedule-event.shared .wrap-body{
+	background-image:url(event-shared.png);
+	background-repeat:no-repeat;
+	background-position:right 5px;	
+}

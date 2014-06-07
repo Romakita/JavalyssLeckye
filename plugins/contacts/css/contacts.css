@@ -1,0 +1,301 @@
+.icon-add-contact{
+	background:url(add.png) no-repeat left center;	
+}
+
+.icon-contacts{
+	background:url(contact-16.png) no-repeat left center;	
+}
+
+.icon-contact-empty{
+	background:url(contact-empty.png) no-repeat left center;	
+}
+
+.icon-contacts-48,
+.icon-contacts-32{
+	background:url(contact-48.png) no-repeat left center;	
+}
+
+.icon-import-contact{
+	background:url(import.png) no-repeat left center;	
+}
+
+.icon-export-contact{
+	background:url(export.png) no-repeat left center;	
+}
+
+.icon-phone-contact{
+	background:url(phone.png) no-repeat left center;	
+}
+
+.icon-mail-contact{
+	background:url(mail.png) no-repeat left center;	
+}
+
+.icon-search-contact{
+	background:url(search.png) no-repeat left center;	
+}
+
+.icon-map-contact{
+	background:url(maps.png) no-repeat left center;	
+}
+
+.icon-itinerary-contact{
+	background:url(itinerary.png) no-repeat left center;	
+}
+
+/* Fenetre */
+
+.window.contact{
+	border:1px solid #D6593B;	
+}
+
+.panel.jpanel.flat.contact > .wrap-header{
+	background: none repeat scroll 0 0 #D24726;
+}
+
+.panel.jpanel.contact.flat > .wrap-header > .simple-button{
+	background: none repeat scroll 0 0 #D6593B;
+}
+
+.panel.jpanel.contact.flat > .wrap-header > .simple-button:hover{
+	background: none repeat scroll 0 0 #b13213;		
+}
+
+.panel.jpanel.contact.flat > .wrap-header > .simple-button.selected{
+	background: none repeat scroll 0 0 #FFF;
+}
+
+.panel.jpanel.contact.flat > .wrap-header > .simple-button > .wrap-text{
+	color: 	white;
+}
+
+.panel.jpanel.contact.flat > .wrap-header > .simple-button.selected > .wrap-text{
+	color:	#D24726;
+}
+
+.panel.jpanel.contact > .drop-menu{
+	display:none;	
+}
+
+.panel.jpanel.contact > .wrap-body > .panel.pan-body > .wrap-body h2.letter-group {
+  	color: #D24726;
+}
+
+/* button */
+
+.panel.jpanel.contact .market-button{
+	background:white;
+	border-color:transparent;	
+}
+.panel.jpanel.contact .market-button:hover{
+	border-color:#D24726;
+}
+
+.market-button.contact-button > .wrap-mask{
+	background:url(contact.png) center;
+}
+
+.contact-button .wrap-button{
+	position:absolute;
+	right:3px;
+	bottom:0px;
+	top:auto;
+}
+
+.contact-button .wrap-button .simple-button{
+	margin-bottom:4px;
+}
+.contact-button .wrap-button .simple-button:hover{
+	background-color:	#fbe2dc !important;
+	border-radius:		0px;
+}
+
+
+/* Picture */
+
+.panel.jpanel.contact .market-button.contact-media{
+	width:96%;	
+	background:#F6F6F6;
+	border:	2px #CCC solid;
+	
+	-moz-transition-delay:400ms;
+	-moz-transition-property:height;
+	-moz-transition-timing-function: ease-in-out;
+	
+	-webkit-transition-delay:400ms;
+	-webkit-transition-property:height;
+	-webkit-transition-timing-function: ease-in-out;
+	
+	-ms-transition-delay:400ms;
+	-ms-transition-property:height;
+	-ms-transition-timing-function: ease-in-out;
+	
+	transition-delay:400ms;
+	transition-property:height;
+	transition-timing-function: ease-in-out;
+}
+
+.panel.jpanel.contact .market-button.contact-media > .wrap-mask{
+	background:url(media.png) center;
+}
+
+.market-button.contact-media .wrap-text .input{
+	width:93%
+}
+
+.market-button.contact-media > .simple-button.remove{
+	margin: 	0;
+	position: 	absolute;
+	right: 		5px;
+	top: 		5px;
+	width:		89px;
+}
+
+.market-button.contact-media .frameworker{
+	bottom: 	0;
+	left: 		90px;
+	position: 	absolute;
+	right: 		0;
+	width: 		auto !important;
+}
+.market-button.contact-media .dropfile{
+	background: none repeat scroll 0 0 transparent;
+	border: 0 none;	
+}
+.market-button.contact-media .dropfile > .wrap-title, .frameworker.click > .wrap-body > .wrap-label, 
+.market-button.contact-media .frameworker.noclick > .wrap-body > .wrap-label{
+	display:none;
+}
+
+.market-button.contact-media.have-textarea{
+	height:130px;
+}
+.market-button.contact-media.have-textarea .wrap-text .input {
+	width:75%;
+}
+.market-button.contact-media.have-textarea .frameworker {
+	left: 	auto;
+	top: 	0;
+	bottom:	auto;
+	width: 	70px;
+}
+
+
+.market-button.contact-media.have-textarea .frameworker .dropfile > .wrap-body{
+	display:none;	
+}
+
+.market-button.contact-media.have-textarea .editable-area {
+	background: none repeat scroll 0 0 transparent;
+	border: 	0 none;
+	bottom:		0;
+	top:		48px;
+	position: 	absolute;
+	right: 		0;
+	left:		90px;
+	resize:		none;
+	overflow:	auto;
+}
+.market-button.contact-media.have-textarea .editable-area.focus,
+.market-button.contact-media.have-textarea .editable-area:focus{
+	background:white;
+}
+
+.market-button.contact-media.have-textarea.focus{
+	height:300px;
+}
+
+/* Splashscreen */
+
+.panel.jpanel.contact .w-flex.fullscreen.splashscreen{
+	background:none repeat scroll 0 0 #D24726;
+}
+
+.panel.jpanel.contact .w-flex.fullscreen.theme-white.splashscreen > .wrap-bg{
+	background:transparent;
+	opacity:1 !important;
+}
+
+.panel.jpanel.contact .w-flex.fullscreen.infinite.theme-white.splashscreen > .wrap-mask{
+	background-image:	url(splashscreen.png);
+}
+
+.panel.jpanel.contact .w-flex.fullscreen.infinite.splashscreen > .wrap-text{
+	color:white;
+	top:320px;	
+}
+
+/* Tableau d'importation */
+
+.simpletable.theme-excel{
+	border:1px solid #CFCFCF;
+	background:white;
+	overflow:hidden;
+}
+
+.simpletable.theme-excel > .wrap-header {
+	background:#FCFCFC;
+}
+.simpletable.theme-excel > .wrap-header > .simple-table > thead > tr > th .wrap-title{
+	padding:0px;	
+}
+
+.simpletable.theme-excel > .wrap-header,
+.simpletable.theme-excel > .wrap-body{
+	margin-left:-1px;	
+}
+
+.simpletable.theme-excel > .wrap-header,
+.simpletable.theme-excel > .wrap-body{
+	margin-right:-1px;	
+}
+
+.simpletable.theme-excel.overflow > .wrap-header,
+.simpletable.theme-excel.overflow > .wrap-body{
+	margin-right:0px;	
+}
+
+.simpletable.theme-excel > .wrap-body .simple-table{
+	margin-top:-1px;	
+}
+.simpletable.theme-excel .simple-table{
+	border-collapse:collapse;
+}
+.simpletable.theme-excel .simple-table thead > tr > *,
+.simpletable.theme-excel .simple-table tbody > tr > *{
+	border:		1px solid #CFCFCF; 
+	padding:	2px;
+}
+.simpletable.theme-excel .simple-table thead > tr > *{
+	border-top:0px;
+	white-space: nowrap;
+	overflow:	hidden;
+}
+.simpletable.theme-excel .simple-table thead > tr > *{
+	white-space: nowrap;
+	overflow:	hidden;
+	font-size:	11px;
+	height:		20px;
+}
+
+.simpletable.theme-excel .simple-table tbody tr td input{
+	border: 	0px none;
+	height: 	20px;
+	padding:	2px;
+	font-size:	11px;
+	width: 		calc(100% - 4px);
+	font-family: Segoe UI; 
+}
+.simpletable.theme-excel .simple-table > tbody > .row-group-header > th{
+	padding:0px;
+}
+.simpletable.theme-excel .simple-table > tbody > .row-group-header > th .wrap-group-text{
+	background:#F0F0F0;
+	display:block;
+	padding:2px;
+}
+.simpletable.theme-excel .simple-table tbody .wrap-header .wrap-title .simple-button {
+	margin-top: 2px;
+	margin-right: 10px;
+	margin-left: 7px;
+}

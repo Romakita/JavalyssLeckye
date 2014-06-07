@@ -1,0 +1,80 @@
+/****************************************************************************************************/
+/*AlerBox********************************************************************************************/
+/****************************************************************************************************/
+.alertbox,
+.alertbox > .window{
+	z-index:10002;
+}
+
+.alertbox > .wrap-background{
+	position:	fixed;
+	top:		0px;
+	left:		0px;
+	width:		100%;
+	height:		100%;
+	z-index:	10001;
+	background:	#000;
+	background: rgba(0,0,0, 0.4);
+}
+
+.alertbox > .window > .wrap-super-body > .drop-menu,
+.alertbox > .window > .wrap-header > .wrap-resize,
+.alertbox > .window > .wrap-header > .wrap-hide,
+.alertbox > .window > .wrap-super-body > .wrap-point,
+.alertbox.wait > .window > .wrap-super-body > .wrap-footer{
+	display:none;
+}
+.alertbox > .window > .wrap-super-body > .wrap-body{
+	margin-bottom:	0px;
+	border-bottom: 	<?php echo $Global->window->footer->mode ? '0' : '1px'; ?>;
+}
+.alertbox > .window > .wrap-super-body > .wrap-body > .wrap-box-body{
+	padding:	10px;
+}
+
+.alertbox > .window > .wrap-super-body > .wrap-body .splite-password .right-content{
+	width:180px;
+}
+/****************************************************************************************************/
+/*AlerBox Wait***************************************************************************************/
+/****************************************************************************************************/
+
+.alertbox.wait > .wrap-background{
+	background:	#000;
+	background: rgba(0,0,0,0.2);
+}
+
+.alertbox.wait > .window.theme-default{
+	background:		#282828;
+	border:			1px solid #383838;
+}
+
+.alertbox.wait .window > .wrap-header > .wrap-close{
+	border-color:	#383838;	
+}
+
+.alertbox.wait > .window > .wrap-super-body{
+	background:		transparent;
+}
+.alertbox.wait > .window > .wrap-super-body > .wrap-body{
+	background-repeat:	no-repeat;
+	background-position:center 30px;
+	background-image:	url(window/images/loading-black.gif);
+}
+
+.alertbox.wait > .window > .wrap-super-body > .wrap-body > .wrap-box-body{
+	height:			85px;
+	position:		relative;
+}
+
+.alertbox.wait > .window > .wrap-super-body > .wrap-body .wrap-loader{
+	bottom: 		0;
+	color: 			white;
+	font-family: 	Segoe UI, HelveticaNeue, Helvetica, Arial;
+	font-size: 		16px;
+	left: 			0;
+	padding:		10px 0px;
+	position: 		absolute;
+	text-align: 	center;
+	width:			100%;
+}

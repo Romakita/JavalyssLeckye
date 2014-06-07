@@ -1,0 +1,134 @@
+/** AlertBox#Progress **/
+.alertbox.progress .window{
+	border:0px transparent solid;
+	background:url(system/images/background-process-progress.png) no-repeat right top #fcfcfc;
+	/* IE10 */ 
+	background-image: -ms-radial-gradient(left top, circle cover, #FFFFFF 0%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-radial-gradient(left top, circle cover, #FFFFFF 0%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+	/* Opera */ 
+	background-image: -o-radial-gradient(left top, circle cover, #FFFFFF 0%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(radial, left top, 0, left top, 1020, color-stop(0, #FFFFFF), color-stop(0.5, #E8E8E8), color-stop(0.5, #CDCDCD), color-stop(0.6, #CDCDCD), color-stop(0.6, #E8E8E8), color-stop(0.7, #E8E8E8), color-stop(0.70, #CFCFCF), color-stop(0.9, #CFCFCF), color-stop(0.9, #F5F5F5));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-radial-gradient(left top, circle cover, #FFFFFF 0%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+	/* Proposed W3C Markup */ 
+	background-image: radial-gradient(left top, circle cover, #FFFFFF 0%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+}
+
+.alertbox.javalyss .window{
+	background:white;
+	box-shadow:none;
+	border-radius:6px;
+	-moz-box-shadow:none;
+	-wek-box-shadow:none;
+}
+
+.alertbox.javalyss .wrap-background{
+	background:url(images/background.png) no-repeat center;
+	background-size:cover;
+	background-image: -ms-radial-gradient(left top, circle cover,  #B03E3C 20%, #FFFFFF 20%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+	background-image: -moz-radial-gradient(left top, circle cover, #B03E3C 20%, #FFFFFF 20%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+	background-image: -o-radial-gradient(left top, circle cover, #B03E3C 20%, #FFFFFF 20%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+	background-image: -webkit-gradient(radial, left top, 0, left top, 1020, color-stop(0.2, #B03E3C), color-stop(0.2, #FFFFFF), color-stop(0.5, #E8E8E8), color-stop(0.5, #CDCDCD), color-stop(0.6, #CDCDCD), color-stop(0.6, #E8E8E8), color-stop(0.7, #E8E8E8), color-stop(0.70, #CFCFCF), color-stop(0.9, #CFCFCF), color-stop(0.9, #F5F5F5));
+	background-image: -webkit-radial-gradient(left top, circle cover, #B03E3C 20%, #FFFFFF 20%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+	background-image: radial-gradient(left top, circle cover, #B03E3C 20%, #FFFFFF 20%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+}
+
+.alertbox.progress .window > .wrap-header{
+	display:none;
+}
+.alertbox.progress .window > .wrap-super-body{
+	background:transparent;
+	/*background: url(system/images/red-blur.png) repeat-x bottom center;*/
+}
+.alertbox.javalyss .window > .wrap-super-body,
+.alertbox.javalyss .window > .wrap-super-body > .wrap-body,
+.alertbox.progress .window > .wrap-super-body > .wrap-body,
+.alertbox.progress .window > .wrap-super-body > .wrap-footer{
+	background-color:transparent;	
+}
+
+.alertbox.progress .window > .wrap-super-body > .wrap-body .alertbox-corps{
+	padding:30px !important;	
+}
+
+.alertbox.javalyss .window > .wrap-super-body > .wrap-body .alertbox-corps{
+	padding:50px 85px 60px 85px !important;	
+}
+
+.alertbox.progress .window > .wrap-super-body > .wrap-footer .progress-bar{
+	position:	relative;
+}
+.alertbox.javalyss .window > .wrap-super-body > .wrap-footer .progress-bar{
+	height:		65px;
+}
+.alertbox.progress .window > .wrap-super-body > .wrap-footer .progress-bar .progress-mask{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	margin:0px;
+	border:0px;
+	padding:0px;
+	background:white;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;
+}
+
+.alertbox.progress .window > .wrap-super-body > .wrap-footer .progress-bar .progress-mask .progress-flex{
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;	
+}
+
+.alertbox.javalyss .window > .wrap-super-body > .wrap-footer .progress-bar .wrap-bg{
+	opacity: 	1 !important;
+	position: 	absolute;
+	height: 	20px;
+	left: 		155px;
+	right: 		155px;
+	bottom: 	15px;
+	z-index: 	2;
+	background:	url(system/images/progress-mask.png) repeat-x transparent; 
+}
+
+.alertbox.javalyss .window > .wrap-super-body > .wrap-footer .progress-bar .progress-mask{
+	height:		20px;
+	bottom:		15px;
+	left: 		155px;
+	right: 		155px;
+	width:		auto;
+}
+
+.alertbox.progress .window > .wrap-super-body > .wrap-footer .progress-bar .progress-text{
+	padding-bottom:15px;
+	padding-top:0px;
+}
+
+.alertbox.javalyss .window > .wrap-super-body > .wrap-footer .progress-bar .progress-text{
+	font-weight: bold;
+	font-family: "Segoe UI";
+	font-size: 15px;
+	color: rgb(72, 72, 72);
+}
+
+.loading-logo{
+	text-align:center;
+	padding:5px;	
+	position:relative;
+	background:url(system/images/software-logo.png) center top no-repeat;
+	height:70px;
+	width:250px;
+}
+
+.loading-logo div{
+	color:			#333;
+	position:		absolute;
+	top:			68px;
+	left:			5px;
+	padding:		0px;
+	font-family: 	Segoe UI, HelveticaNeue, Helvetica, Arial;
+	font-size: 		16px;
+}

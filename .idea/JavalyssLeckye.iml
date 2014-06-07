@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/doc" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/experience" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/mastercard" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/oauth" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/paypal" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/phibee" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/phibeesync" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/phpexcel" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/phpmyadmin" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/planningmaster" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/pmo" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/sqlToClass" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/tasks" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/tinymce4" />
+      <excludeFolder url="file://$MODULE_DIR$/plugins/window" />
+      <excludeFolder url="file://$MODULE_DIR$/private" />
+      <excludeFolder url="file://$MODULE_DIR$/public" />
+      <excludeFolder url="file://$MODULE_DIR$/themes/beautymeet" />
+      <excludeFolder url="file://$MODULE_DIR$/themes/flowerpower" />
+      <excludeFolder url="file://$MODULE_DIR$/themes/fpfrance" />
+      <excludeFolder url="file://$MODULE_DIR$/themes/icons" />
+      <excludeFolder url="file://$MODULE_DIR$/themes/iphone" />
+      <excludeFolder url="file://$MODULE_DIR$/themes/iphone2" />
+      <excludeFolder url="file://$MODULE_DIR$/themes/javalyss" />
+      <excludeFolder url="file://$MODULE_DIR$/themes/javalyssoriginal" />
+      <excludeFolder url="file://$MODULE_DIR$/themes/jememeuble" />
+      <excludeFolder url="file://$MODULE_DIR$/themes/jmm" />
+      <excludeFolder url="file://$MODULE_DIR$/themes/nadine" />
+      <excludeFolder url="file://$MODULE_DIR$/themes/phibee" />
+      <excludeFolder url="file://$MODULE_DIR$/themes/pmaster" />
+      <excludeFolder url="file://$MODULE_DIR$/themes/pmo" />
+      <excludeFolder url="file://$MODULE_DIR$/themes/pmo2" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
+

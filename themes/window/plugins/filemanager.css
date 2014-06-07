@@ -1,0 +1,156 @@
+/*********************************************************************************
+ **Explorer***********************************************************************
+ *********************************************************************************/
+.explorer{
+	text-align:			left;
+	border:				1px solid #999;
+	background-color:	#FFF;
+	display: 			block;
+	width:				180px;
+	height:				150px;
+	overflow:			auto;
+	/*<?php echo $Global->font; ?>
+	line-height:		<?php echo $Global->font->size; ?>;*/
+    color:				black;
+	padding-top:		5px !important;
+	padding-right:		5px !important;
+	padding-left:		0px !important;
+}
+.explorer .w-line{
+	margin-left:5px;
+	padding: 0px !important;
+	margin-top:0px;
+
+}
+.explorer .w-line .w-line{
+	margin:0px;
+	margin-left:10px;
+	margin-top:2px;	
+}
+/*********************************************************************************************************/
+/**FileManager********************************************************************************************/
+/*********************************************************************************************************/
+.window.filemanager{}
+
+.window.filemanager > .wrap-super-body > .wrap-body{
+	min-width:	860px;
+	min-height:	565px;	
+	overflow:hidden;
+}
+
+.window.filemanager > .wrap-super-body > .wrap-body > .explorer{
+	position:absolute;
+	top:			0px;
+	left:			0px;
+	bottom:			0px;
+	margin:			0px;
+	width:			224px;
+	padding-right:	0px !important;
+	height:			auto;
+	border:			0px;
+	border-right:	<?php echo $Window->border->toBorder(); ?>;
+	<?php echo $Global->body->background; ?>
+}
+
+.window.filemanager > .wrap-super-body > .wrap-body > .widget{
+	position:			absolute;
+	left:				225px;
+	top:				0px;
+	bottom:				101px;
+	right:				0px;
+	margin:				0px;
+	border:				0px;
+	width:				auto;
+	-moz-border-radius:	0px;
+	-webkit-border-radius:0px;
+	border-radius:		0px;
+}
+
+.window.tabcontrol .tab-control .panel.widgets > .widget-container > .widgets-dashboard > .widgets-box > .frameworker,
+.window.filemanager > .wrap-super-body > .wrap-body > .frameworker{
+	position:absolute;
+	right:0px;
+	width:auto;
+	height:100px;
+	background:white;
+	border:0px;
+	padding:0px;
+	margin:0px;
+	bottom:0px;
+	left:225px;	
+	border-top:	<?php echo $Window->border->toBorder(); ?>;
+}
+.window.tabcontrol .tab-control .panel.widgets > .widget-container > .widgets-dashboard > .widgets-box > .frameworker{
+	left:0px;	
+}
+
+.window.tabcontrol .tab-control .panel.widgets > .widget-container > .widgets-dashboard > .widgets-box > .frameworker.api > .table-data,
+.window.filemanager > .wrap-super-body > .wrap-body > .frameworker.api > .table-data{
+	display:none;	
+}
+.window.tabcontrol .tab-control .panel.widgets > .widget-container > .widgets-dashboard > .widgets-box > .frameworker > .dropfile,
+.window.tabcontrol .tab-control .panel.widgets > .widget-container > .widgets-dashboard > .widgets-box > .frameworker > .wrap-body,
+.window.filemanager > .wrap-super-body > .wrap-body > .frameworker > .dropfile,
+.window.filemanager > .wrap-super-body > .wrap-body > .frameworker > .wrap-body{
+	height:100px;
+	width:100%;
+	border:0px;
+	margin:0px;	
+}
+
+.window.tabcontrol .tab-control .panel.widgets > .widget-container > .widgets-dashboard > .widgets-box > .frameworker > .dropfile.upload > .wrap-body,
+.window.filemanager > .wrap-super-body > .wrap-body > .frameworker > .dropfile.upload > .wrap-body{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:155px;
+	width:auto;
+}
+
+.window.tabcontrol .tab-control .panel.widgets > .widget-container > .widgets-dashboard > .widgets-box > .frameworker > .dropfile > .wrap-body > .w-line,
+.window.filemanager > .wrap-super-body > .wrap-body > .frameworker > .dropfile > .wrap-body > .w-line{
+	float:left;
+	width:225px;
+}
+
+.window.filemanager > .wrap-super-body >  .wrap-body > .widget > .wrap-header{
+	display:none;
+}
+
+.window.filemanager > .wrap-super-body > .wrap-body >  .widget > .wrap-body{
+	overflow:			auto;
+	position:			absolute;
+	left:				0px;
+	top:				0px;
+	bottom:				0px;
+	right:				0px;
+	width:				auto;
+}
+
+.window.filemanager > .wrap-super-body{
+	padding-bottom:0px;	
+}
+.window.filemanager > .wrap-super-body > .wrap-footer{
+	border:0px;
+	border-top:<?php echo $Window->border->toBorder(); ?>;
+	<?php echo $Window->background; ?>;
+	padding:0px;
+}
+
+.window.filemanager > .wrap-super-body > div.wrap-footer .table-data{
+	margin:0px;
+}
+.window.filemanager > .wrap-super-body > div.wrap-footer > .table-data > tbody > tr > td, 
+.window.filemanager > .wrap-super-body > div.wrap-footer > .table-data > tbody > tr > th{
+	<?php echo $Window->header->font; ?>
+	<?php echo $Global->header->text; ?>
+	color:			<?php echo $Window->header->color; ?>;
+}
+
+.window.filemanager > .wrap-super-body > div.wrap-footer > .table-data > tbody > tr > td, 
+.window.filemanager .fl-info .table-data tbody tr th{
+	font-size:10px;
+	padding:2px;
+	padding-right:4px;
+	padding-left:4px;
+}

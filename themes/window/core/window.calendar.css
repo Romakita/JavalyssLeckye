@@ -1,0 +1,348 @@
+/*********************************************************************************
+ **Calendar***********************************************************************
+ *********************************************************************************/
+.calendar{
+	width:				224px;
+}
+
+.calendar > .wrap-header{
+	padding:			1px;
+	height:				22px;
+	position:			relative;
+	border-width:		0px;
+	border-bottom-width:1px;
+}
+
+.mobile .w-popup .calendar{
+	width:		518px;
+	border:		0px;	
+}
+
+.mobile .w-popup .calendar > .wrap-header{
+	height:40px;	
+}
+
+.calendar > .wrap-header .simple-button{
+	padding:	0px !important;
+	width:		20px !important;
+	height:		20px !important;
+	margin:		0px !important;
+}
+
+.mobile .w-popup .calendar > .wrap-header .simple-button{
+	padding:	5px  !important;	
+	width:		25px !important;
+	height:		25px !important;
+	margin:		2px !important;
+}
+
+.calendar > .wrap-header > .simple-button > .wrap-icon{
+	width:	100%;
+	height:	100%;
+}
+
+.calendar > .wrap-header > .simple-button.prev, 
+.calendar > .wrap-header > .simple-button.prevtwo{
+	float:	left;
+}
+.calendar > .wrap-header > .simple-button.prev{
+	left:2px;
+}
+.calendar > .wrap-header > .simple-button.next{
+	right:2px;
+}
+
+.calendar > .wrap-header > .simple-button.nexttwo, 
+.calendar > .wrap-header > .simple-button.next{
+	float:	right;
+}
+
+.calendar > .wrap-header > .wrap-title{
+	font-weight:	bold;
+	height:			22px;
+	line-height:	22px;
+	margin-left:	44px;
+	margin-right:	44px;
+	text-align:		center;
+}
+
+.mobile .w-popup .calendar > .wrap-header > .wrap-title{
+	height:			40px;
+	line-height:	40px;
+	font-size:		18px;
+	font-family:	Segoe UI, HelveticaNeue, Helvetica, Arial;
+}
+
+.calendar > .wrap-body > .wrap-grid.grid-header{
+	height:			24px;
+	text-align:		center;
+	font-weight:	bold;
+
+}
+
+.mobile .w-popup .calendar > .wrap-body > .wrap-grid.grid-header{	
+	height:			50px;
+}
+
+.calendar > .wrap-body > .wrap-grid.grid-header > .wrap-day{
+	display:		block;
+	float:			left;
+	border:			1px solid transparent;
+ 	height:			24px;
+	line-height:	24px;
+	width:			13.4%;
+	
+	<?php echo $Global->calendar->week->background; ?>
+	
+	color:			<?php echo $Global->calendar->week->color; ?>;
+}
+.webkit .calendar > .wrap-body > .wrap-grid.grid-header > .wrap-day{
+	width:			13.39%;
+}
+
+.mobile .w-popup .calendar > .wrap-body > .wrap-grid.grid-header > .wrap-day{
+	width:			60px;	
+	height:			40px;
+	line-height:	40px;
+	margin:			5px;
+	background:		#383838;
+	border:			2px solid #383838;
+	color:			white;
+	font-size:		18px;
+	font-family:	Segoe UI, HelveticaNeue, Helvetica, Arial;
+}
+
+.calendar > .wrap-body > .wrap-grid.grid-header > .wrap-day.weekend{
+	<?php echo $Global->calendar->inter->background; ?>;
+	color:		<?php echo $Global->calendar->inter->color; ?>;
+}
+
+.mobile .w-popup .calendar > .wrap-body > .wrap-grid.grid-header > .wrap-day.weekend{
+	background:		#484848;
+	border:			2px solid #484848;
+}
+
+.calendar > .wrap-body > .wrap-grid.grid-body{
+	text-align:		center;
+}
+
+.calendar > .wrap-footer{
+	height:		20px;
+	text-align:	center;
+	font-weight:bold;
+}
+
+.pc .calendar > .wrap-footer .simple-button{
+	border-top:		none;
+	border-bottom:	none;
+	background:		none;
+	height:			20px;
+	margin:			0px;
+	width:			24px;
+	padding:		0px;
+}
+
+.calendar > .wrap-footer .simple-button > .wrap-icon {
+	width:			24px;
+	height:			19px;	
+}
+.pc .calendar > .wrap-footer .simple-button:hover{
+	<?php echo $Global->button->over->background; ?>
+}
+.calendar > .wrap-footer .table-data{
+	border-collapse: collapse;	
+	margin:auto;
+	height:20px;
+}
+
+.calendar > .wrap-footer .table-data .wrap-text{
+	display:inline-block;
+	font-weight:bold;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	width:20px;
+	margin:0px;
+	background: 	white;
+	color:			#222;
+}
+
+.calendar > .wrap-footer .table-data .wrap-hours{
+	border-left:	1px solid <?php echo $Global->border->color; ?>;
+	padding-left:	3px;
+	-moz-border-radius:10px 0px 0px 10px;
+	-webkit-border-radius:10px 0px 0px 10px;
+	border-radius:10px 0px 0px 10px;
+}
+.calendar > .wrap-footer .table-data .wrap-min{
+	border-right:	1px solid <?php echo $Global->border->color; ?>;
+	padding-left:	3px;
+	-moz-border-radius:0px 10px 10px 0px;
+	-webkit-border-radius:0px 10px 10px 0px;
+	border-radius:0px 10px 10px 0px;
+}
+.calendar > .wrap-footer .table-data .wrap-db-dot{
+	width:10px;
+}
+.calendar > .wrap-footer .table-data tbody td{
+	padding:0px !important;	
+	line-height:0px;
+	height:20px;
+}
+.calendar > .wrap-footer .simple-button.uphours, 
+.calendar > .wrap-footer .simple-button.upmin{
+	border:0px;
+}
+.calendar > .wrap-footer .simple-button.downhours, 
+.calendar > .wrap-footer .simple-button.downmin{
+	border:0px;	
+}
+/*********************************************************************************
+ **NodeDay************************************************************************
+ *********************************************************************************/
+.node-day, .node-day.disabled{
+	position:		relative;
+	float:			left;
+	display:		block;
+ 	height:			22px;
+	line-height:	22px;
+	font-size:		11px;
+	width:			13.40%;
+	border:			1px solid transparent;
+	color:			<?php echo $Global->color; ?>;
+}
+
+.webkit .node-day, .webkit .node-day.disabled{
+	width:			13.39%;
+}
+
+
+.mobile .w-popup .node-day, .mobile .w-popup .node-day.disabled{
+ 	height:			50px;
+	line-height:	50px;
+	width:			60px;
+	margin:			5px;
+	border:			2px solid #383838;
+	font-size:		18px;
+	font-family:	Segoe UI, HelveticaNeue, Helvetica, Arial;
+	color:			white;
+}
+
+.node-day.weekend{
+	<?php echo $Global->calendar->weekend->background; ?>
+	color:		<?php echo $Global->calendar->weekend->color; ?>;
+}
+
+.mobile .w-popup .node-day.weekend{
+	<?php echo $Global->calendar->weekend->background; ?>
+	border-color:		<?php echo $Global->calendar->weekend->background->color; ?>;
+	color:		<?php echo $Global->calendar->weekend->color; ?>;	
+}
+
+.node-day.off,
+.mobile .w-popup .node-day.weekend.off{
+	color: <?php echo $Global->calendar->day->off->color; ?> !important;	
+}
+
+.mobile .w-popup .node-day.off{
+	color: #383838 !important;	
+}
+
+.node-day.now{
+	border: 		<?php echo $Global->calendar->today->background->color; ?> 1px solid;
+	font-weight:	bold;
+}
+
+.node-day.current{
+	<?php echo $Global->calendar->day->selected->background; ?>
+	color:			<?php echo $Global->calendar->day->selected->color; ?> !important;
+	font-weight:	bold;
+}
+
+.pc .node-day:hover{
+	border:					<?php echo $Global->calendar->day->over->background->color; ?> 1px solid;
+	background-color:		<?php echo $Global->calendar->day->over->background->color; ?>;
+	color:					<?php echo $Global->calendar->day->over->color; ?> !important;
+	cursor:					pointer;
+}
+
+.tagged{
+	background-image: 		url(window/images/left.png);
+	background-repeat:		no-repeat;
+	background-position: 	left bottom;	
+}
+
+.node-day > .tag-button{
+	border: 				0 none;
+    bottom: 				0;
+    margin: 				0;
+    right: 					-2px;
+    top: 					auto;
+    z-index: 				2;
+	-moz-box-shadow:		none;
+	-webkit-box-shadow:		none;
+	box-shadow:				none;
+}
+
+.node-day > .bartag{
+	position:	absolute;
+	bottom:		-1px;
+	left:		-1px;
+	height:		3px;
+	width:		100%;
+	background-color:	#666;
+	display:	none;
+	padding-left:1px;
+	padding-right:1px;
+	z-index:1;
+}	
+.node-day > .bartag .dottag{
+	position:				absolute;
+	width:					7px;
+	height:					7px;
+	background-color:		#444;
+	top:					-2px;
+	-moz-border-radius:		5px;
+	-webkit-border-radius:	5px;
+	border-radius:			5px;
+	display:				none;
+}
+
+.tagged-left > .bartag, 
+.tagged-middle > .bartag, 
+.tagged-right > .bartag{
+	display:block;
+}
+.tagged-left > .bartag .dottag{
+	display:block;
+	left:0px;
+}
+.tagged-right > .bartag .dottag{
+	display:block;
+	right:0px;
+}
+/*********************************************************************************
+ **ClockCalendar******************************************************************
+ *********************************************************************************/
+.clock-calendar{
+	position:		relative;
+	padding:		0px;
+	margin:			0;
+	line-height:	14px;
+	display:		inline-block;
+	height:			20px;
+	cursor:			pointer;
+}
+.clock-calendar > .wrap-hours, 
+.clock-calendar > .wrap-date{	
+	display:		inline-block;
+	height:			20px;
+	line-height:	20px;
+}
+/*********************************************************************************
+ **MenuCalendar*******************************************************************
+ *********************************************************************************/
+.menu-calendar > .wrap-content > .wrap-body .wrap-menu {
+	padding:0px !important;
+	border:0px !important;
+}

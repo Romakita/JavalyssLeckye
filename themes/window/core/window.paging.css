@@ -1,0 +1,40 @@
+/*********************************************************************************
+ **Paging*************************************************************************
+ *********************************************************************************/
+.paging{
+	display:		inline-block;
+	padding:		0px;
+	margin:			0px;
+	margin-left:	3px;
+	margin-right:	3px;
+	line-height:	0px;
+	height:			18px;
+}
+.paging > div{
+	line-height:0;
+	height:0;
+}
+
+.paging > div > label,
+.paging > div > span{
+	display:inline-block;
+	margin:0;
+	padding:0;
+	line-height:18px;
+}
+
+.paging > div > span{
+	padding:0px !important;
+	background:none !important;
+}
+
+.paging > div > span > input{
+	width:		30px !important;
+	height:		16px !important;
+	margin-left:2px !important;
+	margin-right:3px !important;
+	padding:	0px !important;
+	text-align:right;
+}
+
+

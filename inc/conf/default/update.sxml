@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Mise à jour de Javalyss Leckye
+-->
+<sql>
+	<query>
+		TRY ALTER TABLE [[User::TABLE_NAME]] CHANGE `Login` `Login` VARCHAR( 50 ) CHARACTER SET utf8 NOT NULL;
+	</query>
+	
+	<query>
+		TRY ALTER TABLE [[User::TABLE_NAME]] ADD `Avatar` VARCHAR( 255 ) NOT NULL AFTER `Mobile`;
+	</query>
+	
+	<query>
+		TRY ALTER TABLE [[Role::TABLE_NAME]] CHANGE `Role_Parent` `Parent_ID` tinyint(2) NOT NULL DEFAULT '3';
+	</query>
+	
+	<query>
+		TRY ALTER TABLE [[Role::TABLE_NAME]] CHANGE `Role_Titre` `Name` varchar(100) NOT NULL;
+	</query>
+	
+	<query>
+		TRY ALTER TABLE [[Role::TABLE_NAME]] CHANGE `Role_Commentaire` `Description` text NOT NULL;
+	</query>
+	
+	<query>
+		TRY ALTER TABLE [[Role::TABLE_NAME]] ADD `Is_Active` TINYINT( 1 ) NOT NULL DEFAULT '1' AFTER `Description`;
+	</query>
+	
+	<query>
+		TRY RENAME TABLE `#PRE_TABLEutilisateurs` TO [[User::TABLE_NAME]];
+	</query>
+	
+	<query>
+		TRY ALTER TABLE [[User::TABLE_NAME]] CHANGE `Civilite` `Civility` VARCHAR( 5 ) NOT NULL ,
+		CHANGE `Nom` `Name` VARCHAR( 100 ) NOT NULL ,
+		CHANGE `Prenom` `FirstName` VARCHAR( 100 ) NOT NULL ,
+		CHANGE `Tel` `Phone` VARCHAR( 20 ) NOT NULL ,
+		CHANGE `User_Meta` `Meta` TEXT NOT NULL
+	</query>
+	
+	<query>
+		TRY ALTER TABLE [[User::TABLE_NAME]] ADD `Address` VARCHAR( 255 ) NULL DEFAULT '' AFTER `Mobile`,
+		ADD `CP` VARCHAR( 5 ) NULL DEFAULT '' AFTER `Address` ,
+		ADD `City` VARCHAR( 100 ) NULL DEFAULT '' AFTER `CP` ,
+		ADD `Country` VARCHAR( 100 ) NULL DEFAULT '' AFTER `City`;
+	</query>
+	
+	<query>
+		TRY UPDATE [[System::TABLE_NAME]] SET Meta_Key = "LINK_MARKET" WHERE Meta_Key = "LINK_UPDATE_REFERER";
+	</query>
+</sql>

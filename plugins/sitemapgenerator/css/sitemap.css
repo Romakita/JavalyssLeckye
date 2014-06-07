@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+.icon-sitemap-generator{
+	background-image:url(sitemap-generator-16.png);
+	background-repeat:no-repeat;	
+}
+.icon-sitemapgenerator-32{
+	background-image:url(sitemap-generator-48.png);
+	background-repeat:no-repeat;	
+}
+.icon-sitemap-generator-48{
+	background-image:url(sitemap-generator-48.png);
+	background-repeat:no-repeat;	
+}

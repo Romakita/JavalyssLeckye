@@ -1,0 +1,303 @@
+/** Schedule **/
+
+.schedule{
+	background:		white;
+	min-height:		590px;
+	min-width:		798px;
+	width:			798px;
+	border:			1px solid #CFCFCF;
+	overflow:		hidden;
+	position:		relative;
+}
+
+.schedule > .wrap-header{
+	position:		relative;
+	z-index:		1;
+	height: 		70px;
+	background:		url(gray-grad.png) repeat-x #dfdfdf;
+}
+.schedule > .wrap-header > .topbar{
+	background:transparent;
+	padding:3px;
+	height:24px;
+}
+.schedule > .wrap-header > .topbar > .group-button{
+	margin-right:10px;	
+}
+
+.schedule > .wrap-header > .topbar > .group-button.right{
+	margin-left:10px;
+	margin-right:0px;
+	right:0px;
+	float:right;
+}
+
+.schedule > .wrap-header > .table-header{
+	height: 			40px;
+	table-layout:		fixed;	
+	width:				100%;
+	 border-collapse:	collapse;
+	 overflow:			hidden !important;
+	 -moz-user-select:	none;
+	-webkit-user-select:none;
+	user-select:		none;
+	color:			#464646;
+	text-shadow:	0 1px 0 #FFFFFF;
+}
+
+.schedule > .wrap-header > .table-header .wrap-empty,
+.schedule > .wrap-body .table-body .wrap-empty{
+	padding:				0px;
+	line-height:			0px;
+	width:					60px;
+}
+.schedule > .wrap-header > .table-header .wrap-empty{
+	width:					59px;
+	background:				transparent;	
+}
+
+.schedule > .wrap-header > .table-header .cel-offset-scroll{
+	width:17px;	
+}
+
+.schedule > .wrap-header > .table-header .cols{
+	text-align:				center;
+	overflow:				hidden;
+	font-size:				10px;
+	word-spacing:			normal;
+	border-left:			1px solid transparent;
+	/*border:					1px solid #DDD;*/
+}
+.schedule > .wrap-header > .table-header .cols .day{
+	color: #555555;
+    font-weight: normal;
+}
+
+.schedule > .wrap-header > .table-header .cols.today{
+	background:#F1F1FF;
+}
+
+.schedule > .wrap-body{
+	z-index:		0;
+	position:		absolute;
+	top:			70px;
+	left:			0px;
+	right:			0px;
+	bottom:			0px;
+	
+	line-height:	normal;
+	
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	user-select:	none;
+	overflow-x: 	hidden;
+    overflow-y: 	scroll;
+}
+
+.schedule > .wrap-body .table-body{
+	border-collapse:	collapse !important;
+    margin-top:			-1px;
+	table-layout:		fixed;
+    width:				100%;
+}
+
+.schedule > .wrap-body .table-body .wrap-empty{
+	height:				0px !important;
+    padding:			0px !important;
+}
+
+.schedule > .wrap-body .table-body .wrap-content{
+	position:	relative;
+	padding:	0px !important;
+}
+
+.schedule > .wrap-body .table-body .wrap-times{
+	vertical-align:top;	
+}
+
+.schedule > .wrap-body .table-body .wrap-content .wrap-mask{
+	position:	relative;
+	height:		1px;
+    top:		0px;
+    left:		0px;
+    width:		100%;
+	margin:		0 !important;
+	padding:	0 !important;
+}
+
+.schedule > .wrap-body .table-body .wrap-content .wrap-mask .wrap-markers-times{
+	position:	absolute;
+	width:		100%;
+    top:		1px;
+	border:		0px !important;
+	margin:		0 !important;
+	padding:	0 !important;
+}
+
+.schedule > .wrap-body .table-body .wrap-content .wrap-mask .wrap-chips{
+	position:	absolute;
+	width:		100%;
+    top:		1px;
+	z-index:	1;
+	border:		0px !important;
+	margin:		0 !important;
+	padding:	0 !important;
+}
+
+.schedule > .wrap-body .table-body .wrap-content .wrap-mask .wrap-markers-times .rows,
+.schedule > .wrap-body .table-body .wrap-times .rows{
+	position:			relative;
+    height:				41px;
+	border-top:			0px !important;
+    border-bottom:		1px solid #CFCFCF;
+    width:				100%;
+	margin:				0 !important;
+	padding:			0 !important;
+	overflow:			hidden;
+}
+
+.schedule > .wrap-body .table-body .wrap-content .wrap-mask .wrap-markers-times .rows.off{
+	background:rgba(200, 200, 200, 0.2);
+}
+
+.schedule > .wrap-body .table-body .wrap-content .wrap-mask .wrap-markers-times .rows:last-child,
+.schedule > .wrap-body .table-body .wrap-times .rows:last-child{
+	border-bottom:0px;	
+}
+
+.schedule > .wrap-body .table-body .wrap-content .wrap-mask .wrap-markers-times .rows .middle-row{
+	height:20px;
+	margin-bottom:20px;
+	border-bottom: 1px dotted #CFCFCF;
+}
+
+.schedule > .wrap-body .table-body .wrap-times .rows .time{
+	color: #555555;
+    text-align: right;
+	padding:2px;
+}
+
+.schedule > .wrap-body .table-body .cols{
+	border-left: 1px solid #CFCFCF;
+	vertical-align:top;
+}
+
+.schedule > .wrap-body .table-body .cols.off{
+	background:#EFEFEF;
+}
+
+.schedule > .wrap-body .table-body .cols.today{
+	background: #F1F1FF;
+}
+.schedule > .wrap-body .table-body .cols .wrap-date-marker{
+	position:relative;	
+}
+.schedule > .wrap-body .table-body .cols .date-marker{
+	position:absolute;
+	width:100%;
+	left:0px;
+	border-top:2px solid #FF7F6E;
+	margin-top:-1px;
+}
+
+.schedule > .wrap-body .table-body .wrap-times .wrap-arrow-marker{
+	position:relative;	
+}
+.schedule > .wrap-body .table-body .wrap-times .arrow-marker{
+	position:absolute;
+	width:100%;
+	left:0px;
+	height:11px;
+	width:5px;
+	margin-top:-5.5px;
+	background:url(window/images/flag-red-right.png) no-repeat white right center;
+	z-index:1;
+}
+
+/** Event **/
+
+.schedule-event{
+	border:1px solid black;
+	background:white;
+	height:10px;
+	width:50px;
+	position:absolute;
+	top:0px;
+	overflow:hidden;
+	left:0px;
+	cursor:pointer;
+}
+
+.schedule-event > .wrap-header{
+	position:absolute;
+	height:4px;
+	width:100%;
+	top:0;
+	left:0px;
+	cursor:ns-resize;
+}
+.schedule-event > .wrap-body{
+	padding:5px;	
+}
+
+.schedule-event > .wrap-footer{
+	position:absolute;
+	height:4px;
+	width:100%;
+	bottom:0;
+	left:0px;	
+	cursor:ns-resize;
+}
+
+.schedule-event.lock-header > .wrap-header{
+	background:	url(window/images/1up-mini.png) no-repeat center !important;
+	height:10px;
+	cursor:default;
+}
+
+.schedule-event.locked > .wrap-header,
+.schedule-event.locked > .wrap-footer{
+	display:none;
+}
+
+.schedule-event.lock-header > .wrap-body{
+	padding-top:10px;	
+}
+.schedule-event.lock-footer > .wrap-footer{
+	background:	url(window/images/1down-mini.png) no-repeat center !important;
+	height:10px;
+	cursor:default;
+}
+
+.schedule-event.restore {
+	-moz-transition: 				left, top, width, height;
+	-moz-transition-duration:		400ms;
+	-moz-transition-function:		ease;	
+	-webkit-transition: 			left, top, width, height;
+	-webkit-transition-duration:	400ms;
+	-webkit-transition-function:	ease;	
+	-o-transition: 					left, top, width, height;
+	-o-transition-duration:			400ms;
+	-o-transition-function:			ease;	
+	-webkit-transition: 			left, top, width, height;
+	-webkit-transition-duration:	400ms;
+	-webkit-transition-function:	ease;	
+}
+
+.schedule-marker{
+	display:	block;
+	cursor:		pointer;
+	position:	absolute;
+	z-index:	1;
+	height:		32px;
+	width:		32px;
+	background:	url(window/images/marker.png) no-repeat center right;
+}
+
+.schedule-marker .wrap-body{
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	right: 2px;
+	top: 7px;
+}

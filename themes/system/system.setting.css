@@ -1,0 +1,199 @@
+/* CSS Document */
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control.top{
+	min-width: 	500px;
+	margin:		5px;
+}
+.window.tabcontrol.setting > .wrap-super-body > .wrap-body > .tab-control.top,
+.window.tabcontrol.setting > .wrap-super-body > .wrap-body > .tab-control.left{
+	border-width:	0;
+	margin:			0px;
+	border-bottom:	0px;
+}
+
+
+.window.setting.theme-default > .wrap-super-body > .wrap-body > .tab-control.top > .wrap-header > .button.selected{
+	background:		#EFEFEF;
+}
+.window.setting.theme-default > .wrap-super-body > .wrap-body > .tab-control.top > .wrap-header .button.selected > .font{
+	text-shadow: 	0 1px 0 #FFFFFF;
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body .splite{
+	max-width:		500px;
+}
+
+.window.setting .panel > h2{
+	color:			#06F;
+	font-size: 		16px;
+	line-height:	30px;
+	padding-left:	30px;
+}
+
+.window.tabcontrol.setting > .wrap-header > .wrap-title > .wrap-header > .simple-button.selected,
+.window.tabcontrol.setting > .wrap-header > .wrap-title > .wrap-header > .simple-menu > .wrap-content > .wrap-body > .simple-button.selected{
+	background:		#EFEFEF;
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data{
+	margin:			5px;
+	margin-bottom:	10px;
+	margin-left:	10px;	
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data > tbody > tr > th{
+	width:					100px;
+	padding-left:			30px;	
+	color:					#222;
+	background-repeat:		no-repeat; 
+	background-position:	5px center;	
+	text-align:				left;
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .ifield{
+	background-repeat:		no-repeat; 
+	background-position:	5px center;	
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ{
+	background:				transparent;
+	width:					230px;
+	padding:				0px;
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ p{
+	width:				246px;	
+	margin:				2px 0px;
+	padding:			5px;
+	background:			#F6F6F6;
+}
+
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .icon-cell-edit{
+	background-image:none;	
+}
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .input,
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr input[type=text], 
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr input[type=password]{
+	width:			250px;
+	border-radius:	0px;
+	color: 			#666666;
+	font-family: 	Segoe WP,"Segoe UI","Calibri","Helvetica Neue",Tahoma,Arial;
+	font-size: 		16px;
+	height: 		24px;
+	line-height: 	24px;
+	padding: 		1px 2px 2px;
+	margin:			2px 0px;
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .input.listbox{
+	width:			244px;
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .frameworker{
+	width:			256px;
+	margin:			2px 0;
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .area-input{
+	border-radius:0px;	
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .dropfile,
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .frameworker > .wrap-body {
+  	height: 		28px;
+}
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .dropfile.multiple{
+	height:		200px;
+}
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .dropfile {
+	border-radius:	 0 0 0 0;
+	margin: 		0;
+}
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .dropfile.upload > .wrap-body{
+	width:176px
+}
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .dropfile > .wrap-body > .w-line > .wrap-header{
+	height:			24px;
+}
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .dropfile > .wrap-body > .w-line > .wrap-header > .wrap-title{
+	font-size:		13px;
+	height:			18px;
+	line-height:	16px;
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .dropfile.nomultiple > .wrap-body > .w-line{
+	margin:		1px;	
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .dropfile > .wrap-title, 
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .frameworker.click > .wrap-body > .wrap-label, 
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .frameworker.noclick > .wrap-body > .wrap-label{
+	font-size: 		11pt;
+	font-weight: 	normal;
+	height: 		28px;
+	line-height: 	28px;
+	margin: 		0;
+	top: 			0;
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .dropfile > .simple-button {
+	margin-top: 0px;
+	padding: 	1px;
+	right: 		3px;
+	top: 		3px;
+	width: 		68px;
+	margin:		0px;
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr textarea{
+	width: 			244px;
+	padding:		5px;
+	margin:			2px 0px;
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .input.input-button{
+	padding: 		0;
+	height: 		27px;
+	width:			254px;
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .input.input-button > .wrap-input{
+	height: 		27px;
+}
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .input.input-button > .wrap-input > .input{
+	margin:			0px;	
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .input.datetime > .wrap-input {
+    margin-right: 120px;
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .input.datetime > .button {
+  right: 93px;
+}
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .input.datetime > .wrap-text {
+  line-height: 26px;
+  right: 72px;
+}
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .input.input-button > .input-button{
+	width:			70px;
+	margin:			0px;	
+}
+
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .input.input-button > .simple-button {
+	border-radius: 0 0 0 0;
+	border-width: 1px;
+	height: 19px !important;
+	margin: 3px 3px 0 0 !important;
+	width: 19px !important;
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > .splite{
+	margin-bottom:15px;	
+}
+
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > .simple-button.icon > .wrap-icon{
+	width:30px;
+}

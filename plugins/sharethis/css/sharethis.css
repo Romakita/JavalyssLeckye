@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+
+.sharebar{
+	margin-top:20px;
+	margin-bottom:20px;	
+}
+
+.sharebar .share-button{
+	float:left;
+	width:auto;
+	margin:5px;
+}
+
+.sharebar .clearfloat{
+	height:0px;
+	line-height:0px;
+	clear:both;	
+}

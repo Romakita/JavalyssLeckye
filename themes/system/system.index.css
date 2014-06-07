@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+body{
+	background:url(images/background.png) no-repeat center;
+	background-size:cover;
+	background-image: -ms-radial-gradient(left top, circle cover,  #B03E3C 20%, #FFFFFF 20%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+	background-image: -moz-radial-gradient(left top, circle cover, #B03E3C 20%, #FFFFFF 20%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+	background-image: -o-radial-gradient(left top, circle cover, #B03E3C 20%, #FFFFFF 20%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+	background-image: -webkit-gradient(radial, left top, 0, left top, 1020, color-stop(0.2, #B03E3C), color-stop(0.2, #FFFFFF), color-stop(0.5, #E8E8E8), color-stop(0.5, #CDCDCD), color-stop(0.6, #CDCDCD), color-stop(0.6, #E8E8E8), color-stop(0.7, #E8E8E8), color-stop(0.70, #CFCFCF), color-stop(0.9, #CFCFCF), color-stop(0.9, #F5F5F5));
+	background-image: -webkit-radial-gradient(left top, circle cover, #B03E3C 20%, #FFFFFF 20%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+	background-image: radial-gradient(left top, circle cover, #B03E3C 20%, #FFFFFF 20%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+}
+
+body .content{
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	box-shadow:		none;
+	border:			#CFCFCF 1px solid;
+	background:		url(images/background-radial-grey.png) no-repeat center;
+	background-size:cover;
+	
+	background-image: -ms-radial-gradient(left top, circle cover, #FFFFFF 0%, #E8E8E8 50%);
+	background-image: -moz-radial-gradient(left top, circle cover, #FFFFFF 0%, #E8E8E8 50%);
+	background-image: -o-radial-gradient(left top, circle cover, #FFFFFF 0%, #E8E8E8 50%);
+	background-image: -webkit-gradient(radial, left top, 0, left top, 1020, color-stop(0, #FFFFFF), color-stop(0.5, #E8E8E8));
+	background-image: -webkit-radial-gradient(left top, circle cover, #FFFFFF 0%, #E8E8E8 50%);
+	background-image: radial-gradient(left top, circle cover, #FFFFFF 0%, #E8E8E8 50%);
+	padding:	0px;
+	position:	fixed;
+	width:		440px;
+	height:		240px;
+	left:		50%;
+	top:		50%;
+	margin-left:-220px;
+	margin-top:	-160px;
+}
+
+body .content .form-connector{
+	width:		400px;
+	height:		200px;
+	display:	block;
+	margin:0px;
+	padding:20px;
+	background:url(images/my-user.png) right bottom no-repeat;
+}
+
+body .content h1{
+	color:#006699;
+	margin-top:2px;
+	margin-bottom:20px;
+}
+
+body .content input[type=text],
+body .content input[type=password]{
+	border-radius: 	0 0 0 0;
+    color: 			#666;
+    font-size: 		15px;
+    height: 		32px;
+    padding-left: 	3px;
+    padding-right: 	3px;
+    width: 			200px;
+	font-family: 	"Segoe UI", "Calibri", "Helvetica Neue", Arial;
+}
+body .content .table-data{
+	margin-left:20px;
+}
+
+body .content .table-data > tbody > tr > th{
+	font-family:"Segoe UI", "Calibri", "Helvetica Neue", Arial;
+	color:#666666;
+	line-height:38px;
+	font-size:18px
+}
+body .content .table-data > tbody > tr > th .double-dot{
+	display:none;	
+}
+
+body .content .table-data tbody tr .champ{
+	background-color:transparent;	
+}
+body .content .button{
+	display:		inline-block;
+	margin:			10px 7px;
+	position:		relative;
+	cursor:			pointer;
+	line-height:	0;
+	text-align:		left;
+	position:		relative;
+	/**Dynamique**/
+	background-position:top;
+	background-color:#D7D7D7;
+	background-repeat:repeat-x;
+	background-image: -ms-linear-gradient(top, #E4E4E4 0%, #D7D7D7 100%);
+	background-image: -moz-linear-gradient(top, #E4E4E4 0%, #D7D7D7 100%); 
+	background-image: -o-linear-gradient(top, #E4E4E4 0%, #D7D7D7 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E4E4E4), color-stop(1, #D7D7D7));
+	background-image: -webkit-linear-gradient(top, #E4E4E4 0%, #D7D7D7 100%);
+	background-image: linear-gradient(top, #E4E4E4 0%, #D7D7D7 100%);	font-family: Arial, Helvetica, sans-serif;
+	font-size: 		12px;
+	border: 		1px solid #C6C6C6;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	user-select:none;
+}
+body .content .button input{
+	padding:5px 10px;
+	padding-left:22px;
+}
+
+body .content .button:hover{
+	background-position:top;
+	background-color:#852c29;
+	background-repeat:repeat-x;
+	background-image: -ms-linear-gradient(top, #B03E3C 0%, #852C29 100%);
+	background-image: -moz-linear-gradient(top, #B03E3C 0%, #852C29 100%);
+	background-image: -o-linear-gradient(top, #B03E3C 0%, #852C29 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #B03E3C), color-stop(1, #852C29));
+	background-image: -webkit-linear-gradient(top, #B03E3C 0%, #852C29 100%);
+	background-image: linear-gradient(top, #B03E3C 0%, #852C29 100%);	border: 1px solid #660000;
+}
+body .content .button > *{
+	color: 			#333;
+	font-family: 	Arial, Helvetica, sans-serif;
+	font-size: 		12px;
+	text-shadow:	0 -1px 0 rgb(255, 255, 255);
+}
+
+body .content .button:hover > *{
+	color:		white;
+	text-shadow:0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+body .content .button a{
+	padding:4.5px 10px;
+	display:block;
+	padding-left:22px;
+}
+
+body .content .form-foot{
+	position:absolute;
+	text-align:center;
+	left:0px;
+	bottom:0px;
+	background:rgba(255, 255, 255, 0.5);
+	width:100%;
+}
+
+
+.index-logo{
+	position:fixed;
+	bottom:10px;
+	right:15px;	
+}
+.index-logo h1{
+	font-size:50px;
+	line-height:60px;
+	font-family:"Segoe UI", "Calibri", "Helvetica Neue", Arial;
+	font-weight:lighter;
+	color:#333;
+}
+.index-logo h1 span{
+	color:#006699;
+	font-size:35px;
+}

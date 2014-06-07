@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!---->
+<sql><ok><query><![CDATA[CREATE TABLE IF NOT EXISTS `applications` (
+		  `Application_ID` bigint(20) NOT NULL AUTO_INCREMENT,
+		  `Parent_ID` int(2) NOT NULL DEFAULT '0',
+		  `Post_ID` bigint(20) NOT NULL DEFAULT '0',
+		  `User_ID` bigint(20) NOT NULL,
+		  `Category_ID` bigint(20) NOT NULL,
+		  `Name` varchar(100) NOT NULL,
+		  `Author` varchar(100) NOT NULL,
+		  `Author_URI` text NOT NULL,
+		  `Application_URI` text NOT NULL,
+		  `Price` float NOT NULL DEFAULT '0',
+		  `Date_Publication` datetime NOT NULL,
+		  `Description` text NOT NULL,
+		  `Type` VARCHAR( 30 ) NOT NULL DEFAULT 'app',
+		  `Icon` varchar(255) NOT NULL,
+		  `Statut` varchar(30) NOT NULL DEFAULT 'draft',
+		  PRIMARY KEY (`Application_ID`)
+		) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1]]></query></ok><warning><![CDATA[]]></warning><fail><query><![CDATA[<br />Requête SQL : <pre><code>CREATE TABLE IF NOT EXISTS [[CrashRepport::TABLE_NAME]]  (
+			  `Crash_ID` bigint(20) NOT NULL AUTO_INCREMENT,
+			  `Application_ID` bigint(20) NOT NULL,
+			  `Code_Crash` varchar(20) NOT NULL DEFAULT '',
+			  `Email` varchar(60) NOT NULL DEFAULT '',
+			  `Version` varchar(10) NOT NULL,
+			  `Function` varchar(300) NOT NULL,
+			  `Description` text NOT NULL,
+			  `Date_Crash` datetime NOT NULL,
+			  `Statut` tinyint(1) NOT NULL DEFAULT '0',
+			  PRIMARY KEY (`Crash_ID`)
+			) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1</code></pre><br />MySQL erreur : <pre><code>You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[[CrashRepport::TABLE_NAME]]  (
+			  `Crash_ID` bigint(20) NOT NULL AUTO_INCREME' at line 1</code></pre>]]></query></fail></sql>

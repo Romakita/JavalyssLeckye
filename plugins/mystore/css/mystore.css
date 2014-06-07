@@ -1,0 +1,573 @@
+/* icons */
+.icon-mystore{
+	background-image:url(mystore-16.png);
+	background-repeat:no-repeat;	
+}
+
+.icon-mystore-32{
+	background-image:url(mystore-32.png);
+	background-repeat:no-repeat;	
+}
+
+.icon-mystore-48{
+	background-image:url(mystore-48.png);
+	background-repeat:no-repeat;	
+}
+.icon-mystore-64{
+	background-image:url(mystore-64.png);
+	background-repeat:no-repeat;	
+}
+
+.icon-add-product{
+	background:url(add.png) no-repeat left center;	
+}
+
+.icon-edit-outofstock{
+	background:url(outofstock.png) no-repeat left center;	
+}
+
+.icon-edit-menu{
+	background:url(menu.png) no-repeat left center;	
+}
+
+.icon-edit-collection{
+	background:url(collection.png) no-repeat left center;	
+}
+
+.icon-edit-command{
+	background:url(command.png) no-repeat left center;	
+}
+
+.icon-mystore-create-command-48{
+	background:url(create-command-48.png) no-repeat left center;	
+}
+
+.icon-mystore-command{
+	background:url(command-2.png) no-repeat left center;	
+}
+
+.icon-mystore-product{
+	background:url(mystore-product.png) no-repeat left center;	
+}
+
+.icon-mystore-outofstock{
+	background:url(mystore-product.png) no-repeat left center;	
+}
+
+
+.icon-edit-delivery{
+	background:url(delivery.png) no-repeat left center;	
+}
+
+.icon-mystore-delivery{
+	background:url(delivery-2.png) no-repeat left center;	
+}
+
+.icon-edit-payment{
+	background:url(payment.png) no-repeat left center;	
+}
+
+
+.icon-edit-setting{
+	background:url(settings.png) no-repeat left center;	
+}
+
+.icon-edit-matter{
+	background:url(matter.png) no-repeat left center;	
+}
+
+.icon-edit-favorite{
+	background:url(favorite.png) no-repeat left center;	
+}
+.icon-edit-product{
+	background:url(catalogue.png) no-repeat left center;	
+}
+
+.icon-mystore-no-picture{
+	background:url(no-picture.png) no-repeat left center;	
+}
+
+
+/* Fenetre */
+
+.window.mystore{
+	border:1px solid #ff9000;	
+}
+
+.panel.jpanel.mystore.flat > .wrap-header{
+	background: none repeat scroll 0 0 #ff9000;
+}
+
+.panel.jpanel.mystore.flat > .wrap-header{
+	background:url("splashscreen.png") no-repeat scroll -10px #ff9000;
+}
+
+.panel.jpanel.mystore.flat > .wrap-header > h1{
+	margin-left:85px;
+	padding-right:0;
+}
+
+
+.panel.jpanel.mystore.flat > .wrap-header > .simple-button{
+	background: none repeat scroll 0 0 #ffa530;
+}
+
+.panel.jpanel.mystore.flat > .wrap-header > .simple-button:hover{
+	background: none repeat scroll 0 0 #a55d00;		
+}
+
+.panel.jpanel.mystore.flat > .wrap-header > .simple-button.selected{
+	background: none repeat scroll 0 0 #FFF;
+}
+
+.panel.jpanel.mystore.flat > .wrap-header > .simple-button > .wrap-text{
+	color: white;
+	text-shadow:0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.panel.jpanel.mystore.flat > .wrap-header > .simple-button.selected > .wrap-text{
+	color:#ffa530;
+	text-shadow:none;
+}
+
+.panel.jpanel.mystore > .wrap-body > .panel.pan-body > .wrap-body h2.letter-group {
+  	color: #D24726;
+}
+
+.panel.jpanel.flat.mystore > .wrap-header > .simple-button{
+	width:84px;	
+}
+
+.jpanel .simpletable.theme-default .simple-table > tbody.first > tr.wrap-header .wrap-group-text small{
+	font-size:12px;
+	color:#333;	
+}
+
+/* Billing */
+
+.jpanel .panel .table-data.mystore-summary-info{
+	width:100%;	
+	margin-bottom:0px;
+}
+.jpanel .panel .table-data.mystore-summary-info > tbody > tr > th,
+.jpanel .panel .table-data.mystore-summary-info > tbody > tr > td{
+	line-height:30px;
+	vertical-align:top;
+}
+.jpanel .panel .table-data.mystore-summary-info .table-data.mystore-summary-info{
+	margin-left:0px;
+	margin-right:0px;
+	border:1px solid #DFDFDF;
+}
+.jpanel .panel .table-data.mystore-summary-info .table-data.mystore-summary-info > tbody > tr > th{
+	padding-left:0px;
+}
+
+.jpanel .panel .table-data.mystore-summary-info .table-data.mystore-summary-info > tbody > tr > td{
+	padding-right:0px;
+}
+
+.jpanel .panel .table-data.mystore-result-billing{
+	float:right;
+	margin-right:-3px;
+	border-spacing:3px;	
+	margin-bottom:0px;
+}
+
+.jpanel .panel .table-data.mystore-more-billing{
+	float:left;
+	border-spacing:3px;	
+	margin-top:10px;
+	border:1px solid #CFCFCF;
+	margin-bottom:0px;
+}
+
+.jpanel .panel .table-data.mystore-more-billing > tbody > tr > *,
+.jpanel .panel .table-data.mystore-result-billing > tbody > tr > *{
+	line-height:20px;
+	font-size:	12px;	
+	vertical-align: middle;
+}
+.jpanel .panel .table-data.mystore-result-billing > tbody > tr > td.champ{
+	text-align:right;
+	background-color:#F0F0F0;	
+	color:	#111;
+}
+.jpanel .panel .table-data.mystore-result-billing > tbody > tr > td > input{
+	font-size: 12px !important;
+	text-align:right;
+	line-height: 24px;
+	height:		24px;
+}
+.jpanel .panel .table-data.mystore-result-billing > tbody > tr > td > input.tiny{
+	width: 90%;
+	height: 18px;
+	line-height: 20px;
+	font-size: 12px !important;
+	text-align:right;
+}
+
+.simpletable.theme-excel.no-cost-delivery .simple-table thead > tr > th.cel-cost_delivery,
+.simpletable.theme-excel.no-cost-delivery .simple-table tbody > tr > td.cel-cost_delivery{
+	display:none;
+}
+
+/* Item */
+
+.menu-item{
+	display:	block;
+	float:		left;
+	position:	relative;
+	width:		200px;
+	margin:		5px;
+	padding:	0px;
+	
+	border:		1px solid #CFCFCF;
+	list-style:	none;
+	padding:	5px;
+	cursor:		pointer;
+	font-size: 	14pt;
+	position:	relative;
+	/*opacity:0;
+	
+	-moz-transition-duration:400ms;
+	-moz-transition-property:background, border, opacity;
+	-moz-transition-timing-function:ease-in-out;
+	
+	-webkit-transition-duration:400ms;
+	-webkit-transition-property:background, border, opacity;
+	-webkit-transition-timing-function:ease-in-out;
+	
+	transition-duration:400ms;
+	transition-property:background, border, opacity;
+	transition-timing-function:ease-in-out;*/
+}
+.menu-item > .wrap-header{
+	font-family: 	Segoe UI;
+	font-weight: 	lighter;
+	padding: 		5px;
+	color:			#D24726;
+}
+
+.menu-item > .wrap-header > .simple-button{
+	border: 1px solid #CCCCCC !important;
+	border-radius: 0 0 0 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: -1px;
+	top: -1px;
+}
+
+.menu-item > .wrap-header > .simple-button:hover{
+	background:	#CCCCCC !important;
+}
+
+.menu-item > .wrap-body > .menu-item > .wrap-header > .simple-button{
+	border: 0px !important;
+	right: -5px;
+	top: 8px;
+}
+
+.menu-item > .wrap-body{
+	
+}
+
+.menu-item > .wrap-body > .menu-item{
+	border:			0px;
+	background:		transparent;
+	width:			auto;
+	float:			none;
+	list-style:		disc;
+	font-size: 		10pt;
+	padding-left:	15px;
+	margin:			1px;
+	
+}
+
+.menu-item > .wrap-body > .menu-item > .wrap-header{
+	background: none repeat scroll 0 0 transparent;
+	border: 0 none;
+	float: none;
+	font-size: 10pt;
+	list-style: disc outside none;
+	margin-bottom: 0;
+	margin-left: 10px;
+	margin-top: 0;
+	padding-bottom: 0;
+	padding-top: 0;
+	width: auto;
+	color:	#111;
+}
+
+.menu-item > .wrap-body > .menu-item > .wrap-header:hover{
+	color:	#D24726;
+}
+
+/* Market Button */
+
+.market-button.store-button > .btn-remove{
+	background:	white !important;
+	border: 1px solid #CCCCCC !important;
+	border-top: 0px solid transparent !important;
+	border-right: 0px solid transparent !important;
+	border-radius: 0 0 0 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.market-button.store-button > .btn-remove:hover,
+.market-button.store-button > .btn-duplicate:hover{
+	background:	#FC9 !important;
+}
+
+.market-button.store-button > .btn-duplicate{
+	background:	white !important;
+	border: 1px solid #CCCCCC !important;
+	border-top: 0px solid transparent !important;
+	border-right: 0px solid transparent !important;
+	border-radius: 0 0 0 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 21px;
+	top: 0px;
+}
+
+.market-button.store-button > .wrap-tag{
+	right:auto;
+	left:-5px;	
+	top:auto;
+	bottom:-3px;
+}
+
+/* Button */
+
+.market-button.command-product-button{
+    display: 		block;
+    position: 		relative;
+    width: 			auto;
+    height: 		58px;
+    opacity: 		1;
+}
+.market-button.command-product-button.selected{
+	border:1px solid #093 !important;
+	background:white;
+}
+.market-button.command-product-button > .wrap-mask{
+	width:			48px;
+	height:			48px;
+	left:			20px;
+}
+/*.market-button.command-product-button > .wrap-text,
+.market-button.command-product-button > .wrap-subtitle{
+	margin-left:	70px;
+}*/
+.market-button.command-product-button > .btn-remove{
+	position:absolute;
+	bottom:3px;
+	margin:0px;
+	right:3px;
+}
+.market-button.command-product-button > .btn-download{
+	position:absolute;
+	bottom:3px;
+	margin:0px;
+	right:38px;
+}
+.market-button.command-product-button > .btn-download:hover,
+.market-button.command-product-button > .btn-remove:hover{
+	background:	#FC9 !important;
+}
+
+.market-button.command-product-button > .checkbox{
+	position:absolute;
+	top:50%;
+	margin-top:-6px;
+	left:3px;	
+}
+
+.market-button.command-product-button > .btn-download.simple-menu > .wrap-content > .wrap-body > .w-popup{
+	left:auto;
+	right:0px;	
+}
+
+.listbox-command{
+	border-width:	2px;
+	overflow:		hidden; 
+	height:			360px;
+	position:		relative;
+	margin-bottom:	15px;
+}
+.listbox-command.dragover{
+	border-style:dashed;	
+}
+.listbox-command > .navbar{
+	position:absolute;
+	top:	0px;
+	left:	0px;
+	right:	0px;
+	background:#F0F0F0;	
+	min-height:30px;
+}
+
+.listbox-command > .navbar .group-button.hide{
+	display:none !important;	
+}
+.listbox-command > .navbar > .group-button{
+	margin-left: 3px;
+	margin-top: 3px;
+}
+.listbox-command > .navbar > .paging > div > span > input {
+	height: 20px !important;
+	margin-top: 1px;
+	font-size: 12px;
+}
+.listbox-command > .wrap-body{
+	position:absolute;
+	top:	30px;
+	left:	0px;
+	bottom:	0px;
+	right:	0px;
+	overflow:auto;	
+}
+.listbox-command.upload > .wrap-body{
+	opacity:0.6;	
+}
+.jpanel .panel .listbox-command >.frameworker,
+.listbox-command >.frameworker{
+	position: absolute;
+	width: auto;
+	left: -1px;
+	right: -1px;
+	bottom: -1px;
+}
+.listbox-command >.frameworker .dropfile.upload > .wrap-body {
+	width: auto;
+	margin-right: 112px;
+	overflow:hidden;
+}
+
+/* Picture */
+
+.market-button.mystore-picture{
+	width:95%;	
+}
+
+.market-button.mystore-picture .wrap-text .input{
+	width:93%
+}
+
+.market-button.mystore-picture > .simple-button.remove{
+	margin: 	0;
+	position: 	absolute;
+	right: 		5px;
+	top: 		5px;
+	width:		89px;
+}
+
+.market-button.mystore-picture .frameworker{
+	bottom: 	0;
+	left: 		90px;
+	position: 	absolute;
+	right: 		0;
+	width: 		auto !important;
+}
+.market-button.mystore-picture .dropfile{
+	background: none repeat scroll 0 0 transparent;
+	border: 0 none;	
+}
+.market-button.mystore-picture .dropfile > .wrap-title, .frameworker.click > .wrap-body > .wrap-label, 
+.market-button.mystore-picture .frameworker.noclick > .wrap-body > .wrap-label{
+	display:none;
+}
+
+.market-button.mystore-picture.have-textarea{
+	height:130px;
+}
+.market-button.mystore-picture.have-textarea .wrap-text .input {
+	width:75%;
+}
+.market-button.mystore-picture.have-textarea .frameworker {
+	left: 	auto;
+	top: 	0;
+	bottom:	auto;
+	width: 	70px;
+}
+
+
+.market-button.mystore-picture.have-textarea .frameworker .dropfile > .wrap-body{
+	display:none;	
+}
+
+.market-button.mystore-picture.have-textarea .textarea {
+	background: none repeat scroll 0 0 transparent;
+	border: 	0 none;
+	bottom:		0;
+	height: 	75px;
+	position: 	absolute;
+	right: 		0;
+	width:		83%;
+	resize:		none;
+}
+
+.market-button.mystore-picture.have-textarea .textarea.focus,
+.market-button.mystore-picture.have-textarea .textarea:focus{
+	background:white;
+}
+
+/* Delivery */
+
+.market-button.delivery-button > .wrap-tag{
+	background:#999;
+}
+
+/* AddressNode */
+
+.mystore-address{
+	width:250px; 
+	margin-top:10px;
+	margin-right:10px; 
+	position:relative;
+	float:left;	
+	padding-bottom:28px;
+}
+.mystore-address > .group-button{
+	position: absolute;
+	bottom: -1px;
+	left: -1px;
+	margin: 0;
+	padding: 0;
+}
+.mystore-address > .group-button > .button{
+	border-radius:0px;
+	padding:1px;
+	background:white;
+	margin:0px;
+}
+.mystore-address > .group-button > .button:hover{
+	background:#FC9;
+}
+
+/* Splashscreen */
+
+.panel.jpanel.mystore .w-flex.fullscreen.splashscreen{
+	background:none repeat scroll 0 0 #FF9000;
+}
+
+.panel.jpanel.mystore .w-flex.fullscreen.theme-white.splashscreen > .wrap-bg{
+	background:transparent;
+	opacity:1 !important;
+}
+
+.panel.jpanel.mystore .w-flex.fullscreen.infinite.theme-white.splashscreen > .wrap-mask{
+	background-image:	url(splashscreen.png);
+}
+
+.panel.jpanel.mystore .w-flex.fullscreen.infinite.splashscreen > .wrap-text{
+	color:white;
+	top:320px;	
+}

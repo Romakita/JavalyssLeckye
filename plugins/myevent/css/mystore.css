@@ -1,0 +1,372 @@
+/* icons */
+.icon-myevent{
+	background-image:url(myevent-16.png);
+	background-repeat:no-repeat;	
+}
+
+.icon-myevent-32{
+	background-image:url(myevent-32.png);
+	background-repeat:no-repeat;	
+}
+
+.icon-myevent-48{
+	background-image:url(myevent-48.png);
+	background-repeat:no-repeat;	
+}
+.icon-myevent-64{
+	background-image:url(myevent-64.png);
+	background-repeat:no-repeat;	
+}
+
+.icon-add-product{
+	background:url(add.png) no-repeat left center;	
+}
+
+.icon-edit-menu{
+	background:url(menu.png) no-repeat left center;	
+}
+
+.icon-edit-collection{
+	background:url(collection.png) no-repeat left center;	
+}
+
+.icon-edit-command{
+	background:url(command.png) no-repeat left center;	
+}
+
+.icon-edit-delivery{
+	background:url(delivery.png) no-repeat left center;	
+}
+
+.icon-edit-payment{
+	background:url(payment.png) no-repeat left center;	
+}
+
+
+.icon-edit-setting{
+	background:url(settings.png) no-repeat left center;	
+}
+
+.icon-edit-matter{
+	background:url(matter.png) no-repeat left center;	
+}
+
+.icon-edit-favorite{
+	background:url(favorite.png) no-repeat left center;	
+}
+.icon-edit-product{
+	background:url(catalogue.png) no-repeat left center;	
+}
+
+
+/* Fenetre */
+
+.window.myevent{
+	border:1px solid #ff9000;	
+}
+
+.panel.jpanel.myevent.flat > .wrap-header{
+	background: none repeat scroll 0 0 #ff9000;
+}
+
+.panel.jpanel.myevent.flat > .wrap-header{
+	background:url("splashscreen.png") no-repeat scroll -10px #ff9000;
+}
+
+.panel.jpanel.myevent.flat > .wrap-header > h1{
+	margin-left:85px;
+	padding-right:35px;
+}
+
+
+.panel.jpanel.myevent.flat > .wrap-header > .simple-button{
+	background: none repeat scroll 0 0 #ffa530;
+}
+
+.panel.jpanel.myevent.flat > .wrap-header > .simple-button:hover{
+	background: none repeat scroll 0 0 #a55d00;		
+}
+
+.panel.jpanel.myevent.flat > .wrap-header > .simple-button.selected{
+	background: none repeat scroll 0 0 #FFF;
+}
+
+.panel.jpanel.myevent.flat > .wrap-header > .simple-button > .wrap-text{
+	color: white;
+}
+
+.panel.jpanel.myevent.flat > .wrap-header > .simple-button.selected > .wrap-text{
+	color:#ffa530;
+}
+
+.panel.jpanel.myevent > .wrap-body > .panel.pan-body > .wrap-body h2.letter-group {
+  	color: #D24726;
+}
+
+.panel.jpanel.flat.myevent > .wrap-header > .simple-button{
+	width:84px;	
+}
+
+/* Total detail command */
+
+.panel.jpanel.myevent .simple-table tfoot{
+	background:#F6F6F6;	
+}
+
+.panel.jpanel.myevent .simple-table tfoot .amount-ht{
+	border-top:1px solid #D24726;	
+}
+
+.panel.jpanel.myevent .simple-table tfoot tr th{
+	color:#464646;
+}
+
+.panel.jpanel.myevent .simple-table tfoot tr th,
+.panel.jpanel.myevent .simple-table tfoot tr td{
+	padding:5px;
+}
+
+.panel.jpanel.myevent .simple-table tfoot .amount-ht th,
+.panel.jpanel.myevent .simple-table tfoot .amount-ht td{
+	padding-top: 10px;	
+}
+
+.panel.jpanel.myevent .simple-table tfoot tr.eco-tax th,
+.panel.jpanel.myevent .simple-table tfoot tr.eco-tax td,
+.panel.jpanel.myevent .simple-table tfoot tr.cost-delivery th,
+.panel.jpanel.myevent .simple-table tfoot tr.cost-delivery td,
+.panel.jpanel.myevent .simple-table tfoot tr.amount-tva th,
+.panel.jpanel.myevent .simple-table tfoot tr.amount-tva td{
+	color:		#666;
+	font-size:	11px;	
+}
+
+.panel.jpanel.myevent .simple-table tfoot tr.amount-ttc th,
+.panel.jpanel.myevent .simple-table tfoot tr.amount-ttc td{
+	font-size:14px;	
+}
+.panel.jpanel.myevent .simple-table tfoot tr.amount-ttc td{
+	color:#D24726;
+	font-weight:bold;
+	background:white;
+}
+
+/* Item */
+
+.menu-item{
+	display:	block;
+	float:		left;
+	position:	relative;
+	width:		200px;
+	margin:		5px;
+	padding:	0px;
+	
+	border:		1px solid #CFCFCF;
+	list-style:	none;
+	padding:	5px;
+	cursor:		pointer;
+	font-size: 	14pt;
+	position:	relative;
+	/*opacity:0;
+	
+	-moz-transition-duration:400ms;
+	-moz-transition-property:background, border, opacity;
+	-moz-transition-timing-function:ease-in-out;
+	
+	-webkit-transition-duration:400ms;
+	-webkit-transition-property:background, border, opacity;
+	-webkit-transition-timing-function:ease-in-out;
+	
+	transition-duration:400ms;
+	transition-property:background, border, opacity;
+	transition-timing-function:ease-in-out;*/
+}
+.menu-item > .wrap-header{
+	font-family: 	Segoe UI;
+	font-weight: 	lighter;
+	padding: 		5px;
+	color:			#D24726;
+}
+
+.menu-item > .wrap-header > .simple-button{
+	border: 1px solid #CCCCCC !important;
+	border-radius: 0 0 0 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: -1px;
+	top: -1px;
+}
+
+.menu-item > .wrap-header > .simple-button:hover{
+	background:	#CCCCCC !important;
+}
+
+.menu-item > .wrap-body > .menu-item > .wrap-header > .simple-button{
+	border: 0px !important;
+	right: -5px;
+	top: 8px;
+}
+
+.menu-item > .wrap-body{
+	
+}
+
+.menu-item > .wrap-body > .menu-item{
+	border:			0px;
+	background:		transparent;
+	width:			auto;
+	float:			none;
+	list-style:		disc;
+	font-size: 		10pt;
+	padding-left:	15px;
+	margin:			1px;
+	
+}
+
+.menu-item > .wrap-body > .menu-item > .wrap-header{
+	background: none repeat scroll 0 0 transparent;
+	border: 0 none;
+	float: none;
+	font-size: 10pt;
+	list-style: disc outside none;
+	margin-bottom: 0;
+	margin-left: 10px;
+	margin-top: 0;
+	padding-bottom: 0;
+	padding-top: 0;
+	width: auto;
+	color:	#111;
+}
+
+.menu-item > .wrap-body > .menu-item > .wrap-header:hover{
+	color:	#D24726;
+}
+
+/* Market Button */
+
+.market-button.store-button > .btn-remove{
+	background:	white !important;
+	border: 1px solid #CCCCCC !important;
+	border-top: 0px solid transparent !important;
+	border-right: 0px solid transparent !important;
+	border-radius: 0 0 0 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.market-button.store-button > .btn-remove:hover,
+.market-button.store-button > .btn-duplicate:hover{
+	background:	#FC9 !important;
+}
+
+.market-button.store-button > .btn-duplicate{
+	background:	white !important;
+	border: 1px solid #CCCCCC !important;
+	border-top: 0px solid transparent !important;
+	border-right: 0px solid transparent !important;
+	border-radius: 0 0 0 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 21px;
+	top: 0px;
+}
+
+.market-button.store-button > .wrap-tag{
+	right:auto;
+	left:-5px;	
+	top:auto;
+	bottom:-3px;
+}
+
+/* Picture */
+
+.market-button.myevent-picture{
+	width:95%;	
+}
+
+.market-button.myevent-picture .wrap-text .input{
+	width:93%
+}
+
+.market-button.myevent-picture > .simple-button.remove{
+	margin: 	0;
+	position: 	absolute;
+	right: 		5px;
+	top: 		5px;
+	width:		89px;
+}
+
+.market-button.myevent-picture .frameworker{
+	bottom: 	0;
+	left: 		90px;
+	position: 	absolute;
+	right: 		0;
+	width: 		auto !important;
+}
+.market-button.myevent-picture .dropfile{
+	background: none repeat scroll 0 0 transparent;
+	border: 0 none;	
+}
+.market-button.myevent-picture .dropfile > .wrap-title, .frameworker.click > .wrap-body > .wrap-label, 
+.market-button.myevent-picture .frameworker.noclick > .wrap-body > .wrap-label{
+	display:none;
+}
+
+.market-button.myevent-picture.have-textarea{
+	height:130px;
+}
+.market-button.myevent-picture.have-textarea .wrap-text .input {
+	width:75%;
+}
+.market-button.myevent-picture.have-textarea .frameworker {
+	left: 	auto;
+	top: 	0;
+	bottom:	auto;
+	width: 	70px;
+}
+
+
+.market-button.myevent-picture.have-textarea .frameworker .dropfile > .wrap-body{
+	display:none;	
+}
+
+.market-button.myevent-picture.have-textarea .textarea {
+	background: none repeat scroll 0 0 transparent;
+	border: 	0 none;
+	bottom:		0;
+	height: 	75px;
+	position: 	absolute;
+	right: 		0;
+	width:		83%;
+	resize:		none;
+}
+
+.market-button.myevent-picture.have-textarea .textarea.focus,
+.market-button.myevent-picture.have-textarea .textarea:focus{
+	background:white;
+}
+
+/* Splashscreen */
+
+.panel.jpanel.myevent .w-flex.fullscreen.splashscreen{
+	background:none repeat scroll 0 0 #FF9000;
+}
+
+.panel.jpanel.myevent .w-flex.fullscreen.theme-white.splashscreen > .wrap-bg{
+	background:transparent;
+	opacity:1 !important;
+}
+
+.panel.jpanel.myevent .w-flex.fullscreen.infinite.theme-white.splashscreen > .wrap-mask{
+	background-image:	url(splashscreen.png);
+}
+
+.panel.jpanel.myevent .w-flex.fullscreen.infinite.splashscreen > .wrap-text{
+	color:white;
+	top:320px;	
+}

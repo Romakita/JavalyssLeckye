@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+.icon-recaptcha{background:url(recaptcha.png) center no-repeat;}
+.icon-recaptcha-48{background:url(icon.png) center no-repeat;}
+.recaptcha-panel{
+	background:#FFF0BD url(newBG.gif) repeat-x top center;
+	
+}
+
+.recaptcha-panel .splite{
+	background:url(topBar3.gif) no-repeat left top;
+	position:relative;
+	top:-10px;
+}
+.recaptcha-panel .splite.splite-icon .left-content{
+	width:187px;
+	height:125px;
+	padding:0px;
+	padding-top:39px;
+	background:url(logo.gif) no-repeat left bottom;
+}
+
+.recaptcha-panel .splite .right-content{
+	padding-left:30px;
+	padding-top:35px;
+}
+
+.recaptcha-panel .splite .right-content h1{
+	margin:0px;
+	font-weight:normal;
+	color:#f77e00;
+	text-align:right;
+	text-transform:uppercase;
+}
+div.panel.recaptcha-panel > table.table-data > tbody > tr > th{
+	font-size:16px;
+	color:	#f77e00 !important;
+}
+div.panel.recaptcha-panel > table.table-data > tbody > tr > td.champ > .input,
+div.panel.recaptcha-panel > table.table-data > tbody > tr > td.champ > .input-button{
+	background-color:white !important;
+	border:1px solid #b41b05 !important;	
+}
+div.panel.recaptcha-panel .html-node h3{
+	color:#b41b05 !important;
+}
