@@ -13,14 +13,14 @@
 	border-bottom-width:1px;
 }
 
-.mobile .w-popup .calendar{
+/*.mobile .w-popup .calendar{
 	width:		518px;
 	border:		0px;	
 }
 
 .mobile .w-popup .calendar > .wrap-header{
 	height:40px;	
-}
+}*/
 
 .calendar > .wrap-header .simple-button{
 	padding:	0px !important;
@@ -29,12 +29,12 @@
 	margin:		0px !important;
 }
 
-.mobile .w-popup .calendar > .wrap-header .simple-button{
+/*.mobile .w-popup .calendar > .wrap-header .simple-button{
 	padding:	5px  !important;	
 	width:		25px !important;
 	height:		25px !important;
 	margin:		2px !important;
-}
+}*/
 
 .calendar > .wrap-header > .simple-button > .wrap-icon{
 	width:	100%;
@@ -66,12 +66,12 @@
 	text-align:		center;
 }
 
-.mobile .w-popup .calendar > .wrap-header > .wrap-title{
+/*.mobile .w-popup .calendar > .wrap-header > .wrap-title{
 	height:			40px;
 	line-height:	40px;
 	font-size:		18px;
 	font-family:	Segoe UI, HelveticaNeue, Helvetica, Arial;
-}
+}*/
 
 .calendar > .wrap-body > .wrap-grid.grid-header{
 	height:			24px;
@@ -80,9 +80,9 @@
 
 }
 
-.mobile .w-popup .calendar > .wrap-body > .wrap-grid.grid-header{	
+/*.mobile .w-popup .calendar > .wrap-body > .wrap-grid.grid-header{
 	height:			50px;
-}
+}*/
 
 .calendar > .wrap-body > .wrap-grid.grid-header > .wrap-day{
 	display:		block;
@@ -100,7 +100,7 @@
 	width:			13.39%;
 }
 
-.mobile .w-popup .calendar > .wrap-body > .wrap-grid.grid-header > .wrap-day{
+/*.mobile .w-popup .calendar > .wrap-body > .wrap-grid.grid-header > .wrap-day{
 	width:			60px;	
 	height:			40px;
 	line-height:	40px;
@@ -110,17 +110,17 @@
 	color:			white;
 	font-size:		18px;
 	font-family:	Segoe UI, HelveticaNeue, Helvetica, Arial;
-}
+}*/
 
 .calendar > .wrap-body > .wrap-grid.grid-header > .wrap-day.weekend{
 	<?php echo $Global->calendar->inter->background; ?>;
 	color:		<?php echo $Global->calendar->inter->color; ?>;
 }
 
-.mobile .w-popup .calendar > .wrap-body > .wrap-grid.grid-header > .wrap-day.weekend{
+/*.mobile .w-popup .calendar > .wrap-body > .wrap-grid.grid-header > .wrap-day.weekend{
 	background:		#484848;
 	border:			2px solid #484848;
-}
+}*/
 
 .calendar > .wrap-body > .wrap-grid.grid-body{
 	text-align:		center;
@@ -132,7 +132,7 @@
 	font-weight:bold;
 }
 
-.pc .calendar > .wrap-footer .simple-button{
+.calendar > .wrap-footer .simple-button{
 	border-top:		none;
 	border-bottom:	none;
 	background:		none;
@@ -146,7 +146,7 @@
 	width:			24px;
 	height:			19px;	
 }
-.pc .calendar > .wrap-footer .simple-button:hover{
+.calendar > .wrap-footer .simple-button:hover{
 	<?php echo $Global->button->over->background; ?>
 }
 .calendar > .wrap-footer .table-data{
@@ -217,7 +217,7 @@
 }
 
 
-.mobile .w-popup .node-day, .mobile .w-popup .node-day.disabled{
+/*.mobile .w-popup .node-day, .mobile .w-popup .node-day.disabled{
  	height:			50px;
 	line-height:	50px;
 	width:			60px;
@@ -226,27 +226,27 @@
 	font-size:		18px;
 	font-family:	Segoe UI, HelveticaNeue, Helvetica, Arial;
 	color:			white;
-}
+}*/
 
 .node-day.weekend{
 	<?php echo $Global->calendar->weekend->background; ?>
 	color:		<?php echo $Global->calendar->weekend->color; ?>;
 }
 
-.mobile .w-popup .node-day.weekend{
+/*.mobile .w-popup .node-day.weekend{
 	<?php echo $Global->calendar->weekend->background; ?>
 	border-color:		<?php echo $Global->calendar->weekend->background->color; ?>;
 	color:		<?php echo $Global->calendar->weekend->color; ?>;	
-}
+}*/
 
-.node-day.off,
-.mobile .w-popup .node-day.weekend.off{
+.node-day.off/*,
+.mobile .w-popup .node-day.weekend.off*/{
 	color: <?php echo $Global->calendar->day->off->color; ?> !important;	
 }
 
-.mobile .w-popup .node-day.off{
+/*.mobile .w-popup .node-day.off{
 	color: #383838 !important;	
-}
+}*/
 
 .node-day.now{
 	border: 		<?php echo $Global->calendar->today->background->color; ?> 1px solid;
@@ -259,7 +259,7 @@
 	font-weight:	bold;
 }
 
-.pc .node-day:hover{
+.node-day:hover{
 	border:					<?php echo $Global->calendar->day->over->background->color; ?> 1px solid;
 	background-color:		<?php echo $Global->calendar->day->over->background->color; ?>;
 	color:					<?php echo $Global->calendar->day->over->color; ?> !important;

@@ -76,12 +76,12 @@ var System = {
  * System.LINK_DOC_EXTENDS -> String
  * Lien de la documentation de la bibliothèque Extends.
  **/
-	LINK_DOC_EXTENDS:	'http://www.windowjs.fr/extends/',
+	LINK_DOC_EXTENDS:	'http://window.javalyss.fr/extends/',
 /**
  * System.LINK_DOC_WINDOW -> String
  * Lien de la documentation de la bibliothèque Window.
  **/
-	LINK_DOC_WINDOW:	'http://www.windowjs.fr/window/',	
+	LINK_DOC_WINDOW:	'http://window.javalyss.fr/window/',
 /**
  * System.AlertBox -> AlertBox
  * Instance de la boite de dialogue principale du système.
@@ -756,14 +756,7 @@ var System = {
 			
 			
 		}.bind(this), 0.1);
-				
-		new fThread(function(){
-			//récupération des icones
-			if(this.LOAD_ICON){
-				this.exec('system.icon.download');
-			}
-		}.bind(this));
-		
+
 		}catch(er){
 			console.log(er)	
 		}
@@ -1606,7 +1599,7 @@ var System = {
 		//
 		// Gestion de l'affichage du compte utilisateur
 		//
-		var button = new UserButton();
+		var button = new System.User.Button();
 		
 		if(!document.navigator.mobile){
 			button.SpanText.on('click', function(evt){$S.users.openMyPreferences()});
@@ -1614,16 +1607,16 @@ var System = {
 		
 		button.appendChild(new Node('p', {className:'wrap-name'}, [$U().Name + ' ' + $U().FirstName, new Node('span', {className:'wrap-mail'}, $U().EMail)]));
 		
-		button.appendChild(new SimpleButton({icon:'system-account', text:$MUI('Mon compte')}).on('click', function(evt){$S.users.openMyPreferences(); button.hide();}));
+		button.appendChild(new SimpleButton({icon:'system-account', text:$MUI('Mon compte')}).on('click', function(evt){$S.users.openMyPreferences(); button.hide();}));/*
 		button.appendChild(new SimpleButton({icon:'system-account-template', text:$MUI('Thème')}).on('click', function(evt){$S.users.openMyPreferences(1); button.hide();}));
-		button.appendChild(new SimpleButton({icon:'system-account-background', text:$MUI('Fond d\'écran')}).on('click', function(evt){$S.users.openMyPreferences(2); button.hide();}));
-		button.appendChild(new SimpleButton({icon:'system-account-security', text:$MUI('Sécurité')}).on('click', function(evt){$S.users.openMyPreferences(3); button.hide();}));
+		button.appendChild(new SimpleButton({icon:'system-account-background', text:$MUI('Fond d\'écran')}).on('click', function(evt){$S.users.openMyPreferences(2); button.hide();}));*/
+		button.appendChild(new SimpleButton({icon:'system-account-security', text:$MUI('Sécurité')}).on('click', function(evt){$S.users.openMyPreferences(1); button.hide();}));
 		
 		if($U().getRight() <= 2){
-			button.appendChild(new SimpleButton({icon:'system-account-print', text:$MUI('Impression')}).on('click', function(evt){$S.users.openMyPreferences(4); button.hide();}));
+			button.appendChild(new SimpleButton({icon:'system-account-print', text:$MUI('Impression')}).on('click', function(evt){$S.users.openMyPreferences(2); button.hide();}));
 		}
 		
-		var help = new SimpleButton({icon:'system-info'}).on('click', function(evt){$S.users.openMyPreferences(6)})
+		var help = new SimpleButton({icon:'system-info'}).on('click', function(evt){$S.users.openMyPreferences(4)})
 		help.addClassName('help');
 		
 		button.appendChild(help);

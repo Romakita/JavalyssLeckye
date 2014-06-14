@@ -1,9 +1,9 @@
-.pc .w-line > .gradient.over:hover{
+.w-line > .gradient.over:hover{
 	background:<?php echo $Global->button->over->background->color ?>;
 	
 	border-color:<?php echo $Global->button->over->background->color ?>;	
 }
-.pc .w-line > .gradient.over:hover > .wrap-title.font{
+.w-line > .gradient.over:hover > .wrap-title.font{
 	text-shadow:none;	
 }
 /*************************************************************/
@@ -26,7 +26,7 @@
 	text-align:		center;
 }
 
-.pc .drop-menu.left.system-menu{
+.drop-menu.left.system-menu{
 	position:		fixed;
 	width:			150px !important;
 	height:			auto;
@@ -196,7 +196,7 @@
 	z-index:	100001;
 }
 
-.pc.system-full > .drop-menu.left{
+.system-full > .drop-menu.left{
 	width:30px !important;
 }
 
@@ -244,8 +244,8 @@
 }
 
 /* DropMenu */
-.pc .drop-menu.left.system-menu > .simple-button:hover,
-.pc .drop-menu.left.system-menu > .simple-menu:hover > .wrap-content .wrap-body > .simple-button{
+.drop-menu.left.system-menu > .simple-button:hover,
+.drop-menu.left.system-menu > .simple-menu:hover > .wrap-content .wrap-body > .simple-button{
 	filter:			none;
 	-ms-filter:		none;
 	background:		white;
@@ -253,8 +253,8 @@
 	border-bottom:	white 1px solid;
 }
 
-.pc .drop-menu.left.system-menu > .simple-button:hover > .wrap-text,
-.pc .drop-menu.left.system-menu > .simple-menu:hover > .wrap-content .wrap-body > .simple-button > .wrap-text{
+.drop-menu.left.system-menu > .simple-button:hover > .wrap-text,
+.drop-menu.left.system-menu > .simple-menu:hover > .wrap-content .wrap-body > .simple-button > .wrap-text{
 	color:#666;
 	text-shadow:none;
 }

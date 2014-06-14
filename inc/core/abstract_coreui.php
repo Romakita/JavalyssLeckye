@@ -44,7 +44,6 @@ abstract class CoreUI extends BaseUI{
 		'$path/core/role.js',
 		'$path/core/directory.js',
 		'$path/core/filemanager.js',
-		'$path/core/template.js',
 		'$path/core/notify.js',
 		'$path/core/crashrepport.js',
 		'$path/core/plugin.js',
@@ -73,8 +72,10 @@ abstract class CoreUI extends BaseUI{
 		
 		self::$Title = 	'Connexion :: ' . System::Meta('NAME_VERSION');
 		self::EnqueueScript('system', self::$ScriptSystem);
-		self::ImportCSS($uri.'themes/icons/icons.css.php');
-		self::ImportTemplate();
+
+		//self::ImportCSS($uri.'themes/icons/icons.css.php');
+
+        self::ImportTemplate();
 					
 		self::$Header = 	new ElementNode('');
 		self::$Body = 		new ElementNode('');
@@ -266,17 +267,23 @@ abstract class CoreUI extends BaseUI{
  * Cette méthode permet d'importer un script CSS en vue d'être inséré dans l'entête du template.
  **/
 	static public function ImportTemplate($template = NULL, $all = true){
-		
-		if(strpos($template, '/') !== false){
+		$mode = System::Meta('MODE_DEBUG');
+
+        if($mode){
+            self::ImportCSS(System::Path('uri').'themes/compile/default/system/');
+        }else{
+            self::ImportCSS(System::Path('uri').'themes/system.min.css');
+        }
+		/*if(strpos($template, '/') !== false){
 			self::$Css .= '<link type="text/css" rel="stylesheet" href="'.System::Path('uri').'themes/compile/custom/system/'.$template.'" class="system-window-css" />'."\n\t\t";
 		}else{
-		
+
 			if(empty($template)){
-				$template = self::GetTemplateName();	
+				$template = self::GetTemplateName();
 			}
-			
+
 			self::$Css .= '<link type="text/css" rel="stylesheet" href="'.System::Path('uri').'themes/compile/'. $template .'/system/" class="system-window-css" />'."\n\t\t";
-		}
+		}*/
 		
 	}
 /**
@@ -355,14 +362,7 @@ abstract class CoreUI extends BaseUI{
 			self::CompileCSS();
 			return;
 		}
-		//
-		// Detection de la demande de compilation du CSS des icones.
-		//
-		if(System::IsCompileIconsCSSRequest()){
-			JavalyssIconPack::exec(@$_GET['output']);
-			return;
-		}
-				
+
 		Plugin::Import();
 		
 		System::fire('system:index');
@@ -431,12 +431,6 @@ abstract class CoreUI extends BaseUI{
 			System::Fire(self::$Name.':startinterface');
 			
 			if(!System::IsStopEvent()){
-				
-				$uri = '';
-				if(@!file_exists('themes/icons/16/')){
-					$uri = 		'http://www.javalyss.fr/';
-				}
-				
 				self::EnqueueScript('jquery');
 				self::$Title = 	'Administration :: ' . System::Meta('NAME_VERSION');
 				self::Draw();

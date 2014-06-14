@@ -435,7 +435,7 @@ abstract class System{
 				
 		switch(@$options){
 			case '-all':
-				Stream::Copy(ABS_PATH, $tmp, '/^\.svn|\.yaml$|\.bak$|\.git$|\.SyncTrach$|\.SyncID$|\.SyncIgnore$|\.ini$|zipsys|compile|old|archives$|14$|16$|24$|32$|48$|flag$|panel$|private$|psd$|\.db$|_notes|\.sxmllog$|sitemap\.xml|doc\/php$|doc\/js$/');
+				Stream::Copy(ABS_PATH, $tmp, '/^\.svn|\.yaml$|\.bak$|\.git$|\.SyncTrach$|\.SyncID$|\.SyncIgnore$|\.ini$|zipsys|compile|old|archives$|private$|psd$|\.db$|_notes|\.sxmllog$|sitemap\.xml|doc\/php$|doc\/js$/');
 				break;
 			case '-icon':
 			case '-c':
@@ -447,14 +447,14 @@ abstract class System{
 			default:
 			case '-noicon':
 			case '-ic':
-				Stream::Copy(ABS_PATH, $tmp, '/^\.svn|\.yaml$|\.bak$|\.git$|\.SyncTrach$|\.SyncID$|\.SyncIgnore$|\.ini$|zipsys|compile|old|archives$|icons\/14$|icons\/16$|icons\/24$|icons\/32$|icons\/48$|private$|public$|plugins$|psd$|sitemap\.xml|doc\/php$|\.db$|_notes$|themes$|doc\/js$/');
+				Stream::Copy(ABS_PATH, $tmp, '/^\.svn|\.yaml$|\.bak$|\.git$|\.SyncTrach$|\.SyncID$|\.SyncIgnore$|\.ini$|zipsys|compile|old|archives$|private$|public$|plugins$|psd$|sitemap\.xml|doc\/php$|\.db$|_notes$|themes$|doc\/js$/');
 				Stream::Delete($tmp.'inc/conf/conf.soft.php');
 				Stream::Delete($tmp.'inc/conf/conf.db.php');
 				Stream::Delete($tmp.'inc/conf/conf.file.php');
 				break;
 		}
 		
-		$flag = '/^\.svn|\.yaml$|\.bak$|\.git$|\.SyncTrach$|\.SyncID$|\.SyncIgnore$|\.ini$|zipsys|compile|old|archives$|icons\/14$|icons\/16$|icons\/24$|icons\/32$|icons\/48$|private$|public$|plugins$|psd$|\.db$|_notes$|sitemap\.xml|doc\/php$|doc\/js$/';
+		$flag = '/^\.svn|\.yaml$|\.bak$|\.git$|\.SyncTrach$|\.SyncID$|\.SyncIgnore$|\.ini$|zipsys|compile|old|archives$|private$|public$|plugins$|psd$|\.db$|_notes$|sitemap\.xml|doc\/php$|doc\/js$/';
 		
 		@Stream::Delete($tmp.'.htaccess');		
 		@Stream::Delete($tmp.'robots.txt');
@@ -463,7 +463,6 @@ abstract class System{
 		Stream::Copy(self::Path('js').'window/plugins/', $tmp.'js/window/plugins/');
 		
 		@Stream::MkDir($tmp.'themes/', 0751);
-		@Stream::MkDir($tmp.'themes/icons/', 0751);
 		@Stream::MkDir($tmp.'themes/window/', 0751);
 		@Stream::MkDir($tmp.'themes/plugins/', 0751);
 		
@@ -471,22 +470,13 @@ abstract class System{
 		
 		Stream::Copy(self::Path('themes').'window/', $tmp.'themes/window/', $flag);
 		Stream::Copy(self::Path('themes').'system/', $tmp.'themes/system/', $flag);
-		Stream::Copy(self::Path('themes').'pmaster/', $tmp.'themes/pmaster/');
-		Stream::Copy(self::Path('themes').'javalyssoriginal/', $tmp.'themes/javalyssoriginal/', $flag);
-		Stream::Copy(self::Path('themes').'iphone2/', $tmp.'themes/iphone2/', $flag);
-		Stream::Copy(self::Path('themes').'iphone/', $tmp.'themes/iphone/', $flag);
-		Stream::Copy(self::Path('themes').'jmm/', $tmp.'themes/jmm/', $flag);
-		Stream::Copy(self::Path('themes').'font/', $tmp.'themes/font/', $flag);
-		Stream::Copy(self::Path('themes').'dynamic/', $tmp.'themes/dynamic/', $flag);
-		Stream::Copy(self::Path('themes').'icons/flag/', $tmp.'themes/icons/flag/', $flag);
-		Stream::Copy(self::Path('themes').'icons/panel/', $tmp.'themes/icons/panel/', $flag);
 		Stream::Copy(self::Path('themes').'system.min.css', $tmp.'themes/system.min.css', $flag);
 		
 		//
 		// Intégration des packets complémentaires.
 		//
 		@Stream::MkDir($tmp.'plugins/', 0751);
-		Stream::Copy(self::Path('plugins').'javalyssmarket/', $tmp.'plugins/javalyssmarket/', '/^\.svn|\.yaml$|\.bak$|\.git$|\.ini$|zipsys|compile|old|archives$|14$|16$|24$|32$|48$|flag$|panel$|private$|public$|plugins$|psd$|\.db$|_notes|\.sxmllog$|\.zip$|sitemap\.xml/');	
+		Stream::Copy(self::Path('plugins').'javalyssmarket/', $tmp.'plugins/javalyssmarket/', '/^\.svn|\.yaml$|\.bak$|\.git$|\.ini$|zipsys|compile|old|archives$|private$|public$|plugins$|psd$|\.db$|_notes|\.sxmllog$|\.zip$|sitemap\.xml/');
 		
 		if($version){
 			
@@ -899,16 +889,7 @@ abstract class System{
 		$link = new Permalink();
 		return $link->strEnd('/ajax/connected') || $link->strStart('gateway.php', false) ? self::CNT : self::SAFE;
 	}
-/**
- * System.IsCompileIconsCSSRequest() -> Boolean
- *
- * Cette méthode indique si il s'agit d'une demande de récupération du fichier des icônes.
- **/	
-	public static function IsCompileIconsCSSRequest(){
-		$link = new Permalink();
-				
-		return $link->strStart('themes/icons',false) || $link->strStart('icons', false);
-	}
+
 /**
  * System.IsCompileCSSRequest() -> Boolean
  *
@@ -1035,12 +1016,7 @@ abstract class System{
 			case "prints":
 				return ($abs ? ABS_PATH : URI_PATH).PATH_PUBLIC.'Prints/';
 			case "models":
-				return ($abs ? ABS_PATH : URI_PATH).'models/'; 
-			case "models.version":
-				return self::Path('models', $abs).Stream::Sanitize(NAME_VERSION, '') . '/'; 
-			case "model":
-			case "models.societe":
-				return self::Path('models.version', $abs). '/'. SOCIETE_ID.'/';
+				return ($abs ? ABS_PATH : URI_PATH).'models/';
 			case "models.default":
 			case 'model.default':
 				return self::Path('models.version', $abs). '/'. '/default/';
@@ -1270,20 +1246,8 @@ abstract class System{
 			//		
 			self::Configure();
 			
-			if(System::Meta('LINK_MARKET') == 'http://server.javalyss.fr/gateway.safe.php' || System::Meta('LINK_MARKET') == 'http://javalyss.fr/server/gateway.safe.php'){
-				System::Meta('LINK_MARKET', 'http://javalyss.fr/gateway.safe.php');
-				System::Meta('LINK_MARKET', 'http://javalyss.fr/gateway.safe.php');
-			}
-			
-			//mise à jour du pack d'icônes
-			if(file_exists(System::Path('icons').'icons.css.php')){
-				@Stream::Delete(System::Path('icons').'icons.css.php');
-				@Stream::Delete(System::Path('icons').'icons.conf.php');
-				@Stream::Delete(System::Path('icons').'icons.php');
-				@Stream::Delete(System::Path('icons').'16/');
-				@Stream::Delete(System::Path('icons').'24/');
-				@Stream::Delete(System::Path('icons').'32/');
-				@Stream::Delete(System::Path('icons').'48/');
+			if(System::Meta('LINK_MARKET') == 'http://server.javalyss.fr/gateway.safe.php' || System::Meta('LINK_MARKET') == 'http://javalyss.fr/gateway.safe.php'){
+				System::Meta('LINK_MARKET', 'http://javalyss.fr/ajax/');
 			}
 			//
 			// Mise à jour du numéro de version, de la date de mise à jour et de l'historique des mises à jour.
@@ -1630,14 +1594,7 @@ abstract class System{
 				));
 				
 				break;
-										
-			case 'system.icon.download':
-				set_time_limit(0);
-				ignore_user_abort(true);
-				
-				$file = Stream::Download(JavalyssIconPack::PATH, ABS_PATH."public/");
-				Stream::Depackage($file, ABS_PATH."themes/icons/");
-				break;				
+
 			//---------------------------------------------------------------------------
 			//Gestion du CRON------------------------------------------------------------
 			//---------------------------------------------------------------------------

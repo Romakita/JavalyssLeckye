@@ -10,12 +10,12 @@
 .scrollbars > .wrapper{
 	position:relative;
 }
-.mobile .scrollbars > div > *,
+/*.mobile .scrollbars > div > *,
 .mobile .scrollbars > .wrapper > *{
 	-moz-transform:translate3D(0,0,0);
 	-webkit-transform:translate3D(0,0,0);
 	transform:translate3D(0,0,0);
-}
+}*/
 .scrollbars > .scrollbar{
 	position:absolute;
 	overflow:hidden;
@@ -117,14 +117,14 @@
 .ie-lt-10 .scrollbars > .scrollbar.vertical > .wrap-body > .cursor{
 	background:<?php echo $Global->button->normal->background->color; ?>;
 }
-.mobile .scrollbars > .scrollbars > .scrollbar.vertical > .wrap-body > .cursor:active,
-.pc .scrollbars > .scrollbars > .scrollbar.vertical > .wrap-body > .cursor:hover{
+/*.mobile .scrollbars > .scrollbars > .scrollbar.vertical > .wrap-body > .cursor:active,*/
+.scrollbars > .scrollbars > .scrollbar.vertical > .wrap-body > .cursor:hover{
 	<?php echo str_replace(array('(top,', 'left bottom'), array('(left,', 'right top'), $Global->button->over->background); ?>
 	<?php echo $Global->button->over->border; ?>	
 }
 
-.mobile .ie-lt-10 .scrollbars > .scrollbar.vertical > .wrap-body > .cursor:active,
-.pc .ie-lt-10 .scrollbars > .scrollbar.vertical > .wrap-body > .cursor:hover{
+/*.mobile .ie-lt-10 .scrollbars > .scrollbar.vertical > .wrap-body > .cursor:active,*/
+.ie-lt-10 .scrollbars > .scrollbar.vertical > .wrap-body > .cursor:hover{
 	background:<?php echo $Global->button->over->background->color; ?>;
 }
 
@@ -180,8 +180,8 @@
 	box-shadow:				none;
 }
 
-.pc .scrollbars > .scrollbar.horizontal > .wrap-body > .cursor:hover,
-.mobile .scrollbars > .scrollbar.horizontal > .wrap-body > .cursor:active{
+.scrollbars > .scrollbar.horizontal > .wrap-body > .cursor:hover/*,
+.mobile .scrollbars > .scrollbar.horizontal > .wrap-body > .cursor:active*/{
 	<?php echo $Global->button->over->background; ?>
 	<?php echo $Global->button->over->border; ?>	
 }

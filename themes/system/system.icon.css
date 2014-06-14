@@ -1,6 +1,6 @@
 /* ICONS */
 
-.icon-logo-16, icon-logo{
+.icon-logo-16, .icon-logo{
 	background-repeat:no-repeat;
 	background-image:url(system/image/javalyss-logo.png);
 }
@@ -35,6 +35,26 @@
 .icon-1right-mini{
 	background-repeat:no-repeat;
 	background-image:url(system/images/16/1right-mini-grey.png);	
+}
+.icon-1left-mini{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/1left-mini-grey.png);	
+}
+.icon-1up-mini-blue{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/1up-mini-blue.png);	
+}
+.icon-1down-mini-blue{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/1down-mini-blue.png);	
+}
+.icon-1right-mini-blue{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/1right-mini-blue.png);	
+}
+.icon-1left-mini-blue{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/1left-mini-blue.png);	
 }
 /* Menu PRINCIPAL */
 
@@ -119,14 +139,23 @@
 
 .icon-system-setting-export,
 .icon-export{
-	background-repeat:no-repeat;
-	background-image:url(system/images/16/system-setting-export.png);
+     background-repeat:no-repeat;
+     background-image:url(system/images/16/system-setting-export.png);
+ }
+.icon-fileexport{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/system-file-export.png);
 }
 
 .icon-system-setting-export-48,
 .icon-export-48{
 	background-repeat:no-repeat;
 	background-image:url(system/images/48/system-setting-export.png);
+}
+
+.icon-fileimport{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/system-file-import.png);
 }
 
 .icon-export-vcard-48{
@@ -285,6 +314,10 @@
 	background-repeat:no-repeat;
 	background-image:url(system/images/16/system-alert.png);
 }
+.icon-device-harddrive{
+     background-repeat:no-repeat;
+     background-image:url(system/images/16/system-hdd.png);
+ }
 
 .splite-wait-msg,
 .icon-alert-48{
@@ -440,12 +473,14 @@
 
 .icon-system-remove,
 .jpanel .icon-remove-element,
-.icon-cancel-14{
+.icon-cancel-14,
+.icon-delete{
 	background-repeat:no-repeat;
 	background-image:url(system/images/16/remove-element.png);	
 }
 
-.icon-search-14{
+.icon-search-14,
+.icon-cell-edit{
 	background-repeat:no-repeat;
 	background-image:url(system/images/16/edit-element.png);	
 }
@@ -512,16 +547,27 @@
 }
 
 .icon-system-browse,
-.jpanel .icon-browse-element{
+.jpanel .icon-browse-element,
+.icon-file-edit{
 	background-repeat:no-repeat;
 	background-image:url(system/images/16/browse.png);	
 }
 
 .icon-system-duplicate,
 .jpanel .icon-duplicate-element,
-.jpanel .icon-editcopy{
+.jpanel .icon-editcopy,
+.icon-editcopy{
 	background-repeat:no-repeat;
 	background-image:url(system/images/16/duplicate-element.png);	
+}
+
+.icon-editcut{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/cut-element.png);
+}
+.icon-editpaste{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/paste-element.png);
 }
 .icon-system-edit,
 .jpanel .icon-search-14,
@@ -569,4 +615,318 @@ input.icon-edit-element,
 .alertbox.theme-flat.black .icon-edittrash-48{
 	background-repeat:no-repeat;
 	background-image:url(system/images/48/system-trash-white.png);
+}
+
+/** FILE TYPE */
+.icon-folder{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/system-folder.png);
+}
+.icon-folder-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/system-folder.png);
+}
+.icon-folder-new,
+.icon-folder-add{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/system-folder-new.png);
+}
+.icon-folder-new-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/system-folder-new.png);
+}
+
+.icon-file,
+.icon-file-empty,
+.icon-filenew{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file.png);
+}
+.icon-file-48,
+.icon-file-empty-48,
+.icon-filenew-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file.png);
+}
+
+.icon-accdb{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-accdb.png);
+}
+
+.icon-accdb-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-accdb.png);
+}
+
+.icon-pdf{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-pdf.png);
+}
+
+.icon-pdf-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-pdf.png);
+}
+
+.icon-one{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-one.png);
+}
+
+.icon-one-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-one.png);
+}
+
+.icon-word{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-word.png);
+}
+
+.icon-word-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-word.png);
+}
+
+.icon-xls{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-xls.png);
+}
+
+.icon-xls-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-xls.png);
+}
+
+.icon-pub{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-pub.png);
+}
+
+.icon-pub-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-pub.png);
+}
+.icon-pps{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-pps.png);
+}
+
+.icon-pps-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-pps.png);
+}
+
+.icon-psd{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-psd.png);
+}
+
+.icon-psd-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-psd.png);
+}
+
+.icon-avi,
+.icon-mpg,
+.icon-mpeg,
+.icon-mkv,
+.icon-wmv,
+.icon-mov{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-video.png);
+}
+
+.icon-avi-48,
+.icon-mpg-48,
+.icon-mpeg-48,
+.icon-mkv-48,
+.icon-wmv-48,
+.icon-mov-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-video.png);
+}
+
+.icon-mp3,
+.icon-wma{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-audio.png);
+}
+
+.icon-mp3-48,
+.icon-wma-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-audio.png);
+}
+
+.icon-flv{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-flv.png);
+}
+
+.icon-flv-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-flv.png);
+}
+
+.icon-swf{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-swf.png);
+}
+
+.icon-swf-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-swf.png);
+}
+
+
+.icon-picture{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-picture.png);
+}
+
+.icon-picture-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-picture.png);
+}
+
+.icon-code{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-code.png);
+}
+
+.icon-code-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-code.png);
+}
+
+.icon-sql{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-sql.png);
+}
+
+.icon-sql-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-sql.png);
+}
+
+.icon-text{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-text.png);
+}
+
+.icon-text-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-text.png);
+}
+
+.icon-bmp-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-bmp.png);
+}
+.icon-bmp{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-png.png);
+}
+
+.icon-bmp-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-bmp.png);
+}
+.icon-jpg{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-rar.png);
+}
+
+.icon-jpg-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-jpg.png);
+}
+.icon-png{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-png.png);
+}
+
+.icon-png-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-png.png);
+}
+
+
+.icon-rar{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-rar.png);
+}
+
+.icon-rar-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-rar.png);
+}
+.icon-zip{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-zip.png);
+}
+
+.icon-zip-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-zip.png);
+}
+
+/** Panel **/
+
+.my-advanced-panel, .panel-advanced {
+    background-image: url('system/images/panel/my-advanced.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-logo-panel, .panel-logo {
+    background-image: url('system/images/panel/my-logo.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-alert-panel, .panel-alert {
+    background-image: url('system/images/panel/my-alert.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-application-panel, .panel-application {
+    background-image: url('system/images/panel/my-application.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-clock-panel, .panel-clock {
+    background-image: url('system/images/panel/my-clock.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-date-panel, .panel-application {
+    background-image: url('system/images/panel/my-date.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-db-panel, .panel-db {
+    background-image: url('system/images/panel/my-date.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-user-panel, .panel-user {
+    background-image: url('system/images/panel/my-user.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-info-panel, .panel-info {
+    background-image: url('system/images/panel/my-info.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-multimedia-panel, .panel-multimedia {
+    background-image: url('system/images/panel/my-multimedia.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-security-panel, .panel-security {
+    background-image: url('system/images/panel/my-security.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }

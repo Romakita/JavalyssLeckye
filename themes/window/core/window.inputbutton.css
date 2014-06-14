@@ -36,8 +36,8 @@
 }
 
 .input > .button,
-.pc .input > .button:hover,
-.mobile .input > .button:active{
+.input > .button:hover/*,
+.mobile .input > .button:active*/{
 	
 	<?php echo $Global->form->input->normal->border; ?>
 	<?php echo $Global->form->select->normal->border; ?>
@@ -159,11 +159,11 @@
 }
 
 .input.large > .button,
-.pc .input.large > .button:hover,
-.mobile .input.large > .button:active,
 .input.large > .input > .button,
-.pc .input.large > .input > .button:hover,
-.mobile .input.large > .input > .button:active{
+.input.large > .button:hover,
+.input.large > .input > .button:hover/*,
+.mobile .input.large > .button:active,
+.mobile .input.large > .input > .button:active*/{
 	margin:				0px !important;
 	margin-top:			2px !important;
 	margin-right:		2px !important;
@@ -190,11 +190,11 @@
 	border:			0px;
 }
 
-.mobile .input-calendar .popup > .popup-body > .content{
+/*.mobile .input-calendar .popup > .popup-body > .content{
 	max-height: 	400px;
 	width:			auto;
 	background:		white;
-}
+}*/
 /*********************************************************************************
  **InputHoursCalendar*************************************************************
  *********************************************************************************/
@@ -215,8 +215,8 @@
 }
 
 .input.datetime > .button,
-.pc .input.datetime > .button:hover,
-.mobile .input.datetime > .button:active{
+.input.datetime > .button:hover/*,
+.mobile .input.datetime > .button:active*/{
 	right:					80px;
 	border-right-width:		1px;
 	-moz-border-radius:		0px;
@@ -225,8 +225,8 @@
 }
 
 .input.datetime.large > .button,
-.pc .input.datetime.large > .button:hover,
-.mobile .input.datetime.large > .button:active{
+.input.datetime.large > .button:hover/*,
+.mobile .input.datetime.large > .button:active*/{
 	right:93px;
 }
 
@@ -279,10 +279,12 @@
 	margin-top:	-8px;
 }
 
-.pc .input-color .popup{
+.input-color .w-popup{
 	padding:		0px;
 }
-
+.input-color.input-select .w-popup{
+    padding:2px;
+}
 .popup .tab-control{
 	position:		relative;
 	line-height:	0px;
@@ -299,9 +301,9 @@
 	width: 		auto;
 }
 
-.mobile .popup .tab-control > .group-button .simple-button{
+/*.mobile .popup .tab-control > .group-button .simple-button{
 	padding:4px;
-}
+}*/
 
 .popup .tab-control > .wrap-super-body{
 	border-left:0px;
@@ -309,43 +311,43 @@
 	border-bottom:0px;
 }
 
-.pc .popup .tab-control > .wrap-super-body .wrap-body{
+.popup .tab-control > .wrap-super-body .wrap-body{
 	padding:	5px;
 	min-width:	240px;
 	width:		auto;
 	background:	black;
 }
 
-.mobile .popup .tab-control > .wrap-super-body .wrap-body{
+/*.mobile .popup .tab-control > .wrap-super-body .wrap-body{
 	padding:	5px 0px;
 	padding-bottom:0px;
 	background:	#282828;	
-}
+}*/
 
-.pc .popup .tab-control .panel-colors{
+.popup .tab-control .panel-colors{
 	background-color:#000;
 	border-collapse:collapse !important;
 }
 
-.pc .popup .tab-control > .wrap-super-body > .wrap-body > .table-data.panel-colors{
+.popup .tab-control > .wrap-super-body > .wrap-body > .table-data.panel-colors{
 	margin:	auto !important;
 	border-spacing: 0px;
 }
 
-.mobile .popup .tab-control > .wrap-super-body > .wrap-body > .table-data.panel-colors{
+/*.mobile .popup .tab-control > .wrap-super-body > .wrap-body > .table-data.panel-colors{
 	border-spacing:10px;
-}
+}*/
 
-.pc .popup .tab-control > .wrap-super-body > .wrap-body > .table-data.panel-colors > tbody > tr > td{
+.popup .tab-control > .wrap-super-body > .wrap-body > .table-data.panel-colors > tbody > tr > td{
 	padding:0px;
 	border:1px solid black;
 	line-height:0;
 	width:auto;
 }
 
-.mobile .popup .tab-control > .wrap-super-body > .wrap-body > .table-data.panel-colors > tbody > tr > td {
+/*.mobile .popup .tab-control > .wrap-super-body > .wrap-body > .table-data.panel-colors > tbody > tr > td {
 	border:2px solid #383838;	
-}
+}*/
 
 .popup .tab-control > .wrap-super-body > .wrap-body > .table-data.panel-colors > tbody > tr > td.empty{
 	border:0px !important;
@@ -359,12 +361,12 @@
 	display:inline-block;
 }
 
-.mobile .popup .tab-control > .wrap-super-body > .wrap-body > .table-data.panel-colors > tbody > tr > td .color-block{
+/*.mobile .popup .tab-control > .wrap-super-body > .wrap-body > .table-data.panel-colors > tbody > tr > td .color-block{
 	width:25px; 
 	height:25px;
-}
+}*/
 
-.pc .popup .tab-control > .wrap-super-body > .wrap-body > .table-data.panel-colors > tbody > tr > td:hover{
+.popup .tab-control > .wrap-super-body > .wrap-body > .table-data.panel-colors > tbody > tr > td:hover{
 	outline:1px solid white;
 	cursor:pointer;
 }

@@ -204,7 +204,7 @@
 	padding-right: 	20px;
 	text-align: 	left;
 	text-shadow: 	0 1px 1px white;
-	background-image:	url(window/images/1down-mini.png);
+	background-image:	url(system/images/16/1down-mini-grey.png);
 	background-repeat: 	no-repeat;
 	background-position:right center;
 	border-color:		#9f272d;
@@ -292,8 +292,7 @@
 	width:30px;
 }
 
-.pc .user-button > .wrap-body > .simple-button:hover,
-.mobile .user-button > .wrap-body > .simple-button:active{
+.user-button > .wrap-body > .simple-button:hover{
 	background-color:<?php echo $Global->button->over->background->color ?>;
 }
 
@@ -304,8 +303,7 @@
 	font-size:16px;
 }
 
-.pc .user-button > .wrap-body > .simple-button:hover > .wrap-text,
-.mobile .user-button > .wrap-body > .simple-button:active > .wrap-text{
+.user-button > .wrap-body > .simple-button:hover > .wrap-text{
 	color:white;	
 }
 
@@ -335,9 +333,9 @@
 	 font-size:		17px;
 }
 
-.pc .window .wrap-body .simple-table.overable .user-list-node:hover h1 .user-lastname,
-.pc .window .wrap-body .simple-table.overable .user-list-node:hover h1 .user-name,
-.pc .window .wrap-body .simple-table.overable .user-list-node:hover h1 p{
+.window .wrap-body .simple-table.overable .user-list-node:hover h1 .user-lastname,
+.window .wrap-body .simple-table.overable .user-list-node:hover h1 .user-name,
+.window .wrap-body .simple-table.overable .user-list-node:hover h1 p{
 	 color:			white;
 }
 
@@ -345,7 +343,7 @@
 /*User-app-button****************************************************/
 /******************************************************************/
 .app-button.user,
-.pc .app-button.user:hover{
+.app-button.user:hover{
 	border-radius:0px;	
 	-webkit-border-radius:0px;	
 	-moz-border-radius:0px;	

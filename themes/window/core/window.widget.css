@@ -168,8 +168,8 @@ table.simple-table table.simple-table > tbody > tr > td .simple-table.chrome{
 }
 
 .simple-table.chrome > tbody > .wrap-header > .wrap-title, 
-.pc .widget > .wrap-body .simple-table > tbody > .wrap-header:hover .wrap-title, 
-.mobile .widget > .wrap-body .simple-table > tbody > .wrap-header:active .wrap-title{
+.widget > .wrap-body .simple-table > tbody > .wrap-header:hover .wrap-title/*,
+.mobile .widget > .wrap-body .simple-table > tbody > .wrap-header:active .wrap-title*/{
 	padding-top:	1px;
 	padding-bottom:	1px;
 	cursor: 		auto;

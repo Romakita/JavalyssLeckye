@@ -81,17 +81,17 @@ abstract class BaseUI{
  * Cette méthode retourne le nom du template WindowJS à charger.
  **/
 	static public function GetTemplateName(){
-		
+
 		if(User::IsConnect()){
 			$template = @User::Meta('THEME');
-			
+
 			if(empty($template)){
-				$template = System::Meta('DEFAULT_THEME');	
+				$template = System::Meta('DEFAULT_THEME');
 			}
 		}else{
-			$template =	System::Meta('DEFAULT_THEME');	
+			$template =	System::Meta('DEFAULT_THEME');
 		}
-		
+
 		return $template;
 	}
 /**
@@ -263,9 +263,7 @@ abstract class BaseUI{
 		?>
         
 		<script>
-			
-			document.navigator.deviceMode =		'<?php echo System::Meta('DEVICE_MODE') ? System::Meta('DEVICE_MODE') : 'auto'; ?>';
-			
+
             System.VERSION = System.version = 	'<?php echo System::Meta('CODE_VERSION') . System::Meta('CODE_SUBVERSION'); ?>';
             System.PHPSESSID = 					'<?php echo session_id(); ?>';
             //extension des clefs métas du système
@@ -277,7 +275,6 @@ abstract class BaseUI{
             System.PATH_PRIVATE =			'<?php echo PATH_PRIVATE; ?>';
             System.PATH_PLUGIN =			'<?php echo PATH_PLUGIN; ?>';
             System.PATH_THEME =				'<?php echo PATH_THEME; ?>';
-            System.LOAD_ICON =				<?php echo json_encode($uri != ''); ?>;
             
             System.URI_PATH =				'<?php echo URI_PATH; ?>';
             System.Apc = 					<?php echo json_encode(extension_loaded('apc')); ?>;

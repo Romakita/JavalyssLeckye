@@ -72,8 +72,8 @@
 	
 }
 
-.pc .lightbox > .wrap-body .wrap-close:hover,
-.mobile .lightbox > .wrap-body .wrap-close:active{
+.lightbox > .wrap-body .wrap-close:hover/*,
+.mobile .lightbox > .wrap-body .wrap-close:active*/{
 	background:		white;
 	border:			3px solid #333;
 	color:			#333;
@@ -245,15 +245,15 @@
 	border-radius:0px 5px 5px 0px;
 }
 
-.pc .lightbox > .wrap-body .btn-right:hover > .wrap-icon,
-.pc .lightbox > .wrap-body .btn-left:hover > .wrap-icon,
+.lightbox > .wrap-body .btn-right:hover > .wrap-icon,
+.lightbox > .wrap-body .btn-left:hover > .wrap-icon/*,
 .mobile .lightbox > .wrap-body .btn-right > .wrap-icon,
-.mobile .lightbox > .wrap-body .btn-left > .wrap-icon{
+.mobile .lightbox > .wrap-body .btn-left > .wrap-icon*/{
 	opacity:	1;
 	filter: 	alpha(opacity=100);	
 }
 
-.pc .line-element.group > .wrap-header{
+.line-element.group > .wrap-header{
 	<?php echo $Global->row->normal->border; ?>		
 }
 /*

@@ -494,8 +494,8 @@
 	padding-left:30px;	
 }
 
-.pc .jpanel .panel > .wrap-header > span:hover,
-.pc .jpanel .panel > .wrap-header > .navbar > span.action:hover{
+.jpanel .panel > .wrap-header > span:hover,
+.jpanel .panel > .wrap-header > .navbar > span.action:hover{
 	color:#DF0059;
 	cursor:pointer;
 }
@@ -623,11 +623,11 @@
 }
 
 
-.pc .jpanel > .drop-menu.left > .simple-menu:hover > .wrap-content > .wrap-body > .simple-button{
+.jpanel > .drop-menu.left > .simple-menu:hover > .wrap-content > .wrap-body > .simple-button{
 	background:#9f272d;
 }
 
-.pc .jpanel > .drop-menu.left > .simple-menu:hover > .wrap-content > .wrap-body > .simple-button > .wrap-text{
+.jpanel > .drop-menu.left > .simple-menu:hover > .wrap-content > .wrap-body > .simple-button > .wrap-text{
 	color:white;
 }
 
@@ -871,22 +871,22 @@
 
 .system-sidebar .scrollbars > .scrollbar > .simple-button .wrap-icon.icon-1up-mini,
 .jpanel .scrollbars > .scrollbar .simple-button .wrap-icon.icon-1up-mini{
-	background-image:url(system/images/16/1up-mini.png);
+	background-image:url(system/images/16/1up-mini-blue.png);
 }
 
 .system-sidebar .scrollbars > .scrollbar > .simple-button .wrap-icon.icon-1down-mini,
 .jpanel .scrollbars > .scrollbar .simple-button .wrap-icon.icon-1down-mini{
-	background-image:url(system/images/16/1down-mini.png);
+	background-image:url(system/images/16/1down-mini-blue.png);
 }
 
 .system-sidebar .scrollbars > .scrollbar > .simple-button .wrap-icon.icon-1left-mini,
 .jpanel .scrollbars > .scrollbar .simple-button .wrap-icon.icon-1left-mini{
-	background-image:url(system/images/16/1left-mini.png);
+	background-image:url(system/images/16/1left-mini-blue.png);
 }
 
 .system-sidebar .scrollbars > .scrollbar > .simple-button .wrap-icon.icon-1right-mini,
 .jpanel .scrollbars > .scrollbar .simple-button .wrap-icon.icon-1right-mini{
-	background-image:url(system/images/16/1right-mini.png);
+	background-image:url(system/images/16/1right-mini-blue.png);
 }
 
 .system-sidebar .scrollbars > .scrollbar,
@@ -1187,7 +1187,7 @@
 }
 
 /** 
-	Spécifique alertbox 
+	Spï¿½cifique alertbox 
 **/
 
 

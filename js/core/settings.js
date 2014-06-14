@@ -1,4 +1,5 @@
 /** section: Core
+/** section: Core
  * System.Settings
  * Gestionnaire des panneaux de configurations de Javalyss.
  **/
@@ -63,10 +64,7 @@ System.Setting = System.Settings = {
 			win.TabControl.addPanel($MUI('Préférences'), this.createPanelPreferences(win)).setIcon('system-setting-advanced');
 			win.TabControl.addPanel($MUI('Sécurité'), this.createPanelSecurity(win)).setIcon('system-setting-security');
 			win.TabControl.addPanel($MUI('Groupes & accès'), this.createPanelGroup(win)).setIcon('system-group');
-			win.TabControl.addPanel($MUI('Thème'), this.createPanelTheme(win)).setIcon('system-setting-template').on('click', function(){
-				win.forms.DEFAULT_THEME.refresh();
-			});
-			
+
 			win.TabControl.addPanel($MUI('Exportation'), this.createPanelExport(win)).setIcon('system-setting-export').on('click', function(){
 				win.loadExport();
 			});
@@ -401,11 +399,6 @@ System.Setting = System.Settings = {
 		forms.MODE_DEBUG = new ToggleButton();
 		forms.MODE_DEBUG.Value($S.Meta('MODE_DEBUG'));
 		//
-		//
-		//
-		forms.DEVICE_MODE = new ToggleButton();
-		forms.DEVICE_MODE.Value($S.Meta('DEVICE_MODE') == 'mobile');
-		//
 		//LINK_MARKET
 		//
 		forms.LINK_MARKET = 	new Node('input', {className:'icon-cell-edit', type:'text', value:$S.LINK_MARKET});
@@ -415,7 +408,6 @@ System.Setting = System.Settings = {
 		var table = 		new TableData();
 		
 		table.addHead($MUI('Mode développeur'), {className:'icon-system-setting-modedev system-icon-field'}).addCel(forms.MODE_DEBUG, {style:'text-align:right'}).addRow();
-		table.addHead($MUI('Forcer le mode Tablette'), {className:'icon-system-setting-modetablette system-icon-field'}).addCel(forms.DEVICE_MODE, {style:'text-align:right'}).addRow();
 		table.addHead('  ', {style:'height:10px'}).addRow();	
 		table.addHead($MUI('Recherche de mise à jour'), {style:'width:160px', className:'icon-system-setting-update system-icon-field'}).addCel(forms.USE_UPDATE, {style:'text-align:right'}).addRow();
 		table.addHead($MUI('Canal beta'), {style:'width:160px', className:'icon-system-setting-beta system-icon-field'}).addCel(forms.USE_BETA, {style:'text-align:right'}).addRow();
@@ -451,12 +443,7 @@ System.Setting = System.Settings = {
 			win.ActiveProgress();
 			$S.Meta('MODE_DEBUG', this.Value());
 		});
-		
-		forms.DEVICE_MODE.on('change', function(){
-			win.ActiveProgress();
-			$S.Meta('DEVICE_MODE', this.Value() ? 'mobile' : 'auto');
-		});
-		
+
 		forms.MODE_DEBUG.on('mouseover', function(){
 			win.Flag.setText('<p class="icon-documentinfo">' + $MUI('Cette option vous permet d\'activer ou désactiver le mode développeur') + '.</p>').setType(FLAG.RIGHT).color('grey').show(this, true);
 		});
@@ -1040,7 +1027,7 @@ System.Setting = System.Settings = {
 			splite,
 			table,
 			new Node('h4', $MUI('Documentations')),
-			btnCoreJS, btnCorePHP, btnWindow, btnExtends, btnICON, btnFLAG, btnCGU
+			btnCoreJS, btnCorePHP, btnWindow, btnExtends, btnCGU
 		]);
 		
 		var self = this;
@@ -1049,17 +1036,6 @@ System.Setting = System.Settings = {
 		btnExtends.on('click', function(){self.openDoc($S.LINK_DOC_EXTENDS, "Extends JS");});
 		btnCoreJS.on('click', function(){self.openDoc($S.LINK_DOC_CORE, "Core JS");});
 		btnCorePHP.on('click', function(){self.openDoc($S.LINK_DOC_CORE_PHP, "Core PHP");});
-		btnICON.on('click', function(){
-			var win = self.openDoc($S.URI_PATH + 'icons/?output=html', "Liste des icônes");
-			win.resizeTo(550, document.stage.stageHeight);
-			win.moveTo('right', 'top');
-		});
-		btnFLAG.on('click', function(){
-			var win = self.openDoc($S.URI_PATH + 'icons/?output=html.flag', "Liste des drapeaux");
-			win.resizeTo(400, document.stage.stageHeight);
-			win.moveTo('right', 'top');
-		});
-		
 		btnCGU.on('click', function(){
 			var win = System.open('http://javalyss.fr/cgu/javalyss.html', "Conditions générales d'utilisation");
 			win.resizeTo(500, document.stage.stageHeight);

@@ -115,10 +115,10 @@
 	background:				0px;
 }
 
-.pc .taskbar > .systray .button:hover,
+.taskbar > .systray .button:hover,
 .active .taskbar > .systray .button:active,
-.pc .taskbar > .systray .simple-menu:hover > .wrap-content > .wrap-body > .button,
-.mobile .taskbar > .systray .simple-menu:active > .wrap-content > .wrap-body > .button{
+.taskbar > .systray .simple-menu:hover > .wrap-content > .wrap-body > .button/*,
+.mobile .taskbar > .systray .simple-menu:active > .wrap-content > .wrap-body > .button*/{
 	border-width:0px;
 	background:	white;
 }

@@ -73,8 +73,8 @@ textarea { overflow: auto; vertical-align: top; resize: vertical; }
 	background-image:url(window/images/add.png);	
 }
 
-.pc .icon-add-14:hover,
-.mobile .icon-add-14:active{
+.icon-add-14:hover/*,
+.mobile .icon-add-14:active*/{
 	background-image:url(window/images/add-over.png);	
 }
 
@@ -355,22 +355,22 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus
 	<?php echo $Global->button->submit->text; ?>
 }
 
-.pc .button:hover > .font,
-.pc .box-simple-button:hover a,
-.pc .gradient.over.font:hover,
-.pc .gradient.over:hover > .font,
-.pc .button:hover a,
-.pc .button:hover input,
-.pc .button:hover button,
-.pc .w-line > .wrap-header.gradient:hover > .font,
-.pc .w-line.selected > .wrap-header.gradient:hover > .font,
-.pc .drop-menu.chrome > .simple-menu:hover > .wrap-content > .wrap-body > .button > .font,
-.pc .window.theme-default > .wrap-super-body > .drop-menu.top > .simple-menu:hover > .wrap-content > .wrap-body > .button > .font,
-.pc .window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .button:hover > .font,
-.pc .window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .input > .button:hover > .font,
-.pc .simple-menu:hover > .wrap-content > .wrap-body > .button > .font,
+.button:hover > .font,
+.box-simple-button:hover a,
+.gradient.over.font:hover,
+.gradient.over:hover > .font,
+.button:hover a,
+.button:hover input,
+.button:hover button,
+.w-line > .wrap-header.gradient:hover > .font,
+.w-line.selected > .wrap-header.gradient:hover > .font,
+.drop-menu.chrome > .simple-menu:hover > .wrap-content > .wrap-body > .button > .font,
+.window.theme-default > .wrap-super-body > .drop-menu.top > .simple-menu:hover > .wrap-content > .wrap-body > .button > .font,
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .button:hover > .font,
+.window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .input > .button:hover > .font,
+.simple-menu:hover > .wrap-content > .wrap-body > .button > .font,
 
-.mobile .box-simple-button:active a,
+/*.mobile .box-simple-button:active a,
 .mobile .gradient.over.font:active,
 .mobile .gradient.over:active > .font,
 .mobile .button a:active,
@@ -383,7 +383,7 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus
 .mobile .window.theme-default > .wrap-super-body > .drop-menu.top > .simple-menu:active > .wrap-content > .wrap-body > .button > .font,
 .mobile .window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .button:active > .font,
 .mobile .window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .input > .button:active > .font,
-.mobile .simple-menu:active > .wrap-content > .wrap-body > .button > .font,
+.mobile .simple-menu:active > .wrap-content > .wrap-body > .button > .font,*/
 .toggle-button.toggle-yes{
 	<?php
 		if(!empty($Global->button->over->color)):
@@ -406,8 +406,8 @@ body .gradient.button.no-fill > .font{
 	text-shadow:	none !important;
 }
 
-.pc .button.selected:hover > .font,
-.mobile .button.selected:active > .font,
+.button.selected:hover > .font,
+/*.mobile .button.selected:active > .font,*/
 .button.selected > .font,
 .box-simple-button.selected a,
 .gradient.selected.font,
@@ -514,17 +514,17 @@ body .gradient.button.no-fill > .font{
 	<?php echo $Global->button->submit->background; ?>
 }
 
-.pc .button:hover, 
-.pc .gradient.over:hover, 
-.pc .box-simple-button:hover,
-.pc .drop-menu.chrome > .simple-menu:hover > .wrap-content > .wrap-body > .button,
-.pc .simple-menu:hover > .wrap-content > .wrap-body > .button,
-.pc .window.theme-default > .wrap-super-body > .drop-menu.top > .simple-menu:hover > .wrap-content > .wrap-body > .button,
-.pc .window.theme-default.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .button:hover,
-.pc .window.theme-default.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .input > .button:hover,
-.pc .taskbar > .systray .simple-menu > .wrap-content > .wrap-body > .button:hover,
-.pc .app-button:hover,
-.pc .calendar > .wrap-header > .simple-button:hover,
+.button:hover,
+.gradient.over:hover,
+.box-simple-button:hover,
+.drop-menu.chrome > .simple-menu:hover > .wrap-content > .wrap-body > .button,
+.simple-menu:hover > .wrap-content > .wrap-body > .button,
+.window.theme-default > .wrap-super-body > .drop-menu.top > .simple-menu:hover > .wrap-content > .wrap-body > .button,
+.window.theme-default.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .button:hover,
+.window.theme-default.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .input > .button:hover,
+.taskbar > .systray .simple-menu > .wrap-content > .wrap-body > .button:hover,
+.app-button:hover,
+.calendar > .wrap-header > .simple-button:hover/*,
 
 .mobile .button:active,
 .mobile .gradient.over:active,
@@ -535,7 +535,7 @@ body .gradient.button.no-fill > .font{
 .mobile .window.theme-default.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .button:active,
 .mobile .window.theme-default.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .input > .button:active,
 .mobile .taskbar > .systray .simple-menu > .wrap-content > .wrap-body > .button:active,
-.mobile .calendar > .wrap-header > .simple-button:active{
+.mobile .calendar > .wrap-header > .simple-button:active*/{
 	filter:			none;
 	-ms-filter:		none;
 	
@@ -543,7 +543,7 @@ body .gradient.button.no-fill > .font{
 	
 }
 
-.mobile .w-line .gradient.wrap-header.over:active,
+/*.mobile .w-line .gradient.wrap-header.over:active,*/
 .toggle-button.toggle-yes{
 	background:<?php echo empty($Global->button->over->background->color) ? $Global->row->over->background->color : $Global->button->over->background->color; ?>;
 }
@@ -555,8 +555,8 @@ body .button.no-fill{
 	background:			none !important;
 }
 
-.pc .button.selected:hover,
-.mobile .button.selected:active,
+.button.selected:hover,
+/*.mobile .button.selected:active,*/
 .button.selected,
 .gradient.selected, 
 .box-simple-button.selected,
@@ -682,24 +682,24 @@ body .button.no-fill{
 	$rule = $Global->button->over->border->toBorder();
 	if(!empty($rule)):
 ?>
-.pc .button:hover,
-.pc .border.over:hover,
-.pc .drop-menu.chrome > .simple-menu:hover > .wrap-content > .wrap-body > .button,
-.pc .window.theme-default > .wrap-super-body > .drop-menu.top > .simple-menu:hover > .wrap-content > .wrap-body > .button,
-.pc .window.theme-default.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .button:hover,
-.pc .window.theme-default.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .input > .button:hover,
-.pc .taskbar > .systray .simple-menu > .wrap-content > .wrap-body > .button:hover,
-.pc .simple-menu:hover > .wrap-content > .wrap-body > .button,
+.button:hover,
+.border.over:hover,
+.drop-menu.chrome > .simple-menu:hover > .wrap-content > .wrap-body > .button,
+.window.theme-default > .wrap-super-body > .drop-menu.top > .simple-menu:hover > .wrap-content > .wrap-body > .button,
+.window.theme-default.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .button:hover,
+.window.theme-default.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .input > .button:hover,
+.taskbar > .systray .simple-menu > .wrap-content > .wrap-body > .button:hover,
+.simple-menu:hover > .wrap-content > .wrap-body > .button,
+.w-line.selected > .wrap-header.gradient
+/*.mobile .border.over:active
+.mobile .button:active,*/
 
-.mobile .border.over:active
-.mobile .button:active,
-.w-line.selected > .wrap-header.gradient,
-.mobile .drop-menu.chrome > .simple-menu:active > .wrap-content > .wrap-body > .button,
+/*.mobile .drop-menu.chrome > .simple-menu:active > .wrap-content > .wrap-body > .button,
 .mobile .window.theme-default > .wrap-super-body > .drop-menu.top > .simple-menu:active > .wrap-content > .wrap-body > .button,
 .mobile .window.theme-default.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .button:active,
 .mobile .window.theme-default.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .input > .button:active,
 .mobile .taskbar > .systray .simple-menu > .wrap-content > .wrap-body > .button:active,
-.mobile .simple-menu:active > .wrap-content > .wrap-body > .button{
+.mobile .simple-menu:active > .wrap-content > .wrap-body > .button*/{
 	border:<?php echo $rule; ?>
 }
 <?php
@@ -710,8 +710,8 @@ body .border.no-fill{
 	border-color:		transparent !important;
 }
 
-.pc .button.selected:hover,
-.mobile .button.selected:active,
+.button.selected:hover,
+/*.mobile .button.selected:active,*/
 .box-simple-button.selected,
 .button.selected,
 .border.selected,
@@ -758,11 +758,11 @@ body .border.no-fill{
 	box-shadow:			none;
 }
 
-.pc .shadow.over:hover{
+.shadow.over:hover{
 	<?php echo $Global->button->over->toBoxShadow(); ?>	
 }
 
-.mobile .shadow.over:active,
+/*.mobile .shadow.over:active,
 .mobile .button:active,
 .mobile .gradient.over:active,
 .mobile .box-simple-button:active,
@@ -771,14 +771,14 @@ body .border.no-fill{
 .mobile .window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .button:active,
 .mobile .window.setting > .wrap-super-body > .wrap-body > .tab-control > .wrap-super-body > .wrap-body div.panel > table.table-data tbody tr .champ > .input > .input > .button:active,
 .mobile .taskbar > .systray .simple-menu > .wrap-content > .wrap-body > .button:active,
-.mobile .simple-menu:active > .wrap-content > .wrap-body > .button{
+.mobile .simple-menu:active > .wrap-content > .wrap-body > .button*/{
 	-moz-box-shadow:		0 1px 2px rgba(0, 0, 0, 0.5) inset;
 	-webkit-box-shadow:		0 1px 2px rgba(0, 0, 0, 0.5) inset;
 	box-shadow:				0 1px 2px rgba(0, 0, 0, 0.5) inset;
 }
 
-.pc .button.selected:hover,
-.mobile .button.selected:active,
+.button.selected:hover,
+/*.mobile .button.selected:active,*/
 .button.shadow.selected{
 	<?php echo $Global->button->selected->toBoxShadow(); ?>
 }
@@ -895,8 +895,8 @@ body .border.no-fill{
 	color:			<?php echo $Global->row->selected->color; ?> !important;
 }
 
-.pc .w-line.group > .wrap-header > .wrap-title,
-.mobile .w-line.group > .wrap-header > .wrap-title,
+.w-line.group > .wrap-header > .wrap-title,
+/*.mobile .w-line.group > .wrap-header > .wrap-title,*/
 .section > .wrap-header > .wrap-title,
 .simpletable.theme-default .simple-table > tbody > .row-group-header > .wrap-title{
 	color:			<?php echo $Global->table->body->header->color; ?>;

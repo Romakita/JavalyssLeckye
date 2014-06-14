@@ -70,10 +70,10 @@
 	<?php echo $Global->button->normal->border->toOutset(); ?>
 }
 
-.pc .tab-control.left > .wrap-header > .simple-button:hover,
-.pc .tab-control.left > .wrap-header > .simple-menu:hover > .wrap-content > .wrap-body > .simple-button,
+.tab-control.left > .wrap-header > .simple-button:hover,
+.tab-control.left > .wrap-header > .simple-menu:hover > .wrap-content > .wrap-body > .simple-button/*,
 .mobile .tab-control.left > .wrap-header > .simple-button:active,
-.mobile .tab-control.left > .wrap-header > .simple-menu:active > .wrap-content > .wrap-body > .simple-button{
+.mobile .tab-control.left > .wrap-header > .simple-menu:active > .wrap-content > .wrap-body > .simple-button*/{
 	<?php echo $Global->button->over->border->toOutset(); ?>
 }
 
@@ -148,8 +148,8 @@
 	background:white;
 }
 
-.pc .tab-control.left > .wrap-header > .simple-button.selected:hover,
-.mobile .tab-control.left > .wrap-header > .simple-button.selected:active{
+.tab-control.left > .wrap-header > .simple-button.selected:hover/*,
+.mobile .tab-control.left > .wrap-header > .simple-button.selected:active*/{
 	<?php echo $Global->button->normal->border->toOutset(); ?>
 }
 

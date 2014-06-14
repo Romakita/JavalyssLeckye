@@ -140,7 +140,7 @@
 	<?php echo $Global->button->large->padding ?>
 }
 
-.pc .button.large:hover{
+.button.large:hover{
 	background:	none;
 	<?php echo $Global->button->large->over->border; ?>
 	<?php echo $Global->button->large->over->background; ?>
@@ -168,8 +168,8 @@
 	text-shadow:		none;
 }
 
-.pc .button.large:hover > .wrap-text,
-.mobile .button.large:active > .wrap-text{
+.button.large:hover > .wrap-text/*,
+.mobile .button.large:active > .wrap-text*/{
 	color:				#222;
 	text-shadow:		none;
 }
@@ -324,17 +324,17 @@
 	border:					1px solid #ccc;
 }
 
-.pc .app-button:hover{
+.app-button:hover{
 	color:#006699;	
 }
 
-.pc .ie-lt-10 .app-button:hover{
+.ie-lt-10 .app-button:hover{
 	filter:					none;
 	-ms-filter:				none;
 	background:				url(window/images/appbutton-over.png) no-repeat top center;
 }
 
-.pc .hp-button:hover{
+.hp-button:hover{
 	background:	white;
 	border:		1px solid #069;
 	z-index:	10;
@@ -483,7 +483,7 @@
 	white-space:	nowrap;	
 }
 
-.pc .hp-button:hover > .wrap-text{
+.hp-button:hover > .wrap-text{
 	background:#333;	
 	background:rgba(0,0,0,0.7);	
 	overflow:hidden;

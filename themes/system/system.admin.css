@@ -96,10 +96,10 @@ a:hover{
 	background:white;
 }
 
-.pc .app-button:hover{
+.app-button:hover{
 	background:white;
 }
-.pc .app-button:hover{
+.app-button:hover{
 	border:<?php echo $Global->button->over->border->toBorder(); ?>;
 }
 .app-button > .wrap-mask{
@@ -116,7 +116,7 @@ a:hover{
 
 /* TaskBar */
 
-.pc .taskbar > .systray .simple-menu > .wrap-content > .wrap-body > .simple-button:hover{
+.taskbar > .systray .simple-menu > .wrap-content > .wrap-body > .simple-button:hover{
 	background:white;	
 }
 
@@ -309,7 +309,7 @@ body .window.tabcontrol > .wrap-super-body > .wrap-body > .tab-control.left > .w
 	color:			#333333;
 }
 
-.pc .window.tabcontrol > .wrap-super-body > .wrap-body > .tab-control.left > .wrap-header > .simple-button:hover{
+.window.tabcontrol > .wrap-super-body > .wrap-body > .tab-control.left > .wrap-header > .simple-button:hover{
 	background:		<?php echo $Global->button->over->background->color; ?>;
 }
 
@@ -317,7 +317,7 @@ body .window.tabcontrol > .wrap-super-body > .wrap-body > .tab-control.left > .w
 	right:			2px;	
 }
 
-.pc .window.tabcontrol > .wrap-super-body > .wrap-body > .tab-control.left > .wrap-header > .simple-button:hover > .wrap-text{
+.window.tabcontrol > .wrap-super-body > .wrap-body > .tab-control.left > .wrap-header > .simple-button:hover > .wrap-text{
 	color:			white;
 }
 

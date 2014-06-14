@@ -1188,12 +1188,12 @@ Object.extend(System.User, {
 		//
 		// Panel Thème
 		//
-		if($S.Meta('USE_THEMES')){
+		/*if($S.Meta('USE_THEMES')){
 			win.TabControl.addPanel($MUI('Thème'), $S.themes.createPanelChoice(win)).setIcon('system-account-template').on('click',function(){
 				win.refresh();
 			});
 			win.TabControl.addPanel($MUI('Fond d\'écran'), $S.themes.createPanelBackground(win)).setIcon('system-account-background');
-		}
+		}*/
 		//
 		// Panel sécurity
 		//
@@ -1959,7 +1959,7 @@ function $U(key, value, bool){
 	return $UM().user.setMeta(key, value, bool);
 };
 /** section: Core
- * class UserButton
+ * class System.User.Button
  * 
  * Cette classe permet de créer un bouton avec les informations de l'utilisateur.
  *
@@ -1969,9 +1969,9 @@ function $U(key, value, bool){
  * * Classe parente : AppButton
  *
  **/
-var UserButton = Class.from(AppButton);
+System.User.Button = Class.from(AppButton);
 
-UserButton.prototype = {
+System.User.Button.prototype = {
 	className: 'wobject user-button',
 /**
  * new UserButton()
