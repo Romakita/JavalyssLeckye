@@ -293,7 +293,7 @@ System.Setting = System.Settings = {
 		//
 		//Splite
 		//
-		var submit = 		new SimpleButton({text:$MUI('Enregistrer'), icon:'filesave', type:'submit'});
+		var submit = 		new SimpleButton({text:$MUI('Enregistrer'), type:'submit'});
 		//
 		//Table1
 		//
@@ -327,13 +327,7 @@ System.Setting = System.Settings = {
 			
 			submit
 		]);
-		
-		new ButtonInteract(win, {
-			manuelid:	4,
-			incident:	'Formulaire mon compte - configuration impression',
-			node:		panel
-		});
-		
+
 		/*var folder = Object.isUndefined($U('Logo')) ? null : $U('Logo');
 		
 		forms.Logo.SimpleButton.on('click',function(){

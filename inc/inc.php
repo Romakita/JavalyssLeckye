@@ -67,9 +67,11 @@ require_once(ABS_PATH . 'inc/interface/iclass.php');
 require_once(ABS_PATH . 'inc/interface/iplugin.php');
 require_once(ABS_PATH . 'inc/interface/isearch.php');
 require_once(ABS_PATH . 'inc/core/class_system.php');
-System::Initialize();
+
 //----------------------------------------------------------------------------
 //Fin-------------------------------------------------------------------------
 //----------------------------------------------------------------------------
 error_reporting(E_ALL);
+
+System::Initialize();
 ?>
