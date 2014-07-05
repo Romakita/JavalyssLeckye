@@ -223,7 +223,11 @@ abstract class System extends SystemTerm{
         if(!self::IsStopEvent()){ //préparation de la page ADMIN
 
             if(!User::IsConnect()){
-                include('themes/system/index.php');
+                self::Fire('system:connexion');
+
+                if(!self::IsStopEvent()){
+                    include('themes/system/index.php');
+                }
                 exit();
             }
 
