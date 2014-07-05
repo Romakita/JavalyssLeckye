@@ -587,7 +587,7 @@ class User extends ObjectTools implements iClass, iSearch{
 			$mail->Message = '
 			<html><head><title>Réinitialisation de votre mot de passe</title></head>
 			<body>
-				<p>Bonjour '.$this->Name.' '. $this->FirstName.',</p>
+				<p>Bonjour '.$user->Name.' '. $user->FirstName.',</p>
 				
 				<p>Vous avez demandé le renouvellement de votre mot de passe pour le compte suivant :</p>
 				<p>Site internet : <a href="'.URI_PATH.'">'.URI_PATH.'</a></p>
@@ -620,9 +620,7 @@ class User extends ObjectTools implements iClass, iSearch{
 		if($this->Login == NULL && $this->Password == NULL){
 			self::cDie();
 		}
-				
-		$result = false;
-		
+
 		$request = new Request();
 		
 		$result = $request->select('U.*')
@@ -1002,9 +1000,9 @@ class User extends ObjectTools implements iClass, iSearch{
 					return 'user.setmeta.err'; 
 				}
 				
-				if($User->getID() == $this->User->getID()){
-					$_SESSION['User'] = serialize($User);
-					exit(0);
+				if($User->getID() == User::Get()->getID()){
+					$_SESSION['User'] = $User;
+					//exit(0);
 				}
 				
 				echo $User->toJSON();
@@ -1018,7 +1016,7 @@ class User extends ObjectTools implements iClass, iSearch{
  * Cette méthode vérifie que le `Name` et `FirstName` de l'utilisateur n'existe pas en base de données.
  **/
 	public function exist(){		
-		return Sql::count(User::TABLE_NAME, "`Name` = '".Sql::EscapeString($this->getName())."' AND `FirstName` = '".Sql::EscapeString($this->getFirstName())."'") > 0;
+		return Sql::Count(User::TABLE_NAME, "`Name` = '".Sql::EscapeString($this->getName())."' AND `FirstName` = '".Sql::EscapeString($this->getFirstName())."'") > 0;
 	}
 /**
  * User#emailExist() -> boolean
@@ -1026,7 +1024,7 @@ class User extends ObjectTools implements iClass, iSearch{
  * Cette méthode permet de vérifier si l'e-mail de l'utilisateur est déjà enregistré en base de données.
  **/
 	public function emailExist(){
-		return Sql::count(User::TABLE_NAME, "EMail like '".Sql::EscapeString($this->EMail)."' AND User_ID != ".$this->User_ID);
+		return Sql::Count(User::TABLE_NAME, "EMail like '".Sql::EscapeString($this->EMail)."' AND User_ID != ".$this->User_ID);
 	}
 /**
  * User#generateAccess() -> void
@@ -1055,12 +1053,12 @@ class User extends ObjectTools implements iClass, iSearch{
 		
 		if($User instanceof User){
 			if(func_num_args() > 0){
-				if(method_exists($this, func_get_arg(0))) return $User;
-				if(property_exists($this, func_get_arg(0)) && !in_array(func_get_arg(0), array('Meta', 'Is_Connect', 'Is_Active'))){
+				if(method_exists($User, func_get_arg(0))) return $User;
+				if(property_exists($User, func_get_arg(0)) && !in_array(func_get_arg(0), array('Meta', 'Is_Connect', 'Is_Active'))){
 					if(func_num_args() == 2){
-						$this->${func_get_arg(0)} = func_get_arg(1);	
+						$User->${func_get_arg(0)} = func_get_arg(1);
 					}
-					return $this->${func_get_arg(0)};
+					return $User->${func_get_arg(0)};
 				}
 				
 				if(!in_array(func_get_arg(0), array('Meta', 'Is_Connect', 'Is_Active'))){
@@ -1382,28 +1380,6 @@ class User extends ObjectTools implements iClass, iSearch{
 		$role = new Role((int) $this->Role_ID);
 		return $role->getRoleParent();
 	}
-/*
- * User.IsBanIP() -> void
- *
- * Cette méthode `static` vérifie si l'adresse ip du client connecté est bannie.
- **/	
-	final static public function IsBanIP(){
-		$Authorized_Tries = 5;
-		$Ban_Time = 		15;
-		$Current_IP = 		getenv("HTTP_X_FORWARDED_FOR" ) ? getenv("HTTP_X_FORWARDED_FOR" ) : getenv("REMOTE_ADDR" ); 
-		
-		$request = 			new Request(DB_COMPTE);
-		$request->select = 	'Ban_Timestamp';
-		$request->from =	'Banned_Users';
-		$request->where = 	" IP = '" . $Current_IP . "' and Tries >= '" . $Authorized_Tries . "'";
-		
-		$sql = $request->exec('select');
-		
-		if($sql['length'] > 0) {
-			$row = $sql[0];			
-			die('system.banned.ip.'.$row["Ban_Timestamp"].'.'.$Authorized_Tries);
-		}
-	}
 /**
  * User.IsConnect() -> Boolean
  * 
@@ -1547,38 +1523,6 @@ class User extends ObjectTools implements iClass, iSearch{
 		//Sortie PDF
 		return $pdf;
 	}
-/*
- * User.RazBanIP() -> void
- *
- * Cette méthode `static` réinitialise la liste des adresses IP bannies.
- **/	
-	final static public function RazBanIP(){
-		//RAZ IP Bannies depuis 15 mins ou plus
-		$CurrSecs = 	date("s");
-		$CurrMins = 	date("i");
-		$CurrHours = 	date("H");
-		$CurrDay =		date("d");
-		$CurrMonth = 	date("m");
-		$CurrYear = 	date("Y");
-		
-		$Ban_Time = 15;
-		
-		$TstSecs = 	date("s", mktime($CurrHours, $CurrMins-$Ban_Time, $CurrSecs, $CurrMonth, $CurrDay, $CurrYear));
-		$TstMins = 	date("i", mktime($CurrHours, $CurrMins-$Ban_Time, $CurrSecs, $CurrMonth, $CurrDay, $CurrYear));
-		$TstHours = date("H", mktime($CurrHours, $CurrMins-$Ban_Time, $CurrSecs, $CurrMonth, $CurrDay, $CurrYear));
-		$TstDay = 	date("d", mktime($CurrHours, $CurrMins-$Ban_Time, $CurrSecs, $CurrMonth, $CurrDay, $CurrYear));
-		$TstMonth = date("m", mktime($CurrHours, $CurrMins-$Ban_Time, $CurrSecs, $CurrMonth, $CurrDay, $CurrYear));
-		$TstYear = 	date("Y", mktime($CurrHours, $CurrMins-$Ban_Time, $CurrSecs, $CurrMonth, $CurrDay, $CurrYear));
-		
-		$TstTime = $TstYear . $TstMonth . $TstDay . $TstHours . $TstMins .$TstSecs;
-		
-		$request = 			new Request(DB_COMPTE);
-		$request->from = 	"Banned_Users";
-		$request->where =	"Ban_Timestamp < '" . $TstTime . "'";
-	
-		$sql = $request->exec('compile');
-		
-	}
 /**
  * User.Set() -> void
  * 
@@ -1665,7 +1609,8 @@ class User extends ObjectTools implements iClass, iSearch{
 	public function __sleep(){
 		
 		$i = 0;
-		
+		$array = array();
+
     	foreach($this as $key=>$value){
 			if(method_exists($this, $key) && $key != 'Meta') continue;
 			
@@ -1753,4 +1698,3 @@ class User extends ObjectTools implements iClass, iSearch{
 }
 
 User::Initialize();
-?>

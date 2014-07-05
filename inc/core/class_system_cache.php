@@ -77,7 +77,7 @@ class SystemCache extends ObjectTools{
 		}
 		
 		if($o->Src == '' || $o->Src == ABS_PATH){//protection du dossier root
-			return;
+			return '';
 		}
 		
 		if(!file_exists($o->Src)){
@@ -142,5 +142,3 @@ class SystemCache extends ObjectTools{
 		return file_exists($this->SrcCache);
 	}
 }
-
-?>

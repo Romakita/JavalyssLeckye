@@ -97,7 +97,7 @@ class Plugin extends ObjectTools{
 	public static function Initialize(){
 		self::$Manager =	new PluginManager(ABS_PATH.PATH_PLUGIN, ABS_PATH);
 		
-		self::$Manager->observe('gateway.exec', array(__CLASS__, 'exec'));
+		System::Observe('gateway.exec', array(__CLASS__, 'exec'));
 		
 		return self::$Manager;
 	}
@@ -243,13 +243,13 @@ class Plugin extends ObjectTools{
 			
 			$PM->setCurrent($this->Folder);
 			//on stop l'observation de l'événement plugin.active
-			$PM->stopObserving('plugin.active');		
+			System::StopObserving('plugin.active');
 			//inclusion du plugin à activer
 			include($PM->path());
 			
 			ob_start();
 			//on exécute l'événement plugin.active
-			System::fire('plugin.active');
+			System::Fire('plugin.active');
 						
 			$this->Active = 1;
 			
@@ -278,14 +278,14 @@ class Plugin extends ObjectTools{
 			$PM->setCurrent($this->Folder);
 					
 			//on stop l'observation de l'événement plugin.deactive
-			$PM->stopObserving('plugin.deactive');
+            System::StopObserving('plugin.deactive');
 			
 			//inclusion du plugin à activer
 			include($PM->path());
 			
 			ob_start();
 			//on exécute l'événement plugin.deactive
-			System::fire('plugin.deactive', array($erase));
+			System::Fire('plugin.deactive', array($erase));
 			
 			$this->Active = 0;
 			
@@ -345,11 +345,11 @@ class Plugin extends ObjectTools{
  **/
 	public static function exec($op){
 		global $PM;
-		
+
 		switch($op){
 							
 			case 'plugin.active':
-				
+
 				$plugin = new Plugin($_POST['Plugin']);
 								
 				if($str = $plugin->enable()){
@@ -555,5 +555,3 @@ class Plugin extends ObjectTools{
 		return true;
 	}
 }
-
-?>

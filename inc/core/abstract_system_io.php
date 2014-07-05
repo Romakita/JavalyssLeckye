@@ -73,6 +73,7 @@ abstract class SystemIO extends SystemIncluder{
 
         Stream::Copy(self::Path('themes').'window/', $tmp.'themes/window/', $flag);
         Stream::Copy(self::Path('themes').'system/', $tmp.'themes/system/', $flag);
+        Stream::Write(self::Path('themes').'system.min.css', Stream::Get(self::Path('uri') . "themes/compile/default/system/"));
         Stream::Copy(self::Path('themes').'system.min.css', $tmp.'themes/system.min.css', $flag);
 
         //
@@ -216,6 +217,7 @@ abstract class SystemIO extends SystemIncluder{
                         $_GET[$key] = ObjectTools::DecodeJSON($_GET[$key]);
 
                         if(is_string($_POST[$key])) {
+                            $o = new stdClass();
                             $o->op = $_POST[$key];
                             $_POST[$key] = $o;
                         }
@@ -369,7 +371,7 @@ abstract class SystemIO extends SystemIncluder{
      **/
     public static function ParseSXML($file, $db = ''){
         if(!file_exists($file)){
-            return;
+            return false;
         }
         $request = 	new Request($db);
         $array = 	Stream::ParseXML($file);

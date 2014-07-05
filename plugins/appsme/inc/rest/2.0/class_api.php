@@ -203,6 +203,7 @@ class AppsMeRestAPI extends AppsMe{
 		// Informations du dépot
 		//
 		if($link->match('/\/info\/array/')){
+            $depot = new stdClass();
 			$depot->rootName = 'Depot';
 				
 			echo self::Encode(array(
@@ -383,6 +384,7 @@ class AppsMeRestAPI extends AppsMe{
 			
 			//retourne la version du dépot sous forme de tableau
 			case 'depot.info.array':
+                $depot = new stdClass();
 				$depot->rootName = 'Depot';
 				
 				echo self::Encode(array(
@@ -601,15 +603,15 @@ class AppsMeRestAPI extends AppsMe{
  * Cette commande retourne la liste des applications ayant une mise à jour en attente
  **/	
 	public static function GetAppsUpdate($clauses, $options){
-		
+
 		$options->op = 	'-update';
 				
 		if(empty($options->Name)){
-			self::eDie($op.'.name.version.err');
+			self::eDie('app.name.version.err');
 		}
 		
 		if(empty($options->Version)){
-			self::eDie($op.'.code.version.err');
+			self::eDie('app.code.version.err');
 		}
 					
 		if(!$tab = App::GetList('', $options)){
@@ -1008,7 +1010,7 @@ class AppsMeRestAPI extends AppsMe{
 				
 				$mail->From = 	empty($appOptions->Email_Contact) ? "info@javalyss.fr" : $appOptions->Email_Contact;
 								
-				$mail->addMailTo($this->EMail);
+				$mail->addMailTo($user->EMail);
 				
 				$mail->setSubject("Création de votre compte utilisateur");
 										
@@ -1018,8 +1020,8 @@ class AppsMeRestAPI extends AppsMe{
 					
 					<p>Votre compte utilisateur vient d\'être créé sur <a href="'.URI_PATH.'">'.URI_PATH.'</a> et est désormais actif</p>
 					<p>Pour rappel, vos informations de connexion sont les suivantes :</p>
-					<p>Identifiant : '. $this->EMail . '</p>
-					<p>Mot de passe : '. $password . '</p> 
+					<p>Identifiant : '. $user->EMail . '</p>
+					<p>Mot de passe : '. $options->Password . '</p>
 					<p>&nbsp;</p>					
 					<p>Cordialement,<br />
 					L\'équipe informatique</p>
@@ -1077,4 +1079,3 @@ class AppsMeRestAPI extends AppsMe{
 }
 
 AppsMeRestAPI::Initialize();
-?>

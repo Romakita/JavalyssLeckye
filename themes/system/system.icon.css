@@ -26,35 +26,42 @@
 }
 .icon-1up-mini{
 	background-repeat:no-repeat;
-	background-image:url(system/images/16/1up-mini-grey.png);	
+	background-image:url(system/images/16/1up-mini-grey.png);
 }
+
 .icon-1down-mini{
 	background-repeat:no-repeat;
-	background-image:url(system/images/16/1down-mini-grey.png);	
+	background-image:url(system/images/16/1down-mini-grey.png);
 }
+
 .icon-1right-mini{
 	background-repeat:no-repeat;
-	background-image:url(system/images/16/1right-mini-grey.png);	
+	background-image:url(system/images/16/1right-mini-grey.png);
 }
+
 .icon-1left-mini{
 	background-repeat:no-repeat;
-	background-image:url(system/images/16/1left-mini-grey.png);	
+	background-image:url(system/images/16/1left-mini-grey.png);
 }
+
 .icon-1up-mini-blue{
 	background-repeat:no-repeat;
-	background-image:url(system/images/16/1up-mini-blue.png);	
+	background-image:url(system/images/16/1up-mini-blue.png);
 }
+
 .icon-1down-mini-blue{
 	background-repeat:no-repeat;
-	background-image:url(system/images/16/1down-mini-blue.png);	
+	background-image:url(system/images/16/1down-mini-blue.png);
 }
+
 .icon-1right-mini-blue{
 	background-repeat:no-repeat;
-	background-image:url(system/images/16/1right-mini-blue.png);	
+	background-image:url(system/images/16/1right-mini-blue.png);
 }
+
 .icon-1left-mini-blue{
 	background-repeat:no-repeat;
-	background-image:url(system/images/16/1left-mini-blue.png);	
+	background-image:url(system/images/16/1left-mini-blue.png);
 }
 /* Menu PRINCIPAL */
 

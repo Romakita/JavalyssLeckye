@@ -22,6 +22,7 @@ abstract class DynamicLoadLibrary{
 		//gestion des modèles
 		require_once('models/class_pluginmanager.php');
 		require_once('models/class_templatesmanager.php');
+        require_once('mui/class_multilingual.php');
 
 	}
 /*
@@ -52,10 +53,6 @@ abstract class DynamicLoadLibrary{
 			
 			case 'Mail':
 				require_once('mail/class_mail.php');
-				break;
-			
-			case 'Multilingual':
-				require_once('mui/class_multilingual.php');
 				break;
 				
 			case 'TemplatesManager':

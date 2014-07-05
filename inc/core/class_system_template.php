@@ -91,5 +91,3 @@ class SystemTemplate extends Models{
 }
 
 SystemTemplate::Initialize();
-
-?>

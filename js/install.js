@@ -753,17 +753,18 @@ var Install = {
 				return true;	
 			}
 			
-			options.Password = 	encodeURI(forms.Password.value);
-			options.EMail = 	encodeURI(forms.Email.value);
-			options.Login = 	encodeURI(forms.Login.value);
-			options.Name = 		encodeURI(forms.Name.value);
-			options.FirstName = encodeURI(forms.FirstName.value);
+			options.Password = 	forms.Password.value;
+			options.EMail = 	forms.Email.value;
+			options.Login = 	forms.Login.value;
+			options.Name = 		forms.Name.value;
+			options.FirstName = forms.FirstName.value;
 			
 			win.AlertBox.wait();
 			
 			$S.exec('install.user.commit', {
-				parameters: 'User=' + escape(Object.toJSON(options)),
+				parameters: 'User=' + Object.EncodeJSON(options),
 				onComplete: function(result){
+                    alert(result.responseText);
 					win.AlertBox.hide();
 					
 					if(result.responseText.match(/install\.user\.commit\.err/)){
@@ -845,7 +846,7 @@ var Install = {
 			onComplete:function(result){
 				
 				switch(result.responseText.split(' ')[0]){
-					case 'sql.select.db.err': //Le nom de la base de données fournit est éronnée
+					case 'sql.connect.err': //Le nom de la base de données fournit est éronnée
 						 
 						progressBar.setProgress(0, 4, $MUI('Erreur lors de la tentative de connexion. Patientez svp') + '...');
 						win.forms.List[0].className = 'icon-cancel';
@@ -862,24 +863,7 @@ var Install = {
 						}.bind(this), 5, 1).start();
 						
 						break;
-					
-					case 'sql.connect.err'://echec de connexion à la base de données
-						
-						progressBar.setProgress(0, 4, $MUI('Erreur lors de la tentative de connexion. Patientez svp') + '...');
-						win.forms.List[0].className = 'icon-cancel';
-						
-						new Timer(function(){
-							win.removeClassName('progress');
-							this.openConfigDB(win, win.forms.DB);
-							
-							win.Flag.setText('<p class="icon-documentinfo">' 
-							+ $MUI('Soit l\'identifiant et/ou le mot de passe sont incorrects') + '.</p><p>' + $MUI('Soit que l\'hôte est inacessible, ce qui implique que le serveur de données est sans doute défaillant') + '.</p>');
-							
-							win.Flag.setType(FLAG.RIGHT).color('grey').show(win.forms.DB_NAME);
-						
-						}.bind(this), 5, 1).start();
-						
-						break;
+
 					case "install.connection.ok":
 						progressBar.setProgress(2, 4, '');
 						win.forms.List[0].className = 'icon-valid';
@@ -890,8 +874,22 @@ var Install = {
 						}.bind(this), 1, 1).start();
 						
 						break;
-					default:	
-						alert(result.responseText);
+					default:
+						console.log(result.responseText);
+
+                        progressBar.setProgress(0, 4, $MUI('Une erreur inconnue est survenue. Patientez svp') + '...');
+                        win.forms.List[0].className = 'icon-cancel';
+
+                        new Timer(function(){
+                            win.removeClassName('progress');
+                            this.openConfigDB(win, win.forms.DB);
+
+                            win.Flag.setText('<p class="icon-documentinfo">'
+                                + $MUI('Veuillez contacter le support Javalyss pour plus d\'information sur le problème rencontré') + '.</p>');
+
+                            win.Flag.setType(FLAG.RIGHT).color('grey').show(win.forms.DB_NAME);
+
+                        }.bind(this), 5, 1).start();
 				}
 			}.bind(this)
 		});
@@ -970,10 +968,10 @@ var Install = {
 						win.ProgressBar.setProgress(0, 4, $MUI('La création de la base de données a échoué') + '. (code: ' + result.responseText + ')');
 						win.forms.List[2].className = 'icon-cancel';
 						
-						new Timer(function(){
+						/*new Timer(function(){
 							win.removeClassName('progress');
 							this.openConfigDB(win, win.forms.DB);		
-						}.bind(this), 5, 1).start();
+						}.bind(this), 5, 1).start();*/
 				}
 				
 			}.bind(this)

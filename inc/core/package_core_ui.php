@@ -195,5 +195,3 @@ class SimpleButton extends Attributs{
 		return '<span '.$this->serializeAttributs().'><a href="'.$this->Link.'" class="'.$this->Icon.'">'.$this->Text.'</a></span>';
 	}
 }
-
-?>

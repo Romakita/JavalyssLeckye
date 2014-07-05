@@ -1317,5 +1317,3 @@ class pdfSimpleTable extends pdfHTML{
 		return false;
 	}
 }
-
-?>

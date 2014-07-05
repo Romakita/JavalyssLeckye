@@ -199,4 +199,3 @@ class SystemSearch extends ObjectTools{
 
 class IntelliSearch extends SystemSearch{}
 SystemSearch::Initialize();
-?>

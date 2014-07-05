@@ -41,7 +41,7 @@ abstract class Market extends Plugin{
 				else $str .= '&';
 				
 				if(is_array($value) || is_object($value)){
-					$str .= $key.'='.serialize($value);	
+					$str .= $key.'='.serialize($value);
 				}else{
 					$str .= $key.'='.$value;
 				}	

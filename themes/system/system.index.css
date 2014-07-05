@@ -1,5 +1,40 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: "Segoe UI";
+    src: url("http://cdn-resources.windowsphone.com/Resources/Fonts/Apollo/SegoeUI-webfonts-WestEuropean/Segoe-UI/3ca1af51-981a-4e1c-b9c6-a66d0a5fe3c0-3.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Segoe UI Light";
+    src: url("http://cdn-resources.windowsphone.com/Resources/Fonts/Apollo/SegoeUI-webfonts-WestEuropean/Segoe-UI-Light/45a13f65-5199-4a22-821e-9b7d7795518e-3.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Segoe UI Bold";
+    src: url("http://cdn-resources.windowsphone.com/Resources/Fonts/Apollo/SegoeUI-webfonts-WestEuropean/Segoe-UI-Bold/f5dd91f1-2016-48f8-a46c-e3418a52c859-3.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Segoe UI Semibold";
+    src: url("http://cdn-resources.windowsphone.com/Resources/Fonts/Apollo/SegoeUI-webfonts-WestEuropean/Segoe-UI-Semibold/afae52c9-5d08-4193-8984-bb4346fd493c-3.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Segoe UI Semilight";
+    src: url("http://cdn-resources.windowsphone.com/Resources/Fonts/Apollo/SegoeUI-webfonts-WestEuropean/Segoe-UI-SemiLight/58e25a2b-5ed7-47bc-abc4-2f5c14b43227-3.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.icon-password-48{
+    background-image:url('images/48/search-shield.png');
+}
+
 body{
 	background:url(images/background.png) no-repeat center;
 	background-size:cover;
@@ -15,142 +50,90 @@ body .content{
 	-moz-box-shadow:none;
 	-webkit-box-shadow:none;
 	box-shadow:		none;
-	border:			#CFCFCF 1px solid;
-	background:		url(images/background-radial-grey.png) no-repeat center;
-	background-size:cover;
-	
-	background-image: -ms-radial-gradient(left top, circle cover, #FFFFFF 0%, #E8E8E8 50%);
-	background-image: -moz-radial-gradient(left top, circle cover, #FFFFFF 0%, #E8E8E8 50%);
-	background-image: -o-radial-gradient(left top, circle cover, #FFFFFF 0%, #E8E8E8 50%);
-	background-image: -webkit-gradient(radial, left top, 0, left top, 1020, color-stop(0, #FFFFFF), color-stop(0.5, #E8E8E8));
-	background-image: -webkit-radial-gradient(left top, circle cover, #FFFFFF 0%, #E8E8E8 50%);
-	background-image: radial-gradient(left top, circle cover, #FFFFFF 0%, #E8E8E8 50%);
-	padding:	0px;
-	position:	fixed;
-	width:		440px;
-	height:		240px;
-	left:		50%;
-	top:		50%;
-	margin-left:-220px;
-	margin-top:	-160px;
+	padding:	    0px;
+	position:	    fixed;
+	left:		    50%;
+	top:		    50%;
+	margin-left:    -200px;
+	margin-top:	    -160px;
 }
 
 body .content .form-connector{
-	width:		400px;
-	height:		200px;
-	display:	block;
-	margin:0px;
-	padding:20px;
-	background:url(images/my-user.png) right bottom no-repeat;
+    width: 350px;
+    display: block;
+    margin: 0px;
+    text-align: center;
+    margin-left: 22px;
 }
 
-body .content h1{
-	color:#006699;
+body .content .form-connector h1{
+    font-family:"Segoe UI Light", "Calibri", "Helvetica Neue", Arial;
+    font-size:80px;
+    text-align: center;
+    text-shadow:1px 3px 5px rgba(0, 0, 0, 0.5);
+	color:white;
 	margin-top:2px;
 	margin-bottom:20px;
 }
+body .content .form-connector .form-body{
+    position: relative;
+    height:115px;
+}
+body .content .form-connector .form-body .wrap-picture-login {
+    position:       absolute;
+    left:           0px;
+    top:            15px;
+    border:         10px solid #FFF;
+    background:     url(images/login.png) no-repeat scroll center #DFDFDF;
+    border-radius:  50%;
+    z-index:        10;
+    height:         70px;
+    width:          70px;
+    background-size:contain;
+}
 
-body .content input[type=text],
-body .content input[type=password]{
-	border-radius: 	0 0 0 0;
-    color: 			#666;
-    font-size: 		15px;
-    height: 		32px;
-    padding-left: 	3px;
-    padding-right: 	3px;
+body .content .form-connector .form-body input[type=text],
+body .content .form-connector .form-body input[type=password]{
+    font-family: 	"Segoe UI", "Calibri", "Helvetica Neue", Arial;
     width: 			200px;
-	font-family: 	"Segoe UI", "Calibri", "Helvetica Neue", Arial;
-}
-body .content .table-data{
-	margin-left:20px;
-}
-
-body .content .table-data > tbody > tr > th{
-	font-family:"Segoe UI", "Calibri", "Helvetica Neue", Arial;
-	color:#666666;
-	line-height:38px;
-	font-size:18px
-}
-body .content .table-data > tbody > tr > th .double-dot{
-	display:none;	
-}
-
-body .content .table-data tbody tr .champ{
-	background-color:transparent;	
-}
-body .content .button{
-	display:		inline-block;
-	margin:			10px 7px;
-	position:		relative;
-	cursor:			pointer;
-	line-height:	0;
-	text-align:		left;
-	position:		relative;
-	/**Dynamique**/
-	background-position:top;
-	background-color:#D7D7D7;
-	background-repeat:repeat-x;
-	background-image: -ms-linear-gradient(top, #E4E4E4 0%, #D7D7D7 100%);
-	background-image: -moz-linear-gradient(top, #E4E4E4 0%, #D7D7D7 100%); 
-	background-image: -o-linear-gradient(top, #E4E4E4 0%, #D7D7D7 100%);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E4E4E4), color-stop(1, #D7D7D7));
-	background-image: -webkit-linear-gradient(top, #E4E4E4 0%, #D7D7D7 100%);
-	background-image: linear-gradient(top, #E4E4E4 0%, #D7D7D7 100%);	font-family: Arial, Helvetica, sans-serif;
-	font-size: 		12px;
-	border: 		1px solid #C6C6C6;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-khtml-border-radius: 3px;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-khtml-border-radius: 3px;
-	border-radius: 3px;
-	-moz-user-select:none;
-	-webkit-user-select:none;
-	user-select:none;
-}
-body .content .button input{
-	padding:5px 10px;
-	padding-left:22px;
+    height:         34px;
+    padding:        0px 55px;
+    font-size:      14px;
+    line-height:    1.42857;
+    color:          #555;
+    border-radius: 	0 0 0 0;
+    border:         0px;
+    position:       absolute;
+    top:            65px;
+    left:           46px;
+    width:          calc(100% - 46px - 55px);
+    padding-right:  0px;
+    box-shadow:     none;
 }
 
-body .content .button:hover{
-	background-position:top;
-	background-color:#852c29;
-	background-repeat:repeat-x;
-	background-image: -ms-linear-gradient(top, #B03E3C 0%, #852C29 100%);
-	background-image: -moz-linear-gradient(top, #B03E3C 0%, #852C29 100%);
-	background-image: -o-linear-gradient(top, #B03E3C 0%, #852C29 100%);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #B03E3C), color-stop(1, #852C29));
-	background-image: -webkit-linear-gradient(top, #B03E3C 0%, #852C29 100%);
-	background-image: linear-gradient(top, #B03E3C 0%, #852C29 100%);	border: 1px solid #660000;
-}
-body .content .button > *{
-	color: 			#333;
-	font-family: 	Arial, Helvetica, sans-serif;
-	font-size: 		12px;
-	text-shadow:	0 -1px 0 rgb(255, 255, 255);
+body .content .form-connector .form-body input[type=text]{
+    top:            20px;
 }
 
-body .content .button:hover > *{
-	color:		white;
-	text-shadow:0 -1px 0 rgba(0, 0, 0, 0.3);
+body .content .form-connector .form-body input[type=submit]{
+    position: absolute;
+    background:white url(images/16/arrow-right.png) center center no-repeat;
+    border:0px;
+    height: 34px;
+    width: 40px;
+    right: 0px;
+    top: 65px;
 }
-
-body .content .button a{
-	padding:4.5px 10px;
-	display:block;
-	padding-left:22px;
+body .content .form-connector .form-body input[type=submit]:hover{
+    background-color:#eae2e2;
 }
-
-body .content .form-foot{
-	position:absolute;
-	text-align:center;
-	left:0px;
-	bottom:0px;
-	background:rgba(255, 255, 255, 0.5);
-	width:100%;
+body .content a{
+    color:#3C8DBC;
+}
+body .content a:hover, body .content a:active, body .content a:focus{
+    outline: medium none;
+    text-decoration: none;
+    color: #72AFD2;
 }
 
 
@@ -162,11 +145,17 @@ body .content .form-foot{
 .index-logo h1{
 	font-size:50px;
 	line-height:60px;
-	font-family:"Segoe UI", "Calibri", "Helvetica Neue", Arial;
+	font-family:"Segoe UI Light", "Calibri", "Helvetica Neue", Arial;
 	font-weight:lighter;
 	color:#333;
 }
 .index-logo h1 span{
 	color:#006699;
 	font-size:35px;
+}
+
+.window .forgot-email{
+    margin: 20px auto;
+    width: 100%;
+    height: 34px;
 }

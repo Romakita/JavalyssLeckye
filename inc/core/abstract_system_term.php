@@ -100,6 +100,8 @@ class SystemTerm extends SystemEvent{
             if($value === "false") 	$value = false;
             if($value === "true") 	$value = true;
 
+            $meta = $request->exec('select');
+
             if($meta['length'] == 0){
 
                 $request->fields = '(Meta_Key, Meta_Value)';

@@ -440,4 +440,3 @@ class FileManager{
 		return strcmp(basename($a->link), basename($b->link));
 	}
 }
-?>

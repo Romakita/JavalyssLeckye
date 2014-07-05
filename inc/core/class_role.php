@@ -131,7 +131,7 @@ class Role extends ObjectTools implements iClass{
 				$o = new self($_POST[__CLASS__]);
 				
 				if(!$o->commit()){
-					return $op.'.err';	
+					return $cmd.'.err';
 				}
 				
 				echo json_encode($o);
@@ -160,7 +160,7 @@ class Role extends ObjectTools implements iClass{
 				$tab = self::GetList($_POST['clauses'], $_POST['options']);
 				
 				if(!$tab){
-					return $op.'.err';	
+					return $cmd.'.err';
 				}
 				
 				echo json_encode($tab);
@@ -429,4 +429,3 @@ class Role extends ObjectTools implements iClass{
 }
 
 Role::Initialize();
-?>

@@ -39,31 +39,32 @@
 </head>
 <body>
 
+<?php
 
+if(!empty($_COOKIE["lastuserconnected"])){
+    $infos = explode('^', $_COOKIE["lastuserconnected"]);
+    $login = $infos[0];
+    $avatar = $infos[1];
+}
+?>
 <div class="content html-node carbon-node">
     <div class="form-connector">
 
         <form action="#" method="post" name="" onsubmit="return MinSys.connect(this);">
             <h1><?php echo MUI('Connexion'); ?></h1>
 
+            <div class="form-body">
 
-            <table class="table-data">
-                <tbody>
-                <tr>
-                    <th><?php echo MUI('Identifiant'); ?> <span class="double-dot">:</span></th>
-                    <td class="champ"><input type="text" name="Login" class="box-login" maxlength="130" /></td>
-                </tr>
-                <tr>
-                    <th><?php echo MUI('Mot de passe'); ?> <span class="double-dot">:</span></th>
-                    <td class="champ"><input type="password" name="Password" class="box-password" maxlength="15" /></td>
-                </tr>
-                </tbody>
-            </table>
+                <input type="text" name="Login" class="box-login" maxlength="130" placeholder="<?php echo MUI('Identifiant'); ?>"  value="<?php echo empty($login) ? '' : $login; ?>"/>
 
-            <div class="form-foot">
-                <span class="button"><input type="submit" value="Connexion" /></span>
-                <span class="button"><a href="javascript:MinSys.openLost()"><?php echo MUI('Mot de passe oublié'); ?></a></span>
+                <input type="password" name="Password" class="box-password" maxlength="15" placeholder="<?php echo MUI('Mot de passe'); ?>" />
+                <input type="submit" value=" " />
+
+                <div class="wrap-picture-login"<?php echo (!empty($avatar) ? ' style="background-image:url(' . $avatar.')"': ''); ?>></div>
+
+
             </div>
+            <a class="forgotten" href="javascript:MinSys.openLost()"><?php echo MUI('Mot de passe oublié'); ?></a>
         </form>
 
     </div>

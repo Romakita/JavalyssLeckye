@@ -19,8 +19,8 @@
  * #### Informations
  *
  * * Auteur : Lenzotti Romain
- * * Version : 1.3
- * * Date :	21/03/2014
+ * * Version : 1.4
+ * * Date :	21/06/2014
  * * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
  *
  * #### Convention de nommage
@@ -54,7 +54,7 @@ abstract class System extends SystemTerm{
      * System.VERSION -> String
      * Version du système.
      **/
-    const VERSION =			'1.3';
+    const VERSION =			'1.4';
     /**
      * System.SAFE -> String
      **/
@@ -210,13 +210,9 @@ abstract class System extends SystemTerm{
 
             self::fire('system:index');
 
-            if(!self::IsStopEvent()){
-                if(!User::IsConnect()){
-                    include('themes/system/index.php');
-                    exit();
-                }
+            if(self::IsStopEvent()){
+                exit();
             }
-
         }
 
         //deprecated
@@ -385,10 +381,11 @@ abstract class System extends SystemTerm{
 
                 switch($mode){
                     case self::SAFE:
-                        self::Error(System::fire('gateway.safe.exec', array(self::GetCMD())));
+                        self::Error(self::Fire('gateway.safe.exec', array(self::GetCMD())));
                         break;
                     case self::CNT:
-                        self::Error(System::fire('gateway.exec', array(self::GetCMD())));
+
+                        self::Error(self::Fire('gateway.exec', array(self::GetCMD())));
 
                         User::Set();
                         break;
@@ -813,5 +810,3 @@ abstract class System extends SystemTerm{
         return 0;
     }
 }
-
-?>

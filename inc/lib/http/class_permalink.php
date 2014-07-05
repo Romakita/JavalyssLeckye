@@ -287,7 +287,7 @@ class Permalink{
  * 
  * `static` Cette méthode retourne le permalien.
  **/	
-	public static function getURI(){
+	public function getURI(){
 		return $this->uri;
 	}
 /**
