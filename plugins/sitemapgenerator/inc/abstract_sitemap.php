@@ -247,7 +247,7 @@ class SiteMapGenerator extends SiteMapXML{
 		$n = self::GetOptions()->XML;
 		
 		if(empty($n)){
-			Stream::Remove($file);
+			Stream::Delete($file);
 		}
 		//
 		// MAJ INFO

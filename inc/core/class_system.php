@@ -131,10 +131,10 @@ abstract class System extends SystemTerm{
         //
         //gestion du NullByte
         //
-        Stream::CleanNullByte($_POST);
-        Stream::CleanNullByte($_GET);
-        Stream::CleanNullByte($_COOKIE);
-        Stream::CleanNullByte($_REQUEST);
+        $_POST =    Stream::CleanNullByte($_POST);
+        $_GET =     Stream::CleanNullByte($_GET);
+        $_COOKIE =  Stream::CleanNullByte($_COOKIE);
+        $_REQUEST = Stream::CleanNullByte($_REQUEST);
         //
         // Creation de la tache cron
         //
@@ -187,6 +187,11 @@ abstract class System extends SystemTerm{
         // Inclusion des plugins
         //
         Plugin::Import();
+
+
+    }
+
+    static public function StartInterface(){
         //
         //vérification de la requête
         //
@@ -250,7 +255,6 @@ abstract class System extends SystemTerm{
 
             include('themes/system/admin.php');
         }
-
     }
     /**
      * System.Header() -> void

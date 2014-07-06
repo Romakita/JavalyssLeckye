@@ -74,4 +74,8 @@ require_once(ABS_PATH . 'inc/core/class_system.php');
 error_reporting(E_ALL);
 
 System::Initialize();
+
+if(!class_exists('jUnitTest')){
+    System::StartInterface();
+}
 ?>

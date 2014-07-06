@@ -186,15 +186,6 @@ try{
 		this.window.DropMenu.setType();
 		this.window.DropMenu.Chrome(true);
 		this.window.DropMenu.addMenu($MUI('Effacer'), {icon:'cancel'}).observe('click', this.clear.bind(this));
-		this.window.BtnErrors = this.window.DropMenu.addMenu($MUI('Erreurs'), {icon:'14-layer-visible'});
-					
-		this.window.DropMenu.addMenu($MUI('Afficher package'), {icon:'package'}).observe('click', function(){$WT.trace(Extends.Imported())});
-		
-		//this.window.DropMenu.addMenu($MUI('Afficher package'), {icon:'package'}).observe('click', function(){throw('hello')});
-		//
-		// TextArea
-		//
-		
 		//
 		// InputCode
 		//
@@ -239,27 +230,7 @@ try{
 			this.ScrollBar.refresh();
 			this.ScrollBar.scrollToEnd();
 		}catch(er){}
-		
-		this.window.BtnErrors.hidden = false;
-		
-		this.window.BtnErrors.on('click', function(){
-			if(this.window.BtnErrors.hidden){
-				this.window.BtnErrors.setIcon('');
-				this.window.BtnErrors.hidden = false;
-				this.window.BtnErrors.setIcon('14-layer-visible');
-				this.TextArea.removeClassName('show-only-err');
-				this.ScrollBar.refresh();
-				this.ScrollBar.scrollToEnd();
-			}else{
-				this.window.BtnErrors.hidden = true;
-				this.window.BtnErrors.setIcon('14-layer-novisible');
-				this.TextArea.addClassName('show-only-err');	
-				this.ScrollBar.refresh();
-				this.ScrollBar.scrollToEnd();
-			}
-		}.bind(this));
-		
-		
+
 		this.Observer.fire('open', this.window);
 }catch(er){}
 		

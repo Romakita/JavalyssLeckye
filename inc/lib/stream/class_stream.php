@@ -75,12 +75,13 @@ abstract class Stream{
 			}
 			
 			return $o;
-			
 		}
 		
 		if ( strpos($o, chr(0) ) !== false ) {
 			return $replace ? str_replace(chr(0), '', $o) : substr ( $o, 0, strpos($o, chr(0)));
 		}
+
+        return $o;
 	}
 /**
  * Stream.Append(file, content) -> bool
@@ -268,7 +269,6 @@ abstract class Stream{
  **/
 	public static function Quota($folder){
 		$dir = 		@opendir($folder);
-		$array =	array();
 		$size = 	0;
 		
 		if($dir) {
@@ -866,7 +866,7 @@ abstract class Stream{
 		
 		//$str = ob_get_clean();
 		
-		return $str != '' ? false : true;
+		return;
 	}
 /*
  * Stream.GetResize(file [, width, height]) -> Boolean

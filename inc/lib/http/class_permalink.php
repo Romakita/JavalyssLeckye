@@ -59,7 +59,7 @@ class Permalink{
 			$base = $http.str_replace('//', '/', $_SERVER['SERVER_NAME'].$dir);
 			self::$URI_PATH = $base;
 		}
-				
+
 		if(is_string($uri)){
 			$this->setUri($uri);
 		}else{

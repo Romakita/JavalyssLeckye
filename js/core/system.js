@@ -610,7 +610,18 @@ var System = {
 				
 				var parameters = {cmd: argv[1]};
 				break;
-			
+
+            case "test":
+                evt.stop();
+
+                new Ajax.Request(System.URI_PATH +'/test/abtract_junittest.php', {
+                    method:'GET',
+                    onComplete:function(result){
+                        $S.trace(result.responseText);
+                    }
+                });
+                return;
+
 			case "compile":
 			case 'zipsys'://création d'une archive du logiciel.
 				evt.stop();

@@ -19,6 +19,7 @@ abstract class DynamicLoadLibrary{
 		require_once('form/class_frameworker.php');
 		//gestion HTTP Request
 		require_once('http/class_permalink.php');
+        require_once('http/class_route.php');
 		//gestion des modèles
 		require_once('models/class_pluginmanager.php');
 		require_once('models/class_templatesmanager.php');

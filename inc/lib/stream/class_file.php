@@ -262,7 +262,7 @@ class File{
  * Cette méthode retourne un objet anonyme équivalent à l'instance.
  **/
 	public function toObject(){
-
+        $obj = new stdClass();
 		foreach($this as $key=>$value){
 			$obj->$key = $value;
 		}
@@ -274,7 +274,7 @@ class File{
  * Cette méthode retourne un tableau associatif équivalent à l'instance.
  **/
 	public function toArray(){
-
+        $obj = array();
 		foreach($this as $key=>$value){
 			$obj[$key] = $value;
 		}

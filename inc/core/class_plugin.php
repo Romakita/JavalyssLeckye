@@ -235,17 +235,16 @@ class Plugin extends ObjectTools{
  * Cette méthode active l'extension.
  **/	
 	public function enable(){
-		global $PM;
-		
+
 		$activeList = System::Meta('ACTIVE_PLUGINS');
 		
 		if(!in_array($this->Folder, $activeList)){
-			
-			$PM->setCurrent($this->Folder);
+
+            self::$Manager->setCurrent($this->Folder);
 			//on stop l'observation de l'événement plugin.active
 			System::StopObserving('plugin.active');
 			//inclusion du plugin à activer
-			include($PM->path());
+			include(self::$Manager->path());
 			
 			ob_start();
 			//on exécute l'événement plugin.active
@@ -270,18 +269,18 @@ class Plugin extends ObjectTools{
  * Cette méthode désactive l'extension.
  **/	
 	public function disable($erase = false){
-		global $PM;
+
 		$activeList = 	System::Meta('ACTIVE_PLUGINS');
 		
 		if(in_array($this->Folder, $activeList)){
-							
-			$PM->setCurrent($this->Folder);
+
+            self::$Manager->setCurrent($this->Folder);
 					
 			//on stop l'observation de l'événement plugin.deactive
             System::StopObserving('plugin.deactive');
 			
 			//inclusion du plugin à activer
-			include($PM->path());
+			include(self::$Manager->path());
 			
 			ob_start();
 			//on exécute l'événement plugin.deactive
@@ -312,8 +311,7 @@ class Plugin extends ObjectTools{
  * Cette méthode supprime le répertoire de l'extension.
  **/	
 	public function remove(){
-		global $PM;
-		
+
 		if($this->Folder == ''){
 			$this->Folder = Plugin::ByName($this->Name);
 			
@@ -344,7 +342,6 @@ class Plugin extends ObjectTools{
  * La méthode peut retourner 0 ou une chaine de caractère pour indiquer une erreur lors de l'exécution d'une commande.
  **/
 	public static function exec($op){
-		global $PM;
 
 		switch($op){
 							
@@ -435,7 +432,7 @@ class Plugin extends ObjectTools{
 				echo json_encode($tab);
 				break;
 			case 'plugin.reload':
-				echo json_encode($PM->toObject());
+				echo json_encode(self::$Manager->toObject());
 		}
 	}
 /**
