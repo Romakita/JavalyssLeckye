@@ -6,12 +6,6 @@
  **/
 interface iForm{
 /**
- * iForm.Initialize() -> void
- *
- * Cette méthode initialise les événements de la classe.
- **/
-	public static function Initialize();
-/**
  * iForm.onFormSubmit() -> void
  *
  * Cette méthode teste les champs envoyés par le formulaire affiché dans la page source.

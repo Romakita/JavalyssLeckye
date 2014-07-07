@@ -85,6 +85,9 @@ abstract class BlogPress implements iPlugin{
  * Cette méthode installe l'extension ou une partie de l'extension gérées par la classe.
  **/
  	static public function Install(){
+        Post::Install();
+        BlogPressLink::Install();
+
 		$installed = self::Meta('BP_INSTALLED');
 		
 		$post = Post::ByName('accueil');
@@ -132,11 +135,6 @@ abstract class BlogPress implements iPlugin{
 		}
 		
 		self::Meta('BP_INSTALLED', 1);
-		
-		
-		
-		Post::Install();
-		BlogPressLink::Install();
 			
 		$empty = self::Meta('BP_USE_POST');
 		

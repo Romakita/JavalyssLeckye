@@ -6,12 +6,6 @@
  **/
 interface iPage{
 /**
- * iPage.Initialize() -> void
- *
- * Cette méthode initialise les événements de la classe.
- **/
-	public static function Initialize();
-/**
  * iPage.onStart() -> void
  *
  * Cette méthode est lancée avant le chargement d'une page. 

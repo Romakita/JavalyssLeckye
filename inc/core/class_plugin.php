@@ -151,14 +151,14 @@ class Plugin extends ObjectTools{
 			if(!@$plugins[$i]['Active']) continue;
 			//if(!$plugins[$i]['Is_Active']) continue;
 			
-			if($mode == System::CNT){
+			//if($mode == System::CNT){
 				if(System::GetCMD() == 'plugin.deactive'){//on n'inclut pas le plugin en cours de désactivation ou en cours de configuration
 					
 					if($plugin->Name == $plugins[$i]['Name']){
-						 continue; 
+						continue; 
 					}
 				}
-			}
+			//}
 			
 			self::Get()->setCurrent($plugins[$i]['Folder']);
 			

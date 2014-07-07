@@ -540,7 +540,8 @@ class Post extends ObjectTools implements iClass{
 				break;
 				
 			case 'regenerate.name':
-				
+
+                $options = new stdClass();
 				$options->op = '-page';
 				$list = Post::GetList($options, $options);
 				
@@ -1813,7 +1814,7 @@ class Post extends ObjectTools implements iClass{
  * Cette méthode retourne la liste des pages regroupé par arborescence pour un champ select.
  **/
 	public static function GetParents($exclude = NULL, $short = false){
-		
+		$options =          new stdClass();
 		$options->op = 		'-page-tree';
 		$options->exclude = $exclude;
 		$options->short =	$short;
@@ -2106,7 +2107,7 @@ class Post extends ObjectTools implements iClass{
 		
 		if($num == 2){
 			if($key == '') return false;
-			return $User->setMeta($key, func_get_arg(1));
+			return User::Get()->setMeta($key, func_get_arg(1));
 		}
 		
 		return false;
@@ -2219,7 +2220,7 @@ class Post extends ObjectTools implements iClass{
  * Cette méthode indique si le Post courant est une page.
  **/	
 	static public function Page(){
-		return strpos($this->Type, 'page') !== false;
+		return strpos(self::Type(), 'page') !== false;
 	}
 
 /**
