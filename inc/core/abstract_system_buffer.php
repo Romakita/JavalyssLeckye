@@ -1,6 +1,6 @@
 <?php
 /** section: Core
- * mixin SystemBuffer
+ * mixin System.Buffer
  *
  * Cette classe gère le buffer et la compression des données.
  * 
@@ -13,13 +13,15 @@
  * * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
  *
  **/
-abstract class SystemBuffer{
+namespace System;
+
+abstract class Buffer{
 /**
- * SystemBuffer.Stack -> Array
+ * System.Buffer.Stack -> Array
  **/	
 	protected static $Stack = array();
 /**
- * SystemBuffer.Start([ output_callback [, chunk_size [, erase ]]] ) -> String
+ * System.Buffer.Start([ output_callback [, chunk_size [, erase ]]] ) -> String
  * - output_callback (String): Méthode de compression.
  * - chunksize (Number): Taille maximale par ligne.
  * - erase (Boolean): ?
@@ -73,49 +75,49 @@ abstract class SystemBuffer{
 		
 	}
 /**
- * SystemBuffer.GetClean() -> String
+ * System.Buffer.GetClean() -> String
  * Lit le contenu courant du tampon de sortie puis l'efface.
  **/
 	static function GetClean(){
 		return @ob_get_clean();
 	}
 /**
- * SystemBuffer.Clean() -> void
+ * System.Buffer.Clean() -> void
  * Cette fonction vide le tampon de sortie sans l'envoyer au navigateur.
  **/
 	static function Clean(){
 		return ob_clean();
 	}
 /**
- * SystemBuffer.Get() -> String
+ * System.Buffer.Get() -> String
  * Retourne le contenu du tampon de sortie sans l'effacer. 
  **/	
 	static function Get(){
 		return ob_get_contents();
 	}
 /**
- * SystemBuffer.EndClean() -> void
+ * System.Buffer.EndClean() -> void
  * Détruit les données du tampon de sortie et éteint la tamporisation de sortie.
  **/
 	static function EndClean(){
 		return @ob_end_clean();
 	}
 /**
- * SystemBuffer.EndFlush() -> void
+ * System.Buffer.EndFlush() -> void
  * Envoie les données du tampon de sortie et éteint la tamporisation de sortie.
  **/
 	static function EndFlush(){
 		return @ob_end_flush();
 	}
 /**
- * SystemBuffer.Flush() -> void
+ * System.Buffer.Flush() -> void
  * Vide les tampons de sortie
  **/
 	static function Flush(){
 		return @ob_flush();
 	}
 /**
- * SystemBuffer.Store([ output_callback [, chunk_size [, erase ]]] ) -> String
+ * System.Buffer.Store([ output_callback [, chunk_size [, erase ]]] ) -> String
  *
  * Cette méthode copie le buffer courant, le stock dans la pile et le supprime du contexte. Il pourra être récupéré via la fonction Restore.
  **/	
@@ -125,7 +127,7 @@ abstract class SystemBuffer{
 		return $str;
 	}
 /**
- * SystemBuffer.Restore([ output_callback [, chunk_size [, erase ]]] ) -> String
+ * System.Buffer.Restore([ output_callback [, chunk_size [, erase ]]] ) -> String
  *
  * Cette méthode détruit le buffer courrant et le remplace par une copie précédente.
  **/	

@@ -9,7 +9,7 @@
  * * La méthode fire peut être stoppé à l'aide de l'objet [[StopEvent]].
  *
  **/
-var Observer = Class.create();
+var Observer = $.Observer = $.Class.create();
 
 Observer.prototype = {
 /**
@@ -226,7 +226,7 @@ Observer.prototype = {
  * 
  * <p class="note">Cette classe est disponible depuis la version 1.1</p>
  **/
-var StopEvent = Class.create();
+var StopEvent = $.Observer.StopEvent = $.Class.create();
 StopEvent.prototype = {
 	__class__: 'stopevent',
 	eventName:	'',

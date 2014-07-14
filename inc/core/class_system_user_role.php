@@ -1,6 +1,6 @@
 <?php 
 /** section: Core
- * class Role
+ * class System.Role
  * includes ObjectTools, iClass
  *
  * Cette classe gère les informations d'un rôle du [[System]].
@@ -12,62 +12,64 @@
  * * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
  *
  **/
+namespace System\User{
+
 define('TABLE_ROLE', '`'.PRE_TABLE.'roles`');
 
-class Role extends ObjectTools implements iClass{	
+class Role extends \ObjectTools implements \iClass{	
 	const PRE_OP =				'role.';
 /**
- * Role.TABLE_NAME -> String
+ * System.Role.TABLE_NAME -> String
  * Nom de la table gérée par la classe.
  **/	
 	const 	TABLE_NAME = 		TABLE_ROLE;
 /**
- * Role.PRIMARY_KEY -> String
- * Clef primaire de la table Role.TABLE_NAME gérée par la classe.
+ * System.Role.PRIMARY_KEY -> String
+ * Clef primaire de la table System.Role.TABLE_NAME gérée par la classe.
  **/
 	const 	PRIMARY_KEY = 		'Role_ID';
 /**
- * Role#Role_ID -> int
+ * System.Role#Role_ID -> int
  * Numéro d'identifiant du rôle.
  **/
 	public $Role_ID = 			0;
 /**
- * Role#Parent_ID -> int
+ * System.Role#Parent_ID -> int
  * Numéro d'identifiant du rôle parent.
  **/
 	public $Parent_ID = 		3;
 /**
- * Role#Name -> int
+ * System.Role#Name -> int
  * Titre du rôle.
  **/
 	public $Name = 			'';	
 /**
- * Role#Description -> int
+ * System.Role#Description -> int
  * Description du rôle
  **/
 	public $Description = 	'';	
 /**
- * Role#Is_Active -> Boolean
+ * System.Role#Is_Active -> Boolean
  * Indique que le groupe d'utilisateur peut accèder à l'administration ou pas.
  **/
 	public $Is_Active = 	'';	
 /*
- * Role#Role_Meta -> int
+ * System.Role#Role_Meta -> int
  * Information complémentaire concernant le rôle. Ces informations sont encodées au format JSON.
  **/
 	public $Role_Meta = 	'{}';
 /**
- * new Role()
- * new Role(json)
- * new Role(array)
- * new Role(obj)
- * new Role(roleid)
- * - json (String): Chaine de caractères JSON équivalente à une instance [[Role]].
- * - array (Array): Tableau associatif équivalent à une instance [[Role]]. 
- * - obj (Object): Objet équivalent à une instance [[Role]].
+ * new System.Role()
+ * new System.Role(json)
+ * new System.Role(array)
+ * new System.Role(obj)
+ * new System.Role(roleid)
+ * - json (String): Chaine de caractères JSON équivalente à une instance [[System.Role]].
+ * - array (Array): Tableau associatif équivalent à une instance [[System.Role]].
+ * - obj (Object): Objet équivalent à une instance [[System.Role]].
  * - roleid (int): Numéro d'identifiant d'un rôle. Les informations du rôle seront récupérées depuis la base de données.
  *
- * Cette méthode créée une nouvelle instance de [[Role]].
+ * Cette méthode créée une nouvelle instance de [[System.Role]].
  **/
 	function __construct(){
 		$numargs = func_num_args();
@@ -77,7 +79,7 @@ class Role extends ObjectTools implements iClass{
 
 				if(is_numeric($arg_list[0])){
 					
-					$request = 			new Request();
+					$request = 			new \Request();
 					$request->select = 	'*';
 					$request->from = 	self::TABLE_NAME;
 					$request->where = 	self::PRIMARY_KEY .' = '.$arg_list[0];
@@ -104,10 +106,10 @@ class Role extends ObjectTools implements iClass{
 	}
 	
 	public static function Initialize(){
-		System::Observe('gateway.exec', array(__CLASS__, 'exec'));	
+		\System::Observe('gateway.exec', array('\System\User\Role', 'exec'));
 	}
 /**
- * Role.exec(op) -> int
+ * System.Role.exec(op) -> int
  * - op (String): Nom de la commande à exécuter.
  *
  * Cette méthode exécute une commande `op` et affiche un résultat au format JSON de préférence.
@@ -128,7 +130,7 @@ class Role extends ObjectTools implements iClass{
 		switch($cmd){
 			
 			case self::PRE_OP."commit":
-				$o = new self($_POST[__CLASS__]);
+				$o = new self($_POST['Role']);
 				
 				if(!$o->commit()){
 					return $cmd.'.err';
@@ -140,7 +142,7 @@ class Role extends ObjectTools implements iClass{
 			
 			case self::PRE_OP."exists":
 				
-				$o = new self($_POST[__CLASS__]);
+				$o = new self($_POST['Role']);
 				
 				echo json_encode($o->exists());
 				
@@ -152,7 +154,7 @@ class Role extends ObjectTools implements iClass{
 					if(is_object($_POST['options'])){
 						$_POST['options']->word = 	$_POST['word'];
 					}else{
-						$_POST['options'] = new stdClass();
+						$_POST['options'] = new \stdClass();
 						$_POST['options']->word = 	$_POST['word'];
 					}
 				}
@@ -171,12 +173,12 @@ class Role extends ObjectTools implements iClass{
 		return 0;
 	}
 /**
- * Role#commit() -> Boolean
+ * System.Role#commit() -> Boolean
  *
  * Cette méthode enregistre les informations de la classe en base de données.
  **/
 	public function commit(){
-				$request = 			new Request();
+	    $request = 			new \Request();
 		$request->from = 	self::TABLE_NAME;
 		
 		if ($this->Role_ID == 0){
@@ -186,18 +188,18 @@ class Role extends ObjectTools implements iClass{
 								`Description`,
 								`Is_Active`,
 								`Role_Meta`";
-			$request->values = 	"'".Sql::EscapeString($this->Parent_ID)."',
-								'".Sql::EscapeString($this->Name)."',
-								'".Sql::EscapeString($this->Description)."',
-								'".Sql::EscapeString($this->Is_Active)."',
-								'".Sql::EscapeString($this->Role_Meta)."'";
+			$request->values = 	"'".\Sql::EscapeString($this->Parent_ID)."',
+								'".\Sql::EscapeString($this->Name)."',
+								'".\Sql::EscapeString($this->Description)."',
+								'".\Sql::EscapeString($this->Is_Active)."',
+								'".\Sql::EscapeString($this->Role_Meta)."'";
 			
-			System::Fire('role:commit', array(&$this, &$request));
+			\System::Fire('role:commit', array(&$this, &$request));
 			
 			if($request->exec('insert')){
 				$this->Role_ID = $request->exec('lastinsert');
 				
-				System::Fire('role:commit.complete', array(&$this));
+				\System::Fire('role:commit.complete', array(&$this));
 				return true;
 			}
 			
@@ -206,24 +208,24 @@ class Role extends ObjectTools implements iClass{
 		
 		
 		$request->from = 	self::TABLE_NAME;
-		$request->set = 	"`Parent_ID` = '".Sql::EscapeString($this->Parent_ID)."',
-								`Name` = '".Sql::EscapeString($this->Name)."',
-								`Description` = '".Sql::EscapeString($this->Description)."',
-								`Is_Active` = '".Sql::EscapeString($this->Is_Active)."',
-								`Role_Meta` = '".Sql::EscapeString($this->Role_Meta)."'";
+		$request->set = 	"`Parent_ID` = '".\Sql::EscapeString($this->Parent_ID)."',
+								`Name` = '".\Sql::EscapeString($this->Name)."',
+								`Description` = '".\Sql::EscapeString($this->Description)."',
+								`Is_Active` = '".\Sql::EscapeString($this->Is_Active)."',
+								`Role_Meta` = '".\Sql::EscapeString($this->Role_Meta)."'";
 							
 		$request->where = 	self::PRIMARY_KEY." = '".$this->Role_ID."'";
 		
-		System::Fire('role:commit', array(&$this, &$request));
+		\System::Fire('role:commit', array(&$this, &$request));
 		
 		if($request->exec('update')){
-			System::Fire('role:commit.complete', array(&$this));
+			\System::Fire('role:commit.complete', array(&$this));
 			return true;
 		}
 		return false;
 	}
 /*
- * Role#delete() -> boolean
+ * System.Role#delete() -> boolean
  *
  * Cette méthode supprime l'instance [[Role]] de la base de données et retourne vrai en cas de succès.
  *
@@ -231,15 +233,15 @@ class Role extends ObjectTools implements iClass{
  **/
 	public function delete(){}
 /**
- * Role#exists() -> Boolean
+ * System.Role#exists() -> Boolean
  *
  * Cette méthode indique si le nom du rôle est déjà attribué.
  **/
 	public function exist(){
-		return Sql::count(Role::TABLE_NAME, "Role_ID != '".$this->Role_ID."' AND `Name` = '".$this->getName()."'") > 0;
+		return \Sql::count(Role::TABLE_NAME, "Role_ID != '".$this->Role_ID."' AND `Name` = '".$this->getName()."'") > 0;
 	}
 /**
- * Role.ByName(name [, parentid = 3 [, enable = false]]) -> Role
+ * System.Role.ByName(name [, parentid = 3 [, enable = false]]) -> Role
  * - name (String): Nom du rôle.
  * - parentid (Number): Role parent si le role n'existe pas.
  * - enable (Boolean): Indique si le groupe doit être activé lors de sa création.
@@ -248,9 +250,9 @@ class Role extends ObjectTools implements iClass{
  **/	
 	public static function ByName($name, $parent = 3, $enable = false){
 		
-		$request = 			new Request();
+		$request = 			new \Request();
 		$request->from = 	self::TABLE_NAME;
-		$request->where =	'Name = "'.Sql::EscapeString($name).'"';
+		$request->where =	'Name = "'.\Sql::EscapeString($name).'"';
 		
 		$result = $request->exec('select');
 		
@@ -277,7 +279,7 @@ class Role extends ObjectTools implements iClass{
 		return $role;
 	}
 /**
- * Role.GetList([clauses [, options]]) -> Array | Boolean
+ * System.Role.GetList([clauses [, options]]) -> Array | Boolean
  * - clauses (Object): Objet de restriction de la liste.
  * - options (Object): Objet de configuration de la liste.
  *
@@ -285,11 +287,11 @@ class Role extends ObjectTools implements iClass{
  *
  **/
 	public static function GetList($obj = '', $options = ''){
-		$request = new Request();
+		$request = new \Request();
 		
 		$request->select = 	'*, Name as text, Role_ID as value';
-		$request->from = 	Role::TABLE_NAME;
-		$request->order = 	Role::PRIMARY_KEY;
+		$request->from = 	self::TABLE_NAME;
+		$request->order = 	self::PRIMARY_KEY;
 		
 		switch(@$options->op){
 			default:
@@ -304,8 +306,8 @@ class Role extends ObjectTools implements iClass{
 		if(isset($obj) && $obj != ''){
 			if($obj->where) {
 								
-				$request->where = " Name like '%". Sql::EscapeString($obj->where) . "%' 
-									OR Description like '%". Sql::EscapeString($obj->where) ."%'";
+				$request->where = " Name like '%". \Sql::EscapeString($obj->where) . "%' 
+									OR Description like '%". \Sql::EscapeString($obj->where) ."%'";
 				
 			}
 			if($obj->order) 	$request->order = $obj->order;
@@ -314,19 +316,19 @@ class Role extends ObjectTools implements iClass{
 		//
 		// Evenement
 		//
-		System::Fire('role:list', array(&$request, $options));
+		\System::Fire('role:list', array(&$request, $options));
 		
 		$result = $request->exec('select');
 		
 		if($result){
-			$result['maxLength'] = Sql::Count($request->from, $request->where);
+			$result['maxLength'] = \Sql::Count($request->from, $request->where);
 		}
 		return $result; 
 	}
 /**
- * Role.onGetList(row [,request]) -> void
+ * System.Role.onGetList(row [,request]) -> void
  * - row (Array): Ligne traité par la requête.
- * - request (Request): Requêt en cours d'exécution.
+ * - request (\Request): Requêt en cours d'exécution.
  *
  * Cette méthode est appelée par un objet Requete lors de son exécution.
  *
@@ -348,7 +350,7 @@ class Role extends ObjectTools implements iClass{
 	 * @return {Role}
 	 */
 	public function getRoleParent(){
-		return new Role($this->Parent_ID);
+		return new self($this->Parent_ID);
 	}
 	/**
 	 * Retourne le nom du role.
@@ -369,7 +371,7 @@ class Role extends ObjectTools implements iClass{
 		return $this->Description;
 	}
 /**
- * Role#getMeta(key) -> String | int
+ * System.Role#getMeta(key) -> String | int
  * - key (String): Nom de la clef.
  *
  * Cette méthode permet de récuperer une information stockée en base de données dans le champ `Meta`.
@@ -379,8 +381,8 @@ class Role extends ObjectTools implements iClass{
 		return @$obj->$key ? $obj->$key : false;
 	}
 /**
- * Role#setMeta(key, value) -> Boolean
- * Role#setMeta(obj) -> Boolean
+ * System.Role#setMeta(key, value) -> Boolean
+ * System.Role#setMeta(obj) -> Boolean
  * - key (String): clef de la valeur à stocker.
  * - value (String | int): Valeur à stocker.
  * - obj (Object): 
@@ -401,7 +403,7 @@ class Role extends ObjectTools implements iClass{
 		}else{
 			
 			if(empty($this->Role_Meta)){
-				$this->Role_Meta = new stdClass();	
+				$this->Role_Meta = new \stdClass();	
 			}
 			
 			$obj = is_object($this->Role_Meta) ? $this->Role_Meta : json_decode($this->Role_Meta);
@@ -411,9 +413,9 @@ class Role extends ObjectTools implements iClass{
 		
 		if($this->Role_ID != 0){
 			
-			$request = 			new Request();
+			$request = 			new \Request();
 			$request->from = 	self::TABLE_NAME;
-			$request->set = 	"Role_Meta = '".Sql::EscapeString(json_encode($obj))."'";
+			$request->set = 	"Role_Meta = '".\Sql::EscapeString(json_encode($obj))."'";
 			$request->where = 	self::PRIMARY_KEY. " = " . $this->Role_ID;
 	
 			$result = $request->exec('update');
@@ -428,4 +430,8 @@ class Role extends ObjectTools implements iClass{
 
 }
 
-Role::Initialize();
+}
+
+namespace{
+    class Role extends \System\User\Role{}
+}

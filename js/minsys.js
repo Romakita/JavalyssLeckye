@@ -174,7 +174,15 @@ var MinSys = System ={
                         setcookie("lastuserconnected", $user.Login + "^" + $user.Avatar);
 
                         try{
-                            window.location.reload();
+                            if(document.navigator.$_GET('redir')){
+                                window.location = decodeURIComponent(document.navigator.$_GET('redir'));
+                            }else{
+                                if(window.location.href.match(/\/admin/)){
+                                    window.location.reload();
+                                }else{
+                                    window.location = 'admin/';
+                                }
+                            }
                         }catch(er){
                             this.Flag.setText('<p class="icon-documentinfo">' + $MUI('Vous devez accepter les pop-up pour l\'utilisation du logiciel') + '.</p>').setType(FLAG.LB).color('grey');
                             this.Flag.show($WR.TaskBar());

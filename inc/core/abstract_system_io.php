@@ -4,9 +4,11 @@
  * includes SystemIncluder
  * Cette classe gère l'écriture et lecture de flux.
  **/
+namespace System;
+
 require_once('abstract_system_includer.php');
 
-abstract class SystemIO extends SystemIncluder{
+abstract class IO extends Includer{
     /**
      * System.sDie() -> void
      *
@@ -34,60 +36,60 @@ abstract class SystemIO extends SystemIncluder{
      **/
     public static function Compile($file, $version, $options = '-noicon'){
         $tmp = self::Path(). '/compile/';
-        @Stream::MkDir($tmp);
+        @\Stream::MkDir($tmp);
 
         switch(@$options){
             case '-all':
-                Stream::Copy(ABS_PATH, $tmp, '/^\.svn|\.yaml$|\.bak$|\.git$|\.SyncTrach$|\.SyncID$|\.SyncIgnore$|\.ini$|zipsys|compile|old|archives$|private$|psd$|\.db$|_notes|\.sxmllog$|sitemap\.xml|doc\/php$|doc\/js$/');
+                \Stream::Copy(ABS_PATH, $tmp, '/^\.svn|\.yaml$|\.bak$|\.git$|\.SyncTrach$|\.SyncID$|\.SyncIgnore$|\.ini$|zipsys|compile|old|archives$|private$|psd$|\.db$|_notes|\.sxmllog$|sitemap\.xml|doc\/php$|doc\/js$/');
                 break;
             case '-icon':
             case '-c':
-                Stream::Copy(ABS_PATH, $tmp, '/^\.svn|\.yaml$|\.bak$|\.git$|\.SyncTrach$|\.SyncID$|\.SyncIgnore$|zipsys|compile|private$|public$|plugins$|psd$|\.db$|_notes$|themes$|doc\/php$|doc\/js$/');
-                Stream::Delete($tmp.'inc/conf/conf.soft.php');
-                Stream::Delete($tmp.'inc/conf/conf.db.php');
-                Stream::Delete($tmp.'inc/conf/conf.file.php');
+                \Stream::Copy(ABS_PATH, $tmp, '/^\.svn|\.yaml$|\.bak$|\.git$|\.SyncTrach$|\.SyncID$|\.SyncIgnore$|zipsys|compile|private$|public$|plugins$|psd$|\.db$|_notes$|themes$|doc\/php$|doc\/js$/');
+                \Stream::Delete($tmp.'inc/conf/conf.soft.php');
+                \Stream::Delete($tmp.'inc/conf/conf.db.php');
+                \Stream::Delete($tmp.'inc/conf/conf.file.php');
                 break;
             default:
             case '-noicon':
             case '-ic':
-                Stream::Copy(ABS_PATH, $tmp, '/^\.svn|\.yaml$|\.bak$|\.git$|\.SyncTrach$|\.SyncID$|\.SyncIgnore$|\.ini$|zipsys|compile|old|archives$|private$|public$|plugins$|psd$|sitemap\.xml|doc\/php$|\.db$|_notes$|themes$|doc\/js$/');
-                Stream::Delete($tmp.'inc/conf/conf.soft.php');
-                Stream::Delete($tmp.'inc/conf/conf.db.php');
-                Stream::Delete($tmp.'inc/conf/conf.file.php');
+                \Stream::Copy(ABS_PATH, $tmp, '/^\.svn|\.yaml$|\.bak$|\.git$|\.SyncTrach$|\.SyncID$|\.SyncIgnore$|\.ini$|zipsys|compile|old|archives$|private$|public$|plugins$|psd$|sitemap\.xml|doc\/php$|\.db$|_notes$|themes$|doc\/js$/');
+                \Stream::Delete($tmp.'inc/conf/conf.soft.php');
+                \Stream::Delete($tmp.'inc/conf/conf.db.php');
+                \Stream::Delete($tmp.'inc/conf/conf.file.php');
                 break;
         }
 
         $flag = '/^\.svn|\.yaml$|\.bak$|\.git$|\.SyncTrach$|\.SyncID$|\.SyncIgnore$|\.ini$|zipsys|compile|old|archives$|private$|public$|plugins$|psd$|\.db$|_notes$|sitemap\.xml|doc\/php$|doc\/js$/';
 
-        @Stream::Delete($tmp.'.htaccess');
-        @Stream::Delete($tmp.'robots.txt');
+        @\Stream::Delete($tmp.'.htaccess');
+        @\Stream::Delete($tmp.'robots.txt');
 
-        Stream::Copy(self::Path('js').'tiny_mce/plugins/', $tmp.'js/tiny_mce/plugins/');
-        Stream::Copy(self::Path('js').'window/plugins/', $tmp.'js/window/plugins/');
+        \Stream::Copy(self::Path('js').'tiny_mce/plugins/', $tmp.'js/tiny_mce/plugins/');
+        \Stream::Copy(self::Path('js').'window/plugins/', $tmp.'js/window/plugins/');
 
-        @Stream::MkDir($tmp.'themes/', 0751);
-        @Stream::MkDir($tmp.'themes/window/', 0751);
-        @Stream::MkDir($tmp.'themes/plugins/', 0751);
+        @\Stream::MkDir($tmp.'themes/', 0751);
+        @\Stream::MkDir($tmp.'themes/window/', 0751);
+        @\Stream::MkDir($tmp.'themes/plugins/', 0751);
 
-        Stream::Copy(self::Path('themes').'window/plugins/', $tmp.'themes/window/plugins/');
+        \Stream::Copy(self::Path('themes').'window/plugins/', $tmp.'themes/window/plugins/');
 
-        Stream::Copy(self::Path('themes').'window/', $tmp.'themes/window/', $flag);
-        Stream::Copy(self::Path('themes').'system/', $tmp.'themes/system/', $flag);
-        Stream::Write(self::Path('themes').'system.min.css', Stream::Get(self::Path('uri') . "themes/compile/default/system/"));
-        Stream::Copy(self::Path('themes').'system.min.css', $tmp.'themes/system.min.css', $flag);
+        \Stream::Copy(self::Path('themes').'window/', $tmp.'themes/window/', $flag);
+        \Stream::Copy(self::Path('themes').'system/', $tmp.'themes/system/', $flag);
+        \Stream::Write(self::Path('themes').'system.min.css', \Stream::Get(self::Path('uri') . "themes/compile/default/system/"));
+        \Stream::Copy(self::Path('themes').'system.min.css', $tmp.'themes/system.min.css', $flag);
 
         //
         // Intégration des packets complémentaires.
         //
-        @Stream::MkDir($tmp.'plugins/', 0751);
-        Stream::Copy(self::Path('plugins').'javalyssmarket/', $tmp.'plugins/javalyssmarket/', '/^\.svn|\.yaml$|\.bak$|\.git$|\.ini$|zipsys|compile|old|archives$|private$|public$|plugins$|psd$|\.db$|_notes|\.sxmllog$|\.zip$|sitemap\.xml/');
+        @\Stream::MkDir($tmp.'plugins/', 0751);
+        \Stream::Copy(self::Path('plugins').'javalyssmarket/', $tmp.'plugins/javalyssmarket/', '/^\.svn|\.yaml$|\.bak$|\.git$|\.ini$|zipsys|compile|old|archives$|private$|public$|plugins$|psd$|\.db$|_notes|\.sxmllog$|\.zip$|sitemap\.xml/');
 
         if($version){
 
             $subversion = 	substr($version, 3, strlen($version) -1);
             $version =		substr($version, 0, 3);
 
-            $str = Stream::Read(self::Path('conf').'/default/conf.schemes.php');
+            $str = \Stream::Read(self::Path('conf').'/default/conf.schemes.php');
 
             $str = str_replace(array(
                     '#NAME_VERSION',
@@ -106,11 +108,11 @@ abstract class SystemIO extends SystemIncluder{
                     date('Y-m-d')
                 ), $str);
 
-            Stream::Write($tmp.'inc/conf/default/conf.install.php', $str);
+            \Stream::Write($tmp.'inc/conf/default/conf.install.php', $str);
         }
 
-        Stream::Package($tmp, $file = self::Path('publics').$file.'_'.date('Y-m-d').'.zip');
-        Stream::Delete($tmp);
+        \Stream::Package($tmp, $file = self::Path('publics').$file.'_'.date('Y-m-d').'.zip');
+        \Stream::Delete($tmp);
 
         return $file;
     }
@@ -147,12 +149,12 @@ abstract class SystemIO extends SystemIncluder{
 
             switch($key){
                 default:
-                    $_POST[$key] = ObjectTools::RawUrlDecode($_POST[$key]);
+                    $_POST[$key] = \ObjectTools::RawUrlDecode($_POST[$key]);
                     break;
 
                 case 'word':
                     if(!empty($_POST[$key])){
-                        $_POST[$key] = ObjectTools::RawUrlDecode($_POST[$key]);
+                        $_POST[$key] = \ObjectTools::RawUrlDecode($_POST[$key]);
                     }
                     break;
 
@@ -161,10 +163,10 @@ abstract class SystemIO extends SystemIncluder{
                         $_POST[$key] = '';
                     }else{
 
-                        $_POST[$key] = ObjectTools::DecodeJSON($_POST[$key]);
+                        $_POST[$key] = \ObjectTools::DecodeJSON($_POST[$key]);
 
                         if(is_string($_POST[$key])) {
-                            $o = new stdClass();
+                            $o = new \stdClass();
                             $o->op = $_POST[$key];
                             $_POST[$key] = $o;
                         }
@@ -176,37 +178,38 @@ abstract class SystemIO extends SystemIncluder{
                     if($_POST[$key] == 'undefined'){
                         $_POST[$key] = '';
                     }else{
-                        //var_dump($_POST[$key]);
-                        $_POST[$key] = ObjectTools::DecodeJSON($_POST[$key]);
+                        $_POST[$key] = \ObjectTools::DecodeJSON($_POST[$key]);
                     }
                     break;
             }
         }
 
-        if(empty($_POST['clauses'])){
-            $_POST['clauses'] ='';
-        }
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            if(empty($_POST['clauses'])){
+                $_POST['clauses'] ='';
+            }
 
 
-        if(empty($_POST['options'])){
-            $_POST['options'] = 		new stdClass();
-            $_POST['options']->op = 	'';
-        }
+            if(empty($_POST['options'])){
+                $_POST['options'] = 		new \stdClass();
+                $_POST['options']->op = 	'';
+            }
 
-        if(empty($_POST['meta'])){
-            $_POST['meta'] = '';
+            if(empty($_POST['meta'])){
+                $_POST['meta'] = '';
+            }
         }
 
         //GET
         foreach($_GET as $key => $value){
             switch($key){
                 default:
-                    $_GET[$key] = ObjectTools::RawUrlDecode($_GET[$key]);
+                    $_GET[$key] = \ObjectTools::RawUrlDecode($_GET[$key]);
                     break;
 
                 case 'word':
                     if(!empty($_GET[$key])){
-                        $_GET[$key] = ObjectTools::RawUrlDecode($_GET[$key]);
+                        $_GET[$key] = \ObjectTools::RawUrlDecode($_GET[$key]);
                     }
                     break;
 
@@ -214,10 +217,10 @@ abstract class SystemIO extends SystemIncluder{
                     if($_GET[$key] == 'undefined'){
                         $_GET[$key] = '';
                     }else{
-                        $_GET[$key] = ObjectTools::DecodeJSON($_GET[$key]);
+                        $_GET[$key] = \ObjectTools::DecodeJSON($_GET[$key]);
 
                         if(is_string($_POST[$key])) {
-                            $o = new stdClass();
+                            $o = new \stdClass();
                             $o->op = $_POST[$key];
                             $_POST[$key] = $o;
                         }
@@ -229,29 +232,31 @@ abstract class SystemIO extends SystemIncluder{
                     if($_GET[$key] == 'undefined'){
                         $_GET[$key] = '';
                     }else{
-                        $_GET[$key] = ObjectTools::DecodeJSON($_GET[$key]);
+                        $_GET[$key] = \ObjectTools::DecodeJSON($_GET[$key]);
                     }
                     break;
             }
         }
 
-        if(empty($_GET['clauses'])){
-            $_GET['clauses'] ='';
-        }
+        if($_SERVER['REQUEST_METHOD'] == 'GET'){
+            if(empty($_GET['clauses'])){
+                $_GET['clauses'] ='';
+            }
 
-        if(empty($_GET['options'])){
-            $_GET['options'] = 		new stdClass();
-            $_GET['options']->op = 	'';
-        }
+            if(empty($_GET['options'])){
+                $_GET['options'] = 		new \stdClass();
+                $_GET['options']->op = 	'';
+            }
 
-        if(empty($_GET['meta'])){
-            $_GET['meta'] = '';
+            if(empty($_GET['meta'])){
+                $_GET['meta'] = '';
+            }
         }
 
         //COOKIE
-        foreach($_COOKIE as $key => $value) $_COOKIE[$key] = ObjectTools::RawUrlDecode($value);
+        foreach($_COOKIE as $key => $value) $_COOKIE[$key] = \ObjectTools::RawUrlDecode($value);
         //REQUEST
-        foreach($_REQUEST as $key => $value) $_REQUEST[$key] = ObjectTools::RawUrlDecode($value);
+        foreach($_REQUEST as $key => $value) $_REQUEST[$key] = \ObjectTools::RawUrlDecode($value);
 
     }
     /**
@@ -261,7 +266,7 @@ abstract class SystemIO extends SystemIncluder{
      * Cette méthode télécharge un fichier et le stocke dans le dossier public
      **/
     public static function Download($url){
-        return Stream::Download($url, self::Path());
+        return \Stream::Download($url, self::Path());
     }
     /**
      * System.Dump() -> String
@@ -270,14 +275,14 @@ abstract class SystemIO extends SystemIncluder{
      **/
     public static function Dump($list = NULL){
 
-        $request = 	new Request();
-        $str = 		$request->exec(Request::DUMP, $list);
+        $request = 	new \Request();
+        $str = 		$request->exec(\Request::DUMP, $list);
 
         if(!$str) return false;
 
         $filename = self::Path('private').'bck_db_'.date("Y_m_d_H_i_s").'.sql';
 
-        Stream::Write($filename, $str);
+        \Stream::Write($filename, $str);
 
         return $filename;
     }
@@ -289,46 +294,46 @@ abstract class SystemIO extends SystemIncluder{
     protected static function Import(){
         self::iDie();
 
-        FrameWorker::Start();
+        \FrameWorker::Start();
 
         //récupération du fichier
-        FrameWorker::Draw('upload -o="'.self::Path('private').'"');
+        \FrameWorker::Draw('upload -o="'.self::Path('private').'"');
 
-        $file = FrameWorker::Upload(self::Path('private'), System::Meta('EXT_FILE_AUTH'), System::Meta('EXT_FILE_EXCLUDE'));
+        $file = \FrameWorker::Upload(self::Path('private'), \System::Meta('EXT_FILE_AUTH'), \System::Meta('EXT_FILE_EXCLUDE'));
 
-        FrameWorker::Draw('sql dump database');
+        \FrameWorker::Draw('sql dump database');
         //sauvegarde préalable de la base de données.
         self::Dump();
 
         //vérification du fichier, suppression des anciennes entrées et importation des données.
-        switch(Stream::Extension($file)){
+        switch(\Stream::Extension($file)){
             case 'zip':
-                Stream::Depackage($file, ABS_PATH.PATH_PLUGIN);
+                \Stream::Depackage($file, ABS_PATH.PATH_PLUGIN);
                 $file = str_replace('.zip', '.sql', $file);
 
             case 'sql':
 
-                $request = 	new Request();
-                $result = 	System::ShowTable();
+                $request = 	new \Request();
+                $result = 	\System::ShowTable();
 
-                FrameWorker::Draw('sql show table');
+                \FrameWorker::Draw('sql show table');
                 /*
                 for($i = 0; $i < $result['length']; $i++){
                     $request->query = 'TRUNCATE TABLE '.$result[$i]['text'];
 
-                    FrameWorker::Draw('sql truncate -t='.$result[$i]['text']);
+                    \FrameWorker::Draw('sql truncate -t='.$result[$i]['text']);
 
                     if(!$request->exec('query')){
-                        FrameWorker::Draw($request->getError());
+                        \FrameWorker::Draw($request->getError());
                     }
                 }*/
 
-                echo Stream::ParseSQL($file);
+                echo \Stream::ParseSQL($file);
 
                 break;
         }
 
-        FrameWorker::Stop();
+        \FrameWorker::Stop();
         return 0;
     }
     /**
@@ -347,18 +352,18 @@ abstract class SystemIO extends SystemIncluder{
         }
 
         $tmp = self::Path('publics').'compile/';
-        Stream::MkDir($tmp, 0700);
+        \Stream::MkDir($tmp, 0700);
 
-        @Stream::Delete($tmp.'backup_db.sql');
+        @\Stream::Delete($tmp.'backup_db.sql');
 
-        Stream::Copy($fl, $tmp.'backup_db.sql');
+        \Stream::Copy($fl, $tmp.'backup_db.sql');
 
         if(!empty($dumpfile)){
             $file = self::Compile('javalyss_leckye_'.CODE_VERSION.CODE_SUBVERSION, CODE_VERSION.CODE_SUBVERSION);
         }else{
             $file = self::Path('publics').'backup_db_'.date('Y-m-d').'.sql.zip';
-            Stream::Package($tmp, $file);
-            @Stream::Delete($tmp);
+            \Stream::Package($tmp, $file);
+            @\Stream::Delete($tmp);
         }
 
         return $file;
@@ -373,19 +378,19 @@ abstract class SystemIO extends SystemIncluder{
         if(!file_exists($file)){
             return false;
         }
-        $request = 	new Request($db);
-        $array = 	Stream::ParseXML($file);
+        $request = 	new \Request($db);
+        $array = 	\Stream::ParseXML($file);
 
-        $querylog = new XmlNode();
+        $querylog = new \XmlNode();
         $querylog->Name = 'sql';
 
-        $ok = new XmlNode();
+        $ok = new \XmlNode();
         $ok->Name = 'ok';
 
-        $warning = new XmlNode();
+        $warning = new \XmlNode();
         $warning->Name = 'warning';
 
-        $fail = new XmlNode();
+        $fail = new \XmlNode();
         $fail->Name = 'fail';
 
         if(empty($array)) return true;
@@ -410,7 +415,7 @@ abstract class SystemIO extends SystemIncluder{
             if(preg_match_all('/\[serialize\[(.*)\]\]/', $query, $matches)){
                 for($i = 0, $len = count($matches[0]); $i < $len; $i++){
                     if(defined($matches[1][$i])){
-                        $query = str_replace($matches[0][$i], serialize(Sql::EscapeString(constant($matches[1][$i]))), $query);
+                        $query = str_replace($matches[0][$i], serialize(\Sql::EscapeString(constant($matches[1][$i]))), $query);
                     }
                 }
             }
@@ -421,12 +426,12 @@ abstract class SystemIO extends SystemIncluder{
                 $request->query = str_replace($match[1], '', $request->query);
 
                 if(!$request->exec('query')){
-                    $o = new XmlNode('query');
+                    $o = new \XmlNode('query');
                     $o->Text = $request->getError();
                     $warning->push($o);
 
                 }else{
-                    $o = new XmlNode('query');
+                    $o = new \XmlNode('query');
                     $o->Text = $request->query;
 
                     $ok->push($o);
@@ -436,7 +441,7 @@ abstract class SystemIO extends SystemIncluder{
 
                 if(!$request->exec('query')){
 
-                    $o = new XmlNode('query');
+                    $o = new \XmlNode('query');
                     $o->Text = $request->getError();
                     $fail->push($o);
 
@@ -444,11 +449,11 @@ abstract class SystemIO extends SystemIncluder{
                     $querylog->push($warning);
                     $querylog->push($fail);
 
-                    Stream::WriteXML($file.'log', $querylog);
+                    \Stream::WriteXML($file.'log', $querylog);
 
                     return false;
                 }else{
-                    $o = new XmlNode('query');
+                    $o = new \XmlNode('query');
                     $o->Text = $request->query;
 
                     $ok->push($o);
@@ -461,7 +466,7 @@ abstract class SystemIO extends SystemIncluder{
         $querylog->push($warning);
         $querylog->push($fail);
 
-        Stream::WriteXML($file.'log', $querylog);
+        \Stream::WriteXML($file.'log', $querylog);
 
         return true;
     }
@@ -472,8 +477,8 @@ abstract class SystemIO extends SystemIncluder{
      * Cette méthode stop l'événement `eventName`.
      **/
     public static function ShowTable(){
-        $request = new Request();
-        return $request->exec(Request::SHOWTAB, array('System', 'onShowTable'));
+        $request = new \Request();
+        return $request->exec(\Request::SHOWTAB, array('System', 'onShowTable'));
     }
 
     public static function onShowTable(&$row){
@@ -486,7 +491,7 @@ abstract class SystemIO extends SystemIncluder{
      * Cette méthode charge un fichier en provenance du formulaire client.
      **/
     public static function Upload($FILES){
-        return Stream::Upload($FILES, self::Path(), self::Meta('EXT_FILE_AUTH'), self::Meta('EXT_FILE_EXCLUDE'));
+        return \Stream::Upload($FILES, self::Path(), self::Meta('EXT_FILE_AUTH'), self::Meta('EXT_FILE_EXCLUDE'));
     }
     /**
      * System.ReadHTACCESS() -> void
@@ -501,7 +506,7 @@ abstract class SystemIO extends SystemIncluder{
         $rules  = '';
 
         if(file_exists($file)){
-            $rules = Stream::Read(ABS_PATH.'.htaccess') ."\n";
+            $rules = \Stream::Read(ABS_PATH.'.htaccess') ."\n";
         }
 
         return $rules;
@@ -514,7 +519,7 @@ abstract class SystemIO extends SystemIncluder{
     public static function WriteHTACCESS($str = NULL){
 
         if(!empty($str)){
-            Stream::Write(ABS_PATH.'.htaccess', $str);
+            \Stream::Write(ABS_PATH.'.htaccess', $str);
             return;
         }
 
@@ -555,10 +560,10 @@ abstract class SystemIO extends SystemIncluder{
         }
 
         if($rules != $oldRules){
-            Stream::Write(ABS_PATH.'.htaccess', trim($rules));
+            \Stream::Write(ABS_PATH.'.htaccess', trim($rules));
         }
 
-        System::Fire('system:htaccess.write', array($rules));
+        \System::Fire('system:htaccess.write', array($rules));
     }
     /**
      * System.WriteConfig(login, pass, host, db [, pre]) -> void
@@ -577,7 +582,7 @@ abstract class SystemIO extends SystemIncluder{
         if(!is_writable(ABS_PATH.'inc/conf/')) 	die('minsys.conf.unwritable');
 
         //ouverture du fichier modèle
-        $str = Stream::Read(ABS_PATH.'inc/conf/default/conf.db.php');
+        $str = \Stream::Read(ABS_PATH.'inc/conf/default/conf.db.php');
 
         //remplacement des chaines
         $str = str_replace('#DB_NAME', $db, $str);
@@ -587,14 +592,14 @@ abstract class SystemIO extends SystemIncluder{
         $str = str_replace('#DB_TYPE', $type, $str);
         $str = str_replace('#PRE_TABLE', $pre, $str);
 
-        Stream::Write(ABS_PATH.'inc/conf/conf.db.php', $str) or die('minsys.config.write.err');
+        \Stream::Write(ABS_PATH.'inc/conf/conf.db.php', $str) or die('minsys.config.write.err');
 
-        @Stream::MkDir(ABS_PATH.PATH_PUBLIC, 0711);
-        @Stream::MkDir(ABS_PATH.PATH_PRIVATE, 0700);
-        @Stream::MkDir(ABS_PATH.PATH_PLUGIN, 0751);
-        @Stream::Copy(ABS_PATH.'inc/conf/default/conf.soft.php', ABS_PATH.'inc/conf/conf.soft.php');
-        @Stream::Copy(ABS_PATH.'inc/conf/default/conf.cron.php', ABS_PATH.'inc/conf/conf.cron.php');
-        @Stream::Copy(ABS_PATH.'inc/conf/default/conf.file.php', ABS_PATH.'inc/conf/conf.file.php');
+        @\Stream::MkDir(ABS_PATH.PATH_PUBLIC, 0711);
+        @\Stream::MkDir(ABS_PATH.PATH_PRIVATE, 0700);
+        @\Stream::MkDir(ABS_PATH.PATH_PLUGIN, 0751);
+        @\Stream::Copy(ABS_PATH.'inc/conf/default/conf.soft.php', ABS_PATH.'inc/conf/conf.soft.php');
+        @\Stream::Copy(ABS_PATH.'inc/conf/default/conf.cron.php', ABS_PATH.'inc/conf/conf.cron.php');
+        @\Stream::Copy(ABS_PATH.'inc/conf/default/conf.file.php', ABS_PATH.'inc/conf/conf.file.php');
     }
     /**
      * System.WriteDatabase() -> void
@@ -605,8 +610,8 @@ abstract class SystemIO extends SystemIncluder{
      **/
     public static function WriteDatabase(){
         self::sDie();
-        if(!self::ParseSXML(System::Path('conf').'/default/install.sxml')){
-            return "query.error ".Sql::Current()->getError();
+        if(!self::ParseSXML(\System::Path('conf').'/default/install.sxml')){
+            return "query.error ".\Sql::Current()->getError();
         }
         return false;
     }

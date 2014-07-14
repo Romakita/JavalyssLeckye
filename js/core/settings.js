@@ -892,12 +892,11 @@ System.Setting = System.Settings = {
 			win.AlertBox.wait();
 			panel.setOpacity(0);
 			
-			System.exec('system.cron.info', function(result){
+			$.http.get('admin/system/cron/info').success(function(data){
 				win.AlertBox.hide();
 				
 				panel.setOpacity(1);
-				var info = result.responseText.evalJSON();
-				
+				var info = data;
 				//
 				//
 				//
@@ -909,6 +908,7 @@ System.Setting = System.Settings = {
 				var tableTasks = new TableData();
 				nodeTasks.removeChilds();
 				nodeTasks.appendChild(tableTasks);
+
 				for(var key in info.Tasks){
 					task = info.Tasks[key];
 					

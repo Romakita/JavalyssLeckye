@@ -1,32 +1,34 @@
 <?php
 /** section: Core
- * class SystemTerm
- * includes SystemEvent
+ * System.Term
+ * includes Event
  * Cette classe gère les constantes et terminologies du system.
  **/
+namespace System;
+
 require_once('abstract_system_event.php');
 
 define('TABLE_SYSTEM', '`'.PRE_TABLE.'software_meta`');
 
-class SystemTerm extends SystemEvent{
+abstract class Term extends Event{
     /**
-     * System.TABLE_NAME -> String
+     * System.Event.TABLE_NAME -> String
      * Table de configuration du système.
      **/
     const TABLE_NAME = 			TABLE_SYSTEM;
     /*
-     * System.Meta -> Object
+     * System.Event.Meta -> Object
      * Liste des informations métas
      **/
     protected static $Meta =				NULL;
     /**
-     * System.Meta -> Object
+     * System.Event.Meta -> Object
      * Liste des informations métas
      **/
     protected static $Lang =				false;
 
     public static function Initialize(){
-        self::$Meta = new stdClass();
+        self::$Meta = new \stdClass();
     }
 /**
  * System.iDie([safemode]) -> void
@@ -59,7 +61,7 @@ class SystemTerm extends SystemEvent{
         }
     }
     /**
-     * System.Meta(key [, value]) -> String | Number | Array | Object
+     * System.Term.Meta(key [, value]) -> String | Number | Array | Object
      * - key (String): Nom de la valeur stockée.
      * - value (String | Number | Array | Object): Valeur à stocker.
      *
@@ -77,10 +79,10 @@ class SystemTerm extends SystemEvent{
         self::iDie(true);
 
         $num =      func_num_args();
-        $request =          new Request();
+        $request =          new \Request();
         $request->select = 	'*';
         $request->from = 	self::TABLE_NAME;
-        $request->where =	"Meta_Key = '".Sql::EscapeString($key)."'";
+        $request->where =	"Meta_Key = '".\Sql::EscapeString($key)."'";
 
         if($num == 1){
 
@@ -105,13 +107,13 @@ class SystemTerm extends SystemEvent{
             if($meta['length'] == 0){
 
                 $request->fields = '(Meta_Key, Meta_Value)';
-                $request->values = "('".Sql::EscapeString($key)."', '".Sql::EscapeString(serialize($value))."')";
+                $request->values = "('".\Sql::EscapeString($key)."', '".\Sql::EscapeString(serialize($value))."')";
 
                 if($request->exec('insert')) return self::$Meta->$key = func_get_arg(1);
 
             }else{
 
-                $request->set = 	"Meta_Value = '".Sql::EscapeString(serialize($value))."'";
+                $request->set = 	"Meta_Value = '".\Sql::EscapeString(serialize($value))."'";
                 $request->where = 	"Meta_ID = ".$meta[0]['Meta_ID'];
 
                 if($request->exec('update')) {
@@ -129,19 +131,19 @@ class SystemTerm extends SystemEvent{
      **/
     public static function GetMetas(){
 
-        $request = 			new Request();
+        $request = 			new \Request();
         $request->select = 	'*';
         $request->from = 	self::TABLE_NAME;
 
         $meta = $request->exec('select');
 
         if(!$meta){
-            Sql::PrintError();
+            \Sql::PrintError();
         }
 
         if($meta['length'] == 0) return false;
 
-        $array = new stdClass();
+        $array = new \stdClass();
 
         for($i = 0; $i < $meta['length']; $i++){
             $key = $meta[$i]['Meta_Key'];
@@ -168,10 +170,10 @@ class SystemTerm extends SystemEvent{
     public static function GetLang(){
         if(!self::$Lang) {
             if(User::IsConnect()){
-                return self::$Lang = strtolower(User::Meta('LANG') ? User::Meta('LANG') : System::Meta('LANG'));
+                return self::$Lang = strtolower(User::Meta('LANG') ? User::Meta('LANG') : \System::Meta('LANG'));
             }
 
-            return self::$Lang = System::Meta('LANG');
+            return self::$Lang = \System::Meta('LANG');
         }
         return self::$Lang;
     }

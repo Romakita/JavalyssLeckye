@@ -1,38 +1,26 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: romak_000
- * Date: 06/07/14
- * Time: 20:12
- */
-
+/** section: Library
+ * class HTTP.Route.Response
+ *
+ * Cette classe gère les réponses HTTP.
+ **/
 namespace HTTP\Route;
 
 class Response {
-    /**
-     * @var array
-     */
     private $header =   array();
-    /**
-     * @var string
-     */
-    private $type =     'text/plain';
-    /**
-     * @var int
-     */
     private $code =     200;
+    private $finish =   false;
 
+    function __construct(){}
     /**
+     * HTTP.Route.Response.header(key, value) -> HTTP.Route.Response
+     * HTTP.Route.Response.header(object) -> HTTP.Route.Response
+     * HTTP.Route.Response.header(array) -> HTTP.Route.Response
+     * - key (String): Clef de l'entête.
+     * - value (String): Valeur de l'entête.
      *
-     */
-    function __construct(){
-
-    }
-
-    /**
-     * @param $key
-     * @param string $value
-     */
+     * Cette méthode permet d'ajouter des informations dans l'entête de réponse.
+     **/
     public function header($key, $value = ''){
 
         if(is_object($key) || is_array($key)){
@@ -45,16 +33,22 @@ class Response {
         $this->header[] = $key . ': ' . $value;
         return $this;
     }
-
     /**
-     * @param $code
-     * @return $this
-     */
+     * HTTP.Route.Response.status(code) -> HTTP.Route.Response
+     * - code (Number): Code réponse HTTP
+     *
+     * Cette méthode permet d'assigner le code réponse HTTP.
+     **/
     public function status($code){
         $this->code = $code;
         return $this;
     }
-
+    /**
+     * HTTP.Route.Response.type(type) -> HTTP.Route.Response
+     * - type (String): Type mime du contenu à renvoyer.
+     *
+     * Cette méthode permet de renvoyer un type mime précis pour la réponse.
+     **/
     public function type($type){
 
         switch(str_replace('.', '', $type)){
@@ -62,7 +56,7 @@ class Response {
                 $this->header('Content-Type', 'text/html');
                 break;
             case 'json':
-                $this->header('Content-Type', 'application/json');
+                $this->header('Content-Type', 'text/json');
                 break;
             case 'js':
             case 'javascript':
@@ -77,7 +71,14 @@ class Response {
 
         return $this;
     }
-
+    /**
+     * HTTP.Route.Response.json(o) -> HTTP.Route.Response
+     * HTTP.Route.Response.json(statut, o) -> HTTP.Route.Response
+     * - o (Mixed): Données à renvoyer au format JSON.
+     * - statut (Number): Code HTTP.
+     *
+     * Cette méthode permet de renvoyer une réponse avec des données au format JSON.
+     **/
     public function json(){
         if(func_num_args() == 1){
             $o = func_get_arg(0);
@@ -87,9 +88,17 @@ class Response {
         }
 
         $this->type('json');
+
         return $this->end(json_encode($o));
     }
-
+    /**
+     * HTTP.Route.Response.jsonp(o) -> HTTP.Route.Response
+     * HTTP.Route.Response.jsonp(statut, o) -> HTTP.Route.Response
+     * - o (Mixed): Données à renvoyer au format JSON.
+     * - statut (Number): Code HTTP.
+     *
+     * Cette méthode permet de renvoyer une réponse avec des données au format Javascript.
+     **/
     public function jsonp(){
         if(func_num_args() == 1){
             $o = func_get_arg(0);
@@ -100,24 +109,50 @@ class Response {
 
         $this->type('js');
 
+        return $this->end(@$_REQUEST['callback'].'('.json_encode($o).')');
+    }
+    /**
+     * HTTP.Route.Response.end([data]) -> HTTP.Route.Response
+     * - data (String | Number): Données à renvoyer.
+     *
+     * Cette méthode envoie les données vers le navigateur.
+     **/
+    public function end($data = ''){
+
+        if(!$this->sent()){
+
+            @ob_end_clean();
+
+            if($this->code != 200){
+                $this->httpResponseCode($data);
+            }
+
+            foreach($this->header as $value){
+                header($value);
+            }
+
+            if(!empty($data)){
+                echo $data;
+            }
+
+
+            $this->finish = true;
+        }
+
         return $this;
     }
 
-    private function end($data = ''){
-
-        $this->httpResponseCode();
-
-        foreach($this->header as $key => $value){
-            header($key.': ' . $value);
-        }
-
-        if($data){
-            echo $data;
-        }
-
-        return $this;
+    public function sent(){
+        return $this->finish;
     }
-
+    /**
+     * HTTP.Route.Response.redirect(location) -> HTTP.Route.Response
+     * HTTP.Route.Response.redirect(statut, location) -> HTTP.Route.Response
+     * - location (String): Lien de redirection.
+     * - statut (Number): Code HTTP.
+     *
+     * Cette méthode permet de rediriger l'utilisateur vers une nouvelle page.
+     **/
     public function redirect(){
         if(func_num_args() == 1){
             $o = func_get_arg(0);
@@ -128,11 +163,20 @@ class Response {
 
         return $this->location($o);
     }
-
+    /**
+     * HTTP.Route.Response.location(location) -> HTTP.Route.Response
+     *
+     * Cette méthode permet de rediriger l'utilisateur vers une nouvelle page.
+     **/
     public function location($location){
-        return $this->header('Location', $location);
+        return $this->header('Location', $location)->end();
     }
-
+    /**
+     * HTTP.Route.Response.attachment(file) -> HTTP.Route.Response
+     * - file (String): Lien du fichier à attacher.
+     *
+     * Cette méthode permet d'ajouter un fichier en pièce jointe.
+     **/
     public function attachment($file){
 
         $base = basename($file);
@@ -142,7 +186,14 @@ class Response {
             'Content-Disposition' =>        "attachment; filename=" . $base
         ));
     }
-
+    /**
+     * HTTP.Route.Response.send(o) -> HTTP.Route.Response
+     * HTTP.Route.Response.send(statut, o) -> HTTP.Route.Response
+     * - statut (Number): Code HTTP.
+     * - o (Mixed): Données à envoyer.
+     *
+     * Cette méthode permet d'envoyer une réponse.
+     **/
     public function send(){
 
         if(func_num_args() == 1){
@@ -154,34 +205,53 @@ class Response {
 
         return $this->end($o);
     }
-
+    /** alias of: HTTP.Route.Response.download
+     * HTTP.Route.Response.sendfile(file) -> HTTP.Route.Response
+     * - file (String): Lien du fichier à attacher.
+     *
+     * Cette méthode permet de forcer le téléchargement d'un fichier.
+     **/
     public function sendfile($file){
         return $this->download($file);
     }
-
+    /**
+     * HTTP.Route.Response.download(file [, $name = '']) -> HTTP.Route.Response
+     * - file (String): Lien du fichier à attacher.
+     * - name (String): Nom du fichier.
+     *
+     * Cette méthode permet de forcer le téléchargement d'un fichier.
+     **/
     public function download($file, $name = ''){
-        $size = filesize($file);
-        $base = empty($name) ? basename($file) : $name;
 
-        $this->header(array(
-            'Content-Description' =>        'File Transfer',
-            'Content-Type' =>               'application/force-download',
-            'Content-Type' =>               'application/octet-stream',
-            'Content-Disposition' =>        "attachment; filename=" . $base,
-            'Content-Transfer-Encoding' =>  'binary',
-            'Expires' =>                    '0',
-            'Cache-Control' =>              'no-cache,must-revalidate',
-            'Pragma' =>                     'public',
-            'Content-Length' =>             $size
-        ));
+        if(!$this->sent()){
+            $size = filesize($file);
+            $base = empty($name) ? basename($file) : $name;
 
-        $this->end()->flush();
+            $this->header(array(
+                'Content-Description' =>        'File Transfer',
+                'Content-Type' =>               'application/force-download',
+                'Content-Type' =>               'application/octet-stream',
+                'Content-Disposition' =>        "attachment; filename=" . $base,
+                'Content-Transfer-Encoding' =>  'binary',
+                'Expires' =>                    '0',
+                'Cache-Control' =>              'no-cache,must-revalidate',
+                'Pragma' =>                     'public',
+                'Content-Length' =>             $size
+            ));
 
-        readfile($file);
+            $this->end()->flush();
+
+            readfile($file);
+
+            $this->finish = true;
+        }
 
         return $this;
     }
-
+    /*
+     * HTTP.Route.Response.flush() -> HTTP.Route.Response
+     *
+     **/
     private function flush(){
         while (ob_get_level() > 0) {
             ob_end_clean();
@@ -189,8 +259,11 @@ class Response {
         flush();
         return $this;
     }
-
-    private function httpResponseCode(){
+    /*
+     * HTTP.Route.Response.httpResponseCode() -> HTTP.Route.Response
+     *
+     **/
+    private function httpResponseCode($data){
 
         switch ($this->code) {
             case 100: $text = 'Continue'; break;
@@ -238,6 +311,9 @@ class Response {
 
         $this->code = $protocol . ' ' . $this->code . ' ' . $text;
         $GLOBALS['http_response_code'] = $this->code;
+
+        header($this->code);
+
 
         return $this;
     }

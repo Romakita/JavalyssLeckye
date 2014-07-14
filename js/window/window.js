@@ -562,34 +562,7 @@ var WindowRegister = {
  * Cette méthode permet de stocker des données globales à WindowJS.
  **/
 	setGlobals:function(key, value){
-		if(this.globals){
-			switch(key){
-				default:
-					this.globals[key] = value;
-					break;
-				case 'link':
-					this.globals.link = value;
-					break;
-				case 'parameters':
-					if(Object.isString(value)){
-						var explode = value.split('&');
-						var obj = {};
-						for(var i = 0; i < explode.length; i++){
-							var param = explode.split('=');
-							obj[param[0]] = param[1];	
-						}
-						
-						value = obj;
-					}
-					
-					Object.extend(this.globals.parameters, value);
-					
-					this.STRING_POST_PHP = this.getGlobals('parameters');
-					
-					break;	
-			};
-		}
-		
+        $.Extends.setGlobals(key, value);
 		return this;
 	},
 /**
@@ -599,23 +572,7 @@ var WindowRegister = {
  * Cette méthode permet récuperer une valeur en fonction du paramètre [[key]].
  **/	
 	getGlobals:function(key, bool){
-		
-		if(key == 'parameters' && !bool){
-			var parameters = '';
-			var f = true;
-			for(var key in this.globals.parameters){
-				if(f){
-					f = false;
-				}else{
-					parameters += '&';	
-				}
-				
-				parameters += key + '=' + this.globals.parameters[key];
-			}
-			return parameters;
-		}
-		
-		return this.globals[key];
+		return $.Extends.getGlobals(key, bool);
 	},
 /**
  * WindowRegister.cleanEvent(obj) -> void

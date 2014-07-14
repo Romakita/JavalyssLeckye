@@ -1,16 +1,19 @@
 <?php
 /** section: Core
- * class SystemEvent
- * includes SystemIO
+ * System.Event
+ * includes System.IO
  * Cette classe gère les événements du system.
  **/
+
+namespace System;
+
 require_once('abstract_system_io.php');
 
-class SystemEvent extends SystemIO{
+abstract class Event extends IO{
     private static $listeners = array();
     private static $stopped =   false;
     /**
-     * System.Observe(eventName, callback) -> void
+     * System.Event.Observe(eventName, callback) -> void
      * - eventName (String): Nom de l'événement à écouter.
      * - callback (Array | String): Nom de la fonction ou tableau de noms => array(className, methodName).
      *
@@ -25,7 +28,7 @@ class SystemEvent extends SystemIO{
         array_push(self::$listeners[$eventName], $callback);
     }
     /**
-     * System.Fire(eventName, args) -> Mixed
+     * System.Event.Fire(eventName, args) -> Mixed
      * - eventName (String): Nom de l'événement à déclencher.
      * - args (Array): Tableau d'argument à passer aux méthodes enregistrées sur l'événement.
      *
@@ -54,7 +57,7 @@ class SystemEvent extends SystemIO{
         return 0;
     }
     /**
-     * System.StopEvent() -> void
+     * System.Event.StopEvent() -> void
      *
      * Cette méthode stop l'événement déclenché par la méthode [[System.Fire]].
      **/
@@ -67,7 +70,7 @@ class SystemEvent extends SystemIO{
         return self::$stopped;
     }
     /**
-     * System.StopObserving(eventName) -> Mixed
+     * System.Event.StopObserving(eventName) -> Mixed
      * - eventName (String): Nom de l'événement à écouter.
      *
      * Cette méthode stop l'événement `eventName`.

@@ -424,3 +424,5 @@ Object.extend(Object, {
 		}
 	}
 });
+
+$.Class = Class;

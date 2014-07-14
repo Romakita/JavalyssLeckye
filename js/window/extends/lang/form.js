@@ -2,7 +2,7 @@
  * Extends.Form
  * Cette classe gère les formulaires créée par la librairie Window JS. Elle permet de sérialiser rapidement les données du formulaire contenant les champs spécifiques à cette librairie vers un objet.
  **/
-Extends.Form = Class.create({
+$.Form = Extends.Form = Class.create({
 /**
  * new Extends.Form([object])
  * 
@@ -284,4 +284,5 @@ Extends.Form.compare = function(o, n){
 	}
 				
 };
-	
+
+$.Form = Extends.form

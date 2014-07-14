@@ -1,28 +1,55 @@
 <?php
 /** section: Library
  * class HTTP.Route
- * includes Permalink
+ *
  * Cette classe gère les routes HTTP. Permet la création d'API REST via la gestion intelligente des routes.
  **/
 namespace HTTP;
 
+use HTTP\Route\Response;
+
 require_once(__DIR__ . '/route/class_request.php');
+require_once(__DIR__ . '/route/class_response.php');
 
 class Route{
     protected static $defaultCallback =     null;
     protected static $request =             null;
     protected static $callback =            null;
     protected static $middlewares =         null;
+    private static $rawData = null;
 
     public static function Initialize(){
         self::$middlewares = array();
+
+        if($_SERVER['REQUEST_METHOD'] == 'PUT'){
+            if(self::$rawData === null){
+                parse_str(file_get_contents("php://input"), self::$rawData);
+                $_POST = \Stream::CleanNullByte(self::$rawData);
+            }
+        }
     }
 
     public static function UseMiddleware($pattern, $middleware){
         self::$middlewares[$pattern] = $middleware;
     }
+
+    public static function WhenGet($route, $callback = ""){
+        self::When($route, array('method' => 'get'), $callback);
+    }
+
+    public static function WhenPost($route, $callback = ""){
+        self::When($route, array('method' => 'post'), $callback);
+    }
+
+    public static function WhenPut($route, $callback = ""){
+        self::When($route, array('method' => 'put'), $callback);
+    }
+
+    public static function WhenDelete($route, $callback = ""){
+        self::When($route, array('method' => 'delete'), $callback);
+    }
     /**
-     * Route.When(route, options) -> void
+     * HTTP.Route.When(route, options) -> void
      *
      *
      **/
@@ -34,31 +61,25 @@ class Route{
 
         $request = new Route\Request($route);
 
-        ///conversion
-        if(is_array($options) && empty($callback) && !empty($options['callback'])) {
+        if(is_callable($options)){
+            $callback = $options;
+            $options =  new \stdClass();
+        }
+
+        if(is_array($options)){
             $o = new \stdClass();
 
             foreach($options as $key => $value){
                 $o->$key = $value;
             }
             $options = $o;
-        }else{
-            if(empty($callback) && (is_array($options) || is_string($options))) {
-                $callback = $options;
-                $options = new \stdClass();
-            }
-        }
-
-        if(!empty($callback)) {
-            $options->callback = $callback;
         }
 
         $request->setOptions($options);
 
         if($request->match()){
-
             //MIDDLEWARES TEST
-            $parameters = \Permalink::GetPage()->getParameters();
+            $parameters = \Permalink::Get()->getParameters();
             $path = '';
 
             foreach($parameters as $param){
@@ -66,62 +87,51 @@ class Route{
 
                 if(!empty(self::$middlewares[$path])){
 
-                    $response = new stdClass();
+                    $response = new Response();
 
                     if(call_user_func_array(self::$middlewares[$path], array($request, &$response))){
-                        //TODO à changer
-                        return;
+
+                        if(!$response->sent()){
+                            $response->send(401, 'Cannot access to ' . implode('/', $parameters));
+                        }
+
+                        exit();
                     }
                 }
             }
-
-            //PAS D'ERREUR
-
-            /*if(!emtpy($options->connected) && !User::IsConnect()){
-                return;
-            }
-
-            if(!empty($options->roles) && !User::IsConnect() && !in_array(User::Get()->getRight(), $options->roles)){
-                return;
-            }*/
-
-            /*if(!empty($options->appName)){
-                if(!User::IsConnect()){
-                    return;
-                }
-
-                if(!Plugin::HaveAccess($options->appName)){
-                    return;
-                }
-            }*/
 
             self::$request =    $request;
             self::$callback =   $callback;
         }
     }
     /**
-     * Route.Otherwise(route, callback) -> void
+     * HTTP.Route.Otherwise(route, callback) -> void
      **/
     public static function Otherwise($callback){
         if(empty(self::$defaultCallback)){
             self::$defaultCallback = $callback;
         }
     }
-
-
+    /**
+     * HTTP.Route.Fire() -> void
+     **/
     public static function Fire(){
 
-        $response = new stdClass();
+        $response = new Response();
 
         if(!empty(self::$request)){
             call_user_func_array(self::$callback, array(self::$request, &$response));
         }else{
+
             if(!empty(self::$defaultCallback)){
-                call_user_func_array(self::$callback, array(self::$request, &$response));
+                call_user_func_array(self::$defaultCallback, array(self::$request, &$response));
             }
+
         }
 
-        //TODO BUILD RESPONSE
+        if(!$response->sent()){
+            $response->send(401, 'Cannot access to ' . implode('/', \Permalink::Get()->getParameters()));
+        }
 
     }
 }

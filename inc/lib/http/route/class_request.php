@@ -43,6 +43,7 @@ class Request{
     protected $permalink =  '';
 
     public function __construct($route, $options = ''){
+
         $this->query =  $_GET;
         $this->body =   $_POST;
         $this->files =  $_FILES;
@@ -145,6 +146,7 @@ class Request{
         }
 
         $methods = explode(';', $this->method);
+
         return in_array($_SERVER['REQUEST_METHOD'], $methods);
     }
     /**
@@ -206,5 +208,9 @@ class Request{
     public function setIP($str){
         $this->ip = $str;
         return $this;
+    }
+
+    public function getRoute(){
+        return $this->route;
     }
 }

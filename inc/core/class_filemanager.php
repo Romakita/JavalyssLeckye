@@ -76,7 +76,7 @@ class FileManager{
 	public function Initialize(){
 		global $S;	
 		
-		if(!User::IsConnect()) return;
+		if(!\System\User::IsConnect()) return;
 		
 		switch($this->prefixe){
 			default:

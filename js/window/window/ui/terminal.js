@@ -120,13 +120,7 @@ Terminal.prototype = {
 					
 		}.bind(this);
 		
-		if(console && console.log){
-			var consoleLog = console.log;
-			console.log = function(s){
-				this.trace(s);
-				return consoleLog(s);
-			}.bind(this);
-		}
+
 		
 	},
 /*

@@ -1,4 +1,4 @@
-<?php 
+ <?php
 /** section: Library
  * class PluginManager < Models
  *

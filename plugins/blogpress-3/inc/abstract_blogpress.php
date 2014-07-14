@@ -307,6 +307,9 @@ abstract class BlogPress implements iPlugin{
  	static public function Uninstall($erase = false){
 		
 		if($erase){
+
+            self::Meta('BP_INSTALLED', 0);
+
 			$request = new Request(DB_BLOGPRESS);
 			
 			$request->from(Post::TABLE_NAME)->exec('drop');
@@ -459,15 +462,6 @@ abstract class BlogPress implements iPlugin{
 		if(BlogPress::Meta('BP_REDIR_INDEX') != '0'){
 						
 			//define('URI_WEB_PATH', URI_PATH);
-					
-			$folder = BLOGPRESS_PATH.'inc/ui/';
-			
-			//inclusion des composants pour le blog
-			$folder = new StreamList($folder);
-			do{
-				require_once('ui/'.$folder->current());
-			}while($folder->next());
-			
 			System::Fire('blogpress:startinterface');
 			
 			System::StopEvent();
@@ -484,15 +478,7 @@ abstract class BlogPress implements iPlugin{
 		if(Template::FileExists('connexion.php')){
 			
 			//define('BLOGPRESS_URI', str_replace(ABS_PATH, URI_PATH, BLOGPRESS_PATH));
-			
-			$folder = BLOGPRESS_PATH.'inc/ui/';
-			
-			//inclusion des composants pour le blog
-			$folder = new StreamList($folder);
-			do{
-				require_once('ui/'.$folder->current());
-			}while($folder->next());
-			
+
 			Blog::EnqueueScript('prototype');
 			Blog::EnqueueScript('extends', '', 'lang=fr');
 			Blog::EnqueueScript('window');

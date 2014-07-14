@@ -1,43 +1,45 @@
 <?php
 /** section: Core
- * class SystemSearch
+ * class System.Search
  * includes ObjectTools
  *
  * Cette classe gère les extensions du logiciel.
  **/
-class SystemSearch extends ObjectTools{
+namespace System;
+
+class Search extends \ObjectTools{
 /**
- * SystemSearch#text -> String
+ * System.Search#text -> String
  *
  * Texte à afficher en fonction du résultat.
  **/	
 	public $text = 			'';
 /**
- * SystemSearch#appName -> String
+ * System.Search#appName -> String
  *
  * Nom de l'application source des données.
  **/	
 	public $appName =		'';
 /**
- * SystemSearch#appIcon -> String
+ * System.Search#appIcon -> String
  *
  * Icone de l'application.
  **/	
 	public $appIcon =			'';
 /**
- * SystemSearch#icon -> String
+ * System.Search#icon -> String
  *
  * Icone de la ligne du résultat.
  **/	
 	public $icon =			'';
 /**
- * SystemSearch#value -> String
+ * System.Search#value -> String
  *
  * Données à transmettre.
  **/	
 	public $value = 		'';
 /**
- * SystemSearch#onClick -> String
+ * System.Search#onClick -> String
  *
  * Action Javascript.
  **/	
@@ -51,9 +53,9 @@ class SystemSearch extends ObjectTools{
 	
 	protected static $currentAppName = '';
 /**
- * new SystemSearch(object)
- * new SystemSearch(array)
- * new SystemSearch(object)
+ * new System.Search(object)
+ * new System.Search(array)
+ * new System.Search(object)
  *
  * Cette méthode créée une nouvelle instance de résultat.
  **/
@@ -69,11 +71,11 @@ class SystemSearch extends ObjectTools{
  *
  **/	
 	public static function Initialize() {
-		System::Observe('gateway.exec', array(__CLASS__, 'exec'));
+		\System::Observe('gateway.exec', array('\System\Search', 'exec'));
 	}
 /**
- * SystemSearch.Add(options) -> void
- * - options (Object|SystemSearch): Resultat à ajouter.
+ * System.Search.Add(options) -> void
+ * - options (Object|System.Search): Resultat à ajouter.
  * 
  * Cette méthode ajoute un résultat au gestionnaire de recherche global.
  **/	
@@ -108,7 +110,7 @@ class SystemSearch extends ObjectTools{
 		self::$keyword = $word;
 		self::$currentAppName = $appName;
 		
-		System::Fire('system.search.mail', array($word));
+		\System::Fire('system.search.mail', array($word));
 		
 		return self::$Array;
 	}
@@ -135,7 +137,7 @@ class SystemSearch extends ObjectTools{
 				self::$keyword = $word;
 				self::$currentAppName = $appName;
 				
-				System::Fire('system.search', array($word, $appName));
+				\System::Fire('system.search', array($word, $appName));
 					
 		}
 		
@@ -143,7 +145,7 @@ class SystemSearch extends ObjectTools{
 		
 	}
 /**
- * SystemSearch.GetKeyword() -> String
+ * System.Search.GetKeyword() -> String
  *
  * Cette méthode retourne le mot clef recherché par l'utilisateur.
  **/	
@@ -151,7 +153,7 @@ class SystemSearch extends ObjectTools{
 		return self::$keyword;
 	}
 /*
- * SystemSearch.GetAppName() -> String
+ * System.Search.GetAppName() -> String
  *
  * Cette méthode retourne l'application courante.
  **/	
@@ -159,7 +161,7 @@ class SystemSearch extends ObjectTools{
 		return self::$currentAppName;
 	}
 /**
- * SystemSearch#onClick(jsaction) -> void
+ * System.Search#onClick(jsaction) -> void
  *
  * Cette méthode permet d'ajouter une action javascript au clique du résultat par l'utilisateur.
  **/	
@@ -167,7 +169,7 @@ class SystemSearch extends ObjectTools{
 		$this->onClick = $o;	
 	}
 /**
- * SystemSearch#setAppName(name) -> void
+ * System.Search#setAppName(name) -> void
  * - name (String): Nom de l'application lié au résultat.
  *
  * Cette méthode permet de spécifier le nom de l'application ayant retourné le résultat en fonction du mot clef.
@@ -176,7 +178,7 @@ class SystemSearch extends ObjectTools{
 		$this->appName = $o;	
 	}
 /**
- * SystemSearch#setAppIcon(icon) -> void
+ * System.Search#setAppIcon(icon) -> void
  * - icon (String): Icone de l'application lié au résultat.
  *
  * Cette méthode permet de spécifier une icone associée à l'application.
@@ -185,7 +187,7 @@ class SystemSearch extends ObjectTools{
 		$this->appIcon = $o;	
 	}
 /**
- * SystemSearch#setIcon(icon) -> void
+ * System.Search#setIcon(icon) -> void
  * - icon (String): Icone lié au résultat.
  *
  * Cette méthode permet de spécifier une icone associée au résultat.
@@ -196,6 +198,3 @@ class SystemSearch extends ObjectTools{
 	
 	
 }
-
-class IntelliSearch extends SystemSearch{}
-SystemSearch::Initialize();

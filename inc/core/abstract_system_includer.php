@@ -1,6 +1,6 @@
 <?php
 /** section: Core
- * mixin SystemIncluder
+ * mixin System.Includer
  * 
  * Cette classe gère l'inclusion de script CSS et Javascript dans un document.
  *
@@ -11,11 +11,14 @@
  * * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
  *
  **/
+
+namespace System;
+
 if(!class_exists('Includer')):
 
-abstract class SystemIncluder{
+abstract class Includer{
     /**
-     * System.$ScriptSystem -> Array
+     * System.Includer.ScriptSystem -> Array
      **/
     protected static $ScriptSystem = array(
         '$path/core/interact.js',
@@ -61,43 +64,43 @@ abstract class SystemIncluder{
         'hightcharts.exporting'=>       '$path/highchartsjs/modules/exporting.js',
     );
 /**
- * SystemIncluder.Script -> Array
+ * System.Includer.Script -> Array
  **/
 	protected static $Script = 	array();
 /**
- * SystemIncluder.Css -> Array
+ * System.Includer.Css -> Array
  **/
 	protected static $Css =     array();
 /** deprecated
- * System.AddCSS(link [, media]) -> void
+ * System.Includer.AddCSS(link [, media]) -> void
  * - link (String): Lien du fichier CSS à ajouter
  *
  * Cette méthode enregistre un lien d'un script CSS et sera ajouter au lancement du logiciel.
  **/
     public static function AddCSS($link, $media='all'){
-        return self::ImportCSS($link, $media);
+        self::ImportCSS($link, $media);
     }
 /*
- * System.AddJS(link) -> void
+ * System.Includer.AddJS(link) -> void
  * - link (String): Lien du fichier Javascript à ajouter
  *
  * Cette méthode enregistre un lien d'un script Javascript et sera ajouter au lancement du logiciel.
  **/
     public static function AddJS($link){
-        return self::EnqueueScript(md5($link), $link);
+        self::EnqueueScript(md5($link), $link);
     }
 /** deprecated
- * System.AddScript(link) -> void
+ * System.Includer.AddScript(link) -> void
  * - link (String): Lien du fichier Javascript à ajouter
  *
  * Cette méthode enregistre un lien d'un script Javascript et sera ajouter au lancement du logiciel.
  **/
     public static function AddScript($link){
-        return self::EnqueueScript(md5($link), $link);
+        self::EnqueueScript(md5($link), $link);
     }
 
 /**
- * SystemIncluder.EnqueueScript(scriptname [, src [, parameters]]) -> void
+ * System.Includer.EnqueueScript(scriptname [, src [, parameters]]) -> void
  * - scriptname (String): Nom du script tel que `jquery`, `prototype` etc...
  * - src (String): Lien du script à charger
  * - parameters (String): Paramètre à passer au script JS.
@@ -121,7 +124,7 @@ abstract class SystemIncluder{
 		unset(self::$Script[$scriptname]);
 	}
 /**
- * SystemIncluder.ImportCSS(src, media) -> void
+ * System.Includer.ImportCSS(src, media) -> void
  * - src (String): Lien du script css à importer.
  * - media (String): Média cible du script css.
  * 
@@ -131,12 +134,12 @@ abstract class SystemIncluder{
 		array_push(self::$Css, '<link type="text/css" rel="stylesheet" href="'.$style.'" media="'.$media.'" />');
 	}
 /**
- * SystemIncluder.CompileCSS() -> void
+ * System.Includer.CompileCSS() -> void
  * 
  * Cette méthode compile et compresse les fichiers CSS en fonction des paramètres du template.
  **/	
-	static protected function CompileCSS(){
-		$link = 		new Permalink();
+	static public function CompileCSS(){
+		$link = 		new \Permalink();
 		$parameters = 	$link->getParameters();
 		$template = 	@$parameters[2] == 'default' ? 'system' :  $parameters[2];
 		$type =			@$parameters[3];
@@ -145,7 +148,7 @@ abstract class SystemIncluder{
 		
 		include(ABS_PATH . 'inc/lib/window/package_window.php');
 		
-		if(!(User::IsConnect() && System::Meta('MODE_DEBUG'))){
+		if(!(User::IsConnect() && \System::Meta('MODE_DEBUG'))){
 			$compress = true;
 		}
 		
@@ -159,11 +162,11 @@ abstract class SystemIncluder{
 			$path = 		str_replace($stripPath, '', $link);
 			$path =			ABS_PATH . str_replace(array('../plugins','minified'), array('plugins', ''), $path);
 			
-			WR::ParseXML($path);
+			\WR::ParseXML($path);
 			
 		}else{
 			$path = ABS_PATH . 'themes/'.$template.'/';
-			WR::ParseXML($path);
+			\WR::ParseXML($path);
 		}
 		
 		ob_start();
@@ -171,41 +174,41 @@ abstract class SystemIncluder{
 		switch($type){
 				
 			case 'system':
-				WR::ImportCSS(ABS_PATH.'themes/window/core/window.default.css');
-				WR::ImportCSS(ABS_PATH.'themes/system/system.icon.css');
-				WR::ImportCSS(ABS_PATH.'themes/system/system.admin.css');
-				WR::ImportCSS(ABS_PATH.'themes/system/system.progress.css');
-				WR::ImportCSS(ABS_PATH.'themes/system/system.widget.css');
-				WR::ImportCSS(ABS_PATH.'themes/system/system.menu.css');
-				WR::ImportCSS(ABS_PATH.'themes/system/system.user.css');
-				WR::ImportCSS(ABS_PATH.'themes/system/system.filemanager.css');
-				WR::ImportCSS(ABS_PATH.'themes/system/system.setting.css');
-				WR::ImportCSS(ABS_PATH.'themes/system/system.jpanel.css');
-				WR::ImportCSS(ABS_PATH.'themes/system/system.directory.css');
-				WR::ImportCSS(ABS_PATH.'themes/system/system.notify.css');
-				WR::ImportCSS(ABS_PATH.'themes/window/plugins/filemanager.css');
-				WR::ImportFragment($path);
+				\WR::ImportCSS(ABS_PATH.'themes/window/core/window.default.css');
+				\WR::ImportCSS(ABS_PATH.'themes/system/system.icon.css');
+				\WR::ImportCSS(ABS_PATH.'themes/system/system.admin.css');
+				\WR::ImportCSS(ABS_PATH.'themes/system/system.progress.css');
+				\WR::ImportCSS(ABS_PATH.'themes/system/system.widget.css');
+				\WR::ImportCSS(ABS_PATH.'themes/system/system.menu.css');
+				\WR::ImportCSS(ABS_PATH.'themes/system/system.user.css');
+				\WR::ImportCSS(ABS_PATH.'themes/system/system.filemanager.css');
+				\WR::ImportCSS(ABS_PATH.'themes/system/system.setting.css');
+				\WR::ImportCSS(ABS_PATH.'themes/system/system.jpanel.css');
+				\WR::ImportCSS(ABS_PATH.'themes/system/system.directory.css');
+				\WR::ImportCSS(ABS_PATH.'themes/system/system.notify.css');
+				\WR::ImportCSS(ABS_PATH.'themes/window/plugins/filemanager.css');
+				\WR::ImportFragment($path);
 				break;
 				
 			case 'window':
-				WR::ImportCSS(ABS_PATH . 'themes/window/core/window.default.css');
-				WR::ImportFragment($path);
+				\WR::ImportCSS(ABS_PATH . 'themes/window/core/window.default.css');
+				\WR::ImportFragment($path);
 				break;
 				
 			case 'filemanager':
-				WR::ImportCSS(ABS_PATH . 'themes/window/plugins/filemanager.css');
+				\WR::ImportCSS(ABS_PATH . 'themes/window/plugins/filemanager.css');
 				break;
 			case 'schedule':
-				WR::ImportCSS(ABS_PATH . 'themes/window/plugins/schedule.css');
+				\WR::ImportCSS(ABS_PATH . 'themes/window/plugins/schedule.css');
 				break;
 			case 'editor':
-				WR::ImportCSS(ABS_PATH . 'themes/window/plugins/editor.css');
+				\WR::ImportCSS(ABS_PATH . 'themes/window/plugins/editor.css');
 				break;
 		}
 		
 		$str = ob_get_clean();
 		
-		WR::PrintHeader($compress);
+		\WR::PrintHeader($compress);
 		
 		if($template == 'system'){
 			echo str_replace(array(
@@ -237,7 +240,7 @@ abstract class SystemIncluder{
 		ob_flush();
 	}
     /**
-     * SystemIncluder.Path([type]) -> String
+     * System.Includer.Path([type]) -> String
      * - type (String): type de dossier cible
      *
      * Cette méthode retourne le chemin absolue vers le dossier publique de l'utilisateur.
@@ -324,32 +327,32 @@ abstract class SystemIncluder{
         //si on a scriptaculous qui est dans la file d'attente
         if(@$lib['prototype'] && @$lib['jquery']){
 
-            $str .= '<script type="text/javascript" src="'.str_replace('$path/', System::Path('js', false), $lib['prototype']) . '"></script>' ."\n";
-            $str .= '<script type="text/javascript" src="'.str_replace('$path/', System::Path('js', false), $lib['jquery']) . '"></script>' ."\n";
+            $str .= '<script type="text/javascript" src="'.str_replace('$path/', self::Path('js', false), $lib['prototype']) . '"></script>' ."\n";
+            $str .= '<script type="text/javascript" src="'.str_replace('$path/', self::Path('js', false), $lib['jquery']) . '"></script>' ."\n";
 
             if(isset($lib['extends'])){
-                $str .= '<script type="text/javascript" src="'.str_replace('$path/', System::Path('js', false), $lib['extends']) .'"></script>' ."\n";
+                $str .= '<script type="text/javascript" src="'.str_replace('$path/', self::Path('js', false), $lib['extends']) .'"></script>' ."\n";
             }
         }else{
             if(@$lib['prototype']){
-                $str .= '<script type="text/javascript" src="'. str_replace('$path/', System::Path('js', false), $lib['prototype']) .'"></script>' ."\n";
+                $str .= '<script type="text/javascript" src="'. str_replace('$path/', self::Path('js', false), $lib['prototype']) .'"></script>' ."\n";
             }
 
             if(@$lib['extends']){
-                $str .= '<script type="text/javascript" src="'. str_replace('$path/', System::Path('js', false), $lib['extends']) .'"></script>' ."\n";
+                $str .= '<script type="text/javascript" src="'. str_replace('$path/', self::Path('js', false), $lib['extends']) .'"></script>' ."\n";
             }
 
             if(@$lib['jquery']){
-                $str .= '<script type="text/javascript" src="'.str_replace('$path/', System::Path('js', false), $lib['jquery']) . '"></script>' ."\n";
+                $str .= '<script type="text/javascript" src="'.str_replace('$path/', self::Path('js', false), $lib['jquery']) . '"></script>' ."\n";
             }
         }
 
         if(@$lib['window']){
-            $str .= '<script type="text/javascript" src="' . str_replace('$path/', System::Path('js', false), $lib['window']) .'"></script>' ."\n";
+            $str .= '<script type="text/javascript" src="' . str_replace('$path/', self::Path('js', false), $lib['window']) .'"></script>' ."\n";
         }
 
         if(!isset($lib['jquery']) && (isset($lib['highchartsjs']) || isset($lib['highstockjs']))){
-            $str .= '<script type="text/javascript" src="' . str_replace('$path/', System::Path('js', false), self::$ScriptLink['highcharts.adaptater']).'"></script>' ."\n";
+            $str .= '<script type="text/javascript" src="' . str_replace('$path/', self::Path('js', false), self::$ScriptLink['highcharts.adaptater']).'"></script>' ."\n";
         }
 
         return $str;
@@ -367,9 +370,9 @@ abstract class SystemIncluder{
 
                 case 'googlemap':
                     $str .= '<script type="text/javascript" src="'. self::Resolve($lib[$key]).'"></script>' . "\n";
-                    $str .= '<script src="'. GoogleMapAPI::GetClustererPath().'" type="text/javascript"></script>' . "\n";
+                    $str .= '<script src="'. \GoogleMapAPI::GetClustererPath().'" type="text/javascript"></script>' . "\n";
 
-                    GoogleMapAPI::DrawClassJS();
+                    \GoogleMapAPI::DrawClassJS();
                     break;
                 case 'canvas':
                     $str .= '<!--[if IE]><script type="text/javascript" src="'. self::Resolve($lib[$key]).'"></script><![endif]-->' . "\n";
@@ -378,14 +381,14 @@ abstract class SystemIncluder{
                     $str .= '<!--[if lt IE 9]><script type="text/javascript" src="'. self::Resolve($lib[$key]).'" ></script><![endif]-->' . "\n";
                     break;
                 case 'window.schedule':
-                    $str .= '<link type="text/css" rel="stylesheet" href="'. System::Path('uri').'themes/compile/default/schedule/" />' . "\n";
+                    $str .= '<link type="text/css" rel="stylesheet" href="'. self::Path('uri').'themes/compile/default/schedule/" />' . "\n";
                     $str .= '<script type="text/javascript" src="'. self::Resolve($lib[$key]).'"></script>' . "\n";
 
                     break;
                 case 'window.editor':
                     $o = trim($lib[$key]);
                     if(!empty($o)):
-                        $str .= '<link type="text/css" rel="stylesheet" href="'. System::Path('uri').'themes/compile/default/editor/" />' . "\n";
+                        $str .= '<link type="text/css" rel="stylesheet" href="'. self::Path('uri').'themes/compile/default/editor/" />' . "\n";
                         $str .= '<script type="text/javascript" src="'. self::Resolve($lib[$key]).'"></script>' . "\n";
                     endif;
                     break;
@@ -422,10 +425,10 @@ abstract class SystemIncluder{
 
         <script>
 
-            System.VERSION = System.version = 	'<?php echo System::Meta('CODE_VERSION') . System::Meta('CODE_SUBVERSION'); ?>';
+            System.VERSION = System.version = 	'<?php echo \System::Meta('CODE_VERSION') . \System::Meta('CODE_SUBVERSION'); ?>';
             System.PHPSESSID = 					'<?php echo session_id(); ?>';
             //extension des clefs métas du système
-            Object.extend(System, '<?php echo addslashes(json_encode(System::getMetas())); ?>'.evalJSON());
+            Object.extend(System, '<?php echo addslashes(json_encode(\System::getMetas())); ?>'.evalJSON());
 
             //extension des clefs métas de l\'utilisateur courant
 
@@ -446,7 +449,7 @@ abstract class SystemIncluder{
             System.UPLOAD_MAX_FILESIZE =	'<?php echo (str_replace('M', '', ini_get('upload_max_filesize')) * 1024 * 1024); ?>';
             System.MEMORY_LIMIT =			'<?php echo (str_replace('M', '', ini_get('memory_limit')) * 1024 * 1024); ?>';
 
-            System.CRON_STARTED =			<?php echo json_encode(Cron::IsStarted()); ?>;
+            System.CRON_STARTED =			<?php echo json_encode(\Cron::IsStarted()); ?>;
         </script>
 
         <?php
@@ -459,10 +462,10 @@ abstract class SystemIncluder{
  * Cette méthode tente de résoudre le chemin d'un lien codé.
  **/
     static protected function Resolve($link){
-        return str_replace(array('$path/'), array(System::Path('js', false)), $link);
+        return str_replace(array('$path/'), array(\System::Path('js', false)), $link);
     }
 }
 
-abstract class CoreUI extends SystemIncluder{}
 endif;
+
 ?>

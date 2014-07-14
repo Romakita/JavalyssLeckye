@@ -2,7 +2,7 @@
  * class Timer
  * Gestionnaire de temps. Cette classe appellera un nombre de fois paramètré une fonction qui lui est associé.
  **/
-var Timer = Class.create();
+var Timer = $.Timer = $.Class.create();
 Timer.prototype = {
 	isStart:	false,
 	callback:	null,
@@ -105,7 +105,7 @@ Timer.prototype = {
 	}
 };
 
-var fThread = Class.create();
+var fThread = $.fThread = $.Class.create();
 fThread.prototype = {
 	initialize: function(callback, delay){
 		if(Object.isUndefined(delay)){

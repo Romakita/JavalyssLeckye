@@ -248,15 +248,6 @@ abstract class BlogPressTemplate extends Multilingual{
 	}
 	
 	static function ImportComponent(){
-		
-		$folder = BLOGPRESS_PATH.'inc/ui/';
-		
-		//inclusion des composants pour le blog
-		$folder = new StreamList($folder);
-		do{
-			require_once(BLOGPRESS_PATH . 'inc/ui/'.$folder->current());
-		}while($folder->next());
-		
 		if(self::FileExists('inc/inc.php')){
 			include_once(self::Path().'inc/inc.php');
 		}

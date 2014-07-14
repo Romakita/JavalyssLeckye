@@ -66,8 +66,15 @@ require_once(ABS_PATH . 'inc/lib/library.php');
 require_once(ABS_PATH . 'inc/interface/iclass.php');
 require_once(ABS_PATH . 'inc/interface/iplugin.php');
 require_once(ABS_PATH . 'inc/interface/isearch.php');
-require_once(ABS_PATH . 'inc/core/class_system.php');
-
+require_once(ABS_PATH . 'inc/core/abstract_system.php');
+//
+// MIGRATE
+//
+abstract class CoreUI extends \System\Includer{}
+abstract class SystemBuffer extends \System\Buffer{}
+abstract class SystemCache extends \System\Cache{}
+class IntelliSearch extends \System\Search{}
+class SystemSearch extends \System\Search{}
 //----------------------------------------------------------------------------
 //Fin-------------------------------------------------------------------------
 //----------------------------------------------------------------------------
