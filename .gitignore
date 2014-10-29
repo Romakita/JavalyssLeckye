@@ -1,6 +1,7 @@
 #################
 ## project
 #################
+.idea
 themes/icons
 *.zip
 *.psd
