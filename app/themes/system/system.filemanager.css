@@ -1,0 +1,63 @@
+.window.filemanager .explorer{
+	padding:		0px !important;
+}
+
+.window.filemanager .explorer > .w-line,
+.window.filemanager .explorer > .w-line .w-line{
+	margin:0px;
+}
+
+.window.filemanager .explorer > .w-line > .wrap-header,
+.window.filemanager .explorer > .w-line .w-line > .wrap-header{
+	filter:			none;
+	-ms-filter:		none;
+	padding-top:	3px;
+	padding-bottom:	3px;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	border-radius:0px;
+	border-left:0px;
+	border-right:0px;
+}
+.window.filemanager .explorer > .w-line > .wrap-header:hover,
+.window.filemanager .explorer > .w-line .w-line > .wrap-header:hover{
+	filter:none;
+	-ms-filter:none;
+	background:<?php echo $Global->button->over->background->color; ?>;
+	border-left:0px;
+	border-right:0px;
+}
+
+.window.filemanager .explorer > .w-line > .wrap-header > .simple-button,
+.window.filemanager .explorer > .w-line .w-line > .wrap-header > .simple-button{
+	display:none;	
+}
+
+.window.filemanager .explorer > .w-line.selected > .wrap-header,
+.window.filemanager .explorer > .w-line .w-line.selected > .wrap-header{
+	filter:		none;
+	-ms-filter:	none;
+	background:	white;
+	border-left:4px solid #DF0059 !important
+}
+.window.filemanager .explorer > .w-line > .wrap-header > .wrap-title,
+.window.filemanager .explorer > .w-line .w-line > .wrap-header > .wrap-title{
+	color: 				<?php echo $Global->button->normal->color; ?>;
+	background-position:5px center;
+	font-family:		Segoe WP, Segoe UI, HelveticaNeue, Helvetica, Arial;
+	color:				#333333;
+	text-shadow:		none;
+	font-size:			14px;
+}
+.window.filemanager .explorer > .w-line > .wrap-header:hover > .wrap-title,
+.window.filemanager .explorer > .w-line .w-line> .wrap-header:hover > .wrap-title{
+	color:				<?php echo $Global->button->over->color; ?>;
+}
+.window.filemanager .explorer > .w-line.selected > .wrap-header > .wrap-title,
+.window.filemanager .explorer > .w-line .w-line.selected > .wrap-header > .wrap-title{
+	color:				#111;
+	font-weight:		600 !important;
+}
+.window.filemanager .explorer > .w-line > .w-line .w-line{
+	display:		none;
+}

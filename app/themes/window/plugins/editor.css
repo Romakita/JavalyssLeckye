@@ -1,0 +1,1028 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tab-control > .wrap-super-body .editor{
+	margin:0px;	
+}
+
+.panel.compact > .widget-container.cols-2.compact .widgets-dashboard > .widgets-box.col-1 > .editor > .wrap-super-body,
+.panel.compact > .widget-container.cols-3.compact .widgets-dashboard > .widgets-box.col-1 > .editor > .wrap-super-body,
+.panel.compact > .widget-container.cols-4.compact .widgets-dashboard > .widgets-box.col-1 > .editor > .wrap-super-body{
+	border-left-width:		0px;
+}
+
+.panel.compact > .widget-container.cols-2.compact .widgets-dashboard > .widgets-box.col-2 > .editor > .wrap-super-body,
+.panel.compact > .widget-container.cols-3.compact .widgets-dashboard > .widgets-box.col-3 > .editor > .wrap-super-body,
+.panel.compact > .widget-container.cols-4.compact .widgets-dashboard > .widgets-box.col-4 > .editor > .wrap-super-body{
+	border-right-width:		0px;
+}
+
+/*********************************************************************************
+ **Editor*************************************************************************
+ *********************************************************************************/
+.tab-control.editor{
+	margin:0; 
+	margin-left:5px;
+	margin-right:5px;
+}
+.tab-control.editor > .wrap-super-body  > .wrap-body{
+	padding:0px;
+	margin:0px;	
+	border:0px;
+	overflow:hidden !important;
+}
+.tab-control.editor > .wrap-super-body > .wrap-body .panel-editor textarea,
+.tab-control.editor > .wrap-super-body > .wrap-body .panel-source textarea{
+	border:0px;
+	padding:0px;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+
+.tab-control.editor > .wrap-super-body > .wrap-body .panel-source{
+	background:white;
+}
+
+.tab-control.editor > .wrap-super-body > .wrap-body .panel-source textarea{
+	font-family: Consolas,Monaco,monospace;
+    line-height: 150%;
+}
+
+.tab-control.editor > .wrap-super-body{
+	border:1px solid #CFCFCF;
+}
+.tab-control.editor > .wrap-super-body > .wrap-body{
+	background: #dfdfdf;
+	/* IE10 */ 
+	background-image: -ms-linear-gradient(top, #EDEDED 0%, #DFDFDF 100%);
+	
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #EDEDED 0%, #DFDFDF 100%);
+	
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #EDEDED 0%, #DFDFDF 100%);
+	
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EDEDED), color-stop(1, #DFDFDF));
+	
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DFDFDF 100%);
+	
+	/* Proposed W3C Markup */ 
+	background-image: linear-gradient(top, #EDEDED 0%, #DFDFDF 100%);
+}
+.tab-control.editor > .wrap-header > .simple-button, 
+.tab-control.editor > .wrap-header > .simple-menu > .wrap-content > .wrap-body > .simple-button{
+	background: #F1F1F1;
+    border-color: #DFDFDF #DFDFDF #CCCCCC;
+	padding:	2px 4px;
+	margin-bottom:-1px;
+}
+
+.tab-control.editor > .wrap-header > .simple-button > .wrap-text, 
+.tab-control.editor > .wrap-header > .simple-menu > .wrap-content .wrap-body > .simple-button > .wrap-text{
+    color: #999999;
+	text-shadow:none;
+}
+.tab-control.editor > .wrap-header > .simple-button.selected, 
+.tab-control.editor > .wrap-header > .simple-menu > .wrap-content .wrap-body > .simple-button.selected{
+	border:				1px solid #CFCFCF;
+	background:			#EDEDED !important;
+	border-bottom:		0px;
+}
+
+.tab-control.editor > .wrap-header > .simple-button.selected > .wrap-text, 
+.tab-control.editor > .wrap-header > .simple-menu > .wrap-content > .wrap-body > .simple-button.selected > .wrap-text{
+	color:#333333;
+	text-shadow:none;
+}
+
+/* Widget */
+
+.widget .tab-control.editor{
+	margin:		0px;
+} 
+.widget .tab-control.editor > .wrap-super-body{
+	border:		0px;	
+}
+.widget .windowSkin tr.mceFirst td.mceToolbar{
+	background:	#DFDFDF;	
+}
+
+/* UI */
+
+.windowSkin table, .windowSkin tbody, .windowSkin a, .windowSkin img, .windowSkin tr, .windowSkin div, .windowSkin td, .windowSkin iframe, .windowSkin span, .windowSkin *, .windowSkin .mceText {
+	border:0; 
+	margin:0; 
+	padding:0; 
+	white-space:nowrap; 
+	text-decoration:none; 
+	font-weight:normal; 
+	cursor:default; 
+	vertical-align:baseline; 
+	width:auto; 
+	border-collapse:separate;
+}
+
+.windowSkin a:hover, .windowSkin a:link, .windowSkin a:visited, .windowSkin a:active {
+	text-decoration:none; 
+	font-weight:normal; 
+	cursor:default;
+}
+
+.windowSkin table td {
+	vertical-align:middle;
+}
+
+/* Containers */
+
+.windowSkin table {}
+.windowSkin iframe {
+	display:block;
+}
+.windowSkin .mceToolbar {
+	padding: 2px;
+}
+
+/* External */
+.windowSkin .mceExternalToolbar {
+	position:absolute;
+	border-bottom:0;
+	display:none;
+}
+.windowSkin .mceExternalToolbar td.mceToolbar {
+	padding-right:13px;
+}
+.windowSkin .mceExternalClose {
+	position:absolute; 
+	top:3px; 
+	right:3px; 
+	width:7px; 
+	height:7px; 
+	background:url(window/images/wpicons.png) -820px 0;
+}
+
+/* Layout */
+
+.windowSkin table.mceToolbar, .windowSkin tr.mceFirst .mceToolbar tr td, .windowSkin tr.mceLast .mceToolbar tr td {border:0; margin:0; padding:0}
+.windowSkin table.mceLayout {border:0;}
+.windowSkin .mceIframeContainer {}
+.windowSkin .mceStatusbar {
+	background-color: #F5F5F5;
+    border-top: 1px solid #DFDFDF;
+    color: #000000;
+    display: block;
+    font-family: Arial,"Bitstream Vera Sans",Helvetica,Verdana,sans-serif;
+    font-size: 12px;
+    height: 20px;
+    line-height: 16px;
+    overflow: visible;
+    padding: 0 0 0 8px;
+}
+
+.windowSkin .mceStatusbar div {float:left; padding:2px;}
+.windowSkin .mceStatusbar a.mceResize {
+	display: block;
+	float: right;
+	background: url(img/icons.gif) -800px 0;
+	width: 20px;
+	height: 20px;
+	cursor: se-resize
+}
+.windowSkin .mceStatusbar a:hover {text-decoration:underline}
+.windowSkin table.mceToolbar {margin: 0 2px 2px;}
+.windowSkin #content_toolbar1 {margin-top: 2px;}
+.windowSkin .mceToolbar .mceToolbarEndListBox span {display:none}
+.windowSkin span.mceIcon, .windowSkin img.mceIcon {display:block; width:20px; height:20px}
+.windowSkin .mceIcon {background:url(window/images/wpicons.png) no-repeat 20px 20px}
+
+/* Button */
+
+.windowSkin .mceButton {
+	display:block;
+	width: 20px;
+	height: 20px;
+	cursor: default;
+	padding: 1px 2px;
+	margin: 1px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	border-radius: 2px;
+	
+	border-color: 		#ccc;
+	background-color: 	#eee; /* Fallback */
+	background-image: 	-ms-linear-gradient(bottom, #ddd, #fff); /* IE10 */
+	background-image: 	-moz-linear-gradient(bottom, #ddd, #fff); /* Firefox */
+	background-image: 	-o-linear-gradient(bottom, #ddd, #fff); /* Opera */
+	background-image: 	-webkit-gradient(linear, left bottom, left top, from(#ddd), to(#fff)); /* old Webkit */
+	background-image: 	-webkit-linear-gradient(bottom, #ddd, #fff); /* new Webkit */
+	background-image: 	linear-gradient(bottom, #ddd, #fff); /* proposed W3C Markup */}
+
+.windowSkin a.mceButtonEnabled:hover {
+	border-color: 		#a0a0a0;
+	background: 		#ddd; /* Fallback */
+	background-image: -ms-linear-gradient(bottom, #ccc, #fff); /* IE10 */
+	background-image: -moz-linear-gradient(bottom, #ccc, #fff); /* Firefox */
+	background-image: -o-linear-gradient(bottom, #ccc, #fff); /* Opera */
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#ccc), to(#fff)); /* old Webkit */
+	background-image: -webkit-linear-gradient(bottom, #ccc, #fff); /* new Webkit */
+	background-image: linear-gradient(bottom, #ccc, #fff); /* proposed W3C Markup */
+}
+
+.windowSkin .mceOldBoxModel a.mceButton span, .windowSkin .mceOldBoxModel a.mceButton img {margin:0 0 0 1px}
+
+.windowSkin a.mceButton:active,
+.windowSkin a.mceButtonEnabled:active,
+.windowSkin a.mceButtonSelected:active,
+.windowSkin a.mceButtonActive,
+.windowSkin a.mceButtonActive:active,
+.windowSkin a.mceButtonActive:hover {
+	background-color: #ddd; /* Fallback */
+	background-image: -ms-linear-gradient(bottom, #eee, #bbb); /* IE10 */
+	background-image: -moz-linear-gradient(bottom, #eee, #bbb); /* Firefox */
+	background-image: -o-linear-gradient(bottom, #eee, #bbb); /* Opera */
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#eee), to(#bbb)); /* old Webkit */
+	background-image: -webkit-linear-gradient(bottom, #eee, #bbb); /* new Webkit */
+	background-image: linear-gradient(bottom, #eee, #bbb); /* proposed W3C Markup */
+	border-color: #909090;
+}
+
+.windowSkin a.mceButton:active,
+.windowSkin a.mceButtonActive,
+.windowSkin a.mceButtonActive:hover,
+.windowSkin a.mceButtonSelected {
+	-webkit-box-shadow:	 /*0 1px 1px rgba(0, 0, 0, 0.15),*/ inset 0 0 2px 1px #fff;
+	-moz-box-shadow: /*0 1px 0 rgba(0, 0, 0, 0.15),*/ inset 0 0 2px 1px #fff;
+	box-shadow: /*0 1px 0 rgba(0, 0, 0, 0.15),*/ inset 0 0 2px 1px #fff;
+}
+.windowSkin .mceButtonDisabled .mceIcon {opacity:0.4; filter:alpha(opacity=40);}
+
+.windowSkin .mceButtonDisabled {
+	border-color: #ccc !important;
+}
+
+/* Separator */
+.windowSkin .mceSeparator {
+	height: 24px;
+
+	width: 1px;
+	display: block;
+	background: transparent;
+	overflow: hidden;
+	margin: 0 2px;
+}
+
+/* ListBox */
+.windowSkin .mceListBox, .windowSkin .mceListBox a {display:block}
+.windowSkin .mceListBox .mceText {
+	padding: 1px 2px 1px 5px;
+	text-align:left;
+	text-decoration: none;
+	width:70px;
+	-moz-border-bottom-left-radius: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	-khtml-border-bottom-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	-moz-border-top-left-radius: 2px;
+	-webkit-border-top-left-radius: 2px;
+	-khtml-border-top-left-radius: 2px;
+	border-top-left-radius: 2px;
+	-webkit-box-shadow: /*0 1px 0 rgba(0, 0, 0, 0.15),*/ inset 0 0 2px 1px #fff;
+	-moz-box-shadow: /*0 1px 0 rgba(0, 0, 0, 0.15),*/ inset 0 0 2px 1px #fff;
+	box-shadow: /*0 1px 0 rgba(0, 0, 0, 0.15),*/ inset 0 0 2px 1px #fff;
+	font-family: Arial, "Bitstream Vera Sans", Helvetica, Verdana, sans-serif;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+}
+
+.windowSkin .mceListBox {
+	margin: 1px;
+	direction: ltr;
+}
+
+.windowSkin .mceListBox .mceOpen {
+	width: 14px;
+	height: 20px;
+	border-collapse: separate;
+	padding: 1px;
+	-moz-border-bottom-left-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-khtml-border-bottom-left-radius: 0;
+	border-bottom-left-radius: 0;
+	-moz-border-top-left-radius: 0;
+	-webkit-border-top-left-radius: 0;
+	-khtml-border-top-left-radius: 0;
+	border-top-left-radius: 0;
+	-webkit-box-shadow: /*0 1px 0 rgba(0, 0, 0, 0.15),*/ inset 0 0 2px 1px #fff;
+	-moz-box-shadow: /*0 1px 0 rgba(0, 0, 0, 0.15),*/ inset 0 0 2px 1px #fff;
+	box-shadow: /*0 1px 0 rgba(0, 0, 0, 0.15),*/ inset 0 0 2px 1px #fff;
+	border-left: 0 !important;
+}
+
+.windowSkin table.mceListBoxEnabled:hover .mceOpen,
+.windowSkin .mceListBoxHover .mceOpen,
+.windowSkin .mceListBoxHover:active .mceOpen,
+.windowSkin .mceListBoxSelected .mceOpen,
+.windowSkin .mceListBoxSelected .mceText,
+.windowSkin table.mceListBoxEnabled:active .mceText {
+	background: #ccc;
+	border-color: #999;
+}
+
+.windowSkin .mceListBox .mceText,
+.windowSkin .mceListBox .mceOpen{
+	border-color: #ccc;
+	background-color: #eee; /* Fallback */
+	background-image: -ms-linear-gradient(bottom, #ddd, #fff); /* IE10 */
+	background-image: -moz-linear-gradient(bottom, #ddd, #fff); /* Firefox */
+	background-image: -o-linear-gradient(bottom, #ddd, #fff); /* Opera */
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#ddd), to(#fff)); /* old Webkit */
+	background-image: -webkit-linear-gradient(bottom, #ddd, #fff); /* new Webkit */
+	background-image: linear-gradient(bottom, #ddd, #fff); /* proposed W3C Markup */
+}
+.windowSkin .mceListBox .mceOpen span {
+	display: block;
+	width:14px;
+	height:20px;
+	background-image: url(window/images/1down-mini.png);
+	background-position: -1px 2px;
+	background-repeat: no-repeat;
+}
+.windowSkin table.mceListBoxEnabled:hover .mceText,
+.windowSkin .mceListBoxHover .mceText,
+.windowSkin .mceListBoxSelected .mceText,
+.windowSkin table.mceListBoxEnabled:hover .mceOpen,
+.windowSkin .mceListBoxHover .mceOpen,
+.windowSkin .mceListBoxSelected .mceOpen {
+	background-image: none;
+}
+.windowSkin .mceListBoxDisabled .mceText {color:gray}
+.windowSkin .mceListBoxMenu {overflow:auto; overflow-x:hidden}
+.windowSkin .mceOldBoxModel .mceListBox .mceText {height:22px}
+.windowSkin select.mceListBox {
+	font-family: Arial, "Bitstream Vera Sans", Helvetica, Verdana, sans-serif;
+	font-size:12px;
+}
+
+/* SplitButton */
+.windowSkin .mceSplitButton a, .windowSkin .mceSplitButton span {display:block; height:20px}
+.windowSkin .mceSplitButton {
+	display:block;
+	margin: 1px;
+	direction: ltr;
+}
+.windowSkin table.mceSplitButton td {
+	padding: 2px;
+	-moz-border-bottom-left-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-khtml-border-bottom-left-radius: 0;
+	border-bottom-left-radius: 0;
+	-moz-border-top-left-radius: 0;
+	-webkit-border-top-left-radius: 0;
+	-khtml-border-top-left-radius: 0;
+	border-top-left-radius: 0;
+}
+
+.windowSkin table.mceSplitButton td a {
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15), inset 0 0 2px 1px #fff;
+	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15), inset 0 0 2px 1px #fff;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15), inset 0 0 2px 1px #fff;
+}
+
+.windowSkin table.mceSplitButton:hover td {
+	background-image: inherit 0 -10px;
+}
+
+.windowSkin .mceSplitButton a.mceAction {
+	height:20px;
+	width:20px;
+	padding: 1px 2px;
+}
+.windowSkin .mceSplitButton span.mceAction {
+	background-image: url(window/images/wpicons.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	width:20px;
+}
+.windowSkin .mceSplitButton a.mceOpen {
+	width:10px;
+	height:20px;
+	background-image: url(window/images/1down-mini.png);
+	background-position: -2px 4px;
+	background-repeat: no-repeat;
+	padding: 1px;
+	border-left: 0 none !important;
+}
+.windowSkin .mceSplitButton span.mceOpen {display:none}
+.windowSkin .mceSplitButtonDisabled .mceAction {
+	opacity:0.3; 
+	filter:alpha(opacity=30);
+}
+.windowSkin .mceListBox a.mceText, .windowSkin .mceSplitButton a.mceAction {
+	-moz-border-radius-bottomleft: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-khtml-border-bottom-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-webkit-border-top-left-radius: 3px;
+	-khtml-border-top-left-radius: 3px;
+	border-top-left-radius: 3px;
+}
+.windowSkin .mceSplitButton a.mceOpen, .windowSkin .mceListBox a.mceOpen {
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-khtml-border-bottom-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-khtml-border-top-right-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.windowSkin span.mce_undo,
+.windowSkin span.mce_redo,
+.windowSkin span.mce_bullist,
+.windowSkin span.mce_numlist,
+.windowSkin span.mce_blockquote,
+.windowSkin span.mce_charmap,
+.windowSkin span.mce_bold,
+.windowSkin span.mce_italic,
+.windowSkin span.mce_underline,
+.windowSkin span.mce_justifyleft,
+.windowSkin span.mce_justifyright,
+.windowSkin span.mce_justifycenter,
+.windowSkin span.mce_justifyfull,
+.windowSkin span.mce_indent,
+.windowSkin span.mce_outdent,
+.windowSkin span.mce_link,
+.windowSkin span.mce_unlink,
+.windowSkin span.mce_help,
+.windowSkin span.mce_removeformat,
+.windowSkin span.mce_fullscreen,
+.windowSkin span.mce_media,
+.windowSkin span.mce_pastetext,
+.windowSkin span.mce_pasteword,
+.windowSkin span.mce_wp_help,
+.windowSkin span.mce_wp_adv,
+.windowSkin span.mce_wp_more,
+.windowSkin span.mce_strikethrough,
+.windowSkin span.mce_spellchecker,
+.windowSkin span.mce_forecolor,
+.windowSkin .mce_forecolorpicker,
+.windowSkin .mceSplitButton .mce_spellchecker span.mce_spellchecker,
+.windowSkin .mceSplitButton .mce_forecolor span.mce_forecolor,
+.windowSkin .mceSplitButton span.mce_numlist,
+.windowSkin .mceSplitButton span.mce_bullist {
+	background-image: url(window/images/wpicons.png);
+}
+
+/* ColorSplitButton */
+
+.windowSkin div.mceColorSplitMenu table {}
+.windowSkin .mceColorSplitMenu td {padding:2px}
+.windowSkin .mceColorSplitMenu a {display:block; width:9px; height:9px; overflow:hidden;}
+.windowSkin .mceColorSplitMenu td.mceMoreColors {padding:1px 3px 1px 1px}
+.windowSkin .mceColorSplitMenu a.mceMoreColors {width:100%; height:auto; text-align:center; font-family:Tahoma,Verdana,Arial,Helvetica; font-size:11px; line-height:20px;}
+.windowSkin .mceColorSplitMenu a.mceMoreColors:hover {}
+.windowSkin a.mceMoreColors:hover {}
+.windowSkin .mceColorPreview {margin: -5px 0 0 2px; width:16px; height:4px; overflow:hidden}
+
+/* Menu */
+
+.windowSkin .mceMenu {position:absolute; left:0; top:0; z-index:1000;}
+.windowSkin .mceNoIcons span.mceIcon {width:0;}
+.windowSkin .mceNoIcons a .mceText {padding-left:10px}
+.windowSkin .mceMenu table {}
+.windowSkin .mceMenu a, .windowSkin .mceMenu span, .windowSkin .mceMenu {display:block}
+.windowSkin .mceMenu td {height:20px;overflow:hidden;}
+.windowSkin .mceMenu a {
+	position:relative;
+	padding:3px 0 4px 0;
+	text-decoration: none !important;
+
+}
+.windowSkin .mceMenu .mceText {
+	position:relative;
+	display:block;
+	font-family:Tahoma,Verdana,Arial,Helvetica;
+	cursor:default;
+	margin:0;
+	padding:0 25px;
+}
+.windowSkin .mceMenu span.mceText, .windowSkin .mceMenu .mcePreview {
+	font-size: 12px;
+}
+.windowSkin .mceMenu pre.mceText {font-family:Monospace}
+.windowSkin .mceMenu .mceIcon {position:absolute; top:0; left:0; width:22px;}
+.windowSkin .mceMenu .mceMenuItemEnabled a:hover,
+.windowSkin .mceMenu .mceMenuItemActive {}
+.windowSkin td.mceMenuItemSeparator {height:1px}
+.windowSkin .mceMenuItemTitle a {
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	text-decoration: none !important;
+}
+.windowSkin .mceMenuItemTitle span.mceText {font-weight:bold; padding-left:4px}
+.windowSkin .mceMenuItemDisabled .mceText {}
+.windowSkin .mceMenuItemSelected .mceIcon {background:url(window/images/check.gif)}
+.windowSkin .mceNoIcons .mceMenuItemSelected a {background:url(window/images/1right-mini.png) no-repeat -6px center}
+.windowSkin .mceMenu span.mceMenuLine {display:none}
+.windowSkin .mceMenuItemSub a {background:url(window/images/1right-mini.png) no-repeat top right;}
+
+/* Progress,Resize */
+
+.windowSkin .mceBlocker {position:absolute; left:0; top:0; z-index:1000; opacity:0.5; filter:alpha(opacity=50); background:#FFF}
+.windowSkin .mceProgress {position:absolute; left:0; top:0; z-index:1001; background:url(window/images/loading.gif) no-repeat; width:32px; height:32px; margin:-16px 0 0 -16px}
+.windowSkin .mcePlaceHolder {border:1px dotted gray}
+
+/* Formats */
+
+.windowSkin .mce_p span.mceText {}
+.windowSkin .mce_address span.mceText {font-style:italic}
+.windowSkin .mce_pre span.mceText {font-family:monospace}
+.windowSkin .mce_h1 span.mceText {font-weight:bolder; font-size: 17px}
+.windowSkin .mce_h2 span.mceText {font-weight:bolder; font-size: 16px}
+.windowSkin .mce_h3 span.mceText {font-weight:bolder; font-size: 15px}
+.windowSkin .mce_h4 span.mceText {font-weight:bolder; font-size: 14px}
+.windowSkin .mce_h5 span.mceText {font-weight:bolder; font-size: 13px}
+.windowSkin .mce_h6 span.mceText {font-weight:bolder; font-size: 12px}
+
+/* Theme */
+
+.windowSkin span.mce_undo {background-position: -500px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_undo,
+.windowSkin .mceButtonActive span.mce_undo {background-position:-500px 0}
+
+.windowSkin span.mce_redo {background-position:-480px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_redo,
+.windowSkin .mceButtonActive span.mce_redo {background-position:-480px 0}
+
+.windowSkin span.mce_bullist {background-position:-40px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_bullist,
+.windowSkin .mceButtonActive span.mce_bullist,
+.windowSkin .mceSplitButton:hover span.mce_bullist {background-position:-40px 0}
+
+.windowSkin span.mce_numlist {background-position:-61px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_numlist,
+.windowSkin .mceButtonActive span.mce_numlist,
+.windowSkin .mceSplitButton:hover span.mce_numlist {background-position:-61px 0}
+
+.windowSkin span.mce_blockquote {background-position:-80px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_blockquote,
+.windowSkin .mceButtonActive span.mce_blockquote {background-position:-80px 0}
+
+.windowSkin span.mce_charmap {background-position:-420px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_charmap,
+.windowSkin .mceButtonActive span.mce_charmap {background-position:-420px 0}
+
+.windowSkin span.mce_bold {background-position:-1px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_bold,
+.windowSkin .mceButtonActive span.mce_bold {background-position:-1px 0}
+
+.windowSkin span.mce_italic {background-position:-21px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_italic,
+.windowSkin .mceButtonActive span.mce_italic {background-position:-21px 0}
+
+.windowSkin span.mce_underline {background-position:-280px -19px}
+.windowSkin .mceButtonEnabled:hover span.mce_underline,
+.windowSkin .mceButtonActive span.mce_underline {background-position:-280px 1px}
+
+.windowSkin span.mce_justifyleft {background-position:-100px -19px}
+.windowSkin .mceButtonEnabled:hover span.mce_justifyleft,
+.windowSkin .mceButtonActive span.mce_justifyleft {background-position:-100px 1px}
+
+.windowSkin span.mce_justifyright {background-position:-141px -19px}
+.windowSkin .mceButtonEnabled:hover span.mce_justifyright,
+.windowSkin .mceButtonActive span.mce_justifyright {background-position:-141px 1px}
+
+.windowSkin span.mce_justifycenter {background-position:-120px -19px}
+.windowSkin .mceButtonEnabled:hover span.mce_justifycenter,
+.windowSkin .mceButtonActive span.mce_justifycenter {background-position:-120px 1px}
+
+.windowSkin span.mce_justifyfull {background-position:-300px -19px}
+.windowSkin .mceButtonEnabled:hover span.mce_justifyfull,
+.windowSkin .mceButtonActive span.mce_justifyfull {background-position:-300px 1px}
+
+.windowSkin span.mce_indent {background-position:-461px -19px}
+.windowSkin .mceButtonEnabled:hover span.mce_indent,
+.windowSkin .mceButtonActive span.mce_indent {background-position:-461px 1px}
+
+.windowSkin span.mce_outdent {background-position:-440px -19px}
+.windowSkin .mceButtonEnabled:hover span.mce_outdent,
+.windowSkin .mceButtonActive span.mce_outdent {background-position:-440px 1px}
+
+.windowSkin span.mce_link {background-position:-161px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_link,
+.windowSkin .mceButtonActive span.mce_link {background-position:-161px 0}
+
+.windowSkin span.mce_unlink {background-position:-180px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_unlink,
+.windowSkin .mceButtonActive span.mce_unlink {background-position:-180px 0}
+
+.windowSkin span.mce_help {background-position:-521px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_help,
+.windowSkin .mceButtonActive span.mce_help {background-position:-521px 0}
+
+.windowSkin span.mce_removeformat {background-position:-381px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_removeformat,
+.windowSkin .mceButtonActive span.mce_removeformat {background-position:-381px 0}
+
+.windowSkin span.mce_strikethrough {background-position:-540px -18px;}
+.windowSkin .mceButtonEnabled:hover span.mce_strikethrough,
+.windowSkin .mceButtonActive span.mce_strikethrough {background-position:-540px 0}
+
+.windowSkin .mceSplitButton .mce_forecolor span.mce_forecolor {background-position:-321px -22px}
+.windowSkin .mceSplitButtonEnabled:hover span.mce_forecolor,
+.windowSkin .mceSplitButtonActive span.mce_forecolor {background-position:-321px -2px}
+
+.windowSkin .mce_forecolorpicker {background-position:-320px -20px}
+
+/* Plugins in WP */
+.windowSkin span.mce_fullscreen {background-position:-240px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_fullscreen,
+.windowSkin .mceButtonActive span.mce_fullscreen {background-position:-240px 0}
+
+.windowSkin span.mce_media {background-position:-401px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_media,
+.windowSkin .mceButtonActive span.mce_media {background-position:-401px 0}
+
+.windowSkin span.mce_pastetext {background-position:-340px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_pastetext,
+.windowSkin .mceButtonActive span.mce_pastetext {background-position:-340px 0}
+
+.windowSkin span.mce_pasteword {background-position:-360px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_pasteword,
+.windowSkin .mceButtonActive span.mce_pasteword {background-position:-360px 0}
+
+.windowSkin span.mce_spellchecker {background-position:-220px -19px}
+.windowSkin .mceButtonEnabled:hover span.mce_spellchecker,
+.windowSkin .mceSplitButtonEnabled:hover span.mce_spellchecker,
+.windowSkin .mceButtonActive span.mce_spellchecker,
+.windowSkin .mceSplitButtonActive span.mce_spellchecker {background-position:-220px 1px}
+
+.windowSkin span.mce_wp_help {background-position:-521px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_wp_help,
+.windowSkin .mceButtonActive span.mce_wp_help {background-position:-521px 0}
+
+.windowSkin span.mce_wp_adv {background-position:-260px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_wp_adv,
+.windowSkin .mceButtonActive span.mce_wp_adv {background-position:-260px 0}
+
+.windowSkin span.mce_wp_more {background-position:-201px -20px}
+.windowSkin .mceButtonEnabled:hover span.mce_wp_more,
+.windowSkin .mceButtonActive span.mce_wp_more {background-position:-201px 0}
+
+/* Default icons */
+.windowSkin span.mce_cleanup {background-position:-380px -20px}
+.windowSkin span.mce_anchor {background-position:-200px 0}
+.windowSkin span.mce_sub {background-position:-600px 0}
+.windowSkin span.mce_sup {background-position:-620px 0}
+.windowSkin span.mce_newdocument {background-position:-520px 0}
+.windowSkin span.mce_image {background-position:-380px 0}
+.windowSkin span.mce_code {background-position:-260px 0}
+.windowSkin span.mce_hr {background-position:-360px 0}
+.windowSkin span.mce_visualaid {background-position:-660px 0}
+.windowSkin span.mce_paste {background-position:-560px 0}
+.windowSkin span.mce_copy {background-position:-700px 0}
+.windowSkin span.mce_cut {background-position:-680px 0}
+.windowSkin .mce_backcolor span.mceAction {background-position:-760px 0}
+.windowSkin .mce_backcolorpicker {background-position:-760px 0}
+
+
+/* Plugins */
+.windowSkin span.mce_advhr {background-position:-0px -20px}
+.windowSkin span.mce_ltr {background-position:-20px -20px}
+.windowSkin span.mce_rtl {background-position:-40px -20px}
+.windowSkin span.mce_emotions {background-position:-60px -20px}
+.windowSkin span.mce_fullpage {background-position:-80px -20px}
+.windowSkin span.mce_iespell {background-position:-120px -20px}
+.windowSkin span.mce_insertdate {background-position:-140px -20px}
+.windowSkin span.mce_inserttime {background-position:-160px -20px}
+.windowSkin span.mce_absolute {background-position:-180px -20px}
+.windowSkin span.mce_backward {background-position:-200px -20px}
+.windowSkin span.mce_forward {background-position:-220px -20px}
+.windowSkin span.mce_insert_layer {background-position:-240px -20px}
+.windowSkin span.mce_insertlayer {background-position:-260px -20px}
+.windowSkin span.mce_movebackward {background-position:-280px -20px}
+.windowSkin span.mce_moveforward {background-position:-300px -20px}
+.windowSkin span.mce_nonbreaking {background-position:-340px -20px}
+.windowSkin span.mce_selectall {background-position:-400px -20px}
+.windowSkin span.mce_preview {background-position:-420px -20px}
+.windowSkin span.mce_print {background-position:-440px -20px}
+.windowSkin span.mce_cancel {background-position:-460px -20px}
+.windowSkin span.mce_save {background-position:-480px -20px}
+.windowSkin span.mce_replace {background-position:-500px -20px}
+.windowSkin span.mce_search {background-position:-520px -20px}
+.windowSkin span.mce_styleprops {background-position:-560px -20px}
+.windowSkin span.mce_table {background-position:-580px -20px}
+.windowSkin span.mce_cell_props {background-position:-600px -20px}
+.windowSkin span.mce_delete_table {background-position:-620px -20px}
+.windowSkin span.mce_delete_col {background-position:-640px -20px}
+.windowSkin span.mce_delete_row {background-position:-660px -20px}
+.windowSkin span.mce_col_after {background-position:-680px -20px}
+.windowSkin span.mce_col_before {background-position:-700px -20px}
+.windowSkin span.mce_row_after {background-position:-720px -20px}
+.windowSkin span.mce_row_before {background-position:-740px -20px}
+.windowSkin span.mce_merge_cells {background-position:-760px -20px}
+.windowSkin span.mce_table_props {background-position:-980px -20px}
+.windowSkin span.mce_row_props {background-position:-780px -20px}
+.windowSkin span.mce_split_cells {background-position:-800px -20px}
+.windowSkin span.mce_template {background-position:-820px -20px}
+.windowSkin span.mce_visualchars {background-position:-840px -20px}
+.windowSkin span.mce_abbr {background-position:-860px -20px}
+.windowSkin span.mce_acronym {background-position:-880px -20px}
+.windowSkin span.mce_attribs {background-position:-900px -20px}
+.windowSkin span.mce_cite {background-position:-920px -20px}
+.windowSkin span.mce_del {background-position:-940px -20px}
+.windowSkin span.mce_ins {background-position:-960px -20px}
+.windowSkin span.mce_pagebreak {background-position:0 -40px}
+
+
+/* border */
+.windowSkin .mceExternalToolbar,
+.windowSkin .mceButton,
+.windowSkin a.mceButtonEnabled:hover,
+.windowSkin a.mceButtonActive,
+.windowSkin a.mceButtonSelected,
+.windowSkin .mceListBox .mceText,
+.windowSkin .mceListBox .mceOpen,
+.windowSkin table.mceListBoxEnabled:hover .mceText,
+.windowSkin .mceListBoxHover .mceText,
+.windowSkin .mceListBoxSelected .mceText,
+.windowSkin table.mceListBoxEnabled:hover .mceOpen,
+.windowSkin .mceListBoxHover .mceOpen,
+.windowSkin .mceListBoxSelected .mceOpen,
+.windowSkin select.mceListBox,
+.windowSkin .mceSplitButton a.mceAction,
+.windowSkin .mceSplitButton a.mceOpen,
+.windowSkin .mceSplitButton a.mceOpen:hover,
+.windowSkin .mceSplitButtonSelected a.mceOpen,
+.windowSkin table.mceSplitButtonEnabled:hover a.mceAction,
+.windowSkin .mceSplitButton a.mceAction:hover,
+.windowSkin div.mceColorSplitMenu table,
+.windowSkin .mceColorSplitMenu a,
+.windowSkin .mceColorSplitMenu a.mceMoreColors,
+.windowSkin .mceColorSplitMenu a.mceMoreColors:hover,
+.windowSkin a.mceMoreColors:hover,
+.windowSkin .mceMenu {
+	border-style: solid;
+	border-width: 1px;
+}
+
+/* TinyMCE */
+
+#post-status-info {
+	background-color: #EDEDED;
+}
+
+.windowSkin .mceLayout{
+	background:white;	
+}
+.windowSkin *,
+.windowSkin a:hover,
+.windowSkin a:link,
+.windowSkin a:visited,
+.windowSkin a:active {
+	color: #000;
+}
+
+/* Containers */
+.windowSkin table.mceLayout {
+	border-color: #ccc #ccc #dfdfdf;
+}
+
+#editorcontainer #content,
+#editorcontainer .windowSkin .mceIframeContainer {
+	-moz-box-shadow: inset 1px 1px 2px rgba( 0, 0, 0, 0.1 );
+	-webkit-box-shadow: inset 1px 1px 2px rgba( 0, 0, 0, 0.1 );
+	box-shadow: inset 1px 1px 2px rgba( 0, 0, 0, 0.1 );
+}
+.windowSkin iframe {
+	background: transparent;
+}
+
+/* ListBox */
+
+
+/* List Box Hover */
+.windowSkin table.mceListBoxEnabled:hover .mceText,
+.windowSkin .mceListBoxHover .mceText,
+.windowSkin table.mceListBoxEnabled:hover .mceOpen,
+.windowSkin .mceListBoxHover .mceOpen {
+	border-color: #909090;
+	background-color: #eee; /* Fallback */
+	background-image: -ms-linear-gradient(bottom, #ccc, #fff); /* IE10 */
+	background-image: -moz-linear-gradient(bottom, #ccc, #fff); /* Firefox */
+	background-image: -o-linear-gradient(bottom, #ccc, #fff); /* Opera */
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#ccc), to(#fff)); /* old Webkit */
+	background-image: -webkit-linear-gradient(bottom, #ccc, #fff); /* new Webkit */
+	background-image: linear-gradient(bottom, #ccc, #fff); /* proposed W3C Markup */
+}
+
+.windowSkin select.mceListBox {
+	border-color: #B2B2B2;
+	background-color: #fff;
+}
+
+/* SplitButton */
+.windowSkin .mceSplitButton a.mceAction,
+.windowSkin .mceSplitButton a.mceOpen {
+	border-color: #ccc;
+}
+
+.windowSkin .mceSplitButton a.mceOpen:hover,
+.windowSkin .mceSplitButtonSelected a.mceOpen,
+.windowSkin table.mceSplitButtonEnabled:hover a.mceAction,
+.windowSkin .mceSplitButton a.mceAction:hover {
+	border-color: #909090;
+}
+
+
+.windowSkin table.mceSplitButton td {
+	background-color: #eee; /* Fallback */
+	background-image: -ms-linear-gradient(bottom, #ddd, #fff); /* IE10 */
+	background-image: -moz-linear-gradient(bottom, #ddd, #fff); /* Firefox */
+	background-image: -o-linear-gradient(bottom, #ddd, #fff); /* Opera */
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#ddd), to(#fff)); /* old Webkit */
+	background-image: -webkit-linear-gradient(bottom, #ddd, #fff); /* new Webkit */
+	background-image: linear-gradient(bottom, #ddd, #fff); /* proposed W3C Markup */
+}
+
+.windowSkin table.mceSplitButton:hover td {
+	background-image: -ms-linear-gradient(bottom, #ccc, #fff); /* IE10 */
+	background-image: -moz-linear-gradient(bottom, #ccc, #fff); /* Firefox */
+	background-image: -o-linear-gradient(bottom, #ccc, #fff); /* Opera */
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#ccc), to(#fff)); /* old Webkit */
+	background-image: -webkit-linear-gradient(bottom, #ccc, #fff); /* new Webkit */
+	background-image: linear-gradient(bottom, #ccc, #fff); /* proposed W3C Markup */
+}
+
+.windowSkin .mceSplitButtonActive {
+	background-color: #B2B2B2;
+}
+
+/* ColorSplitButton */
+.windowSkin div.mceColorSplitMenu table {
+	background-color: #ebebeb;
+	border-color: #B2B2B2;
+}
+
+.windowSkin .mceColorSplitMenu a {
+	border-color: #B2B2B2;
+}
+
+.windowSkin .mceColorSplitMenu a.mceMoreColors {
+	border-color: #fff;
+}
+
+.windowSkin .mceColorSplitMenu a.mceMoreColors:hover {
+	border-color: #0A246A;
+	background-color: #B6BDD2;
+}
+
+.windowSkin a.mceMoreColors:hover {
+	border-color: #0A246A;
+}
+
+/* Menu */
+.windowSkin .mceMenu {
+	border-color: #ddd;
+}
+
+.windowSkin .mceMenu table {
+	background-color: #ebeaeb;
+}
+
+.windowSkin .mceMenu .mceText {
+	color: #000;
+}
+
+.windowSkin .mceMenu .mceMenuItemEnabled a:hover,
+.windowSkin .mceMenu .mceMenuItemActive {
+	background-color: #f5f5f5;
+}
+.windowSkin td.mceMenuItemSeparator {
+	background-color: #aaa;
+}
+.windowSkin .mceMenuItemTitle a {
+	background-color: #ccc;
+	border-bottom-color: #aaa;
+}
+.windowSkin .mceMenuItemTitle span.mceText {
+	color: #000;
+}
+.windowSkin .mceMenuItemDisabled .mceText {
+	color: #888;
+}
+
+.windowSkin tr.mceFirst td.mceToolbar {
+	background: #dfdfdf;
+	/* IE10 */ 
+	background-image: -ms-linear-gradient(top, #EDEDED 0%, #DFDFDF 100%);
+	
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #EDEDED 0%, #DFDFDF 100%);
+	
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #EDEDED 0%, #DFDFDF 100%);
+	
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EDEDED), color-stop(1, #DFDFDF));
+	
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DFDFDF 100%);
+	
+	/* Proposed W3C Markup */ 
+	background-image: linear-gradient(top, #EDEDED 0%, #DFDFDF 100%);
+	border-color: #ccc;
+}
+
+/* Popup */
+
+
+body #mceModalBlocker {
+	background: #000;
+}
+body .clearlooks2 .mceBottom,
+body .clearlooks2 .mceBottom .mceLeft,
+body .clearlooks2 .mceBottom .mceCenter,
+body .clearlooks2 .mceBottom .mceRight,
+body .clearlooks2 .mceMiddle .mceLeft,
+body .clearlooks2 .mceMiddle .mceRight,
+body .clearlooks2 .mceResizable .mceResize,
+body .clearlooks2 div, 
+body .clearlooks2 span, 
+body .clearlooks2 a,
+body .clearlooks2 .mceMiddle .mceLeft,
+body .clearlooks2 .mceMiddle .mceRight{
+	background: transparent;
+	border: 	0;
+}
+
+
+body .clearlooks2{
+	<?php echo $Window->font; ?>	
+	<?php echo $Window->border ?>
+	<?php echo $Global->toBoxShadow(); ?>
+	background-color:	<?php echo $Window->background->color; ?>;
+}
+
+
+body .clearlooks2 .mceTop{
+	height:			<?php echo $Window->header->height; ?>;
+	
+	<?php echo $Global->window->background->set($Window->header->background); ?>
+		
+	<?php echo $Window->border->toRadius(); ?>
+	
+	-moz-border-radius-bottomleft:0px !important;
+	-moz-border-radius-bottomright:0px !important;
+	-webkit-border-bottom-left-radius:0px !important;
+	-webkit-border-bottom-right-radius:0px !important;	
+	border-bottom-right-radius:	0px !important;
+	border-bottom-left-radius:	0px !important;
+	
+	border-bottom: 1px solid <?php echo $Window->border->color; ?>;	
+}
+
+body .clearlooks2 .mceFocus .mceTop div{
+	background:transparent !important;
+	border:0px;
+}
+
+body .clearlooks2 .mceFocus .mceTop span{
+	padding-left:	5px;
+	line-height:	<?php echo $Window->header->height; ?>;
+	height:			<?php echo $Window->header->height; ?>;
+	
+	<?php echo $Window->header->font; ?>
+	<?php echo $Global->header->text; ?>
+	
+	color:			<?php echo $Window->header->color; ?>;
+	word-spacing:	normal;
+	white-space:	nowrap;
+	font-weight:	bold;
+	overflow:		hidden;
+	text-align:		left;
+}
+
+body .clearlooks2 .mceMiddle{
+	clip:				rect(<?php echo CssNode::Value($Window->header->height) + 1; ?>px, auto, auto, auto);
+	background-color:	#F1F1F1;
+}
+
+body .clearlooks2 .mceBottom,
+body .clearlooks2 .mceMiddle .mceRight{
+	background-color:#F1F1F1;
+}
+
+body .clearlooks2 .mceBottom{
+	border-top:1px solid #F1F1F1;
+}

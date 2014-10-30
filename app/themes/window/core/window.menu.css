@@ -1,0 +1,585 @@
+/* Popup */
+
+.w-popup{
+	position:		absolute;	
+	list-style:		none;
+	margin:			0px;
+	padding:		2px;
+	text-align:		left;
+	left:			0px;
+	top:			0px;
+}
+
+.popup{
+	position:		fixed !important;
+	min-width:		130px;
+	z-index:		100;
+}
+.w-popup > .wrap-content > ul,
+/*.mobile .w-popup > .wrap-content > ul,*/
+.w-popup > .wrap-content > ul > .line{
+	list-style:		none;
+	padding:		0px;
+	margin:			0px;
+	width:			auto;
+}
+
+/*.mobile .area-input .popup,
+.mobile .input.large .popup,
+.mobile .w-popup{
+	border:		0px;
+	background:	rgba(0,0,0, 0.7);
+	position:	fixed !important;
+	top:		0;
+	left:		0;
+	bottom:		0;
+	right:		0;
+	z-index:	100000;
+	padding:	0px;
+
+}*/
+
+.input-popup .popup > .wrap-content{
+	max-height:	200px;
+	padding:0px;
+}
+
+.area-input .popup > .wrap-content{
+	max-height:	400px;
+}
+
+/*.mobile .w-popup > .wrap-content{
+	display:				block;
+	z-index:				100000;
+	position:				absolute;
+	list-style:				none;
+	margin:					0px;
+	padding:				0px;
+	text-align:				left !important;
+	left:					0px;
+	max-height:				600px;
+	background:				#282828;
+	width:					auto;
+}*/
+
+.w-popup > .wrap-content > .wrapper > .wrap-header{
+	display:				none;
+	margin-bottom:			5px;
+}
+
+/*.mobile .w-popup > .wrap-content > .wrapper > .wrap-header{
+	display:block;
+}*/
+
+.w-popup > .wrap-content > .wrapper > .wrap-header h1{
+	color:			#006699;
+	line-height:	normal;
+	padding:		5px;
+	padding-left:	10px;
+	font-size:		16px;
+	font-weight:	normal;
+	font-family:	"Segoe UI", "HelveticaNeue", "Helvetica", Arial;
+}
+
+/*.mobile .w-popup > .wrap-content > .wrapper > .wrap-header h1{
+	font-size:		20px;
+	padding:		6px;
+	padding-left:	10px;
+}*/
+
+/* SimpleMenu */
+
+.simple-menu{
+	display:	inline-block;
+	padding:	0px;
+	margin:		0px;
+	line-height:0px;
+}
+
+.simple-menu > .wrap-content{
+	list-style:				none;
+	margin:					0px;
+	padding:				0px;
+	border:					0px;
+	-moz-border-radius:		0px;
+	-webkit-border-radius:	0px;
+	border-radius:			0px;
+}
+
+.simple-menu > .wrap-content > .wrap-body{
+	margin:				0px;
+	padding:			0px;
+	position:			relative;
+	line-height: 		0px;
+	list-style: 		none;
+}
+
+.simple-menu > .wrap-content > .wrap-body > .button{
+	margin:					0px;
+	text-align:				left;
+}
+
+.simple-menu > .wrap-content > .wrap-body > .w-popup{
+	display:	none;
+}
+
+.simple-menu > .wrap-content > .wrap-body > .w-popup{
+	z-index:	100000;
+	left:		0px;
+	padding:	0px;
+	padding-top:2px;
+	margin-top:-2px;
+	top:		auto;
+}
+
+.simple-menu > .wrap-content > .wrap-body > .w-popup > .wrap-content{
+	padding:	0px;
+	margin:		0px;
+	list-style:	none;
+	margin:		0px;
+	padding:	2px;
+	text-align:	left !important;
+}
+
+.simple-menu.menu-calendar > .wrap-content > .wrap-body > .w-popup > .wrap-content{
+	padding:0px;
+	border:0px;	
+}
+
+.simple-menu.show > .wrap-content > .wrap-body > .wrapper,
+.simple-menu.overable:hover > .wrap-content > .wrap-body > .wrapper,
+.simple-menu.show > .wrap-content > .wrap-body > .wrapper{
+	display:	block;
+}
+
+.simple-menu.empty > .wrap-content > .wrap-body > .wrapper,
+.simple-menu.empty > .wrap-content > .wrap-body > .wrapper{
+	display:	none !important;
+}
+
+.simple-menu .w-line{
+	width:170px;
+	margin:0px;
+	list-style: none;
+}
+/******************************************************************************/
+/*Multiniveau*************************************************************/
+/******************************************************************************/
+.simple-menu .w-line > .wrap-content{
+	display:		none;
+	left:			160px;
+	padding-left:	13px;
+	position:		absolute;
+	top:			-3px;
+	margin:			0px;
+}
+
+.simple-menu .w-line > .wrap-content > .wrap-body{
+	padding:			0px;
+	margin:				0px;
+	padding:			2px;
+}
+
+.simple-menu .w-line:hover > .wrap-content{
+	display:block;
+}
+
+.simple-menu .w-line > .wrap-content > .wrap-body > .w-line{
+	width:		170px;
+}
+
+/** MinWin **/
+
+.simple-menu.minwin{
+	display:		inline-block;
+	width:			<?php echo $Global->minwin->width;?>;
+	height:			<?php echo $Global->minwin->height;?>;
+	margin-left: 	<?php echo $Global->minwin->margin->left; ?>;
+	margin-right: 	<?php echo $Global->minwin->margin->right; ?>;
+	padding:		0px;
+	
+	<?php echo $Global->minwin->normal->border->toRadius(true); ?>
+}
+
+.simple-menu.minwin > .wrap-content > .wrap-body > .simple-button{
+	background:		transparent;
+	filter:			none;
+	-ms-filter:		none;
+	margin:			0px;
+	padding:		0px;
+	width:			<?php echo $Global->minwin->width; ?> !important;
+	height:			<?php echo $Global->minwin->height; ?> !important;
+	
+	<?php echo $Global->minwin->normal->background; ?>
+	<?php echo $Global->minwin->normal->border->toRadius(true); ?>
+	
+	background-repeat:no-repeat;
+	
+	<?php echo $Global->minwin->normal->boxShadow(); ?>
+	<?php echo $Global->minwin->normal->border; ?>;
+}
+
+.simple-menu.minwin:hover > .wrap-content > .wrap-body > .simple-button/*,
+.mobile .simple-menu.minwin:active > .wrap-content > .wrap-body > .simple-button*/{
+	filter:none;
+	-ms-filter:none;
+	background: none;
+	<?php echo $Global->minwin->over->border; ?>
+	<?php echo $Global->minwin->over->background; ?>
+	<?php echo $Global->minwin->over->boxShadow(); ?>
+	margin:0px;
+	padding:0px;
+}
+
+.simple-menu.minwin > .wrap-content > .wrap-body > .simple-button > .wrap-icon{
+	position:absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.simple-menu.minwin > .wrap-content > .wrap-body > .wrapper{
+	top:<?php echo CssNode::Value($Global->minwin->height); ?>px;
+	padding-top:1px;
+	margin-top:-1px;
+}
+
+/*********************************************************************************
+ **DropMenu***********************************************************************
+ *********************************************************************************/
+.drop-menu{
+	position: 	relative;	
+	padding:	0px;
+	margin:		0px;	
+	min-height:	20px;
+	line-height:0px;
+}
+
+.drop-menu.top > .group-button,
+.drop-menu.bottom > .group-button{
+	margin-right:3px;
+	margin-left:3px;
+}
+
+.drop-menu.left, .drop-menu.right{
+	width:		150px;
+}
+
+.drop-menu.left > .simple-menu,
+.drop-menu.right > .simple-menu,
+.drop-menu.accordion > .simple-menu{
+	width:100%;
+}
+
+.drop-menu > .simple-menu > .wrap-content > .wrap-body > .simple-button{	
+	line-height:			20px;
+	min-height:				20px;
+	padding:				0px;
+	padding-top:			3px;
+	padding-bottom:			3px;
+	margin:					0px;
+	-moz-box-shadow:		none;
+	-webkit-box-shadow:		none;
+	box-shadow:				none;
+	width:					auto;
+	-moz-border-radius:		0px;
+	-webkit-border-radius:	0px;
+	border-radius:			0px;
+}
+
+.drop-menu.left > .simple-menu > .wrap-content > .wrap-body > .simple-button,
+.drop-menu.right > .simple-menu > .wrap-content > .wrap-body > .simple-button,
+.drop-menu.accordion > .simple-menu > .wrap-content > .wrap-body > .simple-button{
+	border-left:			0px !important;
+	border-right:			0px !important;
+	display:				block;
+	<?php echo $Global->button->normal->border->toOutset(); ?>
+}
+
+.drop-menu.left > .simple-menu:first-child > .wrap-content > .wrap-body > .simple-button,
+.drop-menu.right > .simple-menu:first-child > .wrap-content > .wrap-body > .simple-button,
+.drop-menu.accordion > .simple-menu:first-child > .wrap-content > .wrap-body > .simple-button{
+	-webkit-border-top-right-radius: 	<?php echo $Global->border->radius; ?>;
+	-webkit-border-top-left-radius: 	<?php echo $Global->border->radius; ?>;
+	-moz-border-radius-topright: 		<?php echo $Global->border->radius; ?>;
+	-moz-border-radius-topleft: 		<?php echo $Global->border->radius; ?>;
+	border-top-right-radius: 			<?php echo $Global->border->radius; ?>;
+	border-top-left-radius:				<?php echo $Global->border->radius; ?>;
+}
+
+.drop-menu.left > .simple-menu:last-child > .wrap-content > .wrap-body > .simple-button,
+.drop-menu.right > .simple-menu:last-child > .wrap-content > .wrap-body > .simple-button,
+.drop-menu.accordion > .simple-menu:last-child > .wrap-content > .wrap-body > .simple-button,
+.drop-menu.accordion > .simple-menu:last-child > .wrap-content > .wrap-body > .wrapper,
+.drop-menu.accordion > .simple-menu:last-child > .wrap-content > .wrap-body > .wrapper > .wrap-menu,
+.drop-menu.accordion > .simple-menu:last-child > .wrap-content > .wrap-body > .wrapper > .wrap-menu > .w-line:last-child{
+	-webkit-border-bottom-right-radius: 	<?php echo $Global->border->radius; ?>;
+	-webkit-border-bottom-left-radius: 		<?php echo $Global->border->radius; ?>;
+	-moz-border-radius-bottomright: 		<?php echo $Global->border->radius; ?>;
+	-moz-border-radius-bottomleft: 			<?php echo $Global->border->radius; ?>;
+	border-bottom-right-radius: 			<?php echo $Global->border->radius; ?>;
+	border-bottom-left-radius:				<?php echo $Global->border->radius; ?>;
+}
+
+.drop-menu.accordion > .simple-menu:last-child:hover > .wrap-content > .wrap-body > .simple-button,
+.drop-menu.accordion> .simple-menu.show  > .wrap-content > .wrap-body > .simple-button{
+	-moz-border-radius:0px;
+	border-radius:0px;
+}
+
+.drop-menu.left > .simple-menu:last-child,
+.drop-menu.right > .simple-menu:last-child,
+.drop-menu.accordion > .simple-menu:last-child{
+	margin-bottom:-1px;	
+}
+
+.drop-menu.accordion > .simple-menu:last-child:hover,
+.drop-menu.accordion> .simple-menu.show {
+	margin-bottom:0px;	
+}
+
+.drop-menu.top > .simple-menu > .wrap-content > .wrap-body > .simple-button,
+.drop-menu.bottom > .simple-menu > .wrap-content > .wrap-body > .simple-button,
+.drop-menu.top > .simple-menu > .wrap-content > .wrap-body > .simple-button,
+.drop-menu.bottom > .simple-menu > .wrap-content > .wrap-body > .simple-button{
+	border-right-width:0px;	
+}
+
+.drop-menu.top > .simple-menu:first-child > .wrap-content > .wrap-body > .simple-button,
+.drop-menu.bottom > .simple-menu:first-child > .wrap-content > .wrap-body > .simple-button{
+	-webkit-border-top-left-radius: 	<?php echo $Global->border->radius; ?>;
+	-webkit-border-bottom-left-radius: 	<?php echo $Global->border->radius; ?>;
+	-moz-border-radius-topleft: 		<?php echo $Global->border->radius; ?>;
+	-moz-border-radius-bottomleft: 		<?php echo $Global->border->radius; ?>;
+	border-top-left-radius: 			<?php echo $Global->border->radius; ?>;
+	border-bottom-left-radius: 			<?php echo $Global->border->radius; ?>;
+}
+
+.drop-menu.top > span:last-child > .wrap-content > .wrap-body > .simple-button,
+.drop-menu.bottom > span:last-child > .wrap-content > .wrap-body > .simple-button{
+	border-right-width:1px;
+	-webkit-border-top-right-radius: 	<?php echo $Global->border->radius; ?>;
+	-webkit-border-bottom-right-radius: <?php echo $Global->border->radius; ?>;
+	-moz-border-radius-topright: 		<?php echo $Global->border->radius; ?>;
+	-moz-border-radius-bottomright: 	<?php echo $Global->border->radius; ?>;
+	border-top-right-radius: 			<?php echo $Global->border->radius; ?>;
+	border-bottom-right-radius: 		<?php echo $Global->border->radius; ?>;
+	margin-right:0px;
+}
+
+.drop-menu > .simple-menu > .wrap-content > .wrap-body > .simple-button > .wrap-icon{
+	width:26px;	
+}
+
+.drop-menu > .simple-menu > .wrap-content > .wrap-body > .simple-button.icon  > .wrap-text{
+	margin-left:	29px;
+}
+
+.window > .wrap-super-body > .drop-menu.top > .simple-menu > .wrap-content > .wrap-body > .simple-button > .wrap-icon,
+.widget .drop-menu > .simple-menu > .wrap-content > .wrap-body > .simple-button > .wrap-icon{
+	width:			20px;	
+}
+.window > .wrap-super-body > .drop-menu.top > .simple-menu > .wrap-content > .wrap-body > .simple-button.icon > .wrap-text,
+.widget .drop-menu > .simple-menu > .wrap-content > .wrap-body > .simple-button.icon > .wrap-text{
+	margin-left:	23px;
+}
+.window > .wrap-super-body > .drop-menu.top > .simple-menu > .wrap-content > .wrap-body > .simple-button,
+.widget .drop-menu > .simple-menu > .wrap-content > .wrap-body > .simple-button{	
+	padding-top:		0px;
+	padding-bottom:		0px;
+	line-height:		normal;
+	min-height:			16px;
+	line-height:		18px;	
+}
+/******************************************************************************/
+/*Wrapper******************************************************************/
+/******************************************************************************/
+.drop-menu > .simple-menu > .wrap-content > .wrap-body > .wrapper{
+	margin:0px;
+	padding:0px;
+}
+.drop-menu.top > .simple-menu > .wrap-content > .wrap-body > .wrapper{
+	top: 20px;
+	
+	padding-top:8px;
+}
+
+.drop-menu.top .simple-button .tag-button{
+	top:auto;
+	bottom:-4px;
+	z-index:1;
+}
+
+.drop-menu.bottom > .simple-menu > .wrap-content > .wrap-body > .wrapper{
+	left:			0px;
+	bottom: 		20px;
+	padding-bottom:	8px;
+}
+.drop-menu.left > .simple-menu > .wrap-content > .wrap-body > .wrapper{
+	left:			140px;
+	top: 			0px;
+	padding-left:	10px;
+}
+.drop-menu.right > .simple-menu > .wrap-content > .wrap-body > .wrapper{
+	right:			140px;
+	top:			0px;
+	left:			auto;
+	padding-right:	10px;
+}
+.drop-menu.accordion > .simple-menu > .wrap-content > .wrap-body > .wrapper{
+	position:	relative;
+	padding:	0px;
+	z-index:	0;
+}
+
+
+.drop-menu.accordion > .simple-menu > .wrap-content > .wrap-body > .wrapper > .wrap-menu{
+	border:				0px;
+	-moz-box-shadow:	none;
+	-webkit-box-shadow:	none;
+	box-shadow:			none;
+}
+
+.drop-menu.left > .simple-menu:hover  > .wrap-content> .wrap-body > .simple-button,
+.drop-menu.right > .simple-menu:hover > .wrap-content > .wrap-body > .simple-button,
+.drop-menu.accordion > .simple-menu:hover > .wrap-content > .wrap-body > .simple-button{
+	<?php echo $Global->button->over->border->toOutset(); ?>
+}
+
+.drop-menu.left > .simple-menu > .wrap-content > .wrap-body > .simple-button .tag-button,
+.drop-menu.right > .simple-menu > .wrap-content > .wrap-body > .simple-button .tag-button,
+.drop-menu.accordion > .simple-menu > .wrap-content > .wrap-body > .simple-button .tag-button,
+.tab-control.left > .wrap-header > .simple-button .tag-button{
+	z-index:1;
+	top:	-3px;	
+}
+
+.drop-menu.accordion > .simple-menu .w-line{
+	width:auto;
+}
+.drop-menu.accordion > .simple-menu .w-line > .wrap-header > .wrap-title{
+	background:none;	
+}
+.drop-menu.accordion > .simple-menu .w-line > .wrap-content{
+	padding:0px;
+	position:static;
+	display:block;	
+}
+.drop-menu.accordion > .simple-menu .w-line > .wrap-content > .wrap-body{
+	border:0px;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	box-shadow:none;	
+	background:transparent;
+	padding-left:10px;
+	padding-right:0px;
+	width:auto;
+}
+.drop-menu.accordion > .simple-menu .w-line > .wrap-content > .wrap-body > .w-line{
+	width:auto;
+	margin-right:0px;
+}
+
+.drop-menu.right > .simple-menu .w-line > .wrap-header > .wrap-title{
+	background: url(window/images/1left-mini.png) right center no-repeat;
+}
+
+.drop-menu.right > .simple-menu .w-line.empty > .wrap-header > .wrap-title{
+	background:none;	
+}
+
+.drop-menu.right > .simple-menu .w-line > .wrap-content{
+	left:-178px;
+	padding-left:0px;
+	padding-right:13px;
+}
+
+.drop-menu.bottom > .simple-menu .w-line > .wrap-content{
+	top:			auto;
+	bottom:			-3px;
+}
+/*********************************************************************************
+ **Section************************************************************************
+ *********************************************************************************/
+.section{
+	display:block;
+	overflow:hidden;
+}
+
+.section > .wrap-header{
+	min-height:			20px;
+	position:			relative;
+}
+
+.section > .wrap-header > .wrap-title{
+	padding-left:	5px;
+	padding-right:	5px;
+	padding-top:	3px;
+	font-weight:	bold;
+	line-height:	normal;
+	display:		block;
+}
+
+.section > .wrap-header .simple-button{
+	position:			absolute;
+	right:				2px;
+	top:				2px;
+}
+
+.section > .wrap-body{
+	display:block;
+}
+/*********************************************************************************
+ **Drop-Auto*************************************************************************
+ *********************************************************************************/
+.drop-menu.chrome{
+	padding:		0px;
+	margin:			0px;
+	height:			<?php echo $Window->menu->height; ?>;
+	z-index:		1;
+}
+
+.drop-menu.chrome > .simple-menu > .wrap-content > .wrap-body > .button{
+	width:		auto;
+	height:		<?php echo CssNode::Value($Window->menu->height) - 6; ?>px;
+	min-height:	10px;
+	margin:		2px;
+	margin-top:	<?php echo ceil((CssNode::Value($Window->menu->height) - (CssNode::Value($Window->menu->height) - 6))/2); ?>;
+	padding:	0px;
+	border:		1px solid transparent;
+	background:	transparent;
+	filter:		none;
+	-ms-filter:	none;
+	
+	-moz-border-radius:		4px;
+	-webkit-border-radius:	4px;
+	border-radius:			4px;
+}
+
+.drop-menu.chrome > span:last-child > .wrap-content > .wrap-body > .button{
+	width:					auto;
+	height:					<?php echo CssNode::Value($Window->menu->height) - 6; ?>px;
+	min-height:				10px;
+	margin:					2px;
+	margin-top:				<?php echo ceil((CssNode::Value($Window->menu->height) - (CssNode::Value($Window->menu->height) - 6))/2); ?>;
+	padding:				0px;
+	border:					1px solid transparent;
+	background:				transparent;
+	filter:					none;
+	-ms-filter:				none;
+	-moz-border-radius:		4px;
+	-webkit-border-radius:	4px;
+	border-radius:			4px;
+}
+
+.drop-menu.chrome > .simple-menu > .wrap-content > .wrap-body > .button > .wrap-text{
+	display:		inline;
+}
+
+.drop-menu.chrome > .simple-menu:hover > .wrap-body > .wrapper{
+	top:	<?php echo $Window->menu->height; ?>;
+	left:	0px;
+}

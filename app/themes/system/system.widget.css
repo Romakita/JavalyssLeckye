@@ -1,0 +1,81 @@
+/*************************************************************/
+/*Widget******************************************************/
+/*************************************************************/
+.system-widgets, 
+.system-panels{
+	margin:			0px;
+	top:			<?php echo CssNode::Value($TaskBar->height) + 1;?>px;
+	bottom:			0;
+	height:			auto;
+	right:			0px;
+	width:			auto;
+	overflow-y:		auto;
+	overflow-x:		hidden;
+	padding-top: 	8px;
+	z-index:		0;
+	opacity:		0;
+	
+	background:		  url(system/images/background.png) no-repeat center;
+	background-size:  cover;
+	background-image: -ms-radial-gradient(left top, circle cover, #E4E4E4  0%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+	background-image: -moz-radial-gradient(left top, circle cover, #E4E4E4  0%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+	background-image: -o-radial-gradient(left top, circle cover, #E4E4E4  0%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+	background-image: -webkit-gradient(radial, left top, 0, left top, 1020, color-stop(0, #E4E4E4 ), color-stop(0.5, #E8E8E8), color-stop(0.5, #CDCDCD), color-stop(0.6, #CDCDCD), color-stop(0.6, #E8E8E8), color-stop(0.7, #E8E8E8), color-stop(0.70, #CFCFCF), color-stop(0.9, #CFCFCF), color-stop(0.9, #F5F5F5));
+	background-image: -webkit-radial-gradient(left top, circle cover, #E4E4E4  0%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);
+	background-image: radial-gradient(left top, circle cover, #E4E4E4 0%, #E8E8E8 50%, #CDCDCD 50%, #CDCDCD 60%, #E8E8E8 60%, #E8E8E8 70%, #CFCFCF 70%, #CFCFCF 90%, #F5F5F5 90%);	
+}
+
+.panel.jpanel.system-panels > .wrap-header{
+	background:#FCFCFC;
+	box-shadow:none;
+	border-bottom:1px solid #DFDFDF;	
+}
+
+.system-background{
+	position:absolute;
+	background-position:center;
+	background-repeat:no-repeat;
+	top:0px;
+	left:0px;
+}
+
+.system-widgets.show, 
+.system-panels.show{
+	z-index:1;
+	opacity:		1;
+}
+
+.ie-7 .system-widgets,
+.ie-8 .system-widgets{
+	background:			#E4E4E4;
+	filter: 			progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<?php echo ABS_PATH; ?>/themes/system/images/background.png', sizingMethod='scale');
+	-ms-filter: 		"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<?php echo ABS_PATH; ?>/themes/system/images/background.png',sizingMethod='scale')";
+}
+
+.system-widgets,
+.system-panels{
+	position:			fixed;	
+	left:				150px;
+	bottom:				0px;
+	-webkit-transition: all 500ms cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+	-webkit-transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+	   -moz-transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+		-ms-transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+		 -o-transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+			transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+}
+
+.system-widgets .widget > .wrap-header > div >.group-button > .simple-button{
+	margin:0 -1px 0px 0px;
+}
+
+.system-full .system-panels,
+.system-full .system-widgets{
+	left:30px;	
+}
+
+.system-widgets.cols-2 .widgets-dashboard > div.widgets-box{
+	width:49%;
+	margin-left:0.5% !important;
+	margin-right:0.5%;
+}

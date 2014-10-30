@@ -1,0 +1,363 @@
+.w-line > .gradient.over:hover{
+	background:<?php echo $Global->button->over->background->color ?>;
+	
+	border-color:<?php echo $Global->button->over->background->color ?>;	
+}
+.w-line > .gradient.over:hover > .wrap-title.font{
+	text-shadow:none;	
+}
+/*************************************************************/
+/*Menu Du System**********************************************/
+/*************************************************************/
+.drop-menu.system-menu{
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	border-radius:	0px;
+	background:		#852C29;
+}
+
+.drop-menu.bottom.system-menu{
+	position:		absolute;
+	bottom:			0px;
+	left:			0px;
+	right:			0px;
+	width:			auto;
+	height:			90px;
+	text-align:		center;
+}
+
+.drop-menu.left.system-menu{
+	position:		fixed;
+	width:			150px !important;
+	height:			auto;
+	top:			<?php echo CssNode::Value($TaskBar->height) + 1;?>px;
+	left:			0px;
+	bottom:			0px;
+	border:			0px;
+	padding-top:	10px;	
+	
+	-webkit-transition: width 500ms cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+	-webkit-transition: width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+	   -moz-transition: width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+		-ms-transition: width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+		 -o-transition: width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+			transition: width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+}
+
+.drop-menu.system-menu > .btn-panel,
+.drop-menu.system-menu > .section-desktop-menu{
+	display:none !important;
+}
+
+.drop-menu.system-menu.multi-panel > .btn-panel,
+.drop-menu.system-menu.multi-panel > .section-desktop-menu{
+	display:block !important;
+}
+
+.drop-menu.left.system-menu > .simple-button:first-child,
+.drop-menu.left.system-menu > .simple-menu:first-child > .wrap-content > .wrap-body > .simple-button{
+	-moz-border-radius:0px;	
+	-webkit-border-radius:0px;	
+	border-radius:0px;
+}
+
+.drop-menu.left.system-menu-shadow{
+	position:		absolute;
+	height:			100%;
+	width:			10px;
+	right:			0px;
+	top:			0px;
+	
+	-moz-box-shadow:inset -5px 0px 5px rgba(0,0,0, 0.1);
+	-webkit-box-shadow:inset -5px 0px 5px rgba(0,0,0, 0.1);
+	box-shadow:inset -5px 0px 5px rgba(0,0,0, 0.1);
+}
+
+.ie-7 .drop-menu.left.system-menu-shadow, .ie-8 .drop-menu.left.system-menu-shadow{
+	background:url(system/shadow-menu.png) repeat-y;
+}
+
+.drop-menu.left.system-menu > span	{
+	margin-bottom:	0px !important;
+}
+
+.drop-menu.left.system-menu > .simple-button,
+.drop-menu.left.system-menu > .simple-button:first-child,
+.drop-menu.left.system-menu > .simple-menu:first-child > .wrap-content > .wrap-body > .simple-button,
+.drop-menu.left.system-menu > .simple-menu > .wrap-content > .wrap-body > .simple-button{	
+
+	-webkit-transition: width 500ms cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+	-webkit-transition: width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+	   -moz-transition: width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+		-ms-transition: width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+		 -o-transition: width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+			transition: width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+			
+	width:					148px;
+	
+	filter:					none;
+	-ms-filter:				none;
+	margin-bottom:			2px !important;
+	position:				relative;
+	left:					2px;
+	
+	-moz-border-radius: 3px 0px 0px 3px;
+	-webkit-border-radius: 3px 0px 0px 3px;
+	border-radius: 3px 0px 0px 3px;
+	
+	background:			#E4E4E4 ;
+	border-bottom-color: #B2B1B1;
+	border-bottom-style: solid;
+	border-left: 0 none !important;
+	border-right: 0 none !important;
+	border-top-color: #F9F9F9;
+	border-top-style: solid;
+	display: block;
+}
+
+.drop-menu.left.system-menu > .simple-button,
+.drop-menu.left.system-menu > .simple-button:first-child{
+	margin-left:0px;
+	margin-right:0px;
+	padding:4px 5px;
+	left:	20px;	
+	width:	120px;
+	background:#A74E4B;
+	border-color:transparent;
+}
+
+.drop-menu.left.system-menu > .simple-button > .wrap-icon{
+	display:none;	
+}
+
+.drop-menu.left.system-menu > .simple-button.selected{
+	background:white;
+	border-bottom-color: #B2B1B1;
+	border-top-color: #F9F9F9;
+}
+
+.drop-menu.left.system-menu > .simple-button > .wrap-text,
+.drop-menu.left.system-menu > .simple-menu > .wrap-content > .wrap-body > .simple-button > .wrap-text{
+	text-shadow:	none;	
+	opacity:		1;
+	color:			#333;
+	
+	-moz-transition: opacity 400ms ease-out;
+	-webkit-transition: opacity 400ms ease-out;
+	-o-transition: opacity 400ms ease-out;
+	transition: opacity 400ms ease-out;
+	
+}
+
+.drop-menu.left.system-menu > .simple-button > .wrap-text{
+	color:white;
+}
+
+.drop-menu.left.system-menu > .simple-button.selected > .wrap-text{
+	color:		#333;
+}
+
+.drop-menu.left.system-menu > .simple-menu > .wrap-content > .wrap-body > .system-toggle-menu > .wrap-text{
+	font-size:	10px !important;
+	opacity:	0.9;
+}
+
+.drop-menu.left.system-menu > .simple-menu > .wrap-content > .wrap-body > .drop-menu.left.system-menu-btn-sep{
+	margin-bottom:	5px;	
+}
+
+.drop-menu.left.system-menu > .simple-button.icon,
+.drop-menu.left.system-menu > .simple-menu > .wrap-content > .wrap-body > .simple-buton.icon{
+	position:		relative;
+	min-width:		22px;
+	min-height:		20px;
+}
+.drop-menu.left.system-menu > .simple-button > .wrap-text{
+	font-size: 		11px;
+}
+.drop-menu.left.system-menu > .simple-menu > .wrap-content > .wrap-body > .simple-button > .wrap-text{
+	font-size:		14px;
+}
+.drop-menu.left.system-menu > .simple-menu > .wrap-content > .wrap-body .w-popup{
+	padding-left:	10px;
+	left:			140px !important;
+}
+
+.drop-menu.left.system-menu > .simple-menu:hover > .wrap-content > .wrap-body .w-popup > .wrap-content{
+	border-width:	0px;
+	background:		white;	
+}
+.ie-7 .drop-menu.left.system-menu > .simple-menu:hover > .wrap-content > .wrap-body .w-popup > .wrap-content,
+.ie-8 .drop-menu.left.system-menu > .simple-menu:hover  > .wrap-content> .wrap-body .w-popup > .wrap-content{
+	border-width:1px;
+}
+
+.drop-menu.left.system-menu > .simple-menu:hover  > .wrap-content> .wrap-body > .simple-button{
+	z-index:	100001;
+}
+
+.system-full > .drop-menu.left{
+	width:30px !important;
+}
+
+.system-full > .drop-menu.left  > .simple-menu:first-child > .wrap-content > .wrap-body > .simple-button, 
+.system-full > .drop-menu.left  > .simple-menu > .wrap-content > .wrap-body > .simple-button{
+	width:28px !important;	
+}
+
+.system-full > .drop-menu.left > .simple-menu > .wrap-content > .wrap-body .w-popup{
+	left:20px !important;
+}
+
+.system-full > .drop-menu.left .wrap-content:hover .wrap-body .w-popup > .wrap-content > .wrapper > .wrap-header{
+	display:block;
+}
+
+.system-full > .drop-menu.left .wrap-content .wrap-body > .simple-button > .wrap-text,
+.drop-menu.left.system-menu-transition .wrap-content .wrap-body > .simple-button > .wrap-text{
+	height:	0;
+	width:	0;
+	overflow:hidden;
+	opacity:0;
+}
+
+.drop-menu.left.system-menu .section + .section,
+.system-full > .drop-menu.left .section,
+.drop-menu.bottom.system-menu .section{
+	display:none !important;	
+}
+
+.system-full .drop-menu.left.system-menu > .simple-button{
+	left:4px !important;
+	border-radius:20px !important;
+	-moz-border-radius:20px !important;
+	-webkit-border-radius:20px !important;
+	padding:0px !important;
+	width:15px !important;
+	border:0px !important;
+	line-height:normal !important;
+	margin:		10px 4px !important;	
+}
+.system-full .drop-menu.left.system-menu > .simple-button > .wrap-text,
+.system-full .drop-menu.left.system-menu > .simple-button > .wrap-icon{
+	display:none !important;
+}
+
+/* DropMenu */
+.drop-menu.left.system-menu > .simple-button:hover,
+.drop-menu.left.system-menu > .simple-menu:hover > .wrap-content .wrap-body > .simple-button{
+	filter:			none;
+	-ms-filter:		none;
+	background:		white;
+	border-top:		white 1px solid;
+	border-bottom:	white 1px solid;
+}
+
+.drop-menu.left.system-menu > .simple-button:hover > .wrap-text,
+.drop-menu.left.system-menu > .simple-menu:hover > .wrap-content .wrap-body > .simple-button > .wrap-text{
+	color:#666;
+	text-shadow:none;
+}
+
+.drop-menu.left.system-menu-shadow{
+	display:none;	
+}
+
+.drop-menu.left.system-menu .section,
+.drop-menu.left.system-menu .section > .wrap-header,
+.drop-menu.left.system-menu .section > .wrap-header > .wrap-title{
+	background:		none;
+	border:			0px;
+	text-shadow:	none;
+	height:			30px;
+}
+
+.drop-menu.left.system-menu .section > .wrap-header > .wrap-title {
+	color: 			#DC5452;
+    font: 			bold 14px/30px Arial,Helvetica,sans-serif;
+    text-shadow: 	0 -1px 0 #6D0F0C;
+    text-transform: uppercase;
+}
+
+
+/* tablette */
+
+.drop-menu.bottom.system-menu.iscroll{
+	overflow-y:					hidden;
+	overflow-x:					auto;
+	white-space: 				pre;
+	word-wrap: 					normal;
+	-ms-overflow-scrolling: 	touch;	
+	-moz-overflow-scrolling: 	touch;
+	-webkit-overflow-scrolling: touch;	
+	overflow-scrolling: 		touch;	
+}
+
+
+.drop-menu.bottom.system-menu > .simple-menu > .wrap-content > .wrap-body > .simple-button{
+	padding:				0px;
+	margin:					0px;
+	width:					50px;
+	height:					50px;	
+	margin:					10px;
+	margin-left:			20px;
+	margin-right:			20px;
+	margin-bottom:			35px;
+	
+	-ms-border:				<?php echo $Global->button->normal->border->toBorder(); ?>;	
+	filter:					none;
+	-ms-filter:				none;
+	
+	-moz-border-radius:		10px;	
+	-webkit-border-radius:	10px;
+	-ms-border-radius:		10px;	
+	border-radius:			10px;
+	
+	-moz-box-shadow: 		0px 2px 2px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow: 	0px 2px 2px rgba(0, 0, 0, 0.6);
+	-ms-box-shadow: 		0px 2px 2px rgba(0, 0, 0, 0.6);
+	box-shadow: 			0px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.drop-menu.bottom.system-menu > .simple-menu > .wrap-content > .wrap-body > .simple-button > .wrap-icon{
+	background-position:	center;
+	overflow:				hidden;
+	width:					100%;
+	height:					50px;
+	position:				absolute;
+	top:					0px;
+	left:					0px;
+	padding:				0px;
+	margin:					0px;
+	-moz-border-radius:		10px;	
+	-webkit-border-radius:	10px;
+	-ms-border-radius:		10px;	
+	border-radius:			10px;
+}
+
+.drop-menu.bottom.system-menu > .simple-menu > .wrap-content > .wrap-body > .simple-button > .wrap-text{
+	width:		88px;
+	height:		28px;
+	padding:	2px;
+	text-align:	center;	
+	position:	absolute;
+	bottom:		-35px;
+	left:		-20px;
+	overflow:	hidden;
+	line-height:normal;
+	text-shadow:none;
+	color:		white;
+	padding:	0px;
+	margin:		0px;
+}
+
+
+.drop-menu.bottom.system-menu > .simple-menu > .wrap-content > .wrap-body > .simple-button > .tag-button{
+	font-size:				11px;
+	position: 				absolute;
+	top:					-5px;
+	right: 					-5px;
+	text-align:				center;
+	height:					16px;
+	line-height:			17px;
+}

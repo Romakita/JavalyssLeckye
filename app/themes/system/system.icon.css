@@ -1,0 +1,939 @@
+/* ICONS */
+
+.icon-logo-16, .icon-logo{
+	background-repeat:no-repeat;
+	background-image:url(system/image/javalyss-logo.png);
+}
+.icon-logo-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/javalyss-logo.png);
+}
+
+.icon-men-48,
+.icon-woman-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/32/user1.png);
+}
+
+.icon-default-avatar-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/default-avatar.png);
+}
+
+.input-button .icon-1down-mini-blue{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/1down-mini-blue.png);
+}
+.icon-1up-mini{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/1up-mini-grey.png);
+}
+
+.icon-1down-mini{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/1down-mini-grey.png);
+}
+
+.icon-1right-mini{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/1right-mini-grey.png);
+}
+
+.icon-1left-mini{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/1left-mini-grey.png);
+}
+
+.icon-1up-mini-blue{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/1up-mini-blue.png);
+}
+
+.icon-1down-mini-blue{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/1down-mini-blue.png);
+}
+
+.icon-1right-mini-blue{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/1right-mini-blue.png);
+}
+
+.icon-1left-mini-blue{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/1left-mini-blue.png);
+}
+/* Menu PRINCIPAL */
+
+.icon-system-user{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-user.png);
+}
+
+.icon-system-group{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-group.png);
+}
+
+.icon-system-group-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-group.png);
+}
+.icon-multimedia,
+.icon-system-filemanager{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-filemanager.png);
+}
+
+.icon-system-filemanager-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-filemanager.png);
+}
+
+
+.system-menu.left .icon-javalyss-market,
+.icon-system-market{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-market.png);
+}
+
+.icon-system-setting,
+.icon-advanced{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-setting.png);
+}
+
+/* Panneau de configuration */
+.icon-system-setting-home{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-setting-home.png);
+}
+
+.icon-system-setting-home-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-setting-home.png);
+}
+
+.icon-system-setting-advanced{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-setting-advanced.png);
+}
+.icon-advanced-48,
+.icon-system-setting-advanced-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-setting-advanced.png);
+}
+
+.icon-system-setting-security{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-setting-security.png);
+}
+
+.icon-system-setting-security-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-setting-security.png);
+}
+
+.icon-system-setting-template{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-setting-template.png);
+}
+
+.icon-system-setting-template-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-setting-template.png);
+}
+
+.icon-system-setting-export,
+.icon-export{
+     background-repeat:no-repeat;
+     background-image:url(system/images/16/system-setting-export.png);
+ }
+.icon-fileexport{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/system-file-export.png);
+}
+
+.icon-system-setting-export-48,
+.icon-export-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-setting-export.png);
+}
+
+.icon-fileimport{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/system-file-import.png);
+}
+
+.icon-export-vcard-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-export-vcard.png);
+}
+
+.icon-export-excel-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-export-excel.png);
+}
+
+.icon-export-csv-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-export-csv.png);
+}
+
+.icon-system-setting-php-info{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-setting-php-info.png);
+}
+
+.icon-system-setting-php-info-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-setting-php-info.png);
+}
+.icon-print-48,
+.icon-system-setting-print-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-setting-print.png);
+}
+
+.icon-system-setting-globaldoc{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-setting-globaldoc.png);
+}
+
+.icon-system-setting-quota{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-setting-quota.png);
+}
+
+.icon-system-setting-modedev{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-setting-modedev.png);
+}
+.icon-system-setting-beta{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-setting-beta.png);
+}
+.icon-system-setting-modetablette{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-setting-modetablette.png);
+}
+.icon-system-setting-update{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-setting-update.png);
+}
+
+.icon-export-xml-48,
+.icon-system-code-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-code.png);
+}
+
+.icon-system-icons-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-icons.png);
+}
+
+.icon-system-flag-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-flag.png);
+}
+
+.icon-system-agreement-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-agreement.png);
+}
+
+.icon-system-windowjs-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-windowjs.png);
+}
+
+.icon-system-extendsjs-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-extendsjs.png);
+}
+
+.icon-system-setting-cron{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-setting-cron.png);
+}
+
+.icon-system-setting-cron-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-setting-cron.png);
+}
+/* Account */
+
+.icon-system-account{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-account.png);
+}
+
+.icon-system-account-print{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-account-print.png);
+}
+.icon-colors,
+.icon-system-account-template{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-setting-template.png);
+}
+
+.icon-system-account-template-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-setting-template.png);
+}
+
+.icon-system-account-security{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-setting-security.png);
+}
+
+.icon-system-account-security-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-setting-security.png);
+}
+
+.icon-system-account-background{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-account-background.png);
+}
+
+.icon-system-account-background-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-account-background.png);
+}
+
+.icon-system-exit{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-exit.png);
+}
+
+
+/* Autres*/
+
+.icon-terminal{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-terminal.png);
+}
+
+.icon-alert{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-alert.png);
+}
+.icon-device-harddrive{
+     background-repeat:no-repeat;
+     background-image:url(system/images/16/system-hdd.png);
+ }
+
+.splite-wait-msg,
+.icon-alert-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-alert.png);
+}
+
+.icon-question-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-question.png);
+}
+
+.icon-system-connect-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-connect.png);
+}
+
+.icon-valid,
+.icon-system-valid,
+.jpanel .icon-valid-element{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-valid.png);
+}
+
+.icon-cancel{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-cancel.png);
+}
+
+.icon-reload,
+.icon-system-reload{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-reload.png);
+}
+
+.hp-button > .wrap-mask.icon-cancel{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-fail-picture-load.png);	
+}
+
+.icon-valid-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-valid.png);
+}
+
+
+.icon-clock{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-clock.png);
+}
+
+.flag.grey .icon-clock{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-clock-white.png);
+}
+
+.icon-next{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/arrow-right.png);
+}
+.icon-prev{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/arrow-left.png);
+}
+.icon-list{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-list.png);
+}
+.icon-nexttwo{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/arrow-right-2.png);
+}
+.icon-prevtwo{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/arrow-left-2.png);
+}
+
+.icon-system-checked{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-checked.png);
+}
+
+.icon-system-unchecked{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-unchecked.png);
+}
+
+.icon-system-notify{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-notify.png);
+}
+
+.icon-system-notify-24{
+	background-repeat:no-repeat;
+	background-image:url(system/images/24/system-notify.png);
+}
+
+.icon-system-loading{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-loading.gif);
+}
+
+.icon-system-user-24{
+	background-repeat:no-repeat;
+	background-image:url(system/images/24/system-user.png);
+}
+
+.icon-system-user-32{
+	background-repeat:no-repeat;
+	background-image:url(system/images/32/system-user.png);
+}
+
+.icon-system-skype-32{
+	background-repeat:no-repeat;
+	background-image:url(system/images/32/skype.png);
+}
+
+.icon-system-skype-video-32{
+	background-repeat:no-repeat;
+	background-image:url(system/images/32/skype-video.png);
+}
+
+.icon-system-windows-32{
+	background-repeat:no-repeat;
+	background-image:url(system/images/32/windows.png);
+}
+
+.icon-filesave-ok-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-filesaveok.png);	
+}
+
+.icon-cell-edit{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/cell-edit.png);	
+}
+
+.icon-system-attach{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-attach.png);	
+}
+
+.jpanel .icon-add-element,
+.icon-add-element{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/add-element.png);	
+}
+
+.icon-add{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-add.png);	
+}
+
+.icon-system-remove,
+.jpanel .icon-remove-element,
+.icon-cancel-14,
+.icon-delete{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/remove-element.png);	
+}
+
+.icon-search-14,
+.icon-cell-edit{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/edit-element.png);	
+}
+
+.icon-system-info,
+.jpanel .icon-info,
+.jpanel .icon-documentinfo,
+.icon-documentinfo{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/info.png);	
+}
+
+.icon-print,
+.icon-system-print,
+.jpanel .icon-print-element{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/print-element.png);	
+}
+.icon-system-mail,
+.icon-mail{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/mail.png);	
+}
+.icon-system-phone,
+.icon-phone{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/phone.png);	
+}
+
+.icon-search{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-search.png);		
+}
+
+.icon-day{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/system-date.png);		
+}
+
+.icon-system-map,
+.jpanel .icon-maps,
+.jpanel .icon-map{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/maps.png);	
+}
+
+.icon-system-itinerary,
+.jpanel .icon-itinerary{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/itinerary.png);	
+}
+
+.icon-system-close,
+.icon-close-element,
+.jpanel .icon-remove-element-2{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/remove-element-2.png);	
+}
+
+.icon-system-import,
+.jpanel .icon-import-element{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/import.png);	
+}
+
+.icon-system-browse,
+.jpanel .icon-browse-element,
+.icon-file-edit{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/browse.png);	
+}
+
+.icon-system-duplicate,
+.jpanel .icon-duplicate-element,
+.jpanel .icon-editcopy,
+.icon-editcopy{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/duplicate-element.png);	
+}
+
+.icon-editcut{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/cut-element.png);
+}
+.icon-editpaste{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/paste-element.png);
+}
+.icon-system-edit,
+.jpanel .icon-search-14,
+.jpanel .icon-edit-element{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/edit-element.png);	
+}
+
+.icon-system-spam,
+.jpanel .icon-spam-element{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/spam-element.png);	
+}
+
+.icon-system-open-user,
+.jpanel .icon-open-user{
+	background-repeat:no-repeat;
+	background-image:url(system/images/16/open-user.png);	
+}
+
+.jpanel .icon-sort-up, .jpanel .icon.desc{
+	background-image:url(system/images/16/up.png);
+	background-repeat:no-repeat;
+}
+
+.jpanel .icon-sort-down, .jpanel .icon.asc{
+	background-image:url(system/images/16/down.png);
+	background-repeat:no-repeat;
+}
+
+input.icon-edit-element,
+.jpanel input.icon-edit-element{
+	background:url(system/images/16/edit-input-element.png) no-repeat center;
+	background-image: url(system/images/16/edit-input-element.png) !important;
+  	background-position: 5px center !important;
+ 	background-repeat: no-repeat !important;
+  	padding-left: 25px;
+}
+
+.icon-edittrash-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-trash.png);
+}
+
+.alertbox.theme-flat.black .icon-edittrash-48{
+	background-repeat:no-repeat;
+	background-image:url(system/images/48/system-trash-white.png);
+}
+
+/** FILE TYPE */
+.icon-folder{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/system-folder.png);
+}
+.icon-folder-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/system-folder.png);
+}
+.icon-folder-new,
+.icon-folder-add{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/system-folder-new.png);
+}
+.icon-folder-new-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/system-folder-new.png);
+}
+
+.icon-file,
+.icon-file-empty,
+.icon-filenew{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file.png);
+}
+.icon-file-48,
+.icon-file-empty-48,
+.icon-filenew-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file.png);
+}
+
+.icon-accdb{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-accdb.png);
+}
+
+.icon-accdb-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-accdb.png);
+}
+
+.icon-pdf{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-pdf.png);
+}
+
+.icon-pdf-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-pdf.png);
+}
+
+.icon-one{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-one.png);
+}
+
+.icon-one-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-one.png);
+}
+
+.icon-word{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-word.png);
+}
+
+.icon-word-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-word.png);
+}
+
+.icon-xls{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-xls.png);
+}
+
+.icon-xls-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-xls.png);
+}
+
+.icon-pub{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-pub.png);
+}
+
+.icon-pub-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-pub.png);
+}
+.icon-pps{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-pps.png);
+}
+
+.icon-pps-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-pps.png);
+}
+
+.icon-psd{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-psd.png);
+}
+
+.icon-psd-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-psd.png);
+}
+
+.icon-avi,
+.icon-mpg,
+.icon-mpeg,
+.icon-mkv,
+.icon-wmv,
+.icon-mov{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-video.png);
+}
+
+.icon-avi-48,
+.icon-mpg-48,
+.icon-mpeg-48,
+.icon-mkv-48,
+.icon-wmv-48,
+.icon-mov-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-video.png);
+}
+
+.icon-mp3,
+.icon-wma{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-audio.png);
+}
+
+.icon-mp3-48,
+.icon-wma-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-audio.png);
+}
+
+.icon-flv{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-flv.png);
+}
+
+.icon-flv-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-flv.png);
+}
+
+.icon-swf{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-swf.png);
+}
+
+.icon-swf-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-swf.png);
+}
+
+
+.icon-picture{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-picture.png);
+}
+
+.icon-picture-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-picture.png);
+}
+
+.icon-code{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-code.png);
+}
+
+.icon-code-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-code.png);
+}
+
+.icon-sql{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-sql.png);
+}
+
+.icon-sql-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-sql.png);
+}
+
+.icon-text{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-text.png);
+}
+
+.icon-text-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-text.png);
+}
+
+.icon-bmp-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-bmp.png);
+}
+.icon-bmp{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-png.png);
+}
+
+.icon-bmp-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-bmp.png);
+}
+.icon-jpg{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-rar.png);
+}
+
+.icon-jpg-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-jpg.png);
+}
+.icon-png{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-png.png);
+}
+
+.icon-png-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-png.png);
+}
+
+
+.icon-rar{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-rar.png);
+}
+
+.icon-rar-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-rar.png);
+}
+.icon-zip{
+    background-repeat:no-repeat;
+    background-image:url(system/images/16/file-zip.png);
+}
+
+.icon-zip-48{
+    background-repeat:no-repeat;
+    background-image:url(system/images/48/file-zip.png);
+}
+
+/** Panel **/
+
+.my-advanced-panel, .panel-advanced {
+    background-image: url('system/images/panel/my-advanced.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-logo-panel, .panel-logo {
+    background-image: url('system/images/panel/my-logo.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-alert-panel, .panel-alert {
+    background-image: url('system/images/panel/my-alert.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-application-panel, .panel-application {
+    background-image: url('system/images/panel/my-application.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-clock-panel, .panel-clock {
+    background-image: url('system/images/panel/my-clock.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-date-panel, .panel-application {
+    background-image: url('system/images/panel/my-date.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-db-panel, .panel-db {
+    background-image: url('system/images/panel/my-date.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-user-panel, .panel-user {
+    background-image: url('system/images/panel/my-user.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-info-panel, .panel-info {
+    background-image: url('system/images/panel/my-info.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-multimedia-panel, .panel-multimedia {
+    background-image: url('system/images/panel/my-multimedia.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.my-security-panel, .panel-security {
+    background-image: url('system/images/panel/my-security.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}

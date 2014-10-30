@@ -1,0 +1,625 @@
+/***********************************************************************************
+ **SimpleButton*********************************************************************
+ ***********************************************************************************/
+.simple-button, 
+.box-simple-button,
+.button > a,
+.button > input{
+	<?php echo $Global->button->padding; ?>
+	display:inline-block;
+}
+
+.simple-button > .wrap-text, 
+.box-simple-button > a{
+	margin-left:	5px;
+	margin-right:	5px;
+	display:		block;
+}
+
+.simple-button > .wrap-icon{
+	position:absolute;
+	top:0px;
+	left:0;
+	height:100%;
+	width:23px;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+.simple-button.icon{
+	position:	relative;
+	min-width:	20px;
+	min-height:	18px;
+}
+
+.simple-button.icon > .wrap-text{
+	margin:0;
+	padding:0px;
+	margin-right:5px;
+	margin-left:23px;
+}
+
+.simple-button.notext {
+	text-align:left;
+}
+
+.simple-button.notext > .wrap-icon{
+	background-position:center;	
+	width:	100% !important;
+}
+
+.simple-button.notext > .wrap-text{
+	display:block;
+	margin:0px !important;
+}
+
+.button.disabled{
+	background:transparent !important;
+}
+
+.button.disabled > .wrap-text{
+	color:#999 !important;	
+}
+
+.button.mini,
+.div-bubble .button.mini{
+	min-width:	14px;
+	min-height:	14px;
+	width:		14px;
+	height:		14px;
+	padding:	0px;
+}
+
+.button.mini > .wrap-icon{
+	min-width:		14px;
+	min-height:		14px;
+	width:			14px !important;
+	height:			14px;
+	left:			0px;
+}
+
+/** TagButton **/
+
+.tag-button{	
+	font-family:			"Helvetica Neue", "Helvetica", Arial !important;
+	font-weight:			bold;
+	font-size:				11px;
+	position: 				absolute;
+	top:					-5px;
+	right: 					-5px;
+	text-align:				center;
+	line-height:			16px;
+	background-position:	top;
+	background-color:		#852c29;
+	background-repeat:		repeat-x;
+	padding-left:			5px;
+	padding-right:			5px;
+	min-width:				6px;
+	color:					white;
+	text-shadow:			0 -1px 0 rgba(0, 0, 0, 0.3);
+	border:					2px solid white;
+	background:				url(window/images/tag.png);
+	/* IE10 */ 
+	background-image: 		-ms-linear-gradient(top, #F5B5B9 0%, #E75159 50%, #DF242D 50%, #B50407 100%);
+	/* Mozilla Firefox */ 
+	background-image: 		-moz-linear-gradient(top, #F5B5B9 0%, #E75159 50%, #DF242D 50%, #B50407 100%);
+	/* Opera */ 
+	background-image: 		-o-linear-gradient(top, #F5B5B9 0%, #E75159 50%, #DF242D 50%, #B50407 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: 		-webkit-gradient(linear, left top, left bottom, color-stop(0, #F5B5B9), color-stop(0.5, #E75159), color-stop(0.5, #DF242D), color-stop(1, #B50407));
+	/* Webkit (Chrome 11+) */ 
+	background-image: 		-webkit-linear-gradient(top, #F5B5B9 0%, #E75159 50%, #DF242D 50%, #B50407 100%);
+	/* Proposed W3C Markup */ 
+	background-image: 		linear-gradient(top, #F5B5B9 0%, #E75159 50%, #DF242D 50%, #B50407 100%);
+	
+	-moz-border-radius:		20px;
+	-webkit-border-radius:	20px;
+	border-radius:			20px;
+	
+	-moz-box-shadow: 		0px 2px 5px rgba(0,0,0, 0.65);
+	-webkit-box-shadow: 	0px 2px 5px rgba(0,0,0, 0.65);
+	box-shadow: 			0px 2px 5px rgba(0,0,0, 0.65);
+}
+/**************************************************************************/
+/*LargeButton - SimpleButton***********************************************/
+/**************************************************************************/
+.button.large{
+	width:		<?php echo $Global->button->large->width; ?>;
+	height:		<?php echo $Global->button->large->height; ?>;	
+	overflow:	hidden;
+	margin:		2px;
+	cursor:		pointer;
+	text-align:	center;
+	overflow:	hidden;
+	padding:	0px;
+	background:	none;
+	
+	<?php echo $Global->button->large->background; ?>
+	<?php echo $Global->button->large->border; ?>
+	color: <?php echo $Global->button->large->color; ?>;
+	<?php echo $Global->button->large->padding ?>
+}
+
+.button.large:hover{
+	background:	none;
+	<?php echo $Global->button->large->over->border; ?>
+	<?php echo $Global->button->large->over->background; ?>
+}
+
+.button.large > .wrap-icon{
+	position:relative;
+	width:100%;
+	height:40px;
+	display:block;	
+}
+.button.large > .wrap-text{
+	display:			block;
+	position:			absolute;
+	margin:				0px;
+	padding:			0px;
+	line-height:		normal;
+	margin-left:		1px;
+	margin-right:		1px;	
+	color:				#222;
+	text-align:			center;
+	width:				<?php echo CssNode::Value($Global->button->large->width) - 2; ?>px;
+	height:				<?php echo CssNode::Value($Global->button->large->height) - 40; ?>px;
+	overflow:			hidden;
+	text-shadow:		none;
+}
+
+.button.large:hover > .wrap-text/*,
+.mobile .button.large:active > .wrap-text*/{
+	color:				#222;
+	text-shadow:		none;
+}
+/***********************************************************************************
+ **ToggleButton*********************************************************************
+ ***********************************************************************************/
+.toggle-button{
+	display:				block;
+	position:				relative;
+	border-radius:			0px;
+    box-shadow:				none;
+    height: 				25px;
+    width: 					80px;
+	line-height:			23px;
+	
+	-moz-user-select:		none;
+	-webkit-user-select:	none;
+	user-select:			none;
+	
+	background-color:		#DEDEDE;
+	border:					1px solid #999999;
+	
+	font-size:				15px;
+	font-family:			Segoe UI, HelveticaNeue, Helvetica, Arial;
+	
+	/* IE10 */ 
+	background-image: -ms-linear-gradient(top, #D7D7D7 0%, #FEFEFE 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #D7D7D7 0%, #FEFEFE 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #D7D7D7 0%, #FEFEFE 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D7D7D7), color-stop(1, #FEFEFE));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #D7D7D7 0%, #FEFEFE 100%);
+	/* Proposed W3C Markup */ 
+	background-image: linear-gradient(top, #D7D7D7 0%, #FEFEFE 100%);
+}
+
+.toggle-button.mini{
+	height:				20px;
+	width:				50px;
+	font-size:			12px;
+	line-height:		19px;
+}
+
+.toggle-button > span{
+	position:			absolute;
+	overflow:			hidden;
+	display:			block;
+	overflow:			hidden;
+	text-align: 		center;
+	width:				50%;
+	height:				100%;
+}
+
+.toggle-button > .no-part{
+	right:			0px;
+	top:			0px;
+	bottom:			0px;
+	color:			#444;
+	cursor:			pointer;
+}
+
+.toggle-button > .yes-part{
+	left:			0px;
+	top:			0px;
+	bottom:			0px;
+	text-shadow:	none;
+	cursor:			pointer;
+}
+
+.toggle-button .cursor{
+	position:	absolute;
+	top:		-1px;
+	left:		-1px;
+	height:		100%;
+	width:		50%;
+	background: #D8D8D8;
+	/* IE10 */ 
+	background-image: -ms-linear-gradient(top, #D8D8D8 0%, #FAFAFA 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #D8D8D8 0%, #FAFAFA 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #D8D8D8 0%, #FAFAFA 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D8D8D8), color-stop(1, #FAFAFA));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #D8D8D8 0%, #FAFAFA 100%);
+	/* Proposed W3C Markup */ 
+	background-image: linear-gradient(top, #D8D8D8 0%, #FAFAFA 100%);
+	
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#D8D8D8, endColorstr=#FAFAFA);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#D8D8D8, endColorstr=#FAFAFA)";
+	
+	border:		1px solid #999;
+}
+
+.toggle-yes .cursor{
+	right: 	-2px;
+	left:	auto;
+}
+/******************************************************************/
+/*App-button*******************************************************/
+/******************************************************************/
+.app-button, .hp-button{
+	position:				relative;
+	display:				inline-block;
+	text-align:				center;
+	width:					50px;
+	height:					50px;	
+	margin:					10px;
+	margin-left:			20px;
+	margin-right:			20px;
+	margin-bottom:			35px;
+	cursor: 				pointer;
+	-ms-border:				<?php echo $Global->button->normal->border->toBorder(); ?>;	
+	filter:					none;
+	-ms-filter:				none;
+}
+
+.app-button{
+	-moz-border-radius:		10px;	
+	-webkit-border-radius:	10px;
+	-ms-border-radius:		10px;	
+	border-radius:			10px;
+	
+	-moz-box-shadow: 		0px 2px 2px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow: 	0px 2px 2px rgba(0, 0, 0, 0.6);
+	-ms-box-shadow: 		0px 2px 2px rgba(0, 0, 0, 0.6);
+	box-shadow: 			0px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.ie-lt-10 .app-button{
+	filter:					none;
+	-ms-filter:				none;
+	background:				url(window/images/appbutton.png) no-repeat top center;
+	margin-left:			15px;
+	margin-right:			15px;
+	margin-bottom:			30px;
+	padding:				5px;
+	padding-top:			0px;
+}
+
+.hp-button{
+	padding-top:			5px;
+	padding-bottom:			5px;
+	height:					100px;
+	width:					126px;
+	margin:					5px;
+	background:				white;
+	border:					1px solid #ccc;
+}
+
+.app-button:hover{
+	color:#006699;	
+}
+
+.ie-lt-10 .app-button:hover{
+	filter:					none;
+	-ms-filter:				none;
+	background:				url(window/images/appbutton-over.png) no-repeat top center;
+}
+
+.hp-button:hover{
+	background:	white;
+	border:		1px solid #069;
+	z-index:	10;
+}
+
+.app-button > .wrap-mask{
+	background-position:	center;
+	overflow:				hidden;
+	width:					50px;
+	height:					50px;
+	position:				absolute;
+	top:					0px;
+	left:					0px;
+	
+	-moz-border-radius:		10px;	
+	-webkit-border-radius:	10px;
+	-ms-border-radius:		10px;	
+	border-radius:			10px;
+}
+
+.ie-lt-10 .app-button > .wrap-mask{
+	width:					60px;
+}
+
+.hp-button > .wrap-mask{
+	margin-left:5px;
+	margin-right:5px;
+	position:				relative;
+	display:				block;
+	background-position:	center;
+	overflow:				hidden;
+	height:					85px;
+	top:					0px;
+	left:					0px;
+}
+
+.hp-button > .wrap-select{
+	display:none;
+	width:20px;
+	height:20px;
+	background-position:center;
+	background-color:#EFEFEF;
+	top:0px;
+	right:0px;
+	position:absolute;
+}
+.hp-button.selected{
+	background:#EFEFEF;	
+}
+.hp-button.selected > .wrap-select{
+	display:block;	
+}
+
+.app-button .tag-button, .hp-button .tag-button{
+	font-size:				11px;
+	position: 				absolute;
+	top:					-5px;
+	right: 					-5px;
+	text-align:				center;
+	height:					16px;
+	line-height:			17px;
+}
+
+.app-button > .wrap-mask > img{
+	width:50px;
+	height:auto;
+	
+	-moz-border-radius:		10px;	
+	-webkit-border-radius:	10px;	
+	-webkit-border-radius:	10px;
+}
+
+.app-button > .wrap-mask > .wrap-picture,
+.hp-button > .wrap-mask > .wrap-picture{
+	display:block;
+	position:absolute;
+	top:	0px;
+	left:	0px;
+	right:	0px;
+	bottom:	0px;
+	background-size:contain;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+.app-button > .wrap-mask > .wrap-picture,
+.app-button > .wrap-mask > img,
+.hp-button > .wrap-mask > .wrap-picture,
+.hp-button > .wrap-mask > img{
+	opacity:				0;
+	-moz-transition-property: opacity;
+	-moz-transition-duration:400ms;
+	-moz-transition-timing-function:ease-in-out;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration:400ms;
+	-webkit-transition-timing-function:ease-in-out;
+	transition-property: opacity;
+	transition-duration:400ms;
+	transition-timing-function:ease-in-out;
+}
+
+.ie-7 .app-button > .wrap-mask > img,
+.ie-8 .app-button > .wrap-mask > img,
+.ie-7 .hp-button > .wrap-mask > img,
+.ie-8 .hp-button > .wrap-mask > img{
+	display:none;	
+}
+
+.app-button > .wrap-mask > .wrap-picture.opa,
+.app-button > .wrap-mask > img.opa,
+.hp-button > .wrap-mask > .wrap-picture.opa,
+.hp-button > .wrap-mask > img.opa{
+	opacity:1;
+}
+
+.ie-7 .app-button > .wrap-mask > img.opa,
+.ie-8 .app-button > .wrap-mask > img.opa,
+.ie-7 .hp-button > .wrap-mask > img.opa,
+.ie-8 .hp-button > .wrap-mask > img.opa{
+	display:inline-block;
+}
+
+.app-button > .wrap-text{
+	width:		86px;
+	height:		28px;
+	padding:	2px;
+	text-align:	center;	
+	position:	absolute;
+	bottom:		-35px;
+	left:		-20px;
+	overflow:	hidden;
+	line-height:normal;
+}
+
+.ie-lt-10 .app-button > .wrap-text{
+	width:96px;	
+}
+
+.hp-button > .wrap-text{
+	display:		block;
+	text-align:		center;	
+	height:			20px;
+	line-height:	20px;
+	font-size:		11px;
+	overflow:		hidden;
+	white-space:	nowrap;	
+}
+
+.hp-button:hover > .wrap-text{
+	background:#333;	
+	background:rgba(0,0,0,0.7);	
+	overflow:hidden;
+	color:white;
+}
+
+.app-button.mini,
+.ie-lt-10 .app-button.mini{
+	width:					30px;
+	height:					30px;
+	/*line-height:	18px;*/
+	-moz-border-radius:		5px;	
+	-webkit-border-radius:	5px;	
+	-ms-border-radius:		5px;
+	border-radius:			5px;
+	padding:				0px;	
+	margin:					1px;
+}
+
+.app-button.mini > .wrap-mask,
+.ie-lt-10 .app-button.mini > .wrap-mask{
+	-moz-border-radius:		5px;	
+	-webkit-border-radius:	5px;	
+	-ms-border-radius:		5px;
+	border-radius:			5px;
+	width:					30px;
+	height:					30px;
+}
+ 
+.app-button.mini > .wrap-mask img{
+	width:30px;	
+	-moz-border-radius:		5px;	
+	-webkit-border-radius:	5px;	
+	-ms-border-radius:		5px;	
+	border-radius:			5px;
+}
+
+.app-button.mini > .wrap-text{
+	display:none;	
+}
+
+.hp-button.large{
+	height:165px;
+	width:240px;
+}
+.hp-button.large > .wrap-mask{
+	height:165px;
+}
+
+.hp-button.mini{
+	height:		50px;
+	width:		63px;
+}
+.hp-button.mini > .wrap-mask{
+	height:50px;
+}
+
+.hp-button.mini > .wrap-text{
+	display:none;	
+}
+
+.hp-button.large > .wrap-text{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	background:white;	
+}
+
+/* GroupButton */
+
+.group-button {
+	white-space:nowrap;
+	display:inline-block;
+	margin-right:5px;	
+}
+
+.group-button > *{
+	white-space:normal;	
+}
+
+.group-button > .toggle-button{display:inline-block}
+
+.group-button > .button{
+	margin:					0px !important;
+	margin-right:			-6px !important;
+	border-right-width:		0px !important;
+	
+	-moz-border-radius:		0px;
+	-webkit-border-radius:	0px;
+	border-radius:			0px;
+}
+
+.window .group-button > .button,
+.group-button.wobject > .button{
+	margin:			0px !important;
+	margin-right: 	0px !important;
+}
+
+.group-button > .button.selected{
+	border-color:<?php echo $Global->button->normal->border->color; ?>;
+}
+
+.group-button > .button.firstchild{
+	-webkit-border-top-left-radius: 	<?php echo $Global->button->normal->border->radius; ?>;
+	-webkit-border-bottom-left-radius: 	<?php echo $Global->button->normal->border->radius; ?>;
+	-moz-border-radius-topleft: 		<?php echo $Global->button->normal->border->radius; ?>;
+	-moz-border-radius-bottomleft: 		<?php echo $Global->button->normal->border->radius; ?>;
+	border-top-left-radius: 			<?php echo $Global->button->normal->border->radius; ?>;
+	border-bottom-left-radius: 			<?php echo $Global->button->normal->border->radius; ?>;	
+}
+.group-button > .button:first-child{
+	-webkit-border-top-left-radius: 	<?php echo $Global->button->normal->border->radius; ?>;
+	-webkit-border-bottom-left-radius: 	<?php echo $Global->button->normal->border->radius; ?>;
+	-moz-border-radius-topleft: 		<?php echo $Global->button->normal->border->radius; ?>;
+	-moz-border-radius-bottomleft: 		<?php echo $Global->button->normal->border->radius; ?>;
+	border-top-left-radius: 			<?php echo $Global->button->normal->border->radius; ?>;
+	border-bottom-left-radius: 			<?php echo $Global->button->normal->border->radius; ?>;
+}
+.group-button > .button.lastchild{
+	border-right-width:1px !important;
+	-webkit-border-top-right-radius: 	<?php echo $Global->button->normal->border->radius; ?>;
+	-webkit-border-bottom-right-radius: <?php echo $Global->button->normal->border->radius; ?>;
+	-moz-border-radius-topright: 		<?php echo $Global->button->normal->border->radius; ?>;
+	-moz-border-radius-bottomright: 	<?php echo $Global->button->normal->border->radius; ?>;
+	border-top-right-radius: 			<?php echo $Global->button->normal->border->radius; ?>;
+	border-bottom-right-radius: 		<?php echo $Global->button->normal->border->radius; ?>;
+	margin-right:						0px;
+}
+.group-button > .button:last-child{
+	border-right-width:1px !important;
+	-webkit-border-top-right-radius: 	<?php echo $Global->button->normal->border->radius; ?>;
+	-webkit-border-bottom-right-radius: <?php echo $Global->button->normal->border->radius; ?>;
+	-moz-border-radius-topright: 		<?php echo $Global->button->normal->border->radius; ?>;
+	-moz-border-radius-bottomright: 	<?php echo $Global->button->normal->border->radius; ?>;
+	border-top-right-radius: 			<?php echo $Global->button->normal->border->radius; ?>;
+	border-bottom-right-radius: 		<?php echo $Global->button->normal->border->radius; ?>;
+	margin-right:						0px;
+}

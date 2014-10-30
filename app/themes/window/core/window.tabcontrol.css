@@ -1,0 +1,263 @@
+/*********************************************************************************
+ **BoxContent IE******************************************************************
+ *********************************************************************************/
+.exception-ie-content{
+	position:	fixed !important;
+	z-index:	10000;
+	top:		0px;
+	left:		0px;
+	border:		0px !important;
+	width:		0px !important;
+	line-height:0px !important;
+}
+/*********************************************************************************
+ **TabControl*********************************************************************
+ *********************************************************************************/
+.tab-control{
+	position:	relative;
+	line-height:0px;
+	padding:	0px;
+}
+
+.tab-control > .wrap-header{
+	padding:0px;
+}
+
+.tab-control.top > .section{
+	display:none;
+}
+
+.tab-control.left{
+	<?php echo $Global->border; ?>;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	-khtml-border-radius:0px;
+	border-radius:0px;
+}
+.tab-control.left > .wrap-header{
+	position:absolute;
+	height:100%;
+	width:160px;
+}
+.tab-control.left > .wrap-header > .simple-menu,
+.tab-control.left > .wrap-header > .simple-menu > .wrap-content,
+.tab-control.left > .wrap-header > .simple-menu > .wrap-content > .wrap-body{
+	width:					100%;
+}
+.tab-control.left > .wrap-header > .simple-button,
+.tab-control.left > .wrap-header > .simple-menu > .wrap-content > .wrap-body > .simple-button{	
+	width:					100%;
+	line-height:			20px;
+	min-height:				20px;
+	border-left:			0px;
+	border-right:			0px;
+	
+	padding:				0px;
+	padding-top:			3px;
+	padding-bottom:			3px;
+	
+	margin:					0px;
+	width:					100%;
+	
+	-moz-box-shadow:		none;
+	-webkit-box-shadow:		none;
+	box-shadow:				none;
+	
+	-moz-border-radius:		0px;
+	-webkit-border-radius:	0px;
+	border-radius:			0px;
+	
+	<?php echo $Global->button->normal->border->toOutset(); ?>
+}
+
+.tab-control.left > .wrap-header > .simple-button:hover,
+.tab-control.left > .wrap-header > .simple-menu:hover > .wrap-content > .wrap-body > .simple-button/*,
+.mobile .tab-control.left > .wrap-header > .simple-button:active,
+.mobile .tab-control.left > .wrap-header > .simple-menu:active > .wrap-content > .wrap-body > .simple-button*/{
+	<?php echo $Global->button->over->border->toOutset(); ?>
+}
+
+.tab-control.left > .wrap-header > .simple-button > .wrap-icon,
+.tab-control.left > .wrap-header > .simple-menu > .wrap-content > .wrap-body > .simple-button > .wrap-icon{
+	width:26px;	
+}
+
+.tab-control.left > .wrap-header > .simple-button > .wrap-text,
+.tab-control.left > .wrap-header > .simple-menu > .wrap-content > .wrap-body > .simple-button > .wrap-text{
+	margin-left:	29px;
+}
+
+.tab-control.top > .wrap-header > .simple-button, 
+.tab-control.top > .wrap-header .simple-menu .wrap-content .wrap-body > .simple-button{
+	width:					auto;
+	border-bottom:			0px;
+	margin-left:			1px;
+	margin-right:			1px;
+	padding: 				0px;
+	-moz-border-radius:		3px 3px 0px 0px;
+	-webkit-border-radius:	3px 3px 0px 0px;
+	border-radius:			3px 3px 0px 0px;	
+	-moz-box-shadow:		none;
+	-webkit-box-shadow:		none;
+	box-shadow:				none;
+}
+
+.tab-control.top > .wrap-header .simple-button .tag-button,
+.window.tabcontrol > .wrap-header > .wrap-title >  .wrap-header .simple-button .tag-button{
+	bottom: 	-4px;
+    top: 		auto;
+    z-index:	2;
+}
+
+.tab-control.top > .wrap-header > .simple-button .simple-button.mini,
+.window.tabcontrol > .wrap-header .simple-button .simple-button.mini{
+	position: absolute; 
+	top: 	50%;
+	right: 	3px;
+	margin-top:-8px;
+}
+
+.tab-control > .wrap-super-body{
+	position:	relative;
+	line-height:normal;
+}
+
+.tab-control.left > .wrap-super-body{
+	margin-left:160px;
+	border-right:0px;
+	border-top:	0px;
+	border-bottom-width:0px;
+}
+
+.tab-control.top > .wrap-super-body > .wrap-body{
+	padding:	13px;
+	line-height: normal;
+}
+
+.tab-control.top > .wrap-header .simple-button.selected{
+	background:			white;
+	border-bottom:		1px solid transparent;
+	margin-bottom:		-1px;
+	z-index:			1;
+	-moz-border-radius:	3px 3px 0px 0px;
+	-webkit-border-radius:3px 3px 0px 0px;
+	border-radius:3px 3px 0px 0px;
+}
+
+.tab-control.left > .wrap-header > .simple-button.selected{
+	background:white;
+}
+
+.tab-control.left > .wrap-header > .simple-button.selected:hover/*,
+.mobile .tab-control.left > .wrap-header > .simple-button.selected:active*/{
+	<?php echo $Global->button->normal->border->toOutset(); ?>
+}
+
+.tab-control.left > .wrap-header > .simple-button.selected > .wrap-text{
+	color:#222;
+	text-shadow:none;
+}
+
+.panel.compact{
+	padding:0px!important;	
+}
+
+.panel.compact > .widget{
+	border-width:0px;
+	margin:0px;
+}
+.panel > .simple-menu .simple-button,
+.panel > .simple-button,
+.div-bubble  .simple-button{
+	padding:5px 10px;
+	margin:5px 6px;
+}
+
+/* Panel WidgetContainer */
+
+.window.tabcontrol .tab-control .panel.widgets,
+.window.tabcontrol .tab-control .panel.widgets > .widget-container,
+.window.tabcontrol .tab-control .panel.widgets > .widget-container > .widgets-dashboard,
+.window.tabcontrol .tab-control .panel.widgets > .widget-container > .widgets-dashboard > .widgets-box,
+.window.tabcontrol .tab-control .panel.maximize.compact,
+.widget-container.maximize,
+.widget-container.maximize > .widgets-dashboard,
+.widget-container.maximize > .widgets-dashboard > .widgets-box{
+	height:100%;
+}
+.window.tabcontrol .tab-control .panel.maximize{
+	height:100%;
+	height:calc(100% - 20px);
+}
+
+.window.tabcontrol .tab-control .panel.widgets > .widget-container > .widgets-dashboard > .widgets-box{
+	overflow:auto;	
+	position:relative;
+}
+
+.panel.compact > .widget-container .widgets-dashboard > .widgets-box.maximize > .widget:first-child,
+.panel.compact.maximize > .widget{
+	height:100%;
+	position:relative;
+}
+
+.panel.compact.maximize > .widget,
+.panel.compact.maximize > .widget > .wrap-header{
+	-moz-border-radius:		0px;
+	-webkit-border-radius: 	0px;
+	-ktml-border-radius:	0px;
+	border-radius:			0px;
+	border-left-width:		0px;	
+}
+
+.panel.compact > .widget-container .widgets-dashboard > .widgets-box.maximize > .widget:first-child > .wrap-body,
+.panel.compact.maximize > .widget > .wrap-body{
+	position:	absolute;
+	top:		0px;
+	bottom:		0px;
+	left:		0px;
+	right:		0px;
+}
+
+.panel.compact > .widget-container .widgets-dashboard > .widgets-box.maximize > .widget:first-child > .wrap-footer,
+.panel.compact.maximize > .widget > .wrap-footer{
+	position:	absolute;	
+	left:		0px;
+	right:		0px;
+	bottom:		0px;
+}
+
+.panel.compact > .widget-container .widgets-dashboard > .widgets-box.maximize > .widget.title:first-child > .wrap-body,
+.panel.compact.maximize > .widget.title > .wrap-body{
+	top:		25px;
+}
+
+.panel.compact > .widget-container .widgets-dashboard > .widgets-box.maximize > .widget.menu:first-child > .wrap-body,
+.panel.compact.maximize > .widget.menu > .wrap-body{
+	top:		24px;
+}
+
+.panel.compact > .widget-container .widgets-dashboard > .widgets-box.maximize > .widget.menu.title:first-child > .wrap-body,
+.panel.compact.maximize > .widget.menu.title > .wrap-body{
+	top:		49px;
+}
+
+.panel.compact > .widget-container .widgets-dashboard > .widgets-box > .widget,
+.panel.compact > .widget{
+	border-top-width:0px;
+	border-bottom-width:0px;
+}
+
+.panel.compact > .widget-container.cols-2.compact .widgets-dashboard > .widgets-box.col-1 > .widget,
+.panel.compact > .widget-container.cols-3.compact .widgets-dashboard > .widgets-box.col-1 > .widget,
+.panel.compact > .widget-container.cols-4.compact .widgets-dashboard > .widgets-box.col-1 > .widget,
+.panel.compact > .widget{
+	border-left-width:		0px;
+}
+
+.panel.compact > .widget-container.cols-2.compact .widgets-dashboard > .widgets-box.col-2 > .widget,
+.panel.compact > .widget-container.cols-3.compact .widgets-dashboard > .widgets-box.col-3 > .widget,
+.panel.compact > .widget-container.cols-4.compact .widgets-dashboard > .widgets-box.col-4 > .widget,
+.panel.compact > .widget{
+	border-right-width:		0px;
+}

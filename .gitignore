@@ -2,8 +2,15 @@
 ## project
 #################
 doc/
-plugins/
-themes/
+plugins/*
+!plugins/javalyssmarket/*
+!plugins/gmap/*
+themes/*
+!themes/system.min.css
+!themes/system/*
+!themes/font/*
+!themes/javalyss/*
+!themes/window/*
 *.zip
 *.psd
 app/public/
