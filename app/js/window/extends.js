@@ -112,7 +112,7 @@ var Extends = {
             return parameters;
         }
 
-        return this.globals[key];
+        return this.globals[k];
     },
     /**
      * Extends.fire(eventName) -> void

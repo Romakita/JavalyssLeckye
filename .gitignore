@@ -1,11 +1,21 @@
 #################
 ## project
 #################
-app/themes/icons
+doc/
+plugins/
+!plugins/javalyssmarket
+!plugins/gmap
+app/themes/
+!app/themes/font
+!app/themes/javalyss
+!app/themes/system
+!app/themes/window
+!app/themes/system.min.css
 *.zip
 *.psd
-public/
-private/
+app/public/
+app/private/
+.idea
 #################
 ## Eclipse
 #################

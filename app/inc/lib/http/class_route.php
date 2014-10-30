@@ -16,10 +16,12 @@ class Route{
     protected static $request =             null;
     protected static $callback =            null;
     protected static $middlewares =         null;
-    private static $rawData = null;
+    private static $rawData =               null;
+    protected static $routes =              null;
 
     public static function Initialize(){
         self::$middlewares = array();
+        self::$routes = array();
 
         if($_SERVER['REQUEST_METHOD'] == 'PUT'){
             if(self::$rawData === null){
@@ -55,10 +57,6 @@ class Route{
      **/
     public static function When($route, $options, $callback = ""){
 
-        if(!empty(self::$request)){//la route est déjà chargée
-            return;
-        }
-
         $request = new Route\Request($route);
 
         if(is_callable($options)){
@@ -76,6 +74,12 @@ class Route{
         }
 
         $request->setOptions($options);
+
+        self::$routes[] = $request;
+
+        if(!empty(self::$request)){//la route est déjà chargée
+            return;
+        }
 
         if($request->match()){
             //MIDDLEWARES TEST
@@ -133,6 +137,10 @@ class Route{
             $response->send(401, 'Cannot access to ' . implode('/', \Permalink::Get()->getParameters()));
         }
 
+    }
+
+    public static function GetRoutes(){
+        return self::$routes;
     }
 }
 

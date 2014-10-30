@@ -44,14 +44,24 @@ class Request{
 
     public function __construct($route, $options = ''){
 
-        $this->query =  $_GET;
-        $this->body =   $_POST;
-        $this->files =  $_FILES;
+        $this->query =  self::a2o($_GET);
+        $this->body =   self::a2o($_POST);
+        $this->files =  self::a2o($_FILES);
         $this->route =  $route;
 
         if(is_object($options)){
             $this->setOptions($options);
         }
+    }
+
+    private static function a2o($a){
+        $options = new \stdClass();
+
+        foreach($a as $key => $value){
+            $options->{$key} = $value;
+        }
+
+        return $options;
     }
     /**
      * HTTP.Route.Request#setOptions(options) -> HTTP.Route.Request
@@ -97,15 +107,22 @@ class Request{
             return false;
         }
 
-        $parameters =   $link->getParameters();
-        $routeParams =  explode('/', $this->route);
-        $options =      new \stdClass();
+        $parameters =    $link->getParameters();
+        $routeParams =   explode('/', $this->route);
+        $nbParameters =  count($parameters);
+        $nbRouteParams = count($routeParams);
+        $options =       new \stdClass();
+        //index
+        if($nbParameters == 1 && $this->route == '/' && $parameters[0] == ''){
+            return true;
+        }
 
-        if(count($routeParams) < count($parameters)){// la route définie ne peut prendre en charge le nombre de paramètre
+        //
+        if($nbRouteParams < $nbParameters){// la route définie ne peut prendre en charge le nombre de paramètre
             return false;
         }
 
-        for($i = 0; $i < count($routeParams); $i++){
+        for($i = 0; $i < $nbRouteParams; $i++){
 
             $startChar =    substr($routeParams[$i], 0, 1);
             $endChar =      substr($routeParams[$i], -1);
@@ -212,5 +229,9 @@ class Request{
 
     public function getRoute(){
         return $this->route;
+    }
+
+    public function getMethod(){
+        return $this->method;
     }
 }

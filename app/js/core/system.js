@@ -246,17 +246,12 @@ var System = {
      * Ferme le système.
      **/
     close: function(){
-        try{
-            $S.exec('system.disconnect', function(){
+
+        $.http.post('/system/users/logout')
+            .success(function(){
                 window.location.reload();
             });
 
-
-        } catch (er) {
-            if (window['console']) {
-                console.log(er)
-            }
-        }
     },
     /**
      * System.connect() -> void
@@ -283,8 +278,22 @@ var System = {
         box.wait();
         //box.setTitle($MUI('Connexion en cours'));
 
+        $.http.post('/system/users/login',{
+            parameters:	{
+                Login:      $U().Login,
+                Password:   box.PasswordSecurity.value
+            }
+        })
+            .success(function(result){
+
+            })
+
+            .catch(function(result){
+
+            });
+
         $S.exec('system.connect', {
-            parameters:	'Login='+ $U().Login + '&Password=' + box.PasswordSecurity.value,
+
             onComplete: function(result){
 
                 box.hide();
@@ -461,7 +470,7 @@ var System = {
             '&' + $WR().getGlobals('parameters') + '&cmd='+cmd :
             $WR().getGlobals('parameters') + '&cmd='+cmd;
 
-        var ajax = new Ajax.Request(options.link, options);
+        var ajax = new Ajax.Request(this.URI_PATH +  'ajax/connected', options);
 
         return ajax;
     },
@@ -555,19 +564,19 @@ var System = {
 
                 switch(argv[1]){
                     case 'start':
-                        $.http.post('admin/system/cron/start');
+                        $.http.post('/system/cron/start');
                         return;
 
                     case 'stop':
-                        $.http.post('admin/system/cron/stop');
+                        $.http.post('/system/cron/stop');
                         return;
                     default:
                     case 'info':
-                        $.http.get('admin/system/cron/statut');
+                        $.http.get('/system/cron/statut');
                         return;
 
                     case 'list':
-                        $.http.get('admin/system/cron/tasks');
+                        $.http.get('/system/cron/tasks');
                         return;
                 }
 
@@ -577,12 +586,12 @@ var System = {
             case 'update':
             case 'configure':
                 evt.stop();
-                $.http.post('admin/system/update');
+                $.http.post('/system/update');
                 return;
 
             case 'disconnect':
                 evt.stop();
-                $S.exec('system.disconnect');
+                $.http.post('/system/users/logout');
                 break;
 
             case "whoimy":
@@ -1152,6 +1161,7 @@ var System = {
         document.body.appendChild(this.LightBox);
 
         $.Extends.setGlobals('link', this.link);
+        $.Extends.setGlobals('origin', this.URI_PATH);
 
         $.http
             .error(function(response){
@@ -1218,13 +1228,13 @@ var System = {
 
         $S.trace('system > loadPreferences');
         
-        $.http.get('admin/system/info').success(this.onInit.bind(this));
+        $.http.get('/system/info').success(this.onInit.bind(this));
         //démarrage du CRON
 
         if(!this.CRON_STARTED){
             var p = null;
 
-            p = $.http.post('admin/system/cron/start').success(function(){
+            p = $.http.post('/system/cron/start').success(function(){
                 new fThread(function(){
                     try{
                         p.ajax.transport.abort();

@@ -205,6 +205,29 @@ class Response {
 
         return $this->end($o);
     }
+    /**
+     * HTTP.Route.Response.render(file, params) -> HTTP.Route.Response
+     * HTTP.Route.Response.send(statut, o) -> HTTP.Route.Response
+     * - statut (Number): Code HTTP.
+     * - o (Mixed): Données à envoyer.
+     *
+     * Cette méthode permet d'envoyer une réponse.
+     **/
+    public function render($file, $params = false){
+        if($params){
+            foreach($params as $key => $value){
+                ${$key} = $value;
+            }
+        }
+
+        $file = \File::toABS($file);
+
+        if(file_exists($file)){
+            ob_start();
+            include($file);
+            $this->send(ob_get_clean());
+        }
+    }
     /** alias of: HTTP.Route.Response.download
      * HTTP.Route.Response.sendfile(file) -> HTTP.Route.Response
      * - file (String): Lien du fichier à attacher.

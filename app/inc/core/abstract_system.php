@@ -47,29 +47,20 @@
  * Cette classe gère l'ensemble du logiciel. Elle assure la gestion notamment des mises à jours du logiciel et la connexion d'un utilisateur au système de données.
  **/
 
-require_once('abstract_system_term.php');
+require_once('abstract_system_route.php');
 require_once('abstract_system_buffer.php');
 require_once('abstract_system_cache.php');
 require_once('class_system_plugin.php');
 require_once('class_system_search.php');
-require_once('class_system_user.php');
 
-abstract class System extends \System\Term{
+require_once('users/class_user.php');
+
+abstract class System extends \System\Route{
     /**
      * System.VERSION -> String
      * Version du système.
      **/
     const VERSION =			'2.0';
-    /**
-     * System.SAFE -> String
-     **/
-    const SAFE = 			'safe';
-    /**
-     * System.CNT -> String
-     **/
-    const CNT =				'connected';
-
-    private static $Error =		0;
     /*
      * System.DB_VERSION -> Array
      * Liste des configurations d'accès des plannings.
@@ -183,117 +174,9 @@ abstract class System extends \System\Term{
 
         self::DecodeFields();
         //
-        // ROUTES
+        // Route
         //
-        \HTTP\Route::UseMiddleware('/admin', function($request, &$response){
-            if(!\System\User::IsConnect()){//utilisateur déconnecté
-                $response->location(System::Path('uri') . 'admin?redir=' . rawurlencode(Permalink::Get()));
-                return true;
-            }
-        });
-
-        \HTTP\Route::When('themes/compile/:arg1/:arg2?/:arg3?', function($request, &$response){
-            System::CompileCSS();
-            exit();
-        });
-
-        \HTTP\Route::When('ajax/connected', function($request, &$response){
-            if(!\System\User::IsConnect()){//utilisateur déconnecté
-
-                $response->send(401, 'API require user authentified');
-
-                return true;
-            }
-
-            if(@System::GetCMD() == ''){
-                $response->send(403, 'Command unitialized');
-                return true;
-            }
-
-            System::Ajax(System::CNT, $request, $response);
-        });
-
-        \HTTP\Route::When('adminajax/', function($request, &$response){
-            if(!\System\User::IsConnect()){//utilisateur déconnecté
-
-                $response->send(401, 'API require user authentified');
-
-                return true;
-            }
-
-            if(@System::GetCMD() == ''){
-                $response->send(403, 'Command unitialized');
-                return true;
-            }
-
-            System::Ajax(System::CNT, $request, $response);
-        });
-
-        \HTTP\Route::When('ajax', function($request, &$response){
-
-            if(@System::GetCMD() == ''){
-                $response->send(403, 'Command unitialized');
-                return true;
-            }
-
-            System::Ajax(System::SAFE, $request, $response);
-        });
-
-        //\HTTP\Route::When('admin/account', array('System', 'onRouteAccount'));
-
-        //Interface ROUTE
-        \HTTP\Route::WhenGet('admin/system/info', function($request, &$response){
-            System::iDie();
-            $response->json(System::Get());
-        });
-
-        \HTTP\Route::WhenPost('admin/system/cron/start', function($request, &$response){
-            Cron::Path(System::Path('private'));
-
-            if(!Cron::IsStarted()){
-                Cron::Start();
-
-            }
-
-            System::Fire('system:cron.start');
-
-            $response->send(200, "Cron started");
-        });
-
-        \HTTP\Route::WhenPost('admin/system/cron/stop', function($request, &$response){
-            Cron::Stop();
-
-            $response->send(200, "Cron stopped");
-        });
-
-        \HTTP\Route::WhenGet('admin/system/cron/info', function($request, &$response){
-            $response->json(Cron::GetInfo());
-        });
-
-        \HTTP\Route::WhenGet('admin/system/cron/tasks', function($request, &$response){
-            $response->json(Cron::GetTask());
-        });
-
-        \HTTP\Route::WhenGet('admin/system/cron/statut', function($request, &$response){
-            if(Cron::IsStarted()){
-                $response->send("started");
-            }else{
-                $response->send("stopped");
-            }
-        });
-
-        \HTTP\Route::WhenPut('admin/system/meta/:key', function($request, &$response){
-            $response->json(200, System::Meta($request->params->key, $request->body['value']));
-        });
-
-        \HTTP\Route::WhenGet('admin/system/meta', function($request, &$response){
-            $response->json(200, System::Meta($request->params->key));
-        });
-
-        \HTTP\Route::WhenGet('admin/system/update', function($request, &$response){
-            System::Configure();
-            $response->json(200, 'Updated');
-        });
+        self::Route();
 
         \System\User::Initialize();
         \System\User\Role::Initialize();
@@ -305,51 +188,9 @@ abstract class System extends \System\Term{
 
         \HTTP\Route::Otherwise(array('System', 'Otherwise'));
     }
-
-    public static function Otherwise($request, &$response){
-        if(self::IsAjaxRequest()){
-            self::Ajax(self::AjaxType(), $request, $response);
-            return;
-        }
-
-        self::Fire('system:admin');
-        //new event
-        self::Fire('system:startinterface');
-
-        if(!self::IsStopEvent()){ //préparation de la page ADMIN
-
-            if(!\System\User::IsConnect()){
-                self::Fire('system:connexion');
-
-                if(!self::IsStopEvent()){
-                    include('themes/system/index.php');
-                }
-                exit();
-            }
-
-            $mode = System::Meta('MODE_DEBUG');
-
-            self::EnqueueScript('prototype');
-
-            if(\System\User::IsConnect() && $mode){
-
-                self::EnqueueScript('extends', '$path/window/extends.js', 'lang='.strtolower(self::GetLang()));
-                self::EnqueueScript('window', '$path/window/window.js');
-
-            }else{
-                self::EnqueueScript('extends', '', 'lang='.strtolower(self::GetLang()));
-                self::EnqueueScript('window');
-            }
-
-            self::EnqueueScript('window.filemanager');
-            self::EnqueueScript('jquery');
-
-            include('themes/system/admin.php');
-        }
-
-        exit();
-    }
-
+    /**
+     *
+     */
     static public function StartInterface(){
 
         self::Update();
@@ -463,7 +304,6 @@ abstract class System extends \System\Term{
 
         return $options;
     }
-
     /**
      * System.eDie(error [, options]) -> void
      * - error (String): Code de l'erreur.
@@ -493,77 +333,6 @@ abstract class System extends \System\Term{
         }
     }
     /**
-     * System.Ajax([mode]) -> void
-     *
-     * Cette méthode execute les procedures en provenance d'AJAX.
-     **/
-    public static function Ajax($mode = System::SAFE, $request = '', &$response = ''){
-
-        SystemBuffer::Start("ob_gzhandler");
-
-        self::$Error = 0;
-        //Vérification de la commande
-
-
-        //Exception de vérification d'instance
-        switch(self::GetCMD()){
-            case 'user.demo.connect':
-                \System\User::exec('user.demo.connect');
-                break;
-            case 'user.connect':
-            case 'system.connect':
-                \System\User::exec('user.connect');
-                break;
-            case 'user.disconnect':
-            case 'system.disconnect':
-                \System\User::exec('system.disconnect');
-                break;
-            case 'user.send.password':
-            case 'user.password.send':
-                \System\User::exec('user.send.password');
-                break;
-            default:
-
-                switch($mode){
-                    case self::SAFE:
-                        self::Error(self::Fire('gateway.safe.exec', array(self::GetCMD())));
-                        break;
-                    case self::CNT:
-
-                        self::Error(self::Fire('gateway.exec', array(self::GetCMD())));
-
-                        \System\User::Set();
-                        break;
-                }
-
-                //traitement d'erreur éventuelle
-                if("". self::Error() != "0"){
-                    $str = \System\Buffer::GetClean();
-                    \System\Buffer::Start("ob_gzhandler");
-                    self::eDie(self::Error(), str_replace("\n", '<br>', $str));
-                }
-        }
-
-        if(empty($_REQUEST['callback'])){
-            $response->send(200, \System\Buffer::GetClean());
-        }else{//retour JSONP
-
-            $str = \System\Buffer::GetClean();
-
-            if(!is_numeric($str) && !preg_match('/^["\[{]/', $str)){
-                $str = '"'.$str.'"';
-            }
-
-            \System\Buffer::Start("ob_gzhandler");
-
-            echo @$_REQUEST['callback'].'('.$str.')';
-
-            $response->end();
-
-            \System\Buffer::EndFlush();
-        }
-    }
-    /**
      * System.Configure() -> void
      *
      * Cette méthode configure et effectue la mise à jour de la base de données.
@@ -576,50 +345,11 @@ abstract class System extends \System\Term{
         return true;
     }
     /**
-     * System.onSelectDB(sql) -> Boolean
-     *
-     * Cette méthode permet de selectionner une base de données à partir de son nom.
-     **/
-    public static function onDBSelect($sql){
-
-        if(is_array($sql->getDatabase())){
-            $dbinfo = $sql->getDatabase();
-        }else{
-            $dbinfo = self::$DB_VERSION[$sql->getDatabase()];
-        }
-
-        $sql->setLogin($dbinfo['login']);
-        $sql->setPassword($dbinfo['pass']);
-        $sql->setHost($dbinfo['host']);
-        $sql->setDatabase($dbinfo['db'], false);
-
-        if(self::$DB_VERSION['Clients Master']['host'] == self::$DB_VERSION[NAME_VERSION]['host']){
-            return false;
-        }
-
-        $sql->connect();
-
-        return true;
-    }
-
-    /**
-     * System.Error() -> String
-     * System.Error(err) -> String
-     **/
-    public static function Error($err = NULL){
-
-        if($err != NULL){
-            self::$Error = $err;
-        }
-
-        return self::$Error;
-    }
-    /**
      * System.FixRight([folder]) -> void
      *
      * Cette méthode fixe les problèmes de droits d'accès aux dossiers et fichiers.
      **/
-    public static function FixRight($folder = ABS_PATH){
+    /*public static function FixRight($folder = ABS_PATH){
 
         $list = new StreamList($folder, NULL, NULL, array());
 
@@ -649,7 +379,7 @@ abstract class System extends \System\Term{
             //}
 
         }while($list->next());
-    }
+    }*/
     /**
      * System.HasRight() -> void
      *
@@ -674,29 +404,21 @@ abstract class System extends \System\Term{
         return true;
     }
     /**
-     * System.IsAjaxRequest() -> Boolean
-     *
-     * Cette méthode si il s'agit de requête AJAX.
+     * System.OnShutDown() -> void
      **/
-    public static function IsAjaxRequest(){
-        $link = new Permalink();
-        return $link->strEnd('/ajax') || $link->strEnd('/ajax/connected') || $link->strEnd('/adminajax') || $link->strStart('gateway.php', false) || $link->strStart('gateway.safe.php', false);
-    }
-    /**
-     * System.AjaxType() -> String
-     *
-     * Cette méthode détecte le type de connexion AJAX souhaitée.
-     **/
-    public static function AjaxType(){
-        $link = new Permalink();
-        return $link->strEnd('/ajax/connected') || $link->strStart('gateway.php', false) ? self::CNT : self::SAFE;
+    public static function OnShutDown(){
+        @session_start();
+        if(!is_string(@$_SESSION['User'])){
+            $_SESSION['User'] = @serialize($_SESSION['User']);
+        }
+        session_commit();
     }
     /**
      * System.IsCompileCSSRequest() -> Boolean
      *
      * Cette méthode indique si il s'agit d'une demande de récupération du fichier des icônes.
      **/
-    public static function IsCompileCSSRequest(){
+    /*public static function IsCompileCSSRequest(){
         $link = new Permalink();
 
         if($link->strStart('themes/window.css.php', false)){
@@ -713,27 +435,8 @@ abstract class System extends \System\Term{
         }
 
         return $link->strStart('themes/compile', false);
-    }
-    /**
-     * System.IsAdminPageRequest() -> Boolean
-     *
-     * Cette méthode indique si il s'agit d'une requête de lancement de la page d'administration du logiciel.
-     **/
-    public static function IsAdminPageRequest(){
-        $link = new Permalink();
+    }*/
 
-        return $link->strStart('admin', false) || $link->strStart('index_admin.php', false);
-    }
-    /**
-     * System.OnShutDown() -> void
-     **/
-    public static function OnShutDown(){
-        @session_start();
-        if(!is_string(@$_SESSION['User'])){
-            $_SESSION['User'] = @serialize($_SESSION['User']);
-        }
-        session_commit();
-    }
     /**
      * System.Update() -> Boolean
      *

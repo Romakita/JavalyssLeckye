@@ -27,11 +27,15 @@ $.Http = $.http = function(url, options){
             reject(response);
         };
 
-        if(!url.indexOf('http://') || !url.indexOf('https://')){
+        if(url.slice(0,1) == '/'){
+            url = $.Extends.getGlobals('origin') + url.slice(1, url.length);
+        }
+
+        /*if(!url.indexOf('http://') || !url.indexOf('https://')){
             if($.Extends.getGlobals('link')){
                 url = $.Extends.getGlobals('link') + url;
             }
-        }
+        }*/
 
         ajax = new Ajax.Request(url, options);
 
@@ -39,7 +43,7 @@ $.Http = $.http = function(url, options){
 
     promise.ajax =      ajax;
     promise.success =   promise.then;
-    promise.error =     promise.catch;
+    promise.error =     promise.catch;console.log(promise.catch)
 
     if(Object.isFunction(options.onComplete)){
         promise.success(options.onComplete);
@@ -57,7 +61,10 @@ $.Http = $.http = function(url, options){
 };
 
 Object.extend($.http, {
-
+    /**
+     *
+     *
+     */
     get:function(url, params, success, error){
         return $.http(url, {
             method:     'get',
@@ -68,6 +75,7 @@ Object.extend($.http, {
     },
 
     post: function(url, params, success, error){
+
         return $.http(url, {
             method:     'post',
             success:    success,
@@ -77,6 +85,7 @@ Object.extend($.http, {
     },
 
     put:function(url, params, success, error){
+
         return $.http(url, {
             method:     'put',
             success:    success,
@@ -85,13 +94,17 @@ Object.extend($.http, {
         });
     },
 
-    remove:function(url, params, success, error){
+    delete:function(url, params, success, error){
         return $.http(url, {
             method:     'delete',
             success:    success,
             error:      error,
             parameters: params
         });
+    },
+
+    remove:function(url, params, success, error){
+        return  this.delete(url, params, success, error);
     },
 
     error:function(callback){
@@ -106,8 +119,11 @@ Object.extend($.http, {
 });
 //override Request
 Object.extend(Ajax.Request.prototype, {
+
+    
     request: function(url) {
         this.url = url;
+
         this.method = this.options.method;
         var params = Object.isString(this.options.parameters) ?
             this.options.parameters :

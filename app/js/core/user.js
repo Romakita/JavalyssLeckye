@@ -92,7 +92,7 @@ var User =  System.users = System.User = Class.createAjax({
  **/
 	Avatar:				'',
 	Avatar16:			'',
-	Avatar16:			'',
+	Avatar32:			'',
 	Avatar48:			'',
 /**
  * System.User#Last_Connexion -> Number
@@ -135,31 +135,46 @@ var User =  System.users = System.User = Class.createAjax({
 		if(this.Meta == null || this.Meta == '') this.Meta = {};
 	},
 /**
- * System.User#commit(callback) -> void
+ * System.User#commit([callback]) -> Promise
  * - callback (Function): Fonction appelée après traitement.
  *
  * Enregistre les informations de l'instance en base de données.
  **/
 	commit: function(callback, error){
-		
-		var obj = {
-			onComplete: function(result){
-				
-				try{
-					this.evalJSON(result.responseText);
-				}catch(er){
-					if(Object.isFunction(error)) error.call(this, result.responseText);
-					return 
-				}
-				
-				if(Object.isFunction(callback)) callback.call(this, this);
-				
-			}.bind(this),
-			parameters: 'User=' + this.toJSON()
-		};
-		
-		$S.exec('user.commit', obj);
-		
+        var self = this;
+
+        if(this.User_ID){
+            return $.http.put('/system/users/' + this.User_ID, this)
+                .then(function(o){
+                    self.setObject(o);
+
+                    if(Object.isFunction(callback)){
+                        callback(self);
+                    }
+                })
+
+                .catch(function(err){
+                    if(Object.isFunction(error)){
+                        error(err);
+                    }
+                });
+        }
+
+        return $.http.put('/system/users/' + this.User_ID, this)
+
+            .then(function(o){
+                self.setObject(o);
+
+                if(Object.isFunction(callback)){
+                    callback(self);
+                }
+            })
+
+            .catch(function(err){
+                if(Object.isFunction(error)){
+                    error(err);
+                }
+            });
 	},
 /**
  * System.User#remove(callback) -> void
@@ -168,25 +183,20 @@ var User =  System.users = System.User = Class.createAjax({
  * Enregistre les informations de l'instance en base de données.
  **/
 	remove: function(callback, error){
-		
-		var obj = {
-			onComplete: function(result){
-				
-				try{
-					this.evalJSON(result.responseText);
-				}catch(er){
-					if(Object.isFunction(error)) error.call(this, result.responseText);
-					return 
-				}
-				
-				if(Object.isFunction(callback)) callback.call(this, this);
-				
-			}.bind(this),
-			parameters: 'User=' + this.toJSON()
-		};
-		
-		$S.exec('user.delete', obj);
-		
+        return $.http.delete('/system/users/' + this.User_ID)
+            .then(function(o){
+                self.setObject(o);
+
+                if(Object.isFunction(callback)){
+                    callback(self);
+                }
+            })
+
+            .catch(function(err){
+                if(Object.isFunction(error)){
+                    error(err);
+                }
+            });
 	},
 /**
  * System.User#exist(callback) -> void
@@ -377,7 +387,7 @@ var User =  System.users = System.User = Class.createAjax({
 			case 'Is_Active':
 				this[key] = value;
 				return this;
-		};
+		}
 		
 		this.Meta[key] = value;
 

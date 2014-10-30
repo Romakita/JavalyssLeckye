@@ -9,12 +9,7 @@
  * Cette classe singleton est le gestionnaire d'installation et de connexion au logiciel.
  **/
 var System;
-var MinSys = System ={
-    /**
-     * MinSys.link -> String
-     * Lien de la passerelle pour la connexion au logiciel.
-     **/
-    link:				(window.location.href.split('?')[0] + '/ajax/connected').replace('index_admin.php', ''),
+var MinSys = System = {
     /**
      * MinSys.AlertBox -> AlertBox
      **/
@@ -131,6 +126,44 @@ var MinSys = System ={
 
         this.AlertBox.wait();
 
+        $.http.post(this.URI_PATH + 'users/login', {
+                Login:      form.Login.value,
+                Password:   form.Password.value
+            }
+        )
+            .then(function(obj){
+                var $user = obj.user.evalJSON();
+
+                function setcookie(name, value, days) {
+                    if (days) {
+                        var date = new Date();
+                        date.setTime(date.getTime()+(days*24*60*60*1000));
+                        var expires = "; expires="+date.toGMTString();
+                    }
+                    else var expires = "";
+                    document.cookie = name+"="+value+expires+"; path=/";
+                }
+
+                setcookie("lastuserconnected", $user.Login + "^" + $user.Avatar);
+
+                if(document.navigator.$_GET('redir')){
+                    window.location = decodeURIComponent(document.navigator.$_GET('redir'));
+                }else{
+                    if(window.location.href.match(/\/admin/)){
+                        window.location.reload();
+                    }else{
+                        window.location = 'admin/';
+                    }
+                }
+
+            })
+
+            .catch(function(result){
+                console.warn(result);
+            });
+
+        return false;
+/*
         $S.exec('system.connect', {
             parameters:	'Login='+ form.Login.value + '&Password=' + form.Password.value,
             onComplete: function(result){
@@ -210,7 +243,7 @@ var MinSys = System ={
             }.bind(this)
         });
 
-        return false;
+        return false;*/
     },
     /**
      * MinSys.disconnect() -> void
@@ -220,12 +253,12 @@ var MinSys = System ={
     disconnect: function(){
         try{
 
-            $S.exec('system.disconnect', function(result){
+            /*$S.exec('system.disconnect', function(result){
                 this.AlertBox.hide();
 
                 var splite = new SpliteInfo($MUI('Vous avez été deconnecté du logiciel') + '.');
                 this.AlertBox.ti($MUI('Message d\'information')).a(splite).ty('CLOSE').show();
-            }.bind(this));
+            }.bind(this));*/
 
         }catch(er){}
     },
@@ -333,7 +366,7 @@ var MinSys = System ={
             //
             // Login
             //
-            options = document.getElementsByClassName('box-login');
+            var options = document.getElementsByClassName('box-login');
 
             for(var i = 0; i < options.length; i++){
                 options[i].on('focus', function(){

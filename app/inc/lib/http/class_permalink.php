@@ -242,7 +242,11 @@ class Permalink{
 	public function getMetaLink(){
 		$uri = 	str_replace(array('https://', 'http://'), '', strtolower($this->uri));
 		$base = str_replace(array('https://', 'http://'), '', strtolower(self::$URI_PATH));
-		
+
+        if($uri.'/' == $base){
+            return '';
+        }
+
 		return str_replace($base, '', $uri);
 	}
 /**
@@ -259,6 +263,10 @@ class Permalink{
 	public static function MetaLink(){
 		$uri = 	str_replace(array('https://', 'http://'), '', strtolower(new Permalink()));
 		$base = str_replace(array('https://', 'http://'), '', strtolower(self::$URI_PATH));
+
+        if($uri.'/' == $base){
+            return '';
+        }
 		
 		return str_replace($base, '', $uri);
 	}

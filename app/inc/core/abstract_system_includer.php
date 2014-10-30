@@ -424,7 +424,6 @@ abstract class Includer{
         ?>
 
         <script>
-
             System.VERSION = System.version = 	'<?php echo \System::Meta('CODE_VERSION') . \System::Meta('CODE_SUBVERSION'); ?>';
             System.PHPSESSID = 					'<?php echo session_id(); ?>';
             //extension des clefs métas du système
