@@ -1,0 +1,55 @@
+---
+id: "Global.PATH_PUBLIC"
+parent_id: "Global"
+type: class property
+line_number: 11
+description: |
+  Chemin relatif du dossier publique.
+
+signatures:
+ -
+  signature: "Global.PATH_PUBLIC"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/conf/conf.file.php
+
+---
+id: "Global.PATH_PRIVATE"
+parent_id: "Global"
+type: class property
+line_number: 16
+description: |
+  Chemin relatif du dossier privé.
+
+signatures:
+ -
+  signature: "Global.PATH_PRIVATE"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/conf/conf.file.php
+
+---
+id: "Global.PATH_PLUGIN"
+parent_id: "Global"
+type: class property
+line_number: 21
+description: |
+  Chemin relatif du dossier des extensions.
+
+signatures:
+ -
+  signature: "Global.PATH_PLUGIN"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/conf/conf.file.php
+
+---
+id: "Global.PATH_THEME"
+parent_id: "Global"
+type: class property
+line_number: 26
+description: |
+  Chemin relatif du dossier des thèmes.
+
+signatures:
+ -
+  signature: "Global.PATH_THEME"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/conf/conf.file.php

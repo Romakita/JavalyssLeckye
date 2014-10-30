@@ -1,0 +1,419 @@
+---
+id: "PluginManager"
+parent_id: "Library section"
+type: class
+superclass_id: "Models"
+line_number: 70
+description: |
+  Gestionnaire des plugins pour un logiciel. Il permet de recupérer la liste des plugins dans un
+  dossier de référence.
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_pluginmanager.php
+  * Version : 1.0
+  * Statut : STABLE
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+  
+  #### Utilisation de PluginManager
+  
+  Voici un exemple de chargement des plugins (conseillé) :
+  
+       //Déclation du dossier des extensions
+       $PM = new PluginManager($pathofplugins);
+       //Inclusion des fichiers principaux des extensions
+       do{
+            include_once($PM->path());
+       }while($PM->next());
+  
+  #### Exemple d'entete
+  
+  L'exemple suivant permet de créer un plugin. Collez l'entête dans un fichier PHP et personnalisez là.
+  Ensuite enregistrez votre fichier dans un sous-dossier - nommé par exemple `monplugin` - situé dans le dossier principal des plugins.
+  
+  <pre><code>/*
+  Plugin Name: Name of Plugin
+  Plugin URI: Link to plugin information
+  Description: Plugin Description
+  Author: Plugin author's name
+  Author URI: Link to the author's web site
+  Version: Must be set in the plugin for WordPress 2.3+
+  Text Domain: Optional. Unique identifier, should be same as the one used in plugin_text_domain()
+  Domain Path: Optional. Only useful if the translations are located in a folder above the plugin's
+  base path. For example, if .mo files are located in the locale folder then Domain Path will
+  be "/locale/" and must have the first slash. Defaults to the base folder the plugin is located in.
+  * / # Remove the space to close comment
+  </code></pre>
+  
+  Description des différentes données de l'entete :
+  
+  * `Name` : Nom du plugin, ce dernier doit être unique.
+  * `Description` : Description of what the plugin does and/or notes from the author.
+  * `Author` : The author's name
+  * `AuthorURI` : The authors web site address.
+  * `Version` : The plugin version number.
+  * `PluginURI` : Plugin web site address.
+  * `TextDomain` : Plugin's text domain for localization.
+  * `DomainPath` : Plugin's relative directory path to .mo files.
+  
+  Some users have issues with opening large files and manipulating the contents
+  for want is usually the first 1kiB or 2kiB. This function stops pulling in
+  the plugin contents when it has all of the required plugin data.
+  
+  The first 8kiB of the file will be pulled in and if the plugin data is not
+  within that first 8kiB, then the plugin author should correct their plugin
+  and move the plugin data headers to the top.
+  
+  The plugin file is assumed to have permissions to allow for scripts to read
+  the file. This is not checked however and the file is only opened for
+  reading.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager.VERSION"
+parent_id: "PluginManager"
+type: class property
+line_number: 76
+description: |
+
+
+signatures:
+ -
+  signature: "PluginManager.VERSION"
+  return_value: "const"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager.stopped"
+parent_id: "PluginManager"
+type: class property
+line_number: 80
+description: |
+
+
+signatures:
+ -
+  signature: "PluginManager.stopped"
+  return_value: "Boolean"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager#listerners"
+parent_id: "PluginManager"
+type: instance property
+line_number: 98
+description: |
+  (private) Liste des écouteurs d'un événement.
+
+signatures:
+ -
+  signature: "PluginManager#listerners"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager#css"
+parent_id: "PluginManager"
+type: instance property
+line_number: 103
+description: |
+  (private) Liste des filtres.
+
+signatures:
+ -
+  signature: "PluginManager#css"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager#tags"
+parent_id: "PluginManager"
+type: instance property
+line_number: 108
+description: |
+  (private) Liste des tags HTML à inserer dans une page cible entre les balises `head`.
+
+signatures:
+ -
+  signature: "PluginManager#tags"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager#script"
+parent_id: "PluginManager"
+type: instance property
+line_number: 113
+description: |
+  (private) Liste des scripts Javascript.
+
+signatures:
+ -
+  signature: "PluginManager#script"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager#observe"
+parent_id: "PluginManager"
+type: instance method
+line_number: 121
+description: |
+  `final` Cette méthode observe un nom d'événement `eventName`. La fonctions associée à `eventName` sera executé par la méthode [[PluginManager.fire]].
+
+signatures:
+ -
+  signature: "PluginManager#observe(eventName, callback)"
+  return_value: "void"
+arguments:
+ -
+  name: eventName
+  types: [String]
+  description: >
+    Nom de l'événement à écouter.
+
+ -
+  name: callback
+  types: [Array, String]
+  description: >
+    Nom de la fonction ou tableau de noms => array(className, methodName).
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager#stopObserving"
+parent_id: "PluginManager"
+type: instance method
+line_number: 143
+description: |
+  `final` Cette méthode stop l'observation d'un nom d'événement `eventName`.
+
+signatures:
+ -
+  signature: "PluginManager#stopObserving(eventName)"
+  return_value: "void"
+arguments:
+ -
+  name: eventName
+  types: [String]
+  description: >
+    Nom de l'événement à écouter.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager#addCSS"
+parent_id: "PluginManager"
+type: instance method
+line_number: 153
+description: |
+  `final` Cette méthode enregistre un lien vers une feuille CSS à inclure dans une page cible.
+
+signatures:
+ -
+  signature: "PluginManager#addCSS(link [, media])"
+  return_value: "void"
+arguments:
+ -
+  name: link
+  types: [String]
+  description: >
+    Lien du fichier CSS à inclure.
+
+ -
+  name: media
+  types: [String]
+  description: >
+    media ciblé par la feuille de style.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager#addScript"
+parent_id: "PluginManager"
+type: instance method
+line_number: 166
+description: |
+  `final` Cette méthode enregistre un lien vers une feuille Javascript à inclure dans une page cible.
+
+signatures:
+ -
+  signature: "PluginManager#addScript(link)"
+  return_value: "void"
+arguments:
+ -
+  name: link
+  types: [String]
+  description: >
+    Lien du fichier Javascript à inclure.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager#addTag"
+parent_id: "PluginManager"
+type: instance method
+line_number: 179
+description: |
+  `final` Cette méthode enregistre une balise et sont contenue qui sera inclut dans une page cible.
+
+signatures:
+ -
+  signature: "PluginManager#addTag(content)"
+  return_value: "void"
+arguments:
+ -
+  name: content
+  types: [String]
+  description: >
+    Balise à inclure dans l'entete du fichier HTML.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager#fire"
+parent_id: "PluginManager"
+type: instance method
+line_number: 189
+description: |
+  `final` Cette méthode déclenche un nom d'événement.
+
+signatures:
+ -
+  signature: "PluginManager#fire(eventName [, argv])"
+  return_value: "Boolean"
+arguments:
+ -
+  name: eventName
+  types: [String]
+  description: >
+    Nom d'événement à déclencher.
+
+ -
+  name: argv
+  types: [Array]
+  description: >
+    Liste d'argument à passer aux fonctions.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager.Stop"
+parent_id: "PluginManager"
+type: class method
+line_number: 215
+description: |
+  Stop l'événement déclenché.
+
+signatures:
+ -
+  signature: "PluginManager.Stop()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager.IsStop"
+parent_id: "PluginManager"
+type: class method
+line_number: 224
+description: |
+  Indique si l'événement a été stoppé.
+
+signatures:
+ -
+  signature: "PluginManager.IsStop()"
+  return_value: "Boolean"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager#printCSS"
+parent_id: "PluginManager"
+type: instance method
+line_number: 236
+description: |
+  `final` Cette méthode affiche les balises CSS enregistrées avec la méthode [[PluginManager.addCSS]].
+
+signatures:
+ -
+  signature: "PluginManager#printCSS()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager#getCSS"
+parent_id: "PluginManager"
+type: instance method
+line_number: 244
+description: |
+  `final` Cette méthode retourne les balises CSS enregistrées avec la méthode [[PluginManager.addCSS]].
+
+signatures:
+ -
+  signature: "PluginManager#getCSS()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager#getScript"
+parent_id: "PluginManager"
+type: instance method
+line_number: 262
+description: |
+  `final` Cette méthode retourne les balises script enregistrées avec la méthode [[PluginManager.addSCript]].
+
+signatures:
+ -
+  signature: "PluginManager#getScript()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager.printScript"
+parent_id: "PluginManager"
+type: class method
+line_number: 276
+description: |
+  `final` Cette méthode affiche les balises script enregistrées avec la méthode [[PluginManager.addSCript]].
+
+signatures:
+ -
+  signature: "PluginManager.printScript()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager#printTags"
+parent_id: "PluginManager"
+type: instance method
+line_number: 292
+description: |
+  `final` Cette méthode affiche les balises enregistrées avec la méthode [[PluginManager.addTags]].
+
+signatures:
+ -
+  signature: "PluginManager#printTags()"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php
+
+---
+id: "PluginManager#setCurrent"
+parent_id: "PluginManager"
+type: instance method
+line_number: 303
+description: |
+  `final` Cette méthode place le pointeur sur le plugin ciblé par `key`.
+
+signatures:
+ -
+  signature: "PluginManager#setCurrent(key)"
+  return_value: "void"
+arguments:
+ -
+  name: key
+  types: [String]
+  description: >
+    Nom du dossier du plugin.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_pluginmanager.php

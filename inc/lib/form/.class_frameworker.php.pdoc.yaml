@@ -1,0 +1,181 @@
+---
+id: "FrameWorker"
+parent_id: "Library section"
+type: class
+included: ["Stream"]
+line_number: 18
+description: |
+  Cette classe permet de gérer les échanges de fichier entre Window et PHP. Elle permet entre autre de manipuler une instance wLoader de Window JS.
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_frameworker.php
+  * Version : 1.1
+  * Date :	09/06/2012
+  * Statut : Stable
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/form/class_frameworker.php
+
+---
+id: "FrameWorker.VERSION"
+parent_id: "FrameWorker"
+type: constant
+line_number: 24
+description: |
+  Version de la librairie.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/form/class_frameworker.php
+
+---
+id: "FrameWorker.Start"
+parent_id: "FrameWorker"
+type: class method
+line_number: 31
+description: |
+  Cette méthode prépare l'envoi d'un fichier depuis javascript vers PHP lorsque vous utilisez une instance WindowFormLoader.
+
+signatures:
+ -
+  signature: "FrameWorker.Start()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/form/class_frameworker.php
+
+---
+id: "FrameWorker.Stop"
+parent_id: "FrameWorker"
+type: class method
+line_number: 45
+description: |
+  Cette méthode indique que l'envoi d'un fichier depuis javascript vers PHP lorsque vous utilisez une instance WindowFormLoader est terminé.
+
+signatures:
+ -
+  signature: "FrameWorker.Stop()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/form/class_frameworker.php
+
+---
+id: "FrameWorker.Error"
+parent_id: "FrameWorker"
+type: class method
+line_number: 77
+description: |
+  Cette méthode indique que l'envoi d'un fichier depuis javascript vers PHP lorsque vous utilisez une instance WindowFormLoader est terminé.
+
+signatures:
+ -
+  signature: "FrameWorker.Error()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/form/class_frameworker.php
+
+---
+id: "FrameWorker.Updoad"
+parent_id: "FrameWorker"
+type: class method
+line_number: 133
+description: |
+  Cette méthode charge le fichier envoyé par le client dans le dossier de destination `dest`, vérifie si l'extension du fichier
+  correspond aux extensions `ext` autorisés et retourne le lien du fichier.
+
+signatures:
+ -
+  signature: "FrameWorker.Updoad(dest [, extension [, exclude]])"
+  return_value: "String"
+arguments:
+ -
+  name: FILES
+  types: [FILES]
+  description: >
+    Ressource du fichier chargé par un formulaire HTML.
+
+ -
+  name: dest
+  types: [String]
+  description: >
+    Lien du dossier de destination.
+
+ -
+  name: extension
+  types: [String]
+  description: >
+    liste des extensions autorisés, séparé par des `;` .
+
+ -
+  name: exclude
+  types: [String]
+  description: >
+    liste des extensions non autorisés, séparé par des `;` .
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/form/class_frameworker.php
+
+---
+id: "FrameWorker.Download"
+parent_id: "FrameWorker"
+type: class method
+line_number: 184
+description: |
+  Cette méthode force le téléchargement du fichier `file` vers le poste client.
+
+signatures:
+ -
+  signature: "FrameWorker.Download(file)"
+  return_value: "void"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier à envoyer vers le poste client.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/form/class_frameworker.php
+
+---
+id: "FrameWorker.DownloadByPopup"
+parent_id: "FrameWorker"
+type: class method
+line_number: 251
+description: |
+  Cette méthode force le téléchargement du fichier `file` vers le poste client  en utilisant une fenêtre popup.
+
+signatures:
+ -
+  signature: "FrameWorker.DownloadByPopup(file)"
+  return_value: "void"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier à envoyer vers le poste client.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/form/class_frameworker.php
+
+---
+id: "FrameWorker.GetType"
+parent_id: "FrameWorker"
+type: class method
+line_number: 303
+description: |
+  Retourne la méthode de chargement du formulaire choisi par la librairie Window JS. Les méthodes de chargement sont `iframe`, `ajax` et `ajax-post`
+
+signatures:
+ -
+  signature: "FrameWorker.GetType()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/form/class_frameworker.php
+
+---
+id: "FrameWorker.GetFileInstance"
+parent_id: "FrameWorker"
+type: class method
+line_number: 325
+description: |
+  Cette méthode retourne la bonne instance $_FILES utilisée par la librairie Window JS.
+
+signatures:
+ -
+  signature: "FrameWorker.GetFileInstance()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/form/class_frameworker.php

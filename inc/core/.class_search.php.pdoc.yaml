@@ -1,0 +1,218 @@
+---
+id: "SystemSearch"
+parent_id: "Core section"
+type: class
+included: ["ObjectTools"]
+line_number: 8
+description: |
+  Cette classe gère les extensions du logiciel.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_search.php
+
+---
+id: "SystemSearch#text"
+parent_id: "SystemSearch"
+type: instance property
+line_number: 14
+description: |
+  Texte à afficher en fonction du résultat.
+
+signatures:
+ -
+  signature: "SystemSearch#text"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_search.php
+
+---
+id: "SystemSearch#appName"
+parent_id: "SystemSearch"
+type: instance property
+line_number: 20
+description: |
+  Nom de l'application source des données.
+
+signatures:
+ -
+  signature: "SystemSearch#appName"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_search.php
+
+---
+id: "SystemSearch#appIcon"
+parent_id: "SystemSearch"
+type: instance property
+line_number: 26
+description: |
+  Icone de l'application.
+
+signatures:
+ -
+  signature: "SystemSearch#appIcon"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_search.php
+
+---
+id: "SystemSearch#icon"
+parent_id: "SystemSearch"
+type: instance property
+line_number: 32
+description: |
+  Icone de la ligne du résultat.
+
+signatures:
+ -
+  signature: "SystemSearch#icon"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_search.php
+
+---
+id: "SystemSearch#value"
+parent_id: "SystemSearch"
+type: instance property
+line_number: 38
+description: |
+  Données à transmettre.
+
+signatures:
+ -
+  signature: "SystemSearch#value"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_search.php
+
+---
+id: "SystemSearch#onClick"
+parent_id: "SystemSearch"
+type: instance property
+line_number: 44
+description: |
+  Action Javascript.
+
+signatures:
+ -
+  signature: "SystemSearch#onClick"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_search.php
+
+---
+id: "new SystemSearch"
+parent_id: "SystemSearch"
+type: constructor
+line_number: 60
+description: |
+  Cette méthode créée une nouvelle instance de résultat.
+
+signatures:
+ -
+  signature: "new SystemSearch(object)"
+ -
+  signature: "new SystemSearch(array)"
+ -
+  signature: "new SystemSearch(object)"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_search.php
+
+---
+id: "SystemSearch.Add"
+parent_id: "SystemSearch"
+type: class method
+line_number: 80
+description: |
+  - options (Object|SystemSearch): Resultat à ajouter.
+  
+  Cette méthode ajoute un résultat au gestionnaire de recherche global.
+
+signatures:
+ -
+  signature: "SystemSearch.Add(options)"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_search.php
+
+---
+id: "SystemSearch.GetKeyword"
+parent_id: "SystemSearch"
+type: class method
+line_number: 150
+description: |
+  Cette méthode retourne le mot clef recherché par l'utilisateur.
+
+signatures:
+ -
+  signature: "SystemSearch.GetKeyword()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_search.php
+
+---
+id: "SystemSearch#onClick"
+parent_id: "SystemSearch"
+type: instance method
+line_number: 166
+description: |
+  Cette méthode permet d'ajouter une action javascript au clique du résultat par l'utilisateur.
+
+signatures:
+ -
+  signature: "SystemSearch#onClick(jsaction)"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_search.php
+
+---
+id: "SystemSearch#setAppName"
+parent_id: "SystemSearch"
+type: instance method
+line_number: 175
+description: |
+  Cette méthode permet de spécifier le nom de l'application ayant retourné le résultat en fonction du mot clef.
+
+signatures:
+ -
+  signature: "SystemSearch#setAppName(name)"
+  return_value: "void"
+arguments:
+ -
+  name: name
+  types: [String]
+  description: >
+    Nom de l'application lié au résultat.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_search.php
+
+---
+id: "SystemSearch#setAppIcon"
+parent_id: "SystemSearch"
+type: instance method
+line_number: 184
+description: |
+  Cette méthode permet de spécifier une icone associée à l'application.
+
+signatures:
+ -
+  signature: "SystemSearch#setAppIcon(icon)"
+  return_value: "void"
+arguments:
+ -
+  name: icon
+  types: [String]
+  description: >
+    Icone de l'application lié au résultat.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_search.php
+
+---
+id: "SystemSearch#setIcon"
+parent_id: "SystemSearch"
+type: instance method
+line_number: 193
+description: |
+  Cette méthode permet de spécifier une icone associée au résultat.
+
+signatures:
+ -
+  signature: "SystemSearch#setIcon(icon)"
+  return_value: "void"
+arguments:
+ -
+  name: icon
+  types: [String]
+  description: >
+    Icone lié au résultat.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_search.php

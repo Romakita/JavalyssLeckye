@@ -1,0 +1,189 @@
+---
+id: "Multilingual"
+parent_id: "Library section"
+type: mixin
+line_number: 15
+description: |
+  Cette classe gère la traduction de contenu d'une langue vers une autre à partir de fichier XML contenant les règles de traduction.
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_multilingual.php
+  * Version : 1.0
+  * Statut : BETA
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/mui/class_multilingual.php
+
+---
+id: "Multilingual.VERSION"
+parent_id: "Multilingual"
+type: class property
+line_number: 25
+description: |
+  Numéro de version de la bibliothèque.
+
+signatures:
+ -
+  signature: "Multilingual.VERSION"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/mui/class_multilingual.php
+
+---
+id: "Multilingual.Lang"
+parent_id: "Multilingual"
+type: class property
+line_number: 32
+description: |
+  Numéro de version de la bibliothèque.
+
+signatures:
+ -
+  signature: "Multilingual.Lang"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/mui/class_multilingual.php
+
+---
+id: "Multilingual.text"
+parent_id: "Multilingual"
+type: class property
+line_number: 37
+description: |
+  Numéro de version de la bibliothèque.
+
+signatures:
+ -
+  signature: "Multilingual.text"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/mui/class_multilingual.php
+
+---
+id: "Multilingual.Initialize"
+parent_id: "Multilingual"
+type: class method
+line_number: 41
+description: |
+
+
+signatures:
+ -
+  signature: "Multilingual.Initialize()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/mui/class_multilingual.php
+
+---
+id: "Multilingual.AddWord"
+parent_id: "Multilingual"
+type: class method
+line_number: 55
+description: |
+  Cette méthode ajoute une traduction d'un mot au dictionnaire de mot.
+
+signatures:
+ -
+  signature: "Multilingual.AddWord(key, word, lang)"
+  return_value: "void"
+arguments:
+ -
+  name: key
+  types: [String]
+  description: >
+    Mot clef de l'application cible.
+
+ -
+  name: word
+  types: [String]
+  description: >
+    Traduction du mot clef dans la langue cible.
+
+ -
+  name: lang
+  types: [String]
+  description: >
+    Langue associée à la traduction.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/mui/class_multilingual.php
+
+---
+id: "Multilingual.AddWords"
+parent_id: "Multilingual"
+type: class method
+line_number: 77
+description: |
+  Cette méthode ajoute un dictionnaire de mot au dictionnaire courrant.
+  
+  ##### Description du paramètre obj
+  
+  Le paramètre obj doit être décrit de la façon suivante :
+  
+      var obj = {
+          'mot cible': 'mot traduit',
+          'mot cible2': 'mot traduit 2',
+          //etc...
+      }
+
+signatures:
+ -
+  signature: "Multilingual.AddWords(obj, lang)"
+  return_value: "void"
+arguments:
+ -
+  name: obj
+  types: [Object]
+  description: >
+    Dictionnaire de mot à ajouter.
+
+ -
+  name: lang
+  types: [String]
+  description: >
+    Langue associée à la traduction.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/mui/class_multilingual.php
+
+---
+id: "Multilingual.ImportLang"
+parent_id: "Multilingual"
+type: class method
+line_number: 86
+description: |
+  Cette méthode importe un fichier de traduction au format XML.
+
+signatures:
+ -
+  signature: "Multilingual.ImportLang(file)"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/mui/class_multilingual.php
+
+---
+id: "Multilingual.Translate"
+parent_id: "Multilingual"
+type: class method
+line_number: 127
+description: |
+  Traduit le mot à partir de langue par défaut et de son dictionnaire associé.
+  
+  ##### Exemple
+  
+  Voici un exemple simple d'utilisation :
+  
+      MUI.addWord('bonjour le monde', 'hello world', 'en');
+  
+      MUI.lang = 'en';
+      alert(MUI.translate('bonjour le monde')); //hello world
+      //autre fonction plus rapide à écrire
+      alert($MUI('bonjour le monde')); //hello world
+
+signatures:
+ -
+  signature: "Multilingual.Translate(word)"
+  return_value: "String"
+arguments:
+ -
+  name: word
+  types: [String]
+  description: >
+    Mot à traduire.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/mui/class_multilingual.php

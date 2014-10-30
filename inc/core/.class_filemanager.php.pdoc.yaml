@@ -1,0 +1,419 @@
+---
+id: "FileManager"
+parent_id: "Core section"
+type: class
+line_number: 14
+description: |
+  Cette classe gère permet la gestion des médias sur le serveur web.
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_filemanger.php
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager.Path"
+parent_id: "FileManager"
+type: class property
+line_number: 19
+description: |
+  Dossier de référence des médias.
+
+signatures:
+ -
+  signature: "FileManager.Path"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager#AbsPath"
+parent_id: "FileManager"
+type: instance property
+line_number: 23
+description: |
+
+
+signatures:
+ -
+  signature: "FileManager#AbsPath"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager#UriPath"
+parent_id: "FileManager"
+type: instance property
+line_number: 27
+description: |
+
+
+signatures:
+ -
+  signature: "FileManager#UriPath"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager#extension"
+parent_id: "FileManager"
+type: instance property
+line_number: 32
+description: |
+  Liste des extensions autorisées
+
+signatures:
+ -
+  signature: "FileManager#extension"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager#exclude"
+parent_id: "FileManager"
+type: instance property
+line_number: 37
+description: |
+  Liste des extensions interdites.
+
+signatures:
+ -
+  signature: "FileManager#exclude"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager#prefixe"
+parent_id: "FileManager"
+type: instance property
+line_number: 41
+description: |
+
+
+signatures:
+ -
+  signature: "FileManager#prefixe"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "new FileManager"
+parent_id: "FileManager"
+type: constructor
+line_number: 55
+description: |
+  Crée une nouvelle instance [[FileManager]].
+
+signatures:
+ -
+  signature: "new FileManager([prefixe])"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager#initialize"
+parent_id: "FileManager"
+type: instance method
+line_number: 76
+description: |
+  Cette méthode initialise le lien du dossier de référence et les extensions autorisées à être manipulés.
+
+signatures:
+ -
+  signature: "FileManager#initialize()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager.DefaultImport"
+parent_id: "FileManager"
+type: class method
+line_number: 104
+description: |
+  Cette méthode importe un élément dans le dossier `public/import/`.
+
+signatures:
+ -
+  signature: "FileManager.DefaultImport()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager#tree"
+parent_id: "FileManager"
+type: instance method
+line_number: 116
+description: |
+  Cette méthode retourne l'arborescence d'un dossier.
+
+signatures:
+ -
+  signature: "FileManager#tree(folder)"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager#create"
+parent_id: "FileManager"
+type: instance method
+line_number: 140
+description: |
+  Cette méthode créée un nouveau dossier dans le gestionnaire des médias.
+
+signatures:
+ -
+  signature: "FileManager#create(folder)"
+  return_value: "Boolean"
+arguments:
+ -
+  name: folder
+  types: [String]
+  description: >
+    Chemin du nouveau dossier à créer.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager#delete"
+parent_id: "FileManager"
+type: instance method
+line_number: 149
+description: |
+  Cette méthode supprime un élément du gestionnaire des médias.
+
+signatures:
+ -
+  signature: "FileManager#delete(file)"
+  return_value: "Boolean"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Chemin de l'élément à supprimer.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager#copy"
+parent_id: "FileManager"
+type: instance method
+line_number: 160
+description: |
+  Cette méthode copie un élément du gestionnaire des médias.
+
+signatures:
+ -
+  signature: "FileManager#copy(src, dest)"
+  return_value: "Boolean"
+arguments:
+ -
+  name: src
+  types: [String]
+  description: >
+    Chemin  source de l'élément à copier
+
+ -
+  name: dest
+  types: [String]
+  description: >
+    Chemin de destination.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager#cut"
+parent_id: "FileManager"
+type: instance method
+line_number: 173
+description: |
+  Cette méthode déplace un élément du gestionnaire des médias.
+
+signatures:
+ -
+  signature: "FileManager#cut(src, dest)"
+  return_value: "Boolean"
+arguments:
+ -
+  name: src
+  types: [String]
+  description: >
+    Chemin  source de l'élément à déplacer.
+
+ -
+  name: dest
+  types: [String]
+  description: >
+    Chemin de destination.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager#rename"
+parent_id: "FileManager"
+type: instance method
+line_number: 191
+description: |
+  Cette méthode renomme un élément du gestionnaire des médias.
+
+signatures:
+ -
+  signature: "FileManager#rename(old, new)"
+  return_value: "Boolean"
+arguments:
+ -
+  name: old
+  types: [String]
+  description: >
+    Nom de l'élément à renommer.
+
+ -
+  name: new
+  types: [String]
+  description: >
+    Nouveau nom de l'élément.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager#touch"
+parent_id: "FileManager"
+type: instance method
+line_number: 203
+description: |
+  Cette méthode modifie la date d'accès d'un élément du gestionnaire des médias.
+
+signatures:
+ -
+  signature: "FileManager#touch(file)"
+  return_value: "void"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Chemin du fichier à modifier.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager#import"
+parent_id: "FileManager"
+type: instance method
+line_number: 213
+description: |
+  Cette méthode importe un élément stocké dans le buffer `$_FILES` dans le dossier `folder`.
+
+signatures:
+ -
+  signature: "FileManager#import(folder)"
+  return_value: "String"
+arguments:
+ -
+  name: folder
+  types: [String]
+  description: >
+    Dossier de reception.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager.exec"
+parent_id: "FileManager"
+type: class method
+line_number: 239
+description: |
+  Cette méthode `static` exécute une commande envoyée par l'interface du logiciel.
+
+signatures:
+ -
+  signature: "FileManager.exec(command)"
+  return_value: "Number"
+arguments:
+ -
+  name: command
+  types: [String]
+  description: >
+    Commande à exécuter.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager#toAbs"
+parent_id: "FileManager"
+type: instance method
+line_number: 343
+description: |
+  `protected` Cette méthode contervit un lien HTTP ou relatif en lien absolue.
+
+signatures:
+ -
+  signature: "FileManager#toAbs(link)"
+  return_value: "String"
+arguments:
+ -
+  name: link
+  types: [String]
+  description: >
+    Lien à convertir.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager#toUri"
+parent_id: "FileManager"
+type: instance method
+line_number: 354
+description: |
+  `protected` Cette méthode contervit un lien absolue en lien HTTP.
+
+signatures:
+ -
+  signature: "FileManager#toUri(link)"
+  return_value: "String"
+arguments:
+ -
+  name: link
+  types: [String]
+  description: >
+    Lien à convertir.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager#toRel"
+parent_id: "FileManager"
+type: instance method
+line_number: 363
+description: |
+  `protected` Cette méthode contervie un lien absolue ou HTTP en lien relatif.
+
+signatures:
+ -
+  signature: "FileManager#toRel(link)"
+  return_value: "String"
+arguments:
+ -
+  name: link
+  types: [String]
+  description: >
+    Lien à convertir.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php
+
+---
+id: "FileManager.GetList"
+parent_id: "FileManager"
+type: class method
+line_number: 383
+description: |
+  - folder
+  
+  Cette méthode liste l'ensemble des élements du dossier `folder`.
+
+signatures:
+ -
+  signature: "FileManager.GetList([folder = ''])"
+  return_value: "Array | Boolean"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_filemanager.php

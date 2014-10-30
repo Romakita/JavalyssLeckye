@@ -1,0 +1,24 @@
+---
+id: "TemplatesManager"
+parent_id: "Library section"
+type: class
+superclass_id: "Models"
+line_number: 8
+description: |
+  Cette classe gère la destection des templates CSS pour votre site Web.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_templatesmanager.php
+
+---
+id: "TemplatesManager.Extensions"
+parent_id: "TemplatesManager"
+type: class property
+line_number: 26
+description: |
+  Liste des extensions de fichier à analyser.
+
+signatures:
+ -
+  signature: "TemplatesManager.Extensions"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/models/class_templatesmanager.php

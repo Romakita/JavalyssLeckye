@@ -1,0 +1,289 @@
+---
+id: "vCalendar"
+parent_id: "Library section"
+type: class
+line_number: 16
+description: |
+  Cette classe gère la création de vCalendar (standard 2.0).
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_vcalendar.php
+  * Version : 2.0
+  * Statut : STABLE
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php
+
+---
+id: "vCalendar.CARRIAGE"
+parent_id: "vCalendar"
+type: class property
+line_number: 28
+description: |
+  Constante de retour chariot.
+
+signatures:
+ -
+  signature: "vCalendar.CARRIAGE"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php
+
+---
+id: "vCalendar.VERSION"
+parent_id: "vCalendar"
+type: class property
+line_number: 33
+description: |
+  Version de la vCard.
+
+signatures:
+ -
+  signature: "vCalendar.VERSION"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php
+
+---
+id: "vCalendar.TAG"
+parent_id: "vCalendar"
+type: class property
+line_number: 38
+description: |
+  Balise d'ouverture de la vCalendar.
+
+signatures:
+ -
+  signature: "vCalendar.TAG"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php
+
+---
+id: "vCalendar#PropID"
+parent_id: "vCalendar"
+type: instance property
+line_number: 43
+description: |
+  Priorietaire de la vCard.
+
+signatures:
+ -
+  signature: "vCalendar#PropID"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php
+
+---
+id: "vCalendar.TZ"
+parent_id: "vCalendar"
+type: class property
+line_number: 48
+description: |
+  Zone horaire.
+
+signatures:
+ -
+  signature: "vCalendar.TZ"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php
+
+---
+id: "vCalendar.vObject"
+parent_id: "vCalendar"
+type: class property
+line_number: 53
+description: |
+  Liste des objets de la vcard.
+
+signatures:
+ -
+  signature: "vCalendar.vObject"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php
+
+---
+id: "new vCalendar"
+parent_id: "vCalendar"
+type: constructor
+line_number: 59
+description: |
+  Cette méthode créée une nouvelle instance [[vCalendar]].
+
+signatures:
+ -
+  signature: "new vCalendar()"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php
+
+---
+id: "vCalendar#toString"
+parent_id: "vCalendar"
+type: instance method
+line_number: 63
+description: |
+
+
+signatures:
+ -
+  signature: "vCalendar#toString()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php
+
+---
+id: "vCalendar#push"
+parent_id: "vCalendar"
+type: instance method
+line_number: 89
+description: |
+  Cette méthode ajoute un objet à l'instance.
+
+signatures:
+ -
+  signature: "vCalendar#push(obj)"
+  return_value: "void"
+arguments:
+ -
+  name: obj
+  types: [vEvent, vAlarm, vTodo]
+  description: >
+    Objet a ajouter à l'instance vCalendar.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php
+
+---
+id: "vCalendar.Download"
+parent_id: "vCalendar"
+type: class method
+line_number: 98
+deprecated: true
+description: |
+  Cette méthode force le téléchargement du fichier.
+
+signatures:
+ -
+  signature: "vCalendar.Download(file)"
+  return_value: "void"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier à télécharger.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php
+
+---
+id: "vCalendar.FormatString"
+parent_id: "vCalendar"
+type: class method
+line_number: 119
+description: |
+  Cette méthode convertit la retour chariot `\r` par la chaine `=0D=0A=`.
+
+signatures:
+ -
+  signature: "vCalendar.FormatString(str)"
+  return_value: "String"
+arguments:
+ -
+  name: str
+  types: [String]
+  description: >
+    Chaine à convertir.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php
+
+---
+id: "vCalendar.FormatDate"
+parent_id: "vCalendar"
+type: class method
+line_number: 129
+description: |
+  Cette méthode convertit la chaine en date vCalendar.
+
+signatures:
+ -
+  signature: "vCalendar.FormatDate(str)"
+  return_value: "String"
+arguments:
+ -
+  name: str
+  types: [String]
+  description: >
+    Chaine à convertir.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php
+
+---
+id: "vProperty"
+parent_id: "Library section"
+type: class
+line_number: 156
+description: |
+  Cette classe gère la création propriété pour les classes [[vCalendar]], [[vCard]], [[vEvent]], etc...
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_vcalendar.php
+  * Version : 2.0
+  * Statut : STABLE
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php
+
+---
+id: "vProperty#name"
+parent_id: "vProperty"
+type: instance property
+line_number: 160
+description: |
+
+
+signatures:
+ -
+  signature: "vProperty#name"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php
+
+---
+id: "vProperty#params"
+parent_id: "vProperty"
+type: instance property
+line_number: 164
+description: |
+
+
+signatures:
+ -
+  signature: "vProperty#params"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php
+
+---
+id: "vProperty#params"
+parent_id: "vProperty"
+type: instance property
+line_number: 168
+description: |
+
+
+signatures:
+ -
+  signature: "vProperty#params"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php
+
+---
+id: "vProperty#parse"
+parent_id: "vProperty"
+type: instance method
+line_number: 176
+description: |
+  Parses a vCard property from one or more lines. Lines that are not
+  property lines, such as blank lines, are skipped. Returns false if
+  there are no more lines to be parsed.
+
+signatures:
+ -
+  signature: "vProperty#parse(lines)"
+  return_value: "Boolean"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vcalendar.php

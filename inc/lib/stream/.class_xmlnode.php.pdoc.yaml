@@ -1,0 +1,191 @@
+---
+id: "XmlNode"
+parent_id: "Library section"
+type: class
+line_number: 18
+description: |
+  Cette classe représente un noeud XML et permet de créer un arbre complet dans le langage XML.
+  
+  XmlNode ajoute le support de créer de document XML à la bibliothèque StreamManager.
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_xmlnode.php
+  * Version : 1.0
+  * Statut : STABLE
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_xmlnode.php
+
+---
+id: "XmlNode#Name"
+parent_id: "XmlNode"
+type: instance property
+line_number: 24
+description: |
+  Nom de noeud XML.
+
+signatures:
+ -
+  signature: "XmlNode#Name"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_xmlnode.php
+
+---
+id: "XmlNode#Text"
+parent_id: "XmlNode"
+type: instance property
+line_number: 29
+description: |
+  Texte dans le corps du noeud XML.
+
+signatures:
+ -
+  signature: "XmlNode#Text"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_xmlnode.php
+
+---
+id: "XmlNode#Childs"
+parent_id: "XmlNode"
+type: instance property
+line_number: 34
+description: |
+  `private` Liste des noeuds enfants du noeud XML.
+
+signatures:
+ -
+  signature: "XmlNode#Childs"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_xmlnode.php
+
+---
+id: "XmlNode#attributs"
+parent_id: "XmlNode"
+type: instance property
+line_number: 39
+description: |
+  `private` Liste des attributs du noeaud XML.
+
+signatures:
+ -
+  signature: "XmlNode#attributs"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_xmlnode.php
+
+---
+id: "XmlNode#CDDATA"
+parent_id: "XmlNode"
+type: instance property
+line_number: 43
+description: |
+
+
+signatures:
+ -
+  signature: "XmlNode#CDDATA"
+  return_value: "Boolean"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_xmlnode.php
+
+---
+id: "new XmlNode"
+parent_id: "XmlNode"
+type: constructor
+line_number: 49
+description: |
+  Cette méthode créée une nouvelle instance [[XmlNode]].
+
+signatures:
+ -
+  signature: "new XmlNode()"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_xmlnode.php
+
+---
+id: "XmlNode#push"
+parent_id: "XmlNode"
+type: instance method
+line_number: 131
+description: |
+  Cette méthode ajoute un noeud XML à l'instance.
+
+signatures:
+ -
+  signature: "XmlNode#push(node)"
+  return_value: "void"
+arguments:
+ -
+  name: node
+  types: [XmlNode]
+  description: >
+    Noeud XML enfant.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_xmlnode.php
+
+---
+id: "XmlNode#pushRow"
+parent_id: "XmlNode"
+type: instance method
+line_number: 141
+description: |
+  Cette méthode convertit le tableau associatif `array` au format XML et ajoute les noeuds à l'instance.
+
+signatures:
+ -
+  signature: "XmlNode#pushRow(array [, header = null])"
+  return_value: "void"
+arguments:
+ -
+  name: array
+  types: [array]
+  description: >
+    Tableau de données à convertir en XML.
+
+ -
+  name: header
+  types: [array]
+  description: >
+    Liste de champs à convertir.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_xmlnode.php
+
+---
+id: "XmlNode#pushAttr"
+parent_id: "XmlNode"
+type: instance method
+line_number: 173
+description: |
+  Cette méthode ajoute un attribut au noeud XML.
+
+signatures:
+ -
+  signature: "XmlNode#pushAttr(name, value)"
+  return_value: "void"
+arguments:
+ -
+  name: name
+  types: [String]
+  description: >
+    Nom de l'attribut.
+
+ -
+  name: value
+  types: [mixed]
+  description: >
+    Valeur de l'attribut
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_xmlnode.php
+
+---
+id: "XmlNode#__toString"
+parent_id: "XmlNode"
+type: instance method
+line_number: 186
+description: |
+  Cette méthode convertit l'instance au format String.
+
+signatures:
+ -
+  signature: "XmlNode#__toString()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_xmlnode.php

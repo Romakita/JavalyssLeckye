@@ -1,0 +1,51 @@
+---
+id: "iSearch"
+parent_id: "Interfaces section"
+type: mixin
+line_number: 7
+description: |
+  Interface des classes pouvant retourner des résultats lors d'une recherche globale.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/interface/isearch.php
+
+---
+id: "iSearch.Search"
+parent_id: "iSearch"
+type: class method
+line_number: 14
+description: |
+  Cette méthode permet d'ajouter un résultat à la recherche globale.
+
+signatures:
+ -
+  signature: "iSearch.Search(word)"
+  return_value: "void"
+arguments:
+ -
+  name: word
+  types: [String]
+  description: >
+    Mot recherché.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/interface/isearch.php
+
+---
+id: "iSearch.SearchMail"
+parent_id: "iSearch"
+type: class method
+line_number: 21
+description: |
+  Cette méthode permet d'ajouter un résultat à la recherche globale d'adresse e-mail.
+
+signatures:
+ -
+  signature: "iSearch.SearchMail(word)"
+  return_value: "void"
+arguments:
+ -
+  name: word
+  types: [String]
+  description: >
+    E-mail recherché.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/interface/isearch.php

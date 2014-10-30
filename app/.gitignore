@@ -1,7 +1,7 @@
 #################
 ## project
 #################
-app/themes/icons
+themes/icons
 *.zip
 *.psd
 public/

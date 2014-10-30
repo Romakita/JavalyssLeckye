@@ -1,0 +1,83 @@
+---
+id: "Global.DB_HOST"
+parent_id: "Global"
+type: class property
+line_number: 11
+description: |
+  Nom d'hôte de la base de données.
+
+signatures:
+ -
+  signature: "Global.DB_HOST"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/conf/conf.db.php
+
+---
+id: "Global.DB_LOGIN"
+parent_id: "Global"
+type: class property
+line_number: 16
+description: |
+  Identifiant de la base de données.
+
+signatures:
+ -
+  signature: "Global.DB_LOGIN"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/conf/conf.db.php
+
+---
+id: "Global.DB_PASS"
+parent_id: "Global"
+type: class property
+line_number: 21
+description: |
+  Mot de passe de connexion à la base de données.
+
+signatures:
+ -
+  signature: "Global.DB_PASS"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/conf/conf.db.php
+
+---
+id: "Global.DB_NAME"
+parent_id: "Global"
+type: class property
+line_number: 26
+description: |
+  Nom de la base de données du logiciel.
+
+signatures:
+ -
+  signature: "Global.DB_NAME"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/conf/conf.db.php
+
+---
+id: "Global.DB_TYPE"
+parent_id: "Global"
+type: class property
+line_number: 31
+description: |
+  Type de la base de données du logiciel.
+
+signatures:
+ -
+  signature: "Global.DB_TYPE"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/conf/conf.db.php
+
+---
+id: "Global.PRE_TABLE"
+parent_id: "Global"
+type: class property
+line_number: 36
+description: |
+  Préfixe des tables du logiciel. Cette constante permet d'installer plusieurs logiciel Javalyss dans la même base de données.
+
+signatures:
+ -
+  signature: "Global.PRE_TABLE"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/conf/conf.db.php

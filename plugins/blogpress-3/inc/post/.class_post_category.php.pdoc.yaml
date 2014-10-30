@@ -1,0 +1,342 @@
+---
+id: "PostCategory"
+parent_id: "Plugins section"
+type: class
+included: ["ObjectTools", "iClass"]
+line_number: 15
+description: |
+  Cette classe gère les catégories pouvant être associées aux [[Post]].
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_category.php
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "PostCategory.TABLE_NAME"
+parent_id: "PostCategory"
+type: class property
+line_number: 22
+description: |
+  Nom de la table gérée par la classe.
+
+signatures:
+ -
+  signature: "PostCategory.TABLE_NAME"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "PostCategory.PRIMARY_KEY"
+parent_id: "PostCategory"
+type: class property
+line_number: 27
+description: |
+  Clef primaire de la table PostCategory.TABLE_NAME gérée par la classe.
+
+signatures:
+ -
+  signature: "PostCategory.PRIMARY_KEY"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "PostCategory#Category_ID"
+parent_id: "PostCategory"
+type: instance property
+line_number: 32
+description: |
+
+
+signatures:
+ -
+  signature: "PostCategory#Category_ID"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "PostCategory#Name"
+parent_id: "PostCategory"
+type: instance property
+line_number: 37
+description: |
+  Varchar
+
+signatures:
+ -
+  signature: "PostCategory#Name"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "PostCategory#Description"
+parent_id: "PostCategory"
+type: instance property
+line_number: 42
+description: |
+  Tinytext
+
+signatures:
+ -
+  signature: "PostCategory#Description"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "PostCategory#Type"
+parent_id: "PostCategory"
+type: instance property
+line_number: 47
+description: |
+  Varchar
+
+signatures:
+ -
+  signature: "PostCategory#Type"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "new PostCategory"
+parent_id: "PostCategory"
+type: constructor
+line_number: 61
+description: |
+  Cette méthode créée une nouvelle instance de [[PostCategory]].
+
+signatures:
+ -
+  signature: "new PostCategory()"
+ -
+  signature: "new PostCategory(json)"
+ -
+  signature: "new PostCategory(array)"
+ -
+  signature: "new PostCategory(obj)"
+ -
+  signature: "new PostCategory(id)"
+arguments:
+ -
+  name: json
+  types: [String]
+  description: >
+    Chaine de caractères JSON équivalente à une instance [[PostCategory]].
+
+ -
+  name: array
+  types: [Array]
+  description: >
+    Tableau associatif équivalent à une instance [[PostCategory]].
+
+ -
+  name: obj
+  types: [Object]
+  description: >
+    Objet équivalent à une instance [[PostCategory]].
+
+ -
+  name: id
+  types: [int]
+  description: >
+    Numéro d'identifiant de l'instance. Les informations de l'instance seront récupérées depuis la base de données.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "PostCategory.Initialize"
+parent_id: "PostCategory"
+type: class method
+line_number: 92
+description: |
+  Cette méthode initialise les événements de la classe.
+
+signatures:
+ -
+  signature: "PostCategory.Initialize()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "PostCategory.Install"
+parent_id: "PostCategory"
+type: class method
+line_number: 102
+description: |
+  Cette méthode installe l'extension ou une partie de l'extension gérées par la classe.
+
+signatures:
+ -
+  signature: "PostCategory.Install()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "PostCategory#commit"
+parent_id: "PostCategory"
+type: instance method
+line_number: 140
+description: |
+  Cette méthode enregistre les informations de la classe en base de données.
+
+signatures:
+ -
+  signature: "PostCategory#commit()"
+  return_value: "Boolean"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "PostCategory.ByName"
+parent_id: "PostCategory"
+type: class method
+line_number: 187
+description: |
+  Cette méthode retourne une instance [[PostCategory]] contenue en base de données si elle existe.
+
+signatures:
+ -
+  signature: "PostCategory.ByName(name)"
+  return_value: "PostCategory | false"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "PostCategory#delete"
+parent_id: "PostCategory"
+type: instance method
+line_number: 206
+description: |
+  Cette méthode supprime les informations de la classe de la base de données.
+
+signatures:
+ -
+  signature: "PostCategory#delete()"
+  return_value: "Boolean"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "PostCategory.exec"
+parent_id: "PostCategory"
+type: class method
+line_number: 226
+description: |
+  Cette méthode exécute une commande `op` et affiche un résultat au format JSON de préférence.
+  La méthode peut retourner 0 ou une chaine de caractère pour indiquer une erreur lors de l'exécution d'une commande.
+
+signatures:
+ -
+  signature: "PostCategory.exec(op)"
+  return_value: "Boolean"
+arguments:
+ -
+  name: op
+  types: [String]
+  description: >
+    Nom de la commande à exécuter.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "PostCategory.execSafe"
+parent_id: "PostCategory"
+type: class method
+line_number: 302
+description: |
+  Cette méthode exécute une commande `op` et affiche un résultat au format JSON de préférence.
+  La méthode peut retourner 0 ou une chaine de caractère pour indiquer une erreur lors de l'exécution d'une commande.
+
+signatures:
+ -
+  signature: "PostCategory.execSafe(op)"
+  return_value: "Boolean"
+arguments:
+ -
+  name: op
+  types: [String]
+  description: >
+    Nom de la commande à exécuter.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "PostCategory#exists"
+parent_id: "PostCategory"
+type: instance method
+line_number: 310
+description: |
+  Cette méthode vérifie si l'instance existe en base de données.
+
+signatures:
+ -
+  signature: "PostCategory#exists()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "PostCategory.Distinct"
+parent_id: "PostCategory"
+type: class method
+line_number: 318
+description: |
+  Cette méthode liste les données d'une colonne de la table.
+
+signatures:
+ -
+  signature: "PostCategory.Distinct(field [, word])"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "PostCategory.GetList"
+parent_id: "PostCategory"
+type: class method
+line_number: 349
+description: |
+  Cette méthode liste l'ensemble des données gérées par la classe.
+
+signatures:
+ -
+  signature: "PostCategory.GetList([clauses [, options]])"
+  return_value: "Array | Boolean"
+arguments:
+ -
+  name: clauses
+  types: [Object]
+  description: >
+    Objet de restriction de la liste.
+
+ -
+  name: options
+  types: [Object]
+  description: >
+    Objet de configuration de la liste.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php
+
+---
+id: "PostCategory.onGetList"
+parent_id: "PostCategory"
+type: class method
+line_number: 401
+description: |
+  Cette méthode est appelée par un objet [[Request]] lors de son exécution.
+
+signatures:
+ -
+  signature: "PostCategory.onGetList(row [,request])"
+  return_value: "void"
+arguments:
+ -
+  name: row
+  types: [Array]
+  description: >
+    Ligne traité par la requête.
+
+ -
+  name: request
+  types: [Request]
+  description: >
+    Requêt en cours d'exécution.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_category.php

@@ -1,0 +1,877 @@
+---
+id: "PostComment"
+parent_id: "Plugins section"
+type: class
+included: ["ObjectTools", "iClass", "iForm"]
+line_number: 15
+description: |
+  Cette classe gère l'édition et la lecture de commentaire.
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_comment.php
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.TABLE_NAME"
+parent_id: "PostComment"
+type: class property
+line_number: 23
+description: |
+  Nom de la table gérée par la classe.
+
+signatures:
+ -
+  signature: "PostComment.TABLE_NAME"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.PRIMARY_KEY"
+parent_id: "PostComment"
+type: class property
+line_number: 28
+description: |
+  Clef primaire de la table PostComment.TABLE_NAME gérée par la classe.
+
+signatures:
+ -
+  signature: "PostComment.PRIMARY_KEY"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment#Comment_ID"
+parent_id: "PostComment"
+type: instance property
+line_number: 33
+description: |
+
+
+signatures:
+ -
+  signature: "PostComment#Comment_ID"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment#Post_ID"
+parent_id: "PostComment"
+type: instance property
+line_number: 37
+description: |
+
+
+signatures:
+ -
+  signature: "PostComment#Post_ID"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment#User_ID"
+parent_id: "PostComment"
+type: instance property
+line_number: 41
+description: |
+
+
+signatures:
+ -
+  signature: "PostComment#User_ID"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment#Author"
+parent_id: "PostComment"
+type: instance property
+line_number: 46
+description: |
+  Varchar
+
+signatures:
+ -
+  signature: "PostComment#Author"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment#Email"
+parent_id: "PostComment"
+type: instance property
+line_number: 51
+description: |
+  Varchar
+
+signatures:
+ -
+  signature: "PostComment#Email"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment#Tracking"
+parent_id: "PostComment"
+type: instance property
+line_number: 55
+description: |
+
+
+signatures:
+ -
+  signature: "PostComment#Tracking"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment#Url"
+parent_id: "PostComment"
+type: instance property
+line_number: 60
+description: |
+  Varchar
+
+signatures:
+ -
+  signature: "PostComment#Url"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment#IP"
+parent_id: "PostComment"
+type: instance property
+line_number: 65
+description: |
+  Varchar
+
+signatures:
+ -
+  signature: "PostComment#IP"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment#User_Agent"
+parent_id: "PostComment"
+type: instance property
+line_number: 70
+description: |
+  Varchar
+
+signatures:
+ -
+  signature: "PostComment#User_Agent"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment#Content"
+parent_id: "PostComment"
+type: instance property
+line_number: 75
+description: |
+  Longtext
+
+signatures:
+ -
+  signature: "PostComment#Content"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment#Note"
+parent_id: "PostComment"
+type: instance property
+line_number: 79
+description: |
+
+
+signatures:
+ -
+  signature: "PostComment#Note"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment#Date_Create"
+parent_id: "PostComment"
+type: instance property
+line_number: 83
+description: |
+
+
+signatures:
+ -
+  signature: "PostComment#Date_Create"
+  return_value: "Datetime"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment#Statut"
+parent_id: "PostComment"
+type: instance property
+line_number: 88
+description: |
+  Varchar
+
+signatures:
+ -
+  signature: "PostComment#Statut"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "new PostComment"
+parent_id: "PostComment"
+type: constructor
+line_number: 105
+description: |
+  Cette méthode créée une nouvelle instance de [[PostComment]].
+
+signatures:
+ -
+  signature: "new PostComment()"
+ -
+  signature: "new PostComment(json)"
+ -
+  signature: "new PostComment(array)"
+ -
+  signature: "new PostComment(obj)"
+ -
+  signature: "new PostComment(id)"
+arguments:
+ -
+  name: json
+  types: [String]
+  description: >
+    Chaine de caractères JSON équivalente à une instance [[PostComment]].
+
+ -
+  name: array
+  types: [Array]
+  description: >
+    Tableau associatif équivalent à une instance [[PostComment]].
+
+ -
+  name: obj
+  types: [Object]
+  description: >
+    Objet équivalent à une instance [[PostComment]].
+
+ -
+  name: id
+  types: [int]
+  description: >
+    Numéro d'identifiant de l'instance. Les informations de l'instance seront récupérées depuis la base de données.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.Initialize"
+parent_id: "PostComment"
+type: class method
+line_number: 140
+description: |
+  Cette méthode initialise les événements de la classe.
+
+signatures:
+ -
+  signature: "PostComment.Initialize()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.Install"
+parent_id: "PostComment"
+type: class method
+line_number: 154
+description: |
+  Cette méthode installe l'extension ou une partie de l'extension gérées par la classe.
+
+signatures:
+ -
+  signature: "PostComment.Install()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment#commit"
+parent_id: "PostComment"
+type: instance method
+line_number: 228
+description: |
+  Cette méthode enregistre les informations de la classe en base de données.
+
+signatures:
+ -
+  signature: "PostComment#commit()"
+  return_value: "Boolean"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment#delete"
+parent_id: "PostComment"
+type: instance method
+line_number: 306
+description: |
+  Cette méthode supprime les informations de la classe de la base de données.
+
+signatures:
+ -
+  signature: "PostComment#delete()"
+  return_value: "Boolean"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.exec"
+parent_id: "PostComment"
+type: class method
+line_number: 326
+description: |
+  Cette méthode exécute une commande `op` et affiche un résultat au format JSON de préférence.
+  La méthode peut retourner 0 ou une chaine de caractère pour indiquer une erreur lors de l'exécution d'une commande.
+
+signatures:
+ -
+  signature: "PostComment.exec(op)"
+  return_value: "Boolean"
+arguments:
+ -
+  name: op
+  types: [String]
+  description: >
+    Nom de la commande à exécuter.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.execSafe"
+parent_id: "PostComment"
+type: class method
+line_number: 422
+description: |
+  Cette méthode exécute une commande `op` et affiche un résultat au format JSON de préférence.
+  La méthode peut retourner 0 ou une chaine de caractère pour indiquer une erreur lors de l'exécution d'une commande.
+
+signatures:
+ -
+  signature: "PostComment.execSafe(op)"
+  return_value: "Boolean"
+arguments:
+ -
+  name: op
+  types: [String]
+  description: >
+    Nom de la commande à exécuter.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.Author"
+parent_id: "PostComment"
+type: class method
+line_number: 430
+description: |
+  Cette méthode retourne le nom de l'auteur du commentaire courant.
+
+signatures:
+ -
+  signature: "PostComment.Author()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.Avatar"
+parent_id: "PostComment"
+type: class method
+line_number: 438
+description: |
+  Cette méthode retourne le lien de l'avatar de l'auteur du commentaire courant.
+
+signatures:
+ -
+  signature: "PostComment.Avatar()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.ClassName"
+parent_id: "PostComment"
+type: class method
+line_number: 453
+description: |
+  Cette méthode construit le ou les classe(s) CSS du commentaire courant.
+
+signatures:
+ -
+  signature: "PostComment.ClassName([className])"
+  return_value: "String"
+arguments:
+ -
+  name: className
+  types: [String]
+  description: >
+    Classe CSS à ajouter.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.Content"
+parent_id: "PostComment"
+type: class method
+line_number: 462
+description: |
+  Cette méthode permet d'assigner du contenu au commentaire courant. La méthode retourne le contenu du commentaire courant.
+
+signatures:
+ -
+  signature: "PostComment.Content()"
+  return_value: "String"
+arguments:
+ -
+  name: str
+  types: [String]
+  description: >
+    Contenu à assigner.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.Count"
+parent_id: "PostComment"
+type: class method
+line_number: 480
+description: |
+  Cette méthode compte le nombre de commentaire du Post courant ou du postid.
+
+signatures:
+ -
+  signature: "PostComment.Count([postid])"
+  return_value: "Number"
+arguments:
+ -
+  name: postid
+  types: [Number]
+  description: >
+    Numéro du post.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.Note"
+parent_id: "PostComment"
+type: class method
+line_number: 492
+description: |
+  Cette méthode retourne la note du commentare courant.
+
+signatures:
+ -
+  signature: "PostComment.Note()"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.Current"
+parent_id: "PostComment"
+type: class method
+line_number: 501
+description: |
+  Cette méthode retourn l'instance du commentaire en cours.
+
+signatures:
+ -
+  signature: "PostComment.Current()"
+  return_value: "Boolean | Comment"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.ID"
+parent_id: "PostComment"
+type: class method
+line_number: 523
+description: |
+  Cette méthode retourne l'ID du commentaire courant.
+
+signatures:
+ -
+  signature: "PostComment.ID()"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.Date"
+parent_id: "PostComment"
+type: class method
+line_number: 534
+description: |
+  Cette méthode retourne la date de création du commentaire en courant.
+
+signatures:
+ -
+  signature: "PostComment.Date([format = '' [, lang = fr [, encode = utf8]]])"
+  return_value: "String"
+arguments:
+ -
+  name: format
+  types: [String]
+  description: >
+    Format de la date à afficher (voir la document PHP pour strftime).
+
+ -
+  name: lang
+  types: [String]
+  description: >
+    Langue pour l'affichage des dates.
+
+ -
+  name: encode
+  types: [String]
+  description: >
+    Encodage de la chaine de caractère.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.Have"
+parent_id: "PostComment"
+type: class method
+line_number: 543
+description: |
+  Cette méthode indique si [[Comment.GetList]] a retourné des commentaires.
+
+signatures:
+ -
+  signature: "PostComment.Have()"
+  return_value: "Boolean"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "Post.MaxLength"
+parent_id: "Post"
+type: class method
+line_number: 565
+description: |
+  Cette méthode retourne le nombre maximal de commentaire contenu dans la liste de commentaires à afficher.
+
+signatures:
+ -
+  signature: "Post.MaxLength()"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.Next"
+parent_id: "PostComment"
+type: class method
+line_number: 573
+description: |
+  Cette méthode passe au commentaire suivant.
+
+signatures:
+ -
+  signature: "PostComment.Next()"
+  return_value: "PostComment | false"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.End"
+parent_id: "PostComment"
+type: class method
+line_number: 593
+description: |
+  Cette méthode passe au dernier commentaire de la liste.
+
+signatures:
+ -
+  signature: "PostComment.End()"
+  return_value: "PostComment | false"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.Reset"
+parent_id: "PostComment"
+type: class method
+line_number: 611
+description: |
+  Cette méthode revient au premier commentaire de la liste.
+
+signatures:
+ -
+  signature: "PostComment.Reset()"
+  return_value: "PostComment | false"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.Prev"
+parent_id: "PostComment"
+type: class method
+line_number: 629
+description: |
+  Cette méthode revient au commentaire précédent.
+
+signatures:
+ -
+  signature: "PostComment.Prev()"
+  return_value: "PostComment | false"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.Pagination"
+parent_id: "PostComment"
+type: class method
+line_number: 647
+description: |
+  Cette méthode affiche les boutons permettant de naviguer dans la liste des commentaire.
+
+signatures:
+ -
+  signature: "PostComment.Pagination()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.notify"
+parent_id: "PostComment"
+type: class method
+line_number: 659
+description: |
+  Cette méthode envoi un e-mail de notification aux personnes suivant la discussion.
+
+signatures:
+ -
+  signature: "PostComment.notify()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.Unregister"
+parent_id: "PostComment"
+type: class method
+line_number: 718
+description: |
+  Cette méthode permet à un utilisateur de ce désabonner d'une discussion.
+
+signatures:
+ -
+  signature: "PostComment.Unregister()"
+  return_value: "Boolean"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment#exists"
+parent_id: "PostComment"
+type: instance method
+line_number: 731
+description: |
+  Cette méthode vérifie si l'instance existe en base de données.
+
+signatures:
+ -
+  signature: "PostComment#exists()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.Distinct"
+parent_id: "PostComment"
+type: class method
+line_number: 739
+description: |
+  Cette méthode liste les données d'une colonne de la table.
+
+signatures:
+ -
+  signature: "PostComment.Distinct(field [, word])"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.DrawNote"
+parent_id: "PostComment"
+type: class method
+line_number: 767
+description: |
+  Cette méthode affiche la note du commentaire courant au format HTML.
+
+signatures:
+ -
+  signature: "PostComment.DrawNote()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.GetList"
+parent_id: "PostComment"
+type: class method
+line_number: 801
+description: |
+  Cette méthode liste l'ensemble des données gérées par la classe.
+
+signatures:
+ -
+  signature: "PostComment.GetList([clauses [, options]])"
+  return_value: "Array | Boolean"
+arguments:
+ -
+  name: clauses
+  types: [Object]
+  description: >
+    Objet de restriction de la liste.
+
+ -
+  name: options
+  types: [Object]
+  description: >
+    Objet de configuration de la liste.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.onGetList"
+parent_id: "PostComment"
+type: class method
+line_number: 897
+description: |
+  Cette méthode est appelée par un objet [[Request]] lors de son exécution.
+
+signatures:
+ -
+  signature: "PostComment.onGetList(row [,request])"
+  return_value: "void"
+arguments:
+ -
+  name: row
+  types: [Array]
+  description: >
+    Ligne traité par la requête.
+
+ -
+  name: request
+  types: [Request]
+  description: >
+    Requêt en cours d'exécution.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.SetList"
+parent_id: "PostComment"
+type: class method
+line_number: 908
+description: |
+  Cette méthode permet d'assigner une liste de commentaires à parcourir.
+
+signatures:
+ -
+  signature: "PostComment.SetList(list)"
+  return_value: "void"
+arguments:
+ -
+  name: list
+  types: [Array]
+  description: >
+    Liste de commentaire.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.onFormSubmit"
+parent_id: "PostComment"
+type: class method
+line_number: 940
+description: |
+  Cette méthode teste les champs envoyés par le formulaire affiché dans la page source.
+  
+  Utilisez les méthodes [[System.GetCMD]] pour connaitre la commande et [[BlogPress.SetError]] pour indiquer une erreur dans le formulaire.
+
+signatures:
+ -
+  signature: "PostComment.onFormSubmit()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.onFormCommit"
+parent_id: "PostComment"
+type: class method
+line_number: 984
+description: |
+  Cette méthode permet d'enregistrer les données du formulaire seulement si aucune erreur n'a été signalé via la méthode [[BlogPress.SetError]].
+
+signatures:
+ -
+  signature: "PostComment.onFormCommit()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.onBeforeForm"
+parent_id: "PostComment"
+type: class method
+line_number: 1078
+description: |
+  Cette méthode permet d'afficher des données en tête du formulaire si le formulaire déclenche l'événement `blog:form.before`.
+  
+  #### Exemple
+  
+      <form action="<?php Blog::Info('submit'); ?>" method="post" name="formRegister" class="form form-register">
+      <?php
+          Blog::Fire('form.before');
+      ?>
+      Formulaire
+      <?php
+          Blog::Fire('form.after');
+      ?>
+      </form>
+
+signatures:
+ -
+  signature: "PostComment.onBeforeForm()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.onAfterForm"
+parent_id: "PostComment"
+type: class method
+line_number: 1109
+description: |
+  Cette méthode permet d'afficher des données en pied de formulaire si le formulaire déclenche l'événement `blog:form.after`.
+  
+  #### Exemple
+  
+      <form action="<?php Blog::Info('submit'); ?>" method="post" name="formRegister" class="form form-register">
+      <?php
+          Blog::Fire('form.before');
+      ?>
+      Formulaire
+      <?php
+          Blog::Fire('form.after');
+      ?>
+      </form>
+
+signatures:
+ -
+  signature: "PostComment.onAfterForm()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php
+
+---
+id: "PostComment.Draw"
+parent_id: "PostComment"
+type: class method
+line_number: 1117
+description: |
+  Cette méthode construit et affiche le formulaire permettant de commenter un post.
+
+signatures:
+ -
+  signature: "PostComment.Draw()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/post/class_post_comment.php

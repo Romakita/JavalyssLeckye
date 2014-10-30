@@ -1,0 +1,163 @@
+---
+id: "SystemBuffer"
+parent_id: "Core section"
+type: mixin
+line_number: 16
+description: |
+  Cette classe gère le buffer et la compression des données.
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_system_buffer.php
+  * Version : 1.0
+  * Statut : STABLE
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_system_buffer.php
+
+---
+id: "SystemBuffer.Stack"
+parent_id: "SystemBuffer"
+type: class property
+line_number: 20
+description: |
+
+
+signatures:
+ -
+  signature: "SystemBuffer.Stack"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_system_buffer.php
+
+---
+id: "SystemBuffer.Start"
+parent_id: "SystemBuffer"
+type: class method
+line_number: 31
+description: |
+  - output_callback (String): Méthode de compression.
+  - chunksize (Number): Taille maximale par ligne.
+  - erase (Boolean): ?
+  
+  Démarre la temporisation de sortie. Tant qu'elle est enclenchée, aucune donnée, hormis les en-têtes, n'est envoyée au navigateur, mais temporairement mise en tampon.
+  
+  Voir la documentation d'ob_start pour plus d'information <a href="http://www.php.net/manual/fr/function.ob-start.php">http://www.php.net/manual/fr/function.ob-start.php</a>.
+
+signatures:
+ -
+  signature: "SystemBuffer.Start([ output_callback [, chunk_size [, erase ]]] )"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_system_buffer.php
+
+---
+id: "SystemBuffer.GetClean"
+parent_id: "SystemBuffer"
+type: class method
+line_number: 79
+description: |
+  Lit le contenu courant du tampon de sortie puis l'efface.
+
+signatures:
+ -
+  signature: "SystemBuffer.GetClean()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_system_buffer.php
+
+---
+id: "SystemBuffer.Clean"
+parent_id: "SystemBuffer"
+type: class method
+line_number: 86
+description: |
+  Cette fonction vide le tampon de sortie sans l'envoyer au navigateur.
+
+signatures:
+ -
+  signature: "SystemBuffer.Clean()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_system_buffer.php
+
+---
+id: "SystemBuffer.Get"
+parent_id: "SystemBuffer"
+type: class method
+line_number: 93
+description: |
+  Retourne le contenu du tampon de sortie sans l'effacer.
+
+signatures:
+ -
+  signature: "SystemBuffer.Get()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_system_buffer.php
+
+---
+id: "SystemBuffer.EndClean"
+parent_id: "SystemBuffer"
+type: class method
+line_number: 100
+description: |
+  Détruit les données du tampon de sortie et éteint la tamporisation de sortie.
+
+signatures:
+ -
+  signature: "SystemBuffer.EndClean()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_system_buffer.php
+
+---
+id: "SystemBuffer.EndFlush"
+parent_id: "SystemBuffer"
+type: class method
+line_number: 107
+description: |
+  Envoie les données du tampon de sortie et éteint la tamporisation de sortie.
+
+signatures:
+ -
+  signature: "SystemBuffer.EndFlush()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_system_buffer.php
+
+---
+id: "SystemBuffer.Flush"
+parent_id: "SystemBuffer"
+type: class method
+line_number: 114
+description: |
+  Vide les tampons de sortie
+
+signatures:
+ -
+  signature: "SystemBuffer.Flush()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_system_buffer.php
+
+---
+id: "SystemBuffer.Store"
+parent_id: "SystemBuffer"
+type: class method
+line_number: 122
+description: |
+  Cette méthode copie le buffer courant, le stock dans la pile et le supprime du contexte. Il pourra être récupéré via la fonction Restore.
+
+signatures:
+ -
+  signature: "SystemBuffer.Store([ output_callback [, chunk_size [, erase ]]] )"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_system_buffer.php
+
+---
+id: "SystemBuffer.Restore"
+parent_id: "SystemBuffer"
+type: class method
+line_number: 132
+description: |
+  Cette méthode détruit le buffer courrant et le remplace par une copie précédente.
+
+signatures:
+ -
+  signature: "SystemBuffer.Restore([ output_callback [, chunk_size [, erase ]]] )"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_system_buffer.php

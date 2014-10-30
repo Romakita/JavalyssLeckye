@@ -1,0 +1,306 @@
+---
+id: "Color"
+parent_id: "Library section"
+type: class
+included: ["ObjectTools"]
+line_number: 16
+description: |
+  Cette classe permet de faire des calculs sur les couleurs (conversion RVB, HSL).
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_color.php
+  * Version : 29/04/2012
+  * Statut : STABLE
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+  * Librairie requise : [[Stream]]
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_color.php
+
+---
+id: "new Color"
+parent_id: "Color"
+type: constructor
+line_number: 35
+description: |
+  Créée une nouvelle instance [[Color]].
+
+signatures:
+ -
+  signature: "new Color()"
+ -
+  signature: "new Color(color)"
+ -
+  signature: "new Color(number)"
+arguments:
+ -
+  name: color
+  types: [String]
+  description: >
+    Couleur au format hexadecimal RGB. Soit #333, soit #33333.
+
+ -
+  name: number
+  types: [Number]
+  description: >
+    Valeur numérique entre 0 et 255.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_color.php
+
+---
+id: "Color#toHSL"
+parent_id: "Color"
+type: instance method
+line_number: 66
+description: |
+  Convertie la couleur RGB en valeur HSL.
+
+signatures:
+ -
+  signature: "Color#toHSL()"
+  return_value: "Color"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_color.php
+
+---
+id: "Color#toString"
+parent_id: "Color"
+type: instance method
+line_number: 105
+description: |
+  Retourne le code Hexadecimal de la couleur.
+
+signatures:
+ -
+  signature: "Color#toString()"
+  return_value: "Color"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_color.php
+
+---
+id: "Color#setRGB"
+parent_id: "Color"
+type: instance method
+line_number: 163
+description: |
+  Cette méthode permet de changer la valeur RGB de la couleur gérée par l'instance.
+
+signatures:
+ -
+  signature: "Color#setRGB(color)"
+  return_value: "Color"
+arguments:
+ -
+  name: color
+  types: [Array, Number, String]
+  description: >
+    Code couleur.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_color.php
+
+---
+id: "Color#setHue"
+parent_id: "Color"
+type: instance method
+line_number: 206
+description: |
+  Cette méthode change le teinte de la couleur.
+
+signatures:
+ -
+  signature: "Color#setHue(hue)"
+  return_value: "Color"
+arguments:
+ -
+  name: hue
+  types: [Number]
+  description: >
+    Valeur de la teinte entre 0 et 255.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_color.php
+
+---
+id: "Color#setLuminance"
+parent_id: "Color"
+type: instance method
+line_number: 218
+description: |
+  Cette méthode change la luminosité de la couleur.
+
+signatures:
+ -
+  signature: "Color#setLuminance(lum)"
+  return_value: "Color"
+arguments:
+ -
+  name: hue
+  types: [Number]
+  description: >
+    Valeur de la luminosité entre 0 et 255.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_color.php
+
+---
+id: "Color#setLuminance"
+parent_id: "Color"
+type: instance method
+line_number: 232
+description: |
+  Cette méthode change la saturation de la couleur.
+
+signatures:
+ -
+  signature: "Color#setLuminance(lum)"
+  return_value: "Color"
+arguments:
+ -
+  name: lum
+  types: [Number]
+  description: >
+    Valeur de l'opacité entre 0 et 255.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_color.php
+
+---
+id: "Color#setRed"
+parent_id: "Color"
+type: instance method
+line_number: 244
+description: |
+  Cette méthode change la valeur du canal rouge.
+
+signatures:
+ -
+  signature: "Color#setRed(red)"
+  return_value: "Color"
+arguments:
+ -
+  name: red
+  types: [Number, String]
+  description: >
+    Valeur du canal rouge entre 0 et 255 (ou en valeur hexadécimal sur deux caratères).
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_color.php
+
+---
+id: "Color#setGreen"
+parent_id: "Color"
+type: instance method
+line_number: 259
+description: |
+  Cette méthode change la valeur du canal vert.
+
+signatures:
+ -
+  signature: "Color#setGreen(green)"
+  return_value: "Color"
+arguments:
+ -
+  name: green
+  types: [Number, String]
+  description: >
+    Valeur du canal vert entre 0 et 255 (ou en valeur hexadécimal sur deux caratères).
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_color.php
+
+---
+id: "Color#setBlue"
+parent_id: "Color"
+type: instance method
+line_number: 273
+description: |
+  Cette méthode change la valeur du canal bleu.
+
+signatures:
+ -
+  signature: "Color#setBlue(blue)"
+  return_value: "Color"
+arguments:
+ -
+  name: blue
+  types: [Number, String]
+  description: >
+    Valeur du canal bleu entre 0 et 255 (ou en valeur hexadécimal sur deux caratères).
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_color.php
+
+---
+id: "Color#getHue"
+parent_id: "Color"
+type: instance method
+line_number: 286
+description: |
+  Retourne la valeur de la teinte de la couleur.
+
+signatures:
+ -
+  signature: "Color#getHue()"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_color.php
+
+---
+id: "Color#getHue"
+parent_id: "Color"
+type: instance method
+line_number: 294
+description: |
+  Retourne la valeur de la saturation de la couleur.
+
+signatures:
+ -
+  signature: "Color#getHue()"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_color.php
+
+---
+id: "Color#getLuminance"
+parent_id: "Color"
+type: instance method
+line_number: 302
+description: |
+  Retourne la valeur de la luminosité de la couleur.
+
+signatures:
+ -
+  signature: "Color#getLuminance()"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_color.php
+
+---
+id: "Color#getRed"
+parent_id: "Color"
+type: instance method
+line_number: 310
+description: |
+  Retourne la valeur rouge de la couleur.
+
+signatures:
+ -
+  signature: "Color#getRed()"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_color.php
+
+---
+id: "Color#getGreen"
+parent_id: "Color"
+type: instance method
+line_number: 318
+description: |
+  Retourne la valeur verte de la couleur.
+
+signatures:
+ -
+  signature: "Color#getGreen()"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_color.php
+
+---
+id: "Color#getBlue"
+parent_id: "Color"
+type: instance method
+line_number: 326
+description: |
+  Retourne la valeur bleu de la couleur.
+
+signatures:
+ -
+  signature: "Color#getBlue()"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_color.php

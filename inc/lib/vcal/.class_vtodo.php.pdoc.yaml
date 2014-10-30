@@ -1,0 +1,169 @@
+---
+id: "vTodo"
+parent_id: "Library section"
+type: class
+line_number: 15
+description: |
+  Cette classe gère la création d'objet vTodo. Les vTodo sont des tâches que l'on peut ajouter à une instance [[vCalendar]].
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_vcalendar.php
+  * Version : 2.0
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vtodo.php
+
+---
+id: "vTodo.TAG"
+parent_id: "vTodo"
+type: class property
+line_number: 21
+description: |
+  Balise d'ouverture de la vTodo.
+
+signatures:
+ -
+  signature: "vTodo.TAG"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vtodo.php
+
+---
+id: "vTodo#Summary"
+parent_id: "vTodo"
+type: instance property
+line_number: 26
+description: |
+  Résumé de la tâche.
+
+signatures:
+ -
+  signature: "vTodo#Summary"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vtodo.php
+
+---
+id: "vTodo#DateStamp"
+parent_id: "vTodo"
+type: instance property
+line_number: 30
+description: |
+
+
+signatures:
+ -
+  signature: "vTodo#DateStamp"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vtodo.php
+
+---
+id: "vTodo#Sequence"
+parent_id: "vTodo"
+type: instance property
+line_number: 34
+description: |
+
+
+signatures:
+ -
+  signature: "vTodo#Sequence"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vtodo.php
+
+---
+id: "vTodo#UID"
+parent_id: "vTodo"
+type: instance property
+line_number: 38
+description: |
+
+
+signatures:
+ -
+  signature: "vTodo#UID"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vtodo.php
+
+---
+id: "vTodo#Organizer"
+parent_id: "vTodo"
+type: instance property
+line_number: 42
+description: |
+
+
+signatures:
+ -
+  signature: "vTodo#Organizer"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vtodo.php
+
+---
+id: "vTodo#Due"
+parent_id: "vTodo"
+type: instance property
+line_number: 46
+description: |
+
+
+signatures:
+ -
+  signature: "vTodo#Due"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vtodo.php
+
+---
+id: "vTodo#Status"
+parent_id: "vTodo"
+type: instance property
+line_number: 50
+description: |
+
+
+signatures:
+ -
+  signature: "vTodo#Status"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vtodo.php
+
+---
+id: "vTodo#vAlarm"
+parent_id: "vTodo"
+type: instance property
+line_number: 54
+description: |
+
+
+signatures:
+ -
+  signature: "vTodo#vAlarm"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vtodo.php
+
+---
+id: "new vTodo"
+parent_id: "vTodo"
+type: constructor
+line_number: 60
+description: |
+  Cette méthode créée une nouvelle instance [[vTodo]].
+
+signatures:
+ -
+  signature: "new vTodo()"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vtodo.php
+
+---
+id: "vTodo#toString"
+parent_id: "vTodo"
+type: instance method
+line_number: 64
+description: |
+
+
+signatures:
+ -
+  signature: "vTodo#toString()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vtodo.php

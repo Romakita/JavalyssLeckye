@@ -1,0 +1,367 @@
+---
+id: "ObjectTools"
+parent_id: "Library section"
+type: mixin
+line_number: 24
+description: |
+  Cet utilitaire gère la convertion d'une instance vers différent format tel que :
+  
+  * JSON vers une instance de classe.
+  * Une instance de classe vers JSON.
+  * Un tableau associatif vers une instance de classe.
+  * Une instance de classe vers un tableau associatif.
+  * Un objet générique vers une instance de classe.
+  * Une instance de classe vers un objet générique.
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_object_tools.php
+  * Version : 1.5
+  * Date : 20/08/2013
+  * Statut : STABLE
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php
+
+---
+id: "ObjectTools#toJSON"
+parent_id: "ObjectTools"
+type: instance method
+line_number: 31
+description: |
+  Convertit l'instance au format JSON.
+
+signatures:
+ -
+  signature: "ObjectTools#toJSON()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php
+
+---
+id: "ObjectTools#evalJSON"
+parent_id: "ObjectTools"
+type: instance method
+line_number: 40
+description: |
+  Cette méthode évalue la chaine `json` et restaure les attributs de la classe fille.
+
+signatures:
+ -
+  signature: "ObjectTools#evalJSON(json)"
+  return_value: "void"
+arguments:
+ -
+  name: json
+  types: [String]
+  description: >
+    Chaine de caractère au format JSON.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php
+
+---
+id: "ObjectTools.IsJSON"
+parent_id: "ObjectTools"
+type: class method
+line_number: 116
+description: |
+  `static` Cette méthode vérifie que le string est un json.
+
+signatures:
+ -
+  signature: "ObjectTools.IsJSON(json)"
+  return_value: "Boolean"
+arguments:
+ -
+  name: json
+  types: [String]
+  description: >
+    chaine json.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php
+
+---
+id: "ObjectTools.IsMail"
+parent_id: "ObjectTools"
+type: class method
+line_number: 128
+description: |
+  `static` Cette méthode vérifie la syntaxe de l'adresse e-mail.
+
+signatures:
+ -
+  signature: "ObjectTools.IsMail(mail)"
+  return_value: "Boolean"
+arguments:
+ -
+  name: mail
+  types: [String]
+  description: >
+    Adresse e-mail.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php
+
+---
+id: "ObjectTools.IsDate"
+parent_id: "ObjectTools"
+type: class method
+line_number: 147
+description: |
+  `static` Cette méthode vérifie la syntaxe de l'adresse e-mail.
+
+signatures:
+ -
+  signature: "ObjectTools.IsDate(mail)"
+  return_value: "Boolean"
+arguments:
+ -
+  name: mail
+  types: [String]
+  description: >
+    Adresse e-mail.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php
+
+---
+id: "ObjectTools.DateFormat"
+parent_id: "ObjectTools"
+type: class method
+line_number: 170
+description: |
+  Cette méthode formate une date. Voir syntaxe PHP des dates pour la méthode strftime.
+
+signatures:
+ -
+  signature: "ObjectTools.DateFormat(date)"
+  return_value: "String"
+arguments:
+ -
+  name: date
+  types: [String]
+  description: >
+    Date au format 'Y-m-d H:i:s';
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php
+
+---
+id: "ObjectTools.PhoneFormat"
+parent_id: "ObjectTools"
+type: class method
+line_number: 223
+description: |
+  Cette méthode formate un numéro de téléphone.
+
+signatures:
+ -
+  signature: "ObjectTools.PhoneFormat(phonenumber [, char [, splitLength]])"
+  return_value: "String"
+arguments:
+ -
+  name: phonenumber
+  types: [String]
+  description: >
+    Numéro de téléphone à formater.
+
+ -
+  name: char
+  types: [String]
+  description: >
+    Caractère de séparation. Par défaut, c'est un espace blanc.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php
+
+---
+id: "ObjectTools.DecodeJSON"
+parent_id: "ObjectTools"
+type: class method
+line_number: 241
+description: |
+  Cette méthode static décode une chaine JSON.
+
+signatures:
+ -
+  signature: "ObjectTools.DecodeJSON(json)"
+  return_value: "Object"
+arguments:
+ -
+  name: json
+  types: [String]
+  description: >
+    Chaine de caractère à décoder.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php
+
+---
+id: "ObjectTools.Unserialize"
+parent_id: "ObjectTools"
+type: class method
+line_number: 271
+description: |
+  Cette méthode static décode une chaine JSON.
+
+signatures:
+ -
+  signature: "ObjectTools.Unserialize(json)"
+  return_value: "Object"
+arguments:
+ -
+  name: json
+  types: [String]
+  description: >
+    Chaine de caractère à décoder.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php
+
+---
+id: "ObjectTools.RawURLDecode"
+parent_id: "ObjectTools"
+type: class method
+line_number: 289
+description: |
+  Cette méthode static applique la fonction rawurldecode sur un objet.
+
+signatures:
+ -
+  signature: "ObjectTools.RawURLDecode(json)"
+  return_value: "Object"
+arguments:
+ -
+  name: json
+  types: [String]
+  description: >
+    Chaine de caractère à décoder.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php
+
+---
+id: "ObjectTools#toObject"
+parent_id: "ObjectTools"
+type: instance method
+line_number: 330
+description: |
+  Cette méthode retourne un objet générique équivalent à l'instance.
+
+signatures:
+ -
+  signature: "ObjectTools#toObject()"
+  return_value: "Object"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php
+
+---
+id: "ObjectTools#toArray"
+parent_id: "ObjectTools"
+type: instance method
+line_number: 342
+description: |
+  Cette méthode retourne un tableau associatif équivalent à l'instance.
+
+signatures:
+ -
+  signature: "ObjectTools#toArray()"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php
+
+---
+id: "ObjectTools#setObject"
+parent_id: "ObjectTools"
+type: instance method
+line_number: 355
+description: |
+  Cette méthode récupère les informations de l'objet équivalent à l'instance.
+
+signatures:
+ -
+  signature: "ObjectTools#setObject(obj)"
+  return_value: "Object"
+arguments:
+ -
+  name: obj
+  types: [Object]
+  description: >
+    Objet générique équivalent à l'instance.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php
+
+---
+id: "ObjectTools#setArray"
+parent_id: "ObjectTools"
+type: instance method
+line_number: 366
+description: |
+  Cette méthode récupère les informations du tableau associatif équivalent à l'instance.
+
+signatures:
+ -
+  signature: "ObjectTools#setArray(array)"
+  return_value: "Object"
+arguments:
+ -
+  name: array
+  types: [Array]
+  description: >
+    Tableau associatif équivalent à l'instance.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php
+
+---
+id: "ObjectTools#extend"
+parent_id: "ObjectTools"
+type: instance method
+line_number: 377
+description: |
+  Cette méthode ajoute les informations de l'objet `obj` à l'instance.
+
+signatures:
+ -
+  signature: "ObjectTools#extend(obj)"
+  return_value: "void"
+arguments:
+ -
+  name: obj
+  types: [Array, Object]
+  description: >
+    Objet ou tableau associatif.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php
+
+---
+id: "ObjectTools.ArrayToObject"
+parent_id: "ObjectTools"
+type: class method
+line_number: 390
+description: |
+  Cette méthode convertie un tableau de données en objet.
+
+signatures:
+ -
+  signature: "ObjectTools.ArrayToObject(a)"
+  return_value: "void"
+arguments:
+ -
+  name: a
+  types: [Array]
+  description: >
+    Objet ou tableau associatif.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php
+
+---
+id: "ObjectTools.DataMerge"
+parent_id: "ObjectTools"
+type: class method
+line_number: 412
+description: |
+  Cette méthode créée un tableau de données d'une ligne à partir d'un tableau de données complet.
+
+signatures:
+ -
+  signature: "ObjectTools.DataMerge(a)"
+  return_value: "Array"
+arguments:
+ -
+  name: a
+  types: [Array]
+  description: >
+    tableau de données.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_tools.php

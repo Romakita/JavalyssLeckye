@@ -1,0 +1,325 @@
+---
+id: "Geocode"
+parent_id: "Library section"
+type: class
+line_number: 15
+description: |
+  Cette classe permet de récuperer la localisation d'une adresse en utilisant les services Google Map ou Yahoo.
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_geocode.php
+  * Version : 1.0
+  * Statut : STABLE
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode.GMAP"
+parent_id: "Geocode"
+type: class property
+line_number: 26
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode.GMAP"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode.YAHOO"
+parent_id: "Geocode"
+type: class property
+line_number: 30
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode.YAHOO"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#CP"
+parent_id: "Geocode"
+type: instance property
+line_number: 34
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#CP"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#City"
+parent_id: "Geocode"
+type: instance property
+line_number: 38
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#City"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#CityFormated"
+parent_id: "Geocode"
+type: instance property
+line_number: 42
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#CityFormated"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#State"
+parent_id: "Geocode"
+type: instance property
+line_number: 46
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#State"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#County"
+parent_id: "Geocode"
+type: instance property
+line_number: 50
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#County"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#CountyCode"
+parent_id: "Geocode"
+type: instance property
+line_number: 54
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#CountyCode"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#Country"
+parent_id: "Geocode"
+type: instance property
+line_number: 58
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#Country"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#CountryCode"
+parent_id: "Geocode"
+type: instance property
+line_number: 62
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#CountryCode"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#Latitude"
+parent_id: "Geocode"
+type: instance property
+line_number: 66
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#Latitude"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode.Longitude"
+parent_id: "Geocode"
+type: class property
+line_number: 70
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode.Longitude"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode.Get"
+parent_id: "Geocode"
+type: class method
+line_number: 81
+description: |
+  Cette méthode permet de récupérer le géocode de la ville, adresse ou autre position.
+
+signatures:
+ -
+  signature: "Geocode.Get(addr, type)"
+  return_value: "Ville"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#getCity"
+parent_id: "Geocode"
+type: instance method
+line_number: 167
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#getCity()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#getCityFormated"
+parent_id: "Geocode"
+type: instance method
+line_number: 173
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#getCityFormated()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#getState"
+parent_id: "Geocode"
+type: instance method
+line_number: 179
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#getState()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#getCounty"
+parent_id: "Geocode"
+type: instance method
+line_number: 185
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#getCounty()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#getCP"
+parent_id: "Geocode"
+type: instance method
+line_number: 195
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#getCP()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#getCountry"
+parent_id: "Geocode"
+type: instance method
+line_number: 201
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#getCountry()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#getCountryCode"
+parent_id: "Geocode"
+type: instance method
+line_number: 207
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#getCountryCode()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#getLongitude"
+parent_id: "Geocode"
+type: instance method
+line_number: 213
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#getLongitude()"
+  return_value: "Float"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php
+
+---
+id: "Geocode#getLatitude"
+parent_id: "Geocode"
+type: instance method
+line_number: 219
+description: |
+
+
+signatures:
+ -
+  signature: "Geocode#getLatitude()"
+  return_value: "Float"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/geolocation/class_geocode.php

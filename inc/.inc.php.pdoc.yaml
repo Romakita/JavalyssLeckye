@@ -1,0 +1,55 @@
+---
+id: "Constants section"
+type: section
+line_number: 13
+description: |
+  Cette section décrit toutes les constantes du logiciel.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/inc.php
+
+---
+id: "Interfaces section"
+type: section
+line_number: 19
+description: |
+  Cette section décrit les interfaces pouvant être implémentées par les classes de PMO.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/inc.php
+
+---
+id: "Global"
+parent_id: "Constants section"
+type: namespace
+line_number: 24
+description: |
+  Espace de nommage global contenant la description de toutes les constantes du logiciel.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/inc.php
+
+---
+id: "Global.ABS_PATH"
+parent_id: "Global"
+type: class property
+line_number: 40
+description: |
+  Répertoire de référence du logiciel Javalyss.
+
+signatures:
+ -
+  signature: "Global.ABS_PATH"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/inc.php
+
+---
+id: "Global.URI_PATH"
+parent_id: "Global"
+type: class property
+line_number: 46
+description: |
+  URL du logiciel. Cette constante est vrai seulement lorsque c'est un fichier du logiciel qui inclut le fichier inc.php.
+
+signatures:
+ -
+  signature: "Global.URI_PATH"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/inc.php

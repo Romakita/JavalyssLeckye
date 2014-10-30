@@ -1,0 +1,196 @@
+---
+id: "VilleDeFrance.Department"
+parent_id: "VilleDeFrance"
+type: class
+included: ["ObjectTools"]
+line_number: 17
+description: |
+  Cette classe gère la completion des départements.
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Appication: Ville de France
+  * Fichier : class_department.php
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_department.php
+
+---
+id: "VilleDeFrance.Department.TABLE_NAME"
+parent_id: "VilleDeFrance.Department"
+type: class property
+line_number: 22
+description: |
+  Nom de la table gérée par la classe.
+
+signatures:
+ -
+  signature: "VilleDeFrance.Department.TABLE_NAME"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_department.php
+
+---
+id: "VilleDeFrance.Department.PRIMARY_KEY"
+parent_id: "VilleDeFrance.Department"
+type: class property
+line_number: 27
+description: |
+  Clef primaire de la table Departement.TABLE_NAME gérée par la classe.
+
+signatures:
+ -
+  signature: "VilleDeFrance.Department.PRIMARY_KEY"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_department.php
+
+---
+id: "VilleDeFrance.Department#Departement_ID"
+parent_id: "VilleDeFrance.Department"
+type: instance property
+line_number: 31
+description: |
+
+
+signatures:
+ -
+  signature: "VilleDeFrance.Department#Departement_ID"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_department.php
+
+---
+id: "VilleDeFrance.Department#Region_ID"
+parent_id: "VilleDeFrance.Department"
+type: instance property
+line_number: 35
+description: |
+
+
+signatures:
+ -
+  signature: "VilleDeFrance.Department#Region_ID"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_department.php
+
+---
+id: "VilleDeFrance.Department#Code"
+parent_id: "VilleDeFrance.Department"
+type: instance property
+line_number: 39
+description: |
+
+
+signatures:
+ -
+  signature: "VilleDeFrance.Department#Code"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_department.php
+
+---
+id: "VilleDeFrance.Department#Departement_UP"
+parent_id: "VilleDeFrance.Department"
+type: instance property
+line_number: 43
+description: |
+
+
+signatures:
+ -
+  signature: "VilleDeFrance.Department#Departement_UP"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_department.php
+
+---
+id: "VilleDeFrance.Department#Departement"
+parent_id: "VilleDeFrance.Department"
+type: instance property
+line_number: 47
+description: |
+
+
+signatures:
+ -
+  signature: "VilleDeFrance.Department#Departement"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_department.php
+
+---
+id: "new VilleDeFrance.Department"
+parent_id: "VilleDeFrance.Department"
+type: constructor
+line_number: 62
+description: |
+  Cette méthode créée une nouvelle instance de [[VilleDeFrance.Department]].
+
+signatures:
+ -
+  signature: "new VilleDeFrance.Department()"
+ -
+  signature: "new VilleDeFrance.Department(json)"
+ -
+  signature: "new VilleDeFrance.Department(array)"
+ -
+  signature: "new VilleDeFrance.Department(obj)"
+ -
+  signature: "new VilleDeFrance.Department(id)"
+arguments:
+ -
+  name: json
+  types: [String]
+  description: >
+    Chaine de caractères JSON équivalente à une instance [[VilleDeFrance.Department]].
+
+ -
+  name: array
+  types: [Array]
+  description: >
+    Tableau associatif équivalent à une instance [[VilleDeFrance.Department]].
+
+ -
+  name: obj
+  types: [Object]
+  description: >
+    Objet équivalent à une instance [[VilleDeFrance.Department]].
+
+ -
+  name: id
+  types: [int]
+  description: >
+    Numéro d'identifiant d'un département. Les informations de l'instance seront récupérées depuis la base de données.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_department.php
+
+---
+id: "VilleDeFrance.Department.Search"
+parent_id: "VilleDeFrance.Department"
+type: class method
+line_number: 87
+description: |
+  Cette méthode recherche une ville.
+
+signatures:
+ -
+  signature: "VilleDeFrance.Department.Search(word)"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_department.php
+
+---
+id: "VilleDeFrance.Department.GetCity"
+parent_id: "VilleDeFrance.Department"
+type: class method
+line_number: 108
+description: |
+  Cette méthode liste les villes du département.
+
+signatures:
+ -
+  signature: "VilleDeFrance.Department.GetCity(departement)"
+  return_value: "Array"
+arguments:
+ -
+  name: departement
+  types: [String]
+  description: >
+    Nom du département.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_department.php

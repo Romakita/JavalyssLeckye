@@ -1,0 +1,194 @@
+---
+id: "ObjectPrint"
+parent_id: "Library section"
+type: mixin
+included: ["ObjectSingleton"]
+line_number: 18
+description: |
+  Cet utilitaire ajoute les méthodes utile à l'impression.
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_object_print.php
+  * Version : 0.7
+  * Date : 20/07/2011
+  * Statut : BETA
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_print.php
+
+---
+id: "ObjectPrint.Link"
+parent_id: "ObjectPrint"
+type: class property
+line_number: 26
+description: |
+  Lien du fichier FPDF.
+
+signatures:
+ -
+  signature: "ObjectPrint.Link"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_print.php
+
+---
+id: "ObjectPrint.Link"
+parent_id: "ObjectPrint"
+type: class property
+line_number: 31
+description: |
+  Lien du fichier FPDF.
+
+signatures:
+ -
+  signature: "ObjectPrint.Link"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_print.php
+
+---
+id: "ObjectPrint.Link"
+parent_id: "ObjectPrint"
+type: class property
+line_number: 36
+description: |
+  Lien du fichier FPDF.
+
+signatures:
+ -
+  signature: "ObjectPrint.Link"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_print.php
+
+---
+id: "ObjectPrint.SetLink"
+parent_id: "ObjectPrint"
+type: class method
+line_number: 43
+description: |
+  Cette méthode permet d'assigner le chemin du PDF.
+
+signatures:
+ -
+  signature: "ObjectPrint.SetLink(link)"
+  return_value: "void"
+arguments:
+ -
+  name: link
+  types: [String]
+  description: >
+    Chemin du PDF.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_print.php
+
+---
+id: "ObjectPrint.GetLink"
+parent_id: "ObjectPrint"
+type: class method
+line_number: 51
+description: |
+  Cette méthode permet de récuperer le lien du PDF.
+
+signatures:
+ -
+  signature: "ObjectPrint.GetLink(link)"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_print.php
+
+---
+id: "ObjectPrint.SetOptions"
+parent_id: "ObjectPrint"
+type: class method
+line_number: 60
+description: |
+  Cette méthode permet d'assigner le chemin du PDF.
+
+signatures:
+ -
+  signature: "ObjectPrint.SetOptions(link)"
+  return_value: "void"
+arguments:
+ -
+  name: link
+  types: [String]
+  description: >
+    Chemin du PDF.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_print.php
+
+---
+id: "ObjectPrint.GetOptions"
+parent_id: "ObjectPrint"
+type: class method
+line_number: 68
+description: |
+  Cette méthode permet de récuperer le lien du PDF.
+
+signatures:
+ -
+  signature: "ObjectPrint.GetOptions(link)"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_print.php
+
+---
+id: "ObjectPrint.SetPDF"
+parent_id: "ObjectPrint"
+type: class method
+line_number: 77
+description: |
+  Cette méthode permet d'assigner une ressource PDF
+
+signatures:
+ -
+  signature: "ObjectPrint.SetPDF(link)"
+  return_value: "void"
+arguments:
+ -
+  name: link
+  types: [String]
+  description: >
+    Chemin du PDF.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_print.php
+
+---
+id: "ObjectPrint.GetPDF"
+parent_id: "ObjectPrint"
+type: class method
+line_number: 85
+description: |
+  Cette méthode permet de récuperer le lien du PDF.
+
+signatures:
+ -
+  signature: "ObjectPrint.GetPDF(link)"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_print.php
+
+---
+id: "ObjectPrint#printPDF"
+parent_id: "ObjectPrint"
+type: instance method
+line_number: 93
+description: |
+  `abstract` Cette méthode créée un PDF à partir des informations de l'instance.
+
+signatures:
+ -
+  signature: "ObjectPrint#printPDF([mode = default])"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_print.php
+
+---
+id: "ObjectPrint.PrintList"
+parent_id: "ObjectPrint"
+type: class method
+line_number: 99
+description: |
+  `abstract` Cette méthode créée un PDF du listing.
+
+signatures:
+ -
+  signature: "ObjectPrint.PrintList([clauses = null [, options = null]])"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/object/class_object_print.php

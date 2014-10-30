@@ -1,0 +1,168 @@
+---
+id: "VilleDeFrance.County"
+parent_id: "VilleDeFrance"
+type: class
+included: ["ObjectTools"]
+line_number: 17
+description: |
+  Cette classe gère la completion des régions
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Appication: Ville de France
+  * Fichier : class_county.php
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_county.php
+
+---
+id: "VilleDeFrance.County.TABLE_NAME"
+parent_id: "VilleDeFrance.County"
+type: class property
+line_number: 22
+description: |
+  Nom de la table gérée par la classe.
+
+signatures:
+ -
+  signature: "VilleDeFrance.County.TABLE_NAME"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_county.php
+
+---
+id: "VilleDeFrance.County.PRIMARY_KEY"
+parent_id: "VilleDeFrance.County"
+type: class property
+line_number: 27
+description: |
+  Clef primaire de la table VilleDeFrance.County.TABLE_NAME gérée par la classe.
+
+signatures:
+ -
+  signature: "VilleDeFrance.County.PRIMARY_KEY"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_county.php
+
+---
+id: "VilleDeFrance.County#Region_ID"
+parent_id: "VilleDeFrance.County"
+type: instance property
+line_number: 31
+description: |
+
+
+signatures:
+ -
+  signature: "VilleDeFrance.County#Region_ID"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_county.php
+
+---
+id: "VilleDeFrance.County#Region_UP"
+parent_id: "VilleDeFrance.County"
+type: instance property
+line_number: 35
+description: |
+
+
+signatures:
+ -
+  signature: "VilleDeFrance.County#Region_UP"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_county.php
+
+---
+id: "VilleDeFrance.County#Region_UP"
+parent_id: "VilleDeFrance.County"
+type: instance property
+line_number: 39
+description: |
+
+
+signatures:
+ -
+  signature: "VilleDeFrance.County#Region_UP"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_county.php
+
+---
+id: "new VilleDeFrance.County"
+parent_id: "VilleDeFrance.County"
+type: constructor
+line_number: 54
+description: |
+  Cette méthode créée une nouvelle instance de [[VilleDeFrance.County]].
+
+signatures:
+ -
+  signature: "new VilleDeFrance.County()"
+ -
+  signature: "new VilleDeFrance.County(json)"
+ -
+  signature: "new VilleDeFrance.County(array)"
+ -
+  signature: "new VilleDeFrance.County(obj)"
+ -
+  signature: "new VilleDeFrance.County(id)"
+arguments:
+ -
+  name: json
+  types: [String]
+  description: >
+    Chaine de caractères JSON équivalente à une instance [[VilleDeFrance.County]].
+
+ -
+  name: array
+  types: [Array]
+  description: >
+    Tableau associatif équivalent à une instance [[VilleDeFrance.County]].
+
+ -
+  name: obj
+  types: [Object]
+  description: >
+    Objet équivalent à une instance [[VilleDeFrance.County]].
+
+ -
+  name: id
+  types: [int]
+  description: >
+    Numéro d'identifiant d'une région. Les informations de l'instance seront récupérées depuis la base de données.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_county.php
+
+---
+id: "VilleDeFrance.County.Search"
+parent_id: "VilleDeFrance.County"
+type: class method
+line_number: 79
+description: |
+  Cette méthode recherche une région.
+
+signatures:
+ -
+  signature: "VilleDeFrance.County.Search(word)"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_county.php
+
+---
+id: "VilleDeFrance.County.GetCity"
+parent_id: "VilleDeFrance.County"
+type: class method
+line_number: 97
+description: |
+  Cette méthode liste les villes de la région.
+
+signatures:
+ -
+  signature: "VilleDeFrance.County.GetCity(departement)"
+  return_value: "Array"
+arguments:
+ -
+  name: departement
+  types: [String]
+  description: >
+    Nom du département.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/villefrance/inc/class_county.php

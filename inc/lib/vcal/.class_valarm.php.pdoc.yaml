@@ -1,0 +1,127 @@
+---
+id: "vAlarm"
+parent_id: "Library section"
+type: class
+line_number: 16
+description: |
+  Cette classe gère la création d'objet vAlarm. Les vAlarm sont des alarmes que l'on peut ajouter à une instance [[vCalendar]].
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_vcalendar.php
+  * Statut : BETA
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_valarm.php
+
+---
+id: "vAlarm.TAG"
+parent_id: "vAlarm"
+type: class property
+line_number: 22
+description: |
+  Balise d'ouverture de la vAlarm.
+
+signatures:
+ -
+  signature: "vAlarm.TAG"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_valarm.php
+
+---
+id: "vAlarm#Action"
+parent_id: "vAlarm"
+type: instance property
+line_number: 26
+description: |
+
+
+signatures:
+ -
+  signature: "vAlarm#Action"
+  return_value: "AUDIO"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_valarm.php
+
+---
+id: "vAlarm#Trigger"
+parent_id: "vAlarm"
+type: instance property
+line_number: 30
+description: |
+
+
+signatures:
+ -
+  signature: "vAlarm#Trigger"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_valarm.php
+
+---
+id: "vAlarm#Attach"
+parent_id: "vAlarm"
+type: instance property
+line_number: 34
+description: |
+
+
+signatures:
+ -
+  signature: "vAlarm#Attach"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_valarm.php
+
+---
+id: "vAlarm#Repeat"
+parent_id: "vAlarm"
+type: instance property
+line_number: 38
+description: |
+
+
+signatures:
+ -
+  signature: "vAlarm#Repeat"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_valarm.php
+
+---
+id: "vAlarm#Duration"
+parent_id: "vAlarm"
+type: instance property
+line_number: 42
+description: |
+
+
+signatures:
+ -
+  signature: "vAlarm#Duration"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_valarm.php
+
+---
+id: "new vAlarm"
+parent_id: "vAlarm"
+type: constructor
+line_number: 48
+description: |
+  Cette méthode créée une nouvelle instance [[vAlarm]].
+
+signatures:
+ -
+  signature: "new vAlarm()"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_valarm.php
+
+---
+id: "vAlarm#toString"
+parent_id: "vAlarm"
+type: instance method
+line_number: 52
+description: |
+
+
+signatures:
+ -
+  signature: "vAlarm#toString()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_valarm.php

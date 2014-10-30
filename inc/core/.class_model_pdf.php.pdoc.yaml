@@ -1,0 +1,522 @@
+---
+id: "ModelPDF"
+parent_id: "Core section"
+type: class
+included: ["Models"]
+line_number: 15
+description: |
+  Cette classe gère les modèles FPDF utilisés par les différentes versions de PMO.
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_modele_pdf.php
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "ModelPDF.Header"
+parent_id: "ModelPDF"
+type: class property
+line_number: 23
+description: |
+  Liste des attributs devant être présent dans l'entête de description d'un modèle.
+
+signatures:
+ -
+  signature: "ModelPDF.Header"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "ModelPDF.resizeTo"
+parent_id: "ModelPDF"
+type: class method
+line_number: 91
+description: |
+  Cette méthode donne les nouvelles dimensions d'une image pour FPDF.
+
+signatures:
+ -
+  signature: "ModelPDF.resizeTo(height, width, widthMax, heightMax)"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfModel"
+parent_id: "Core section"
+type: class
+superclass_id: "FPDF"
+line_number: 142
+description: |
+  Cette classe permet de créer une modèle générique FPDF avec entête et pied de page.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfModel.HeaderType"
+parent_id: "pdfModel"
+type: class property
+line_number: 149
+description: |
+  Type d'entête à utiliser.
+
+signatures:
+ -
+  signature: "pdfModel.HeaderType"
+  return_value: "Number | String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfModel#Header"
+parent_id: "pdfModel"
+type: instance method
+line_number: 160
+description: |
+
+
+signatures:
+ -
+  signature: "pdfModel#Header()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfModel.Footer"
+parent_id: "pdfModel"
+type: class method
+line_number: 276
+description: |
+  Cette méthode affiche le pied de page du PDF.
+
+signatures:
+ -
+  signature: "pdfModel.Footer()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfModel#NbLines"
+parent_id: "pdfModel"
+type: instance method
+line_number: 290
+description: |
+  Cette méthode affiche le pied de page du PDF.
+
+signatures:
+ -
+  signature: "pdfModel#NbLines()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfModel#addSection"
+parent_id: "pdfModel"
+type: instance method
+line_number: 348
+description: |
+  Cette méthode ajoute créé nouveau block de page et réinitialise le compte des pages.
+
+signatures:
+ -
+  signature: "pdfModel#addSection()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfHTML"
+parent_id: "Core section"
+type: class
+superclass_id: "pdfModel"
+line_number: 406
+description: |
+  Cette classe permet de convertir un document HTML simple en fichier PDF.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfCssStyle"
+parent_id: "Core section"
+type: class
+line_number: 659
+description: |
+  Cette classe founrnit un parseur CSS simple pour la création de modèle [[FDPF]].
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfCssStyle#Background"
+parent_id: "pdfCssStyle"
+type: instance property
+line_number: 663
+description: |
+
+
+signatures:
+ -
+  signature: "pdfCssStyle#Background"
+  return_value: "Color"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfCssStyle#Color"
+parent_id: "pdfCssStyle"
+type: instance property
+line_number: 667
+description: |
+
+
+signatures:
+ -
+  signature: "pdfCssStyle#Color"
+  return_value: "Color"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfCssStyle#Fill"
+parent_id: "pdfCssStyle"
+type: instance property
+line_number: 671
+description: |
+
+
+signatures:
+ -
+  signature: "pdfCssStyle#Fill"
+  return_value: "Color"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfCssStyle#BorderColor"
+parent_id: "pdfCssStyle"
+type: instance property
+line_number: 675
+description: |
+
+
+signatures:
+ -
+  signature: "pdfCssStyle#BorderColor"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfCssStyle#BorderStyle"
+parent_id: "pdfCssStyle"
+type: instance property
+line_number: 679
+description: |
+
+
+signatures:
+ -
+  signature: "pdfCssStyle#BorderStyle"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfCssStyle#FontSize"
+parent_id: "pdfCssStyle"
+type: instance property
+line_number: 683
+description: |
+
+
+signatures:
+ -
+  signature: "pdfCssStyle#FontSize"
+  return_value: "Number"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfCssStyle#FontFamily"
+parent_id: "pdfCssStyle"
+type: instance property
+line_number: 687
+description: |
+
+
+signatures:
+ -
+  signature: "pdfCssStyle#FontFamily"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfCssStyle#FontWeight"
+parent_id: "pdfCssStyle"
+type: instance property
+line_number: 691
+description: |
+
+
+signatures:
+ -
+  signature: "pdfCssStyle#FontWeight"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfCssStyle#TextAlign"
+parent_id: "pdfCssStyle"
+type: instance property
+line_number: 695
+description: |
+
+
+signatures:
+ -
+  signature: "pdfCssStyle#TextAlign"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfCssStyle#Width"
+parent_id: "pdfCssStyle"
+type: instance property
+line_number: 699
+description: |
+
+
+signatures:
+ -
+  signature: "pdfCssStyle#Width"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfCssStyle#Height"
+parent_id: "pdfCssStyle"
+type: instance property
+line_number: 703
+description: |
+
+
+signatures:
+ -
+  signature: "pdfCssStyle#Height"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfCssStyle#MinHeight"
+parent_id: "pdfCssStyle"
+type: instance property
+line_number: 707
+description: |
+
+
+signatures:
+ -
+  signature: "pdfCssStyle#MinHeight"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfCssStyle#Overflow"
+parent_id: "pdfCssStyle"
+type: instance property
+line_number: 711
+description: |
+
+
+signatures:
+ -
+  signature: "pdfCssStyle#Overflow"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "new pdfCssStyle"
+parent_id: "pdfCssStyle"
+type: constructor
+line_number: 715
+description: |
+
+
+signatures:
+ -
+  signature: "new pdfCssStyle()"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfCssStyle.setStyle"
+parent_id: "pdfCssStyle"
+type: class method
+line_number: 727
+description: |
+
+
+signatures:
+ -
+  signature: "pdfCssStyle.setStyle(style)"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfSimpleTable"
+parent_id: "Core section"
+type: class
+superclass_id: "pdfHTML"
+line_number: 850
+description: |
+  Cette classe permet de créer des documents PDF avec un tableau de données paramètrable.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "new pdfSimpleTable"
+parent_id: "pdfSimpleTable"
+type: constructor
+line_number: 884
+description: |
+
+
+signatures:
+ -
+  signature: "new pdfSimpleTable()"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfSimpleTable#AddHeader"
+parent_id: "pdfSimpleTable"
+type: instance method
+line_number: 900
+description: |
+  Cette méthode permet de configuer l'entête du tableau de données.
+
+signatures:
+ -
+  signature: "pdfSimpleTable#AddHeader(header)"
+  return_value: "void"
+arguments:
+ -
+  name: header
+  types: [Array]
+  description: >
+    Tableau de configuration d'une entête de tableau PDF.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfSimpleTable#Observe"
+parent_id: "pdfSimpleTable"
+type: instance method
+line_number: 957
+description: |
+  - event (String): Nom de l'événement à observer.
+  - callback (Array|String): Fonction à appeler.
+  
+  Cette méthode permet d'observer un événement.
+
+signatures:
+ -
+  signature: "pdfSimpleTable#Observe(event, callback)"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfSimpleTable#FireEvent"
+parent_id: "pdfSimpleTable"
+type: instance method
+line_number: 967
+description: |
+  Cette méthode déclenche un évenement `event`.
+
+signatures:
+ -
+  signature: "pdfSimpleTable#FireEvent(event [, args])"
+  return_value: "void"
+arguments:
+ -
+  name: event
+  types: [String]
+  description: >
+    Nom de l'événement à déclencher
+
+ -
+  name: args
+  types: [Array]
+  description: >
+    Liste des arguments à passer aux fonctions écoutant l'événement.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfSimpleTable#AddFilters"
+parent_id: "pdfSimpleTable"
+type: instance method
+line_number: 978
+description: |
+  - key (String|callback): Nom ou liste de nom des colonnes à filtrer.
+  
+  Cette méthode permet d'appliquer un filtre de mise en forme sur une colonne du tableau.
+
+signatures:
+ -
+  signature: "pdfSimpleTable#AddFilters(key, callback)"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfSimpleTable#Fire"
+parent_id: "pdfSimpleTable"
+type: instance method
+line_number: 996
+description: |
+  Cette méthode déclenche un évenement `event`.
+
+signatures:
+ -
+  signature: "pdfSimpleTable#Fire(event [, args])"
+  return_value: "void"
+arguments:
+ -
+  name: event
+  types: [String]
+  description: >
+    Nom de l'événement à déclencher
+
+ -
+  name: args
+  types: [Array]
+  description: >
+    Liste des arguments à passer aux fonctions écoutant l'événement.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfSimpleTable#AddRows"
+parent_id: "pdfSimpleTable"
+type: instance method
+line_number: 1007
+description: |
+  Cette méthode permet d'ajouter un tableau de données au tableau PDF.
+
+signatures:
+ -
+  signature: "pdfSimpleTable#AddRows(array)"
+  return_value: "void"
+arguments:
+ -
+  name: array
+  types: [Array]
+  description: >
+    Tableau de données à ajouter.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php
+
+---
+id: "pdfSimpleTable#AddRow"
+parent_id: "pdfSimpleTable"
+type: instance method
+line_number: 1099
+description: |
+  Cette méthode permet d'ajouter une ligne au tableau.
+
+signatures:
+ -
+  signature: "pdfSimpleTable#AddRow(data)"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/core/class_model_pdf.php

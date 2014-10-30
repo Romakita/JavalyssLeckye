@@ -1,0 +1,1189 @@
+---
+id: "Stream"
+parent_id: "Library section"
+type: mixin
+line_number: 16
+description: |
+  `abstract` Cette classe gère les flux tel que la lecture et écriture de fichier, la récupération de contenu via Curl ou la gestion d'archive Zip.
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_stream.php
+  * Version : 1.8
+  * Statut : STABLE
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.VERSION"
+parent_id: "Stream"
+type: class property
+line_number: 25
+description: |
+  Numéro de version de la bibliothèque.
+
+signatures:
+ -
+  signature: "Stream.VERSION"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.CARRIAGE"
+parent_id: "Stream"
+type: class property
+line_number: 30
+description: |
+  Constante de retour chariot.
+
+signatures:
+ -
+  signature: "Stream.CARRIAGE"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.MEMORY_MAX_LIMIT"
+parent_id: "Stream"
+type: class property
+line_number: 35
+description: |
+  Taille de la mémoire cache maximal.
+
+signatures:
+ -
+  signature: "Stream.MEMORY_MAX_LIMIT"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Accept"
+parent_id: "Stream"
+type: class method
+line_number: 44
+description: |
+  Cette méthode ananlyse l'extension du fichier importé en fonction de la liste `extension` passé.
+  Elle retourne vrai si l'extension est authorisé, faux dans le cas contraire.
+
+signatures:
+ -
+  signature: "Stream.Accept(FILES, extension)"
+  return_value: "bool"
+arguments:
+ -
+  name: FILES
+  types: [FILES]
+  description: >
+    Ressource du fichier envoyé par un formulaire HTML par $_FILES
+
+ -
+  name: extension
+  types: [String]
+  description: >
+    liste des extensions autorisés, séparé par des `;` .
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.CleanNullByte"
+parent_id: "Stream"
+type: class method
+line_number: 66
+description: |
+  Cette méthode supprime le NULLBYTE d'une chaine de caractère.
+
+signatures:
+ -
+  signature: "Stream.CleanNullByte(str [, replace = true])"
+  return_value: "String"
+ -
+  signature: "Stream.CleanNullByte(array [, replace = true])"
+  return_value: "Array"
+ -
+  signature: "Stream.CleanNullByte(Object [, replace = true])"
+  return_value: "Object"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Append"
+parent_id: "Stream"
+type: class method
+line_number: 94
+description: |
+  Cette méthode ajoute le contenu `content` à la suite du contenu du fichier `file`.
+  
+  <p class="note">[[Stream]] gère l'ouverture et la fermeture des flux</p>
+
+signatures:
+ -
+  signature: "Stream.Append(file, content)"
+  return_value: "bool"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier.
+
+ -
+  name: content
+  types: [String]
+  description: >
+    Contenu à ajouter.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Post"
+parent_id: "Stream"
+type: class method
+line_number: 117
+description: |
+  Cette méthode envoi les informations `params` à la page indiqué par l'`url` en méthode `POST` et retourne le résultat.
+
+signatures:
+ -
+  signature: "Stream.Post(url [, params = null])"
+  return_value: "bool"
+arguments:
+ -
+  name: url
+  types: [String]
+  description: >
+    Lien de la page.
+
+ -
+  name: params
+  types: [String, array]
+  description: >
+    Paramètre à envoyer en Post.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Get"
+parent_id: "Stream"
+type: class method
+line_number: 162
+description: |
+  Cette méthode envoi les informations `params` à la page indiqué par l'`url` en méthode `POST` et retourne le résultat.
+
+signatures:
+ -
+  signature: "Stream.Get(url)"
+  return_value: "bool"
+arguments:
+ -
+  name: url
+  types: [String]
+  description: >
+    Lien de la page.
+
+ -
+  name: params
+  types: [String, array]
+  description: >
+    Paramètre à envoyer en Post.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Download"
+parent_id: "Stream"
+type: class method
+line_number: 185
+description: |
+  Cette méthode télécharge un fichier depuis un serveur distant vers le serveur local dans le dossier de destination `folder`.
+
+signatures:
+ -
+  signature: "Stream.Download(url, param [, folder = null])"
+  return_value: "bool"
+ -
+  signature: "Stream.Download(url, param, folder)"
+  return_value: "bool"
+arguments:
+ -
+  name: url
+  types: [String]
+  description: >
+    Lien du contenu à récupérer
+
+ -
+  name: folder
+  types: [String]
+  description: >
+    Dossier de destination.
+
+ -
+  name: params
+  types: [String, array]
+  description: >
+    Paramètre à envoyer en Post.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Feed"
+parent_id: "Stream"
+type: class method
+line_number: 238
+description: |
+  Cette méthode récupère le flux RSS à l'`url` indiqué et le retourne sous forme de tableau.
+
+signatures:
+ -
+  signature: "Stream.Feed(url [, params])"
+  return_value: "array"
+arguments:
+ -
+  name: url
+  types: [String]
+  description: >
+    Lien du flux.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Quota"
+parent_id: "Stream"
+type: class method
+line_number: 269
+description: |
+  Cette méthode retourne la taille du dossier `folder`.
+
+signatures:
+ -
+  signature: "Stream.Quota(folder)"
+  return_value: "int"
+arguments:
+ -
+  name: folder
+  types: [String]
+  description: >
+    Lien du dossier.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Updoad"
+parent_id: "Stream"
+type: class method
+line_number: 300
+description: |
+  Cette méthode charge le fichier envoyé par le client dans le dossier de destination `dest`, vérifie si l'extension du fichier
+  correspond aux extensions `ext` autorisés et retourne le lien du fichier.
+
+signatures:
+ -
+  signature: "Stream.Updoad(FILES, dest, extension)"
+  return_value: "String"
+arguments:
+ -
+  name: FILES
+  types: [FILES]
+  description: >
+    Ressource du fichier chargé par un formulaire HTML.
+
+ -
+  name: dest
+  types: [String]
+  description: >
+    Lien du dossier de destination.
+
+ -
+  name: extension
+  types: [String]
+  description: >
+    liste des extensions autorisés, séparé par des `;` .
+
+ -
+  name: exclude
+  types: [String]
+  description: >
+    liste des extensions non autorisés, séparé par des `;` .
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.MkDir"
+parent_id: "Stream"
+type: class method
+line_number: 331
+description: |
+  Cette méthode crée un nouveau dossier si ce dernier n'existe pas.
+
+signatures:
+ -
+  signature: "Stream.MkDir(folder, chmod)"
+  return_value: "bool"
+arguments:
+ -
+  name: folder
+  types: [String]
+  description: >
+    Lien du nouveau dossier.
+
+ -
+  name: chmod
+  types: [int]
+  description: >
+    Droits d'accès du nouveau dossier de la forme 0755.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Depackage"
+parent_id: "Stream"
+type: class method
+line_number: 344
+description: |
+  Cette méthode dézippe l'archive dans le dossier destination `folder`.
+
+signatures:
+ -
+  signature: "Stream.Depackage(file, folder)"
+  return_value: "bool"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien de l'archive.
+
+ -
+  name: folder
+  types: [String]
+  description: >
+    Dossier de destination.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Delete"
+parent_id: "Stream"
+type: class method
+line_number: 363
+description: |
+  Cette méthode supprime le fichier ou le dossier et son contenu du serveur.
+
+signatures:
+ -
+  signature: "Stream.Delete(file)"
+  return_value: "bool"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier ou dossier.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Clean"
+parent_id: "Stream"
+type: class method
+line_number: 400
+description: |
+  Cette méthode supprime les dossiers et fichier correspondant à la description du `pattern`.
+
+signatures:
+ -
+  signature: "Stream.Clean(dir, pattern)"
+  return_value: "bool"
+arguments:
+ -
+  name: dir
+  types: [String]
+  description: >
+    Dossier de référence.
+
+ -
+  name: pattern
+  types: [String]
+  description: >
+    Motif de nom de fichier ou dossier à supprimer.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Extension"
+parent_id: "Stream"
+type: class method
+line_number: 435
+description: |
+  Cette méthode retourne l'extension du fichier.
+
+signatures:
+ -
+  signature: "Stream.Extension(file)"
+  return_value: "bool"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.FileName"
+parent_id: "Stream"
+type: class method
+line_number: 445
+description: |
+  Cette méthode retourne le nom du fichier en fonction de son lien.
+
+signatures:
+ -
+  signature: "Stream.FileName(file)"
+  return_value: "bool"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Listing"
+parent_id: "Stream"
+type: class method
+line_number: 457
+description: |
+  Cette méthode créée la liste des noms de fichiers du dossier `folder` et la retourne.
+
+signatures:
+ -
+  signature: "Stream.Listing(folder [, pattern [, exclude [, extension]]])"
+  return_value: "array"
+arguments:
+ -
+  name: folder
+  types: [String]
+  description: >
+    Lien du dossier.
+
+ -
+  name: pattern
+  types: [String]
+  description: >
+    Expression regulière afin de filtrer la liste retourné.
+
+ -
+  name: exclude
+  types: [array]
+  description: >
+    Liste de fichier à exclure de liste.
+
+ -
+  name: extension
+  types: [array]
+  description: >
+    liste des extentions devant être listé.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.FileList"
+parent_id: "Stream"
+type: class method
+line_number: 497
+description: |
+  Cette méthode créée la liste des fichiers de type [[File]] du dossier `folder` et la retourne.
+
+signatures:
+ -
+  signature: "Stream.FileList(folder [, pattern [, exclude [, extension]]])"
+  return_value: "array"
+arguments:
+ -
+  name: folder
+  types: [String]
+  description: >
+    Lien du dossier.
+
+ -
+  name: pattern
+  types: [String]
+  description: >
+    Expression regulière afin de filtrer la liste retourné.
+
+ -
+  name: exclude
+  types: [array]
+  description: >
+    Liste de fichier à exclure de liste.
+
+ -
+  name: extension
+  types: [array]
+  description: >
+    liste des extentions devant être listé.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Package"
+parent_id: "Stream"
+type: class method
+line_number: 536
+description: |
+  Cette méthode créée une archive du dossier ou fichier `src` et le stock au lien indiqué par `dest`.
+
+signatures:
+ -
+  signature: "Stream.Package(src, dest)"
+  return_value: "bool"
+arguments:
+ -
+  name: src
+  types: [String]
+  description: >
+    Lien du dossier ou du fichier à archiver.
+
+ -
+  name: dest
+  types: [String]
+  description: >
+    Lien du fichier une fois archivé.
+
+ -
+  name: exclude
+  types: [Array]
+  description: >
+    Liste des noms de fichier à exclure.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.ParseCSV"
+parent_id: "Stream"
+type: class method
+line_number: 617
+description: |
+  Cette méthode analyse le fichier CSV `file` est retourne un tableau de données équivalent.
+
+signatures:
+ -
+  signature: "Stream.ParseCSV(file)"
+  return_value: "Array"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier CSV.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.ParseSQL"
+parent_id: "Stream"
+type: class method
+line_number: 642
+description: |
+  Cette méthode analyse le fichier SQL `file` et insère les données en base de données.
+  
+  <p class="note">Cette méthode utilise la bibliothèque SqlManager pour analyser le fichier SQL. Si la bibliothèque est absente la méthode retourne false</p>
+
+signatures:
+ -
+  signature: "Stream.ParseSQL(file)"
+  return_value: "bool"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier SQL.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.ParseXLS"
+parent_id: "Stream"
+type: class method
+line_number: 657
+description: |
+  Cette méthode analyse le fichier XLS `file` est retourne un tableau de données équivalent.
+  
+  <p class="note">Cette méthode utilise la bibliothèque spreadsheet.</p>
+
+signatures:
+ -
+  signature: "Stream.ParseXLS(file)"
+  return_value: "array"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier CSV.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.ParseXML"
+parent_id: "Stream"
+type: class method
+line_number: 696
+description: |
+  Cette méthode analyse le fichier XML `file` est retourne un tableau de données équivalent.
+
+signatures:
+ -
+  signature: "Stream.ParseXML(file)"
+  return_value: "array"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier XML.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.GetData"
+parent_id: "Stream"
+type: class method
+line_number: 715
+description: |
+  Cette méthode récupère les données d'un fichier de données et retourne un tableau de données.
+  
+  Les formats pris en charge sont `csv`, `csv Microsoft`, `xml`, `xls`, `xlsx` et `vcf`.
+
+signatures:
+ -
+  signature: "Stream.GetData(file)"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Read"
+parent_id: "Stream"
+type: class method
+line_number: 747
+description: |
+  Cette méthode lit le contenu du fichier `file`.
+  
+  <p class="note">[[Stream]] gère l'ouverture et la fermeture des flux</p>
+
+signatures:
+ -
+  signature: "Stream.Read(file)"
+  return_value: "bool"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.ReadToArray"
+parent_id: "Stream"
+type: class method
+line_number: 778
+description: |
+  Cette méthode lit le contenu du fichier `file`.
+  
+  <p class="note">[[Stream]] gère l'ouverture et la fermeture des flux</p>
+  
+  
+  #### Le paramètre useIncludePath
+  
+  * `FILE_USE_INCLUDE_PATH` : Recherche le fichier dans l'include_path.
+  * `FILE_IGNORE_NEW_LINES` : N'ajoute pas de nouvelle ligne à la fin de chaque élément du tableau.
+  * `FILE_SKIP_EMPTY_LINES` : Ignore les lignes vides.
+
+signatures:
+ -
+  signature: "Stream.ReadToArray(file [, useIncludePath [, ressource]])"
+  return_value: "bool"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier.
+
+ -
+  name: useIncludePath
+  types: [String]
+  description: >
+    Flag.
+
+ -
+  name: ressource
+  types: [RESSOURCE]
+  description: >
+    Une ressource de contexte valide, créée avec la fonction stream_context_create()
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Resize"
+parent_id: "Stream"
+type: class method
+line_number: 790
+description: |
+  Cette méthode redimensionne une image en gardant les proportions. Elle retourne faux si tout se passe bien.
+
+signatures:
+ -
+  signature: "Stream.Resize(file [, width = 1024 [, height = 800 [, quality = 100]]])"
+  return_value: "False | String"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier.
+
+ -
+  name: width
+  types: [Number]
+  description: >
+    Largeur maximale de l'image.
+
+ -
+  name: height
+  types: [Number]
+  description: >
+    Hauteur maximale de l'image.
+
+ -
+  name: quality
+  types: [Number]
+  description: >
+    Qualité du fichier JPEG.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.PngToJpg"
+parent_id: "Stream"
+type: class method
+line_number: 855
+description: |
+  Cette méthode convertie un fichier PNG en fichier JPG.
+
+signatures:
+ -
+  signature: "Stream.PngToJpg(file [, quality])"
+  return_value: "Boolean"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Sanitize"
+parent_id: "Stream"
+type: class method
+line_number: 944
+description: |
+  Cette méthode replace les accents par leurs équivalents sans accents et les caractère interdit par un _ .
+
+signatures:
+ -
+  signature: "Stream.Sanitize(name)"
+  return_value: "String"
+arguments:
+ -
+  name: name
+  types: [String]
+  description: >
+    Nom à nettoyer
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Tree"
+parent_id: "Stream"
+type: class method
+line_number: 966
+description: |
+  Cette méthode crée une arborescence des dossiers `folder`.
+  
+  <p class="note">Attention cette méthode peut être longue sur de grosse arborescence.</p>
+  <p class="note">Si l'arborescence est trop grande spécifier le paramètre `all` à faux pour ne lister les dossiers directement relié au dossier `folder`.</p>
+
+signatures:
+ -
+  signature: "Stream.Tree(folder [, all])"
+  return_value: "array"
+arguments:
+ -
+  name: folder
+  types: [String]
+  description: >
+    Lien du dossier
+
+ -
+  name: all
+  types: [bool]
+  description: >
+    si vrai tout les enfants du dossier seront listé.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Rename"
+parent_id: "Stream"
+type: class method
+line_number: 1095
+description: |
+  Cette méthode de renommer le dossier ou fichier `oldname` en `newname`.
+
+signatures:
+ -
+  signature: "Stream.Rename(oldname, newname)"
+  return_value: "bool"
+arguments:
+ -
+  name: oldname
+  types: [String]
+  description: >
+    Nom du dossier ou fichier.
+
+ -
+  name: newname
+  types: [String]
+  description: >
+    Nouveau nom du dossier ou fichier.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.StripTags"
+parent_id: "Stream"
+type: class method
+line_number: 1129
+description: |
+  Cette méthode supprime les balises HTML et
+
+signatures:
+ -
+  signature: "Stream.StripTags(str)"
+  return_value: "String"
+arguments:
+ -
+  name: str
+  types: [String]
+  description: >
+    Chaine de caratère à convertir.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Copy"
+parent_id: "Stream"
+type: class method
+line_number: 1160
+description: |
+  Cette méthode tente de copier un fichier vers `dest`.
+
+signatures:
+ -
+  signature: "Stream.Copy(src, dest [, pattern])"
+  return_value: "bool"
+arguments:
+ -
+  name: src
+  types: [String]
+  description: >
+    Lien du fichier.
+
+ -
+  name: dest
+  types: [String]
+  description: >
+    Lien du fichier de destination.
+
+ -
+  name: pattern
+  types: [String]
+  description: >
+    Expression régulière indiquant quels sont les fichiers à ne pas copier.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Move"
+parent_id: "Stream"
+type: class method
+line_number: 1201
+description: |
+  Cette méthode tente de déplacer un fichier ou dossier vers `dest`.
+
+signatures:
+ -
+  signature: "Stream.Move(src, dest [, pattern])"
+  return_value: "bool"
+arguments:
+ -
+  name: src
+  types: [String]
+  description: >
+    Lien du fichier.
+
+ -
+  name: dest
+  types: [String]
+  description: >
+    Lien du fichier de destination.
+
+ -
+  name: pattern
+  types: [String]
+  description: >
+    Expression régulière indiquant quels sont les fichiers à ne pas déplacer.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.Write"
+parent_id: "Stream"
+type: class method
+line_number: 1243
+description: |
+  Cette méthode écrit le contenu `content` dans le fichier `file`.
+  
+  <p class="note">[[Stream]] gère l'ouverture et la fermeture des flux</p>
+
+signatures:
+ -
+  signature: "Stream.Write(file, content)"
+  return_value: "bool"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier.
+
+ -
+  name: content
+  types: [String]
+  description: >
+    Contenu à écrire dans le fichier.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.WriteCSV"
+parent_id: "Stream"
+type: class method
+line_number: 1275
+description: |
+  Cette méthode écrit le contenu `array` dans le fichier `file` au format CSV.
+  
+  <p class="note">[[Stream]] gère l'ouverture et la fermeture des flux</p>
+
+signatures:
+ -
+  signature: "Stream.WriteCSV(file, array [, header [, parse [, enclosure]]])"
+  return_value: "bool"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier.
+
+ -
+  name: array
+  types: [array]
+  description: >
+    Tableau de données.
+
+ -
+  name: header
+  types: [array]
+  description: >
+    Liste des colonnes à enregistrer dans le fichier.
+
+ -
+  name: parse
+  types: [char]
+  description: >
+    Caractère de séparation.
+
+ -
+  name: enclosure
+  types: [char]
+  description: >
+    Caractère d'enclosure des chaines de caractères.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "Stream.WriteXML"
+parent_id: "Stream"
+type: class method
+line_number: 1375
+description: |
+  Cette méthode écrit le contenu `xmlNode` dans le fichier `file` au format XML.
+  
+  <p class="note">[[Stream]] gère l'ouverture et la fermeture des flux</p>
+
+signatures:
+ -
+  signature: "Stream.WriteXML(file, xmlNode [, header])"
+  return_value: "bool"
+arguments:
+ -
+  name: file
+  types: [String]
+  description: >
+    Lien du fichier.
+
+ -
+  name: xmlNode
+  types: [XmlNode]
+  description: >
+    Noeud principal du conteneur XML.
+
+ -
+  name: header
+  types: [array]
+  description: >
+    personnalisation de l'entete de description du fichier XML.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "StreamList"
+parent_id: "Library section"
+type: class
+included: ["Stream"]
+line_number: 1391
+description: |
+  Cette classe permet de parcourir un dossier avec les méthodes tels que [[StreamList.next]] ou [[StreamList.prev]].
+  Autrement dit, il s'agit d'un outil de parcours de tableau spécialisé pour les dossiers.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "new StreamList"
+parent_id: "StreamList"
+type: constructor
+line_number: 1403
+description: |
+  Cette méthode créée une nouvelle instance de [[StreamList]] et liste l'ensemble des fichiers du dossier.
+  Ensuite utilisez les méthodes [[StreamList.next]] ou [[StreamList.prev]]
+
+signatures:
+ -
+  signature: "new StreamList(path [, pattern = null [, exclude = array [, extension = array]]])"
+arguments:
+ -
+  name: path
+  types: [String]
+  description: >
+    Lien du dossier.
+
+ -
+  name: pattern
+  types: [String]
+  description: >
+    Expression regulière afin de filtrer la liste retourné.
+
+ -
+  name: exclude
+  types: [array]
+  description: >
+    Liste de fichier à exclure de liste.
+
+ -
+  name: extension
+  types: [array]
+  description: >
+    liste des extentions devant être listé.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "StreamList.current"
+parent_id: "StreamList"
+type: class method
+line_number: 1411
+description: |
+  Cette méthode liste les fichiers d'un dossier.
+
+signatures:
+ -
+  signature: "StreamList.current(path [, pattern = null [, exclude = array [, extension = array]]])"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "StreamList.current"
+parent_id: "StreamList"
+type: class method
+line_number: 1420
+description: |
+  Retourne la valeur courant à l'emplacement du pointeur.
+
+signatures:
+ -
+  signature: "StreamList.current()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "StreamList.key"
+parent_id: "StreamList"
+type: class method
+line_number: 1428
+description: |
+  Retourne la clef courante.
+
+signatures:
+ -
+  signature: "StreamList.key()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "StreamList.next"
+parent_id: "StreamList"
+type: class method
+line_number: 1436
+description: |
+  Avance le pointeur du tableau et retourne le nom du fichier.
+
+signatures:
+ -
+  signature: "StreamList.next()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php
+
+---
+id: "StreamList.prev"
+parent_id: "StreamList"
+type: class method
+line_number: 1444
+description: |
+  Recule le pointeur du tableau et retourne le nom du fichier.
+
+signatures:
+ -
+  signature: "StreamList.prev()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/stream/class_stream.php

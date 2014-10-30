@@ -1,0 +1,317 @@
+---
+id: "BlogPress"
+parent_id: "Plugins section"
+type: namespace
+included: ["iPlugin"]
+line_number: 15
+description: |
+  BlogPress gère l'application, le lancement et l'affichage des pages ainsi que la validation des formulaires.
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_blogpress.php
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php
+
+---
+id: "BlogPress.Initialize"
+parent_id: "BlogPress"
+type: class method
+line_number: 25
+description: |
+  Cette méthode initialise les événements de la classe.
+
+signatures:
+ -
+  signature: "BlogPress.Initialize()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php
+
+---
+id: "BlogPress.WriteRobotsTXT"
+parent_id: "BlogPress"
+type: class method
+line_number: 69
+description: |
+  Cette méthode écrit le fichier robots.txt.
+
+signatures:
+ -
+  signature: "BlogPress.WriteRobotsTXT()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php
+
+---
+id: "BlogPress.Install"
+parent_id: "BlogPress"
+type: class method
+line_number: 87
+description: |
+  Cette méthode installe l'extension ou une partie de l'extension gérées par la classe.
+
+signatures:
+ -
+  signature: "BlogPress.Install()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php
+
+---
+id: "BlogPress.Uninstall"
+parent_id: "BlogPress"
+type: class method
+line_number: 309
+description: |
+  Cette méthode désintalle  l'extension et supprime les données liées à l'extension si `eraseData` est vrai.
+
+signatures:
+ -
+  signature: "BlogPress.Uninstall(eraseData)"
+  return_value: "void"
+arguments:
+ -
+  name: eraseData
+  types: [Boolean]
+  description: >
+    Suppression de données.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php
+
+---
+id: "BlogPress.exec"
+parent_id: "BlogPress"
+type: class method
+line_number: 329
+description: |
+  Cette méthode exécute une commande `op` et affiche un résultat au format JSON de préférence.
+  La méthode peut retourner 0 ou une chaine de caractère pour indiquer une erreur lors de l'exécution d'une commande.
+
+signatures:
+ -
+  signature: "BlogPress.exec(op)"
+  return_value: "Boolean"
+arguments:
+ -
+  name: op
+  types: [String]
+  description: >
+    Nom de la commande à exécuter.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php
+
+---
+id: "BlogPress.SetError"
+parent_id: "BlogPress"
+type: class method
+line_number: 366
+description: |
+  Cette méthode permet de stocker une erreur lors de la validation d'un formulaire. En assignant une erreur les méthodes [[iForm.onFormCommit]] ne seront pas déclenchées.
+  Les erreurs pourront ensuite être affichées dans le formulaire via la méthode [[iForm.onBeforeForm]] et la méthode [[BlogPress.GetError]].
+
+signatures:
+ -
+  signature: "BlogPress.SetError(error)"
+  return_value: "String"
+arguments:
+ -
+  name: error
+  types: [String]
+  description: >
+    Erreur à stocker.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php
+
+---
+id: "BlogPress.GetError"
+parent_id: "BlogPress"
+type: class method
+line_number: 378
+description: |
+  Cette méthode retourne les erreurs stockées par via la méthode [[BlogPress.SetError]].
+
+signatures:
+ -
+  signature: "BlogPress.GetError()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php
+
+---
+id: "BlogPress.IsError"
+parent_id: "BlogPress"
+type: class method
+line_number: 386
+description: |
+  Cette méthode indique si une erreur a été stocké via la méthode [[BlogPress.SetError]].
+
+signatures:
+ -
+  signature: "BlogPress.IsError()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php
+
+---
+id: "BlogPress.HasError"
+parent_id: "BlogPress"
+type: class method
+line_number: 395
+alias_of: "BlogPress.IsError"
+description: |
+  Cette méthode indique si une erreur a été stocké via la méthode [[BlogPress.SetError]].
+
+signatures:
+ -
+  signature: "BlogPress.HasError()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php
+
+---
+id: "BlogPress.StopEvent"
+parent_id: "BlogPress"
+type: class method
+line_number: 784
+description: |
+  Cette méthode stop le processus de chargement d'une page ou d'un post. Cette méthode n'a d'effet que lors de l'utilisation des méthodes [[iPage.onStart]].
+
+signatures:
+ -
+  signature: "BlogPress.StopEvent()"
+  return_value: "void"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php
+
+---
+id: "BlogPress.IsStopEvent"
+parent_id: "BlogPress"
+type: class method
+line_number: 792
+description: |
+  Cette méthode indique si l'arrêt du processus de chargement d'une page a été demandé.
+
+signatures:
+ -
+  signature: "BlogPress.IsStopEvent()"
+  return_value: "Boolean"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php
+
+---
+id: "BlogPress.GetPermalink"
+parent_id: "BlogPress"
+type: class method
+line_number: 800
+description: |
+  Cette méthode retourne le permalien demandé par le poste client.
+
+signatures:
+ -
+  signature: "BlogPress.GetPermalink()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php
+
+---
+id: "BlogPress.GetParameters"
+parent_id: "BlogPress"
+type: class method
+line_number: 809
+description: |
+  Cette méthode retourne les paramètres du permalien demandée par le client.
+
+signatures:
+ -
+  signature: "BlogPress.GetParameters()"
+  return_value: "Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php
+
+---
+id: "BlogPress.GetOptions"
+parent_id: "BlogPress"
+type: class method
+line_number: 824
+description: |
+  Cette méthode retourne des informations sur la pagination, le type de page et d'autres informations nécessaires à l'affichage d'une page d'un article ou d'une recherche.
+
+signatures:
+ -
+  signature: "BlogPress.GetOptions()"
+  return_value: "String | Array"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php
+
+---
+id: "BlogPress.SetAccessRole"
+parent_id: "BlogPress"
+type: class method
+line_number: 886
+description: |
+  Cette méthode permet de changer l'accès d'un groupe lors de la connexion d'un membre du groupe. Si `postid = 0`, l'utilisateur du groupe `roleid` sera redirigé vers le back office Javalyss.
+  Si `postid` est différent de 0 alors l'utilisateur du groupe sera redirigé vers la page défini par postid.
+
+signatures:
+ -
+  signature: "BlogPress.SetAccessRole(roleid, postid)"
+  return_value: "void"
+arguments:
+ -
+  name: roleid
+  types: [Number]
+  description: >
+    Numéro d'identifiant du groupe.
+
+ -
+  name: postid
+  types: [Number]
+  description: >
+    Numéro d'identifiant d'une page.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php
+
+---
+id: "BlogPress.Sanitize"
+parent_id: "BlogPress"
+type: class method
+line_number: 919
+description: |
+  Cette méthode retourne une chaine sans caractères spéciaux et sans espace.
+
+signatures:
+ -
+  signature: "BlogPress.Sanitize(str)"
+  return_value: "String"
+arguments:
+ -
+  name: str
+  types: [String]
+  description: >
+    Chaine à nettoyer.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php
+
+---
+id: "BlogPress.Meta"
+parent_id: "BlogPress"
+type: class method
+line_number: 945
+description: |
+  Cette méthode retourne une valeur stocké en fonction du paramètre `key` dans la table `software_meta`.
+  Si le paramètre `value` est mentionné alors la méthode enregistrera cette valeur dans la table au nom de clef indiqué `key`.
+  
+  <p class="note">Si la clef n'existe pas et que `value` n'est pas mentionné la méthode retournera NULL.</p>
+  
+  <p class="note">Si la clef n'existe pas et que `value` est mentionné la méthode créera une nouvelle entrée dans la table.</p>
+
+signatures:
+ -
+  signature: "BlogPress.Meta(key [, value])"
+  return_value: "String | Number | Array | Object"
+arguments:
+ -
+  name: key
+  types: [String]
+  description: >
+    Nom de la valeur stockée.
+
+ -
+  name: value
+  types: [String, Number, Array, Object]
+  description: >
+    Valeur à stocker.
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/plugins/blogpress-3/inc/abstract_blogpress.php

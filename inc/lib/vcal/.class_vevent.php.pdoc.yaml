@@ -1,0 +1,169 @@
+---
+id: "vEvent"
+parent_id: "Library section"
+type: class
+line_number: 15
+description: |
+  Cette classe gère la création d'objet vEvent. Les vEvent sont des événements que l'on peut ajouter à une instance [[vCalendar]].
+  
+  #### Informations
+  
+  * Auteur : Lenzotti Romain
+  * Fichier : class_vcalendar.php
+  * Statut : STABLE
+  * Note :	This work is licensed under a Creative Commons Attribution 2.5 Generic License http://creativecommons.org/licenses/by/2.5/
+
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vevent.php
+
+---
+id: "vEvent.TAG"
+parent_id: "vEvent"
+type: class property
+line_number: 21
+description: |
+  Balise d'ouverture de la vEvent.
+
+signatures:
+ -
+  signature: "vEvent.TAG"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vevent.php
+
+---
+id: "vEvent#Summary"
+parent_id: "vEvent"
+type: instance property
+line_number: 26
+description: |
+  Résumé de l'événement.
+
+signatures:
+ -
+  signature: "vEvent#Summary"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vevent.php
+
+---
+id: "vEvent#Description"
+parent_id: "vEvent"
+type: instance property
+line_number: 31
+description: |
+  Description de l'événement.
+
+signatures:
+ -
+  signature: "vEvent#Description"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vevent.php
+
+---
+id: "vEvent#DateStart"
+parent_id: "vEvent"
+type: instance property
+line_number: 36
+description: |
+  Début de l'événement. La date doit avoir le format suivant `AAAAMMDDTHHIISSZ` (avec PHP utilisez la fonction date('Ymd\THisZ'));
+
+signatures:
+ -
+  signature: "vEvent#DateStart"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vevent.php
+
+---
+id: "vEvent#DateEnd"
+parent_id: "vEvent"
+type: instance property
+line_number: 41
+description: |
+  Fin de l'événement. La date doit avoir le format suivant `AAAAMMDDTHHIISSZ` (avec PHP utilisez la fonction date('Ymd\THisZ'));
+
+signatures:
+ -
+  signature: "vEvent#DateEnd"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vevent.php
+
+---
+id: "vEvent#Location"
+parent_id: "vEvent"
+type: instance property
+line_number: 46
+description: |
+  Localisation de l'événement.
+
+signatures:
+ -
+  signature: "vEvent#Location"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vevent.php
+
+---
+id: "vEvent#Categories"
+parent_id: "vEvent"
+type: instance property
+line_number: 50
+description: |
+
+
+signatures:
+ -
+  signature: "vEvent#Categories"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vevent.php
+
+---
+id: "vEvent#Status"
+parent_id: "vEvent"
+type: instance property
+line_number: 54
+description: |
+
+
+signatures:
+ -
+  signature: "vEvent#Status"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vevent.php
+
+---
+id: "vEvent#Transp"
+parent_id: "vEvent"
+type: instance property
+line_number: 58
+description: |
+
+
+signatures:
+ -
+  signature: "vEvent#Transp"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vevent.php
+
+---
+id: "new vEvent"
+parent_id: "vEvent"
+type: constructor
+line_number: 64
+description: |
+  Cette méthode créée une nouvelle instance [[vEvent]].
+
+signatures:
+ -
+  signature: "new vEvent()"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vevent.php
+
+---
+id: "vEvent#toString"
+parent_id: "vEvent"
+type: instance method
+line_number: 68
+description: |
+
+
+signatures:
+ -
+  signature: "vEvent#toString()"
+  return_value: "String"
+file: C:/Users/romak_000/DropBox/mywww/JavalyssLeckye/inc/lib/vcal/class_vevent.php
